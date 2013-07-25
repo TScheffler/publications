@@ -1,0 +1,3037 @@
+1235  RT	
+194   lt	
+121   #bpt112	hash_tag
+119   gt	
+117   ne	
+108   xD	
+97    #wettendass	hash_tag
+73    is	
+60    #ff	hash_tag
+60    grad	
+53    Gottschalk	
+53    haha	
+50    nich	
+47    nen	
+41    Stardoll	
+40    gepostet	
+39    #offenbings	hash_tag
+36    Tweets	
+35    XD	
+34    nix	
+32    Na	
+32    유	
+31    @OMGermanTeen	at_token
+30    ok	
+30    sowas	
+29    Haha	
+29    naja	
+28    lol	
+26    :-D	
+26    heut	
+26    net	
+26    wär	
+25    The	
+25    erstmal	
+25    gibts	
+24    #OMGermanTeen	hash_tag
+24    fuer	
+24    gehts	
+23    #Offenbings	hash_tag
+23    na	
+22    Guttenberg	
+22    freu	
+21    find	
+21    nem	
+20    on	
+20    weiss	
+19    @ZDFonline	at_token
+19    Jauch	
+19    nacht	
+19    werd	
+18    Naja	
+18    Tweet	
+18    grade	
+18    iPhone	
+17    #WettenDass	hash_tag
+17    #fb	hash_tag
+17    @youtube	at_token
+17    sorry	
+17    twitter	
+16    #BGE	hash_tag
+16    @Bushido78	at_token
+16    BGE	
+16    Germany	
+16    Ok	
+16    Sorry	
+16    di	
+16    kenn	
+16    rum	
+16    video	
+16    würd	
+15    @FuckYesGerman	at_token
+15    App	
+15    EUR	
+15    German	
+15    Social	
+15    abend	
+15    ey	
+15    htt	
+15    ner	
+15    to	
+14    #piraten	hash_tag
+14    #tvprogramm	hash_tag
+14    @StadtpolizeiZH	at_token
+14    DJ	
+14    OMG	
+14    Re	
+14    tweets	
+13    #bpt11	hash_tag
+13    Hey	
+13    SMS	
+13    Schweiger	
+13    for	
+13    geld	
+13    twittern	
+13    xDD	
+13    zuhause	
+12    Black	
+12    DTN	
+12    FB	
+12    Jungs	
+12    Spass	
+12    TL	
+12    co	
+12    fur	
+12    hahaha	
+12    hehe	
+12    jaa	
+12    leute	
+12    ma	
+12    min	
+12    tag	
+11    @damitdasklaas	at_token
+11    Nowitzki	
+11    Nö	
+11    Pageballs	
+11    Stream	
+11    at	
+11    bild	
+11    cont	
+11    handy	
+11    hey	
+11    my	
+11    soo	
+10    #mmt28	hash_tag
+10    #nowplaying	hash_tag
+10    #seo	hash_tag
+10    #stapo24	hash_tag
+10    Ey	
+10    Galaxy	
+10    Game	
+10    Gladbach	
+10    HANSGROHE	
+10    Happy	
+10    Lol	
+10    cc	
+10    geb	
+10    hPa	
+10    habs	
+10    la	
+10    posten	
+10    wars	
+10    ªќ	
+9     #BPT112	hash_tag
+9     #Domian	hash_tag
+9     #Guttenberg	hash_tag
+9     #Quoka	hash_tag
+9     #fail	hash_tag
+9     #hach	hash_tag
+9     @pageballs_com	at_token
+9     Ah	
+9     Blu	
+9     DD	
+9     Reus	
+9     Timeline	
+9     aku	
+9     daß	
+9     facebook	
+9     ga	
+9     garnicht	
+9     glück	
+9     iOS	
+9     iPad	
+9     it	
+9     lust	
+9     markt.	
+9     much	
+9     ned	
+9     nee	
+9     nö	
+9     oO	
+9     scho	
+9     wow	
+9     youtube	
+8     #news	hash_tag
+8     @bangpowwww	at_token
+8     @holgi	at_token
+8     @sueddeutschede	at_token
+8     Day	
+8     HS	
+8     Hbf	
+8     Is	
+8     Justin	
+8     MP3	
+8     Night	
+8     Shirt	
+8     Til	
+8     WE	
+8     Weihnachts	
+8     Weiss	
+8     and	
+8     by	
+8     ch	
+8     film	
+8     ht	
+8     jahre	
+8     leid	
+8     like	
+8     mann	
+8     muß	
+8     of	
+8     omg	
+8     ppm	
+8     son	
+8     sooo	
+8     tweet	
+8     typ	
+8     wa	
+8     welt	
+8     yg	
+8     you	
+7     #alverde	hash_tag
+7     #berlin	hash_tag
+7     #domian	hash_tag
+7     @Sunnypedia1987	at_token
+7     @hex2	at_token
+7     Bonds	
+7     Chihuahua	
+7     Christmas	
+7     Gottschalks	
+7     Jaa	
+7     LOL	
+7     Let	
+7     Like	
+7     Maffay	
+7     Mario	
+7     Min	
+7     Nee	
+7     Now	
+7     ON	
+7     Och	
+7     One	
+7     Receiver	
+7     Red	
+7     Sky	
+7     Sowas	
+7     St	
+7     Titten	
+7     Twitterer	
+7     Weltcup	
+7     Zo	
+7     Zwickauer	
+7     aww	
+7     bekomm	
+7     bett	
+7     boah	
+7     dpa	
+7     dr	
+7     etc	
+7     ha	
+7     hammer	
+7     hihi	
+7     hmm	
+7     immernoch	
+7     inkl	
+7     isch	
+7     iwie	
+7     jetz	
+7     me	
+7     namen	
+7     quot	
+7     ray	
+7     schaun	
+7     schonmal	
+7     show	
+7     sry	
+7     tja	
+7     twittert	
+7     up	
+7     vllt	
+7     vo	
+7     woche	
+7     xx	
+7     Äh	
+6     #GermanTeens	hash_tag
+6     #UnderTheMistletoe	hash_tag
+6     #bundesliga	hash_tag
+6     #fcb	hash_tag
+6     #followerpower	hash_tag
+6     #wetter	hash_tag
+6     #zdf	hash_tag
+6     :-P	
+6     @EpikTweet	at_token
+6     @GermanTeens	at_token
+6     @Griesgraemer	at_token
+6     @HerrTutorial	at_token
+6     @TassadarWS	at_token
+6     @TineAngel1	at_token
+6     @Truemmermaedel	at_token
+6     @marvinkroell	at_token
+6     @oOtrinityOo	at_token
+6     @sechsdreinuller	at_token
+6     @swish41	at_token
+6     @tazgezwitscher	at_token
+6     Bah	
+6     Biel	
+6     Breaking	
+6     Browsergame	
+6     Browserspiel	
+6     Bushido	
+6     CROCS	
+6     Cayman	
+6     Find	
+6     Follower	
+6     GO	
+6     Hm	
+6     Hot	
+6     House	
+6     Jorge	
+6     Life	
+6     Limmat	
+6     Löw	
+6     Marco	
+6     Meat	
+6     Ne	
+6     No	
+6     Playmobil	
+6     Tommy	
+6     WTF	
+6     Wow	
+6     XDDD	
+6     Yeah	
+6     aja	
+6     aufm	
+6     augen	
+6     com	
+6     dapd	
+6     dia	
+6     down	
+6     eig.	
+6     fan	
+6     fuck	
+6     fühl	
+6     gesehn	
+6     go	
+6     grosse	
+6     hahah	
+6     hm	
+6     hunger	
+6     hätt	
+6     ik	
+6     internet	
+6     jaaaa	
+6     jahr	
+6     meins	
+6     met	
+6     mum	
+6     off	
+6     problem	
+6     retweetet	
+6     sendung	
+6     soooo	
+6     spiel	
+6     stunden	
+6     the	
+6     top	
+6     tv	
+6     uhr	
+6     wel	
+6     wenns	
+6     winter	
+6     wirds	
+6     wochenende	
+6     wünsch	
+6     xd	
+5     #BVB	hash_tag
+5     #FCB	hash_tag
+5     #FragdieGurus	hash_tag
+5     #GER	hash_tag
+5     #GuruAdventskalender	hash_tag
+5     #IPT110	hash_tag
+5     #Newsfunk	hash_tag
+5     #Voice	hash_tag
+5     #bge	hash_tag
+5     #buli	hash_tag
+5     #deal	hash_tag
+5     #effzeh	hash_tag
+5     #em2012	hash_tag
+5     #hertha	hash_tag
+5     #heuteshow	hash_tag
+5     #ipteq	hash_tag
+5     #jobs	hash_tag
+5     #sem	hash_tag
+5     #smo	hash_tag
+5     #suchmaschinenoptimierung	hash_tag
+5     @AddThis	at_token
+5     @Bartipapi	at_token
+5     @BiancaLovesSami	at_token
+5     @DifferentKev	at_token
+5     @Gunnsen	at_token
+5     @IPData	at_token
+5     @JRehborn	at_token
+5     @Kakaoherzchen	at_token
+5     @Lamew00d	at_token
+5     @LoveBerryx3	at_token
+5     @Maxk88	at_token
+5     @Polm90	at_token
+5     @Schmidtlepp	at_token
+5     @addthis	at_token
+5     @ajityass	at_token
+5     @dieternuhr	at_token
+5     @dorobaer	at_token
+5     @gigiii96	at_token
+5     @hyperaktivraupe	at_token
+5     @iFlobole	at_token
+5     @missOchrasy	at_token
+5     @mspro	at_token
+5     @plaetzchen	at_token
+5     @sat1	at_token
+5     @schlenzalot	at_token
+5     @thebosshoss	at_token
+5     @weltonline	at_token
+5     @xLadyDevilx	at_token
+5     @zeitonline	at_token
+5     Acer	
+5     Achso	
+5     Aha	
+5     Air	
+5     Audio	
+5     Avatar	
+5     Axor	
+5     Bieber	
+5     Big	
+5     Bio	
+5     Britney	
+5     Cain	
+5     Carrier	
+5     Cyber	
+5     Do	
+5     Fashion	
+5     Freu	
+5     Gingerbread	
+5     Hach	
+5     Hmm	
+5     Ick	
+5     Livestream	
+5     Liveticker	
+5     Loaf	
+5     Map	
+5     Minecraft	
+5     Of	
+5     On	
+5     Oo	
+5     Playing	
+5     Scheiss	
+5     Slim	
+5     Special	
+5     TT	
+5     Temp	
+5     Time	
+5     Tja	
+5     Up	
+5     Voice	
+5     WAVE	
+5     Werd	
+5     Xbox	
+5     achso	
+5     ah	
+5     ang	
+5     app	
+5     auto	
+5     awesome	
+5     awww	
+5     bier	
+5     blah	
+5     blog	
+5     deutschland	
+5     ehm	
+5     faven	
+5     fb	
+5     fehler	
+5     ff	
+5     finds	
+5     freundin	
+5     getwittert	
+5     gg	
+5     good	
+5     gott	
+5     gÃ¼nstigsten	
+5     happy	
+5     hats	
+5     ichs	
+5     jaja	
+5     joa	
+5     ju	
+5     jz	
+5     ka	
+5     komt	
+5     krieg	
+5     leren	
+5     les	
+5     life	
+5     moechte	
+5     name	
+5     nehm	
+5     nerv	
+5     no	
+5     nog	
+5     papa	
+5     prÃ¼fen	
+5     retweeten	
+5     satz	
+5     schatz	
+5     schlaf	
+5     se	
+5     seh	
+5     sitz	
+5     spaß	
+5     stunde	
+5     thema	
+5     tá	
+5     un	
+5     waere	
+5     we	
+5     weisst	
+5     wochen	
+5     wärs	
+5     zo	
+5     zuviel	
+4     #BR	hash_tag
+4     #FQ	hash_tag
+4     #Gottschalk	hash_tag
+4     #IPTFFFFFF	hash_tag
+4     #Ribéry	hash_tag
+4     #SSNHD	hash_tag
+4     #SocialMedia	hash_tag
+4     #Tweetkalender	hash_tag
+4     #evmakir	hash_tag
+4     #hamburg	hash_tag
+4     #köln	hash_tag
+4     #leipzig	hash_tag
+4     #quoka	hash_tag
+4     #spaeter	hash_tag
+4     #twikolaus	hash_tag
+4     #unwiderstehl	hash_tag
+4     #voice	hash_tag
+4     @BrokenSavior	at_token
+4     @CaptOrwell	at_token
+4     @ChaskaBorek	at_token
+4     @DerWachsame	at_token
+4     @DerWesten	at_token
+4     @GermanTeenie	at_token
+4     @Gronkh	at_token
+4     @HausOfKate	at_token
+4     @JanaEgaal	at_token
+4     @KGeni	at_token
+4     @Klarawrrr	at_token
+4     @Lalilein_	at_token
+4     @Liiseeeee	at_token
+4     @MannVomTheater	at_token
+4     @McDenno	at_token
+4     @Muaxim	at_token
+4     @SwieSuperstar	at_token
+4     @TaMMy_KeKs	at_token
+4     @TiiaAurora	at_token
+4     @Tobi7889	at_token
+4     @Turtilie	at_token
+4     @YourMomma_	at_token
+4     @_Rya_	at_token
+4     @allestutti	at_token
+4     @fefesblog	at_token
+4     @fhmaster0801	at_token
+4     @fred_zwitschert	at_token
+4     @germanborder	at_token
+4     @germanpsycho	at_token
+4     @hi_d_11e	at_token
+4     @hmdeutschland	at_token
+4     @itChhii	at_token
+4     @mchlpchl	at_token
+4     @nati0n	at_token
+4     @satriyowijoyo	at_token
+4     @siggismallz	at_token
+4     @svennibenni_de	at_token
+4     @teufelsweiblein	at_token
+4     @thumbsupharry	at_token
+4     @xLovatoBucks	at_token
+4     @xavic_fcb	at_token
+4     @zeitonline_pol	at_token
+4     Ali	
+4     Alina	
+4     Android	
+4     Ardian	
+4     BPT	
+4     Bag	
+4     Best	
+4     Blitzer	
+4     Boah	
+4     Boe	
+4     Borussen	
+4     Bujupi	
+4     Bullshit	
+4     Bye	
+4     CS	
+4     Camera	
+4     Cap	
+4     Case	
+4     Community	
+4     Cup	
+4     DDD	
+4     DS	
+4     DSDS	
+4     Dan	
+4     Dance	
+4     Danisch	
+4     Dez	
+4     Elstner	
+4     Fantasy	
+4     Faymann	
+4     Friends	
+4     Girls	
+4     Good	
+4     Guess	
+4     HH	
+4     Hahahaha	
+4     High	
+4     Hihi	
+4     Hmmm	
+4     ID	
+4     Ice	
+4     Kate	
+4     Kindle	
+4     LOVE	
+4     Lan	
+4     Lopes	
+4     Love	
+4     Luftfeuchte	
+4     MP	
+4     Make	
+4     Mathe	
+4     Mike	
+4     Model	
+4     My	
+4     NBA	
+4     OF	
+4     Oha	
+4     Ohh	
+4     Open	
+4     Path	
+4     Play	
+4     Podcast	
+4     Promo	
+4     Purple	
+4     Read	
+4     Rewe	
+4     Ryanair	
+4     Salzungen	
+4     Schoko	
+4     Schwдnze	
+4     Shit	
+4     Skype	
+4     Smartphone	
+4     Snoep	
+4     South	
+4     Spongebob	
+4     Steinbrück	
+4     Store	
+4     Style	
+4     Tablet	
+4     Tach	
+4     ThyssenKrupp	
+4     Till	
+4     To	
+4     Touch	
+4     Ui	
+4     Vegas	
+4     Winehouse	
+4     With	
+4     af	
+4     ahnung	
+4     amp	
+4     arbeit	
+4     bayern	
+4     berlin	
+4     bescheid	
+4     bruder	
+4     buch	
+4     bye	
+4     check	
+4     christmas	
+4     dacht	
+4     dat	
+4     design	
+4     dong	
+4     duerfen	
+4     dung	
+4     ebook	
+4     eig	
+4     en	
+4     entfolgen	
+4     fall	
+4     foto	
+4     friedrichshafen	
+4     gaat	
+4     gräber	
+4     gw	
+4     haare	
+4     haus	
+4     he	
+4     heisse	
+4     iPod	
+4     ic	
+4     idee	
+4     jaaa	
+4     jij	
+4     justin	
+4     kk	
+4     kmh	
+4     kok	
+4     lagi	
+4     leuk	
+4     lied	
+4     liked	
+4     love	
+4     mau	
+4     max	
+4     mensch	
+4     menschen	
+4     mitte	
+4     montag	
+4     nu	
+4     out	
+4     party	
+4     pc	
+4     piraten	
+4     response	
+4     riesenehre	
+4     rofl	
+4     scheiss	
+4     seite	
+4     sex	
+4     shoppen	
+4     si	
+4     spass	
+4     stadt	
+4     süsse	
+4     tau	
+4     thx	
+4     tommys	
+4     twitterst	
+4     uuml	
+4     ve	
+4     very	
+4     videos	
+4     vorallem	
+4     week	
+4     weihnachten	
+4     weils	
+4     xDDD	
+4     ya	
+4     yeah	
+4     zb	
+4     zocken	
+4     zuviele	
+4     ähm	
+3     #Android	hash_tag
+3     #FollowFriday	hash_tag
+3     #Sat1	hash_tag
+3     #Skyrim	hash_tag
+3     #TheDome	hash_tag
+3     #ZDFinfo	hash_tag
+3     #bvb	hash_tag
+3     #ch	hash_tag
+3     #gottschalk	hash_tag
+3     #gÃ¼nstigsten	hash_tag
+3     #haushaltsaufloesung	hash_tag
+3     #iTunes	hash_tag
+3     #jobsuche	hash_tag
+3     #knp	hash_tag
+3     #musik	hash_tag
+3     #münchen	hash_tag
+3     #no_add	hash_tag
+3     #philosophy	hash_tag
+3     #phoenix	hash_tag
+3     #rtl	hash_tag
+3     #spd	hash_tag
+3     #stellenangebote	hash_tag
+3     #szonline	hash_tag
+3     #taz	hash_tag
+3     #teamfollowback	hash_tag
+3     #trends	hash_tag
+3     #twoff	hash_tag
+3     @Aimar_HH	at_token
+3     @AkalineableYT	at_token
+3     @Annika_K	at_token
+3     @ArminWolf	at_token
+3     @BTRCrewGermany	at_token
+3     @Belibaa_	at_token
+3     @BenniferRostock	at_token
+3     @BennysGirl_xoxo	at_token
+3     @Brainvibes	at_token
+3     @BrowserSpiele1	at_token
+3     @ChibixYume	at_token
+3     @DementiusPrea	at_token
+3     @DerTypAusFF	at_token
+3     @DoroBaer	at_token
+3     @Dschavar	at_token
+3     @EternalReplica	at_token
+3     @EtienneToGo	at_token
+3     @FabianFabsen	at_token
+3     @FairyOnClouds	at_token
+3     @Fanti2412	at_token
+3     @GJGBTL231	at_token
+3     @GebbiGibson	at_token
+3     @GloriaRei	at_token
+3     @GoettinHH	at_token
+3     @GreenEyedNeko	at_token
+3     @HaifischInAspik	at_token
+3     @HannahBeitzer	at_token
+3     @HerrVanBohm	at_token
+3     @HoneyballCookie	at_token
+3     @Huldaswift	at_token
+3     @JMarkMueller	at_token
+3     @Jaaaamiee	at_token
+3     @JepicJedhead_	at_token
+3     @JustiBasti	at_token
+3     @KendallSCrewGer	at_token
+3     @KonstantinNotz	at_token
+3     @Lisawr	at_token
+3     @MarvinDings	at_token
+3     @MichelleundDu	at_token
+3     @MissChessie	at_token
+3     @NourAssahub	at_token
+3     @Ondyi	at_token
+3     @PiratenStream	at_token
+3     @PlayStationDE	at_token
+3     @Point1a	at_token
+3     @ProSieben	at_token
+3     @Qype	at_token
+3     @RealDeuterium	at_token
+3     @Scherzinfarkt	at_token
+3     @Schnupsi407	at_token
+3     @SebJabbusch	at_token
+3     @SelenasMiracle	at_token
+3     @Sintaura	at_token
+3     @Stief1996	at_token
+3     @SusanneKuenzel	at_token
+3     @Teufelsweiblein	at_token
+3     @ThomasMielke	at_token
+3     @Thomy_Freaky	at_token
+3     @TylerTroublez	at_token
+3     @ViviSkarsgard	at_token
+3     @WernerFailmann	at_token
+3     @YLTTM	at_token
+3     @__Kimba__	at_token
+3     @albtraeumchen	at_token
+3     @annafrOst	at_token
+3     @blastactionhero	at_token
+3     @brennooth	at_token
+3     @bretzelmann	at_token
+3     @caschy	at_token
+3     @co_ki_net	at_token
+3     @davidaguirre	at_token
+3     @daysofmusic	at_token
+3     @desasterkind	at_token
+3     @deuxcvsix	at_token
+3     @drPfarrer	at_token
+3     @eingenickt	at_token
+3     @ekelias	at_token
+3     @emtiu	at_token
+3     @ennomane	at_token
+3     @fckoeln	at_token
+3     @fortunafan95ole	at_token
+3     @frankfeil	at_token
+3     @gillyberlin	at_token
+3     @glitter_m0nster	at_token
+3     @heckyeahsaade	at_token
+3     @heeeeenni	at_token
+3     @heiseonline	at_token
+3     @hoerns	at_token
+3     @hollywhaaat	at_token
+3     @iFlamongo	at_token
+3     @iJol_	at_token
+3     @iNerdSelena	at_token
+3     @iiLoveKB	at_token
+3     @intelligenceMRR	at_token
+3     @justinbieber	at_token
+3     @largewhiteguy	at_token
+3     @mac_monday	at_token
+3     @mbrandhu	at_token
+3     @miinaaa	at_token
+3     @ncisgirl95	at_token
+3     @nedo04	at_token
+3     @niels_k	at_token
+3     @nzz	at_token
+3     @ohaimareiki	at_token
+3     @pyth2_0	at_token
+3     @quantatheist	at_token
+3     @rkwilde99	at_token
+3     @roadrunner1904	at_token
+3     @saebenerstr	at_token
+3     @schwarzblond	at_token
+3     @schwarzmaler20	at_token
+3     @seelengebunden_	at_token
+3     @sinnundverstand	at_token
+3     @sixtus	at_token
+3     @stadtpolizeizh	at_token
+3     @tagesschau	at_token
+3     @termfrequenz	at_token
+3     @textzicke	at_token
+3     @thatsHepHapbaby	at_token
+3     @tirsales	at_token
+3     @traumdenker	at_token
+3     @unhappy_dream	at_token
+3     @webrebell	at_token
+3     @werkarniggel	at_token
+3     @yaassuuu	at_token
+3     @zdfonline	at_token
+3     @zynaesthesie	at_token
+3     ABBA	
+3     Achja	
+3     Amy	
+3     Assassin	
+3     Atomic	
+3     Aw	
+3     BE	
+3     BVB	
+3     Bandana	
+3     Barth	
+3     Beat	
+3     BenQ	
+3     Berben	
+3     Birthday	
+3     Bo	
+3     Books	
+3     Bravo	
+3     Buys	
+3     CELAC	
+3     Canvas	
+3     Carrerabahn	
+3     Channel	
+3     Chili	
+3     Chris	
+3     Chuck	
+3     Coral	
+3     Creed	
+3     DGAP	
+3     Dark	
+3     Date	
+3     Dax	
+3     December	
+3     Despres	
+3     Di	
+3     Duma	
+3     EIL	
+3     El	
+3     Email	
+3     End	
+3     Entertainment	
+3     Escort	
+3     European	
+3     FFM	
+3     FML	
+3     Fahrplanwechsel	
+3     Feng	
+3     Flavonmax	
+3     For	
+3     Free	
+3     Friday	
+3     Fuck	
+3     GT	
+3     Ga	
+3     Games	
+3     Girl	
+3     Gr.	
+3     Green	
+3     Grüsse	
+3     HTC	
+3     Hahaha	
+3     Hanke	
+3     Hannah	
+3     Hashtag	
+3     Headset	
+3     Heels	
+3     Hellboy	
+3     Hetero	
+3     HiFi	
+3     Hidden	
+3     Hobbies	
+3     Hoffenheim	
+3     Hunziker	
+3     Husky	
+3     IMG	
+3     Ih	
+3     Jared	
+3     Jessica	
+3     Juhu	
+3     Jupp	
+3     Ka	
+3     Keep	
+3     Keramag	
+3     Key	
+3     Keys	
+3     Kids	
+3     Kindervon	
+3     Klaas	
+3     Kombo	
+3     Krupp	
+3     LG	
+3     LV	
+3     La	
+3     Labbadia	
+3     Label	
+3     Lattek	
+3     League	
+3     Lichterkette	
+3     Lopez	
+3     Lu	
+3     Ma	
+3     MacBook	
+3     Maejor	
+3     Maps	
+3     Maroon	
+3     Mas	
+3     Mascara	
+3     Mate	
+3     Michelle	
+3     Muhammad	
+3     Multiplayer	
+3     NW	
+3     Nachti	
+3     Newsletter	
+3     Nexus	
+3     Nick	
+3     Nike	
+3     Nix	
+3     Norris	
+3     OK	
+3     Ohhh	
+3     PA	
+3     PM	
+3     Palace	
+3     Paradise	
+3     Payne	
+3     Pechstein	
+3     Perry	
+3     Phoenix	
+3     Plait	
+3     Please	
+3     Pocket	
+3     Podolski	
+3     Prelaunch	
+3     Primera	
+3     Proble	
+3     Promi	
+3     PunktenIch	
+3     Puzzlepaneelen	
+3     RP	
+3     Ray	
+3     Resistance	
+3     Retweet	
+3     Rex	
+3     Rinderschocker	
+3     Ruhl	
+3     SC	
+3     SEO	
+3     SF	
+3     SG	
+3     SSL	
+3     ST	
+3     SVP	
+3     SW	
+3     Saar	
+3     Saints	
+3     Sander	
+3     Sans	
+3     Sarah	
+3     Sat	
+3     Scheisse	
+3     Schmitz	
+3     Schuhbeck	
+3     Security	
+3     Seller	
+3     Share	
+3     Shopping	
+3     Shui	
+3     Siri	
+3     Sms	
+3     Sooo	
+3     Soundtrack	
+3     Sry	
+3     Starck	
+3     Stick	
+3     THE	
+3     THQ	
+3     TK	
+3     TO	
+3     Tab	
+3     Tablets	
+3     Taiji	
+3     Tenny	
+3     Ticker	
+3     Toma	
+3     Tonic	
+3     Traffic	
+3     Tv	
+3     Tweetdiebstahl	
+3     Tweetklau	
+3     Twist	
+3     Vinyl	
+3     Virtual	
+3     Vorallem	
+3     Vorrundengegner	
+3     We	
+3     What	
+3     White	
+3     Witt	
+3     Xavier	
+3     YEAH	
+3     Yay	
+3     Yes	
+3     account	
+3     adden	
+3     ahh	
+3     aka	
+3     akku	
+3     album	
+3     alkohol	
+3     apa	
+3     aqui	
+3     ard	
+3     arsch	
+3     art	
+3     aso	
+3     ausgang	
+3     ava	
+3     banyak	
+3     bb	
+3     bella	
+3     bissl	
+3     bock	
+3     bom	
+3     boys	
+3     bpt	
+3     bt	
+3     buat	
+3     bus	
+3     bzw	
+3     chemie	
+3     chillin	
+3     chrom	
+3     couch	
+3     crocs	
+3     dad	
+3     ding	
+3     downloaden	
+3     draus	
+3     ei	
+3     eis	
+3     entfolgst	
+3     erinnerungen	
+3     erlich	
+3     familie	
+3     feat	
+3     feier	
+3     fine	
+3     flasche	
+3     follower	
+3     frau	
+3     free	
+3     freunde	
+3     friends	
+3     gaaaanz	
+3     gaga	
+3     gak	
+3     ge	
+3     gebloggt	
+3     gehn	
+3     gitarre	
+3     gl	
+3     google	
+3     grossen	
+3     gruppe	
+3     habn	
+3     hahahaha	
+3     ham	
+3     heissen	
+3     hi	
+3     hilfe	
+3     hinbekomme	
+3     ho	
+3     hochgeladen	
+3     holland	
+3     home	
+3     hust	
+3     hät	
+3     hö	
+3     icq	
+3     ihrs	
+3     info	
+3     isses	
+3     jadi	
+3     japp	
+3     jep	
+3     jepp	
+3     jez	
+3     jo	
+3     jojo	
+3     kacken	
+3     kaffee	
+3     kaka	
+3     kanns	
+3     karte	
+3     katze	
+3     ki	
+3     lama	
+3     langsung	
+3     le	
+3     leine	
+3     lg	
+3     lmao	
+3     makin	
+3     match	
+3     mensen	
+3     mer	
+3     mh	
+3     mitreissen	
+3     mittwoch	
+3     mom	
+3     moment	
+3     movie	
+3     musik	
+3     mutter	
+3     männer	
+3     naar	
+3     nciht	
+3     nd	
+3     neet	
+3     ni	
+3     nice	
+3     nurnoch	
+3     nya	
+3     nä	
+3     och	
+3     oha	
+3     ohh	
+3     oje	
+3     olle	
+3     oooh	
+3     org	
+3     pic	
+3     pink	
+3     pizza	
+3     plan	
+3     pls	
+3     pp	
+3     present	
+3     profil	
+3     rauf	
+3     rauskommen	
+3     ricardo.	
+3     right	
+3     rüber	
+3     sale	
+3     sapa	
+3     sau	
+3     schatje	
+3     schluss	
+3     schwanz	
+3     sic	
+3     sis	
+3     sorry.	
+3     standard	
+3     star	
+3     stehts	
+3     stück	
+3     sweet	
+3     sz	
+3     tabletten	
+3     tages	
+3     test	
+3     timeline	
+3     tisch	
+3     tod	
+3     too	
+3     träum	
+3     ts	
+3     twittere	
+3     tztztz	
+3     ui	
+3     unverbraucht	
+3     upd	
+3     usb	
+3     usw	
+3     vem	
+3     ver	
+3     vi	
+3     voten	
+3     vão	
+3     weis	
+3     weißte	
+3     wetter	
+3     what	
+3     wien	
+3     wohnung	
+3     work	
+3     wort	
+3     xDDDD	
+3     xo	
+3     yach	
+3     yay	
+3     yo	
+3     zyn	
+3     à	
+3     äh	
+3     österreich	
+2     #1DonGermanTVtoday	hash_tag
+2     #Adventsk	hash_tag
+2     #Austria	hash_tag
+2     #BPT11	hash_tag
+2     #Battlefield3	hash_tag
+2     #BeaverCreek	hash_tag
+2     #Birkenbihl	hash_tag
+2     #Castor	hash_tag
+2     #Comedy	hash_tag
+2     #ComedyCentral	hash_tag
+2     #Crozza	hash_tag
+2     #CuReSoft	hash_tag
+2     #DEPR	hash_tag
+2     #EinsExtra	hash_tag
+2     #EinsPlus	hash_tag
+2     #FCBayern	hash_tag
+2     #FCK	hash_tag
+2     #Fahrraeder	hash_tag
+2     #Fewo	hash_tag
+2     #FloraPower	hash_tag
+2     #Followerpower	hash_tag
+2     #Galaxy	hash_tag
+2     #Germany	hash_tag
+2     #Guben	hash_tag
+2     #HIMYM	hash_tag
+2     #Jülich	hash_tag
+2     #KSC	hash_tag
+2     #LastActionSEO	hash_tag
+2     #MEGADOTS	hash_tag
+2     #MEGATEST	hash_tag
+2     #NP	hash_tag
+2     #Phoenix	hash_tag
+2     #Podolski	hash_tag
+2     #ProSieben	hash_tag
+2     #Promifunk	hash_tag
+2     #SWR	hash_tag
+2     #SWTOR	hash_tag
+2     #Silent	hash_tag
+2     #Superflat	hash_tag
+2     #Twittercharts	hash_tag
+2     #VOICE	hash_tag
+2     #WettenDas	hash_tag
+2     #adobe	hash_tag
+2     #adventskalender	hash_tag
+2     #afghanistan	hash_tag
+2     #auslosung	hash_tag
+2     #auto	hash_tag
+2     #awlb	hash_tag
+2     #badminton	hash_tag
+2     #bcruhr5	hash_tag
+2     #berli	hash_tag
+2     #beuel	hash_tag
+2     #bonn	hash_tag
+2     #bpt	hash_tag
+2     #campixx	hash_tag
+2     #cop17	hash_tag
+2     #derStandardNewsroom	hash_tag
+2     #ek2012	hash_tag
+2     #eps	hash_tag
+2     #erotik	hash_tag
+2     #esports	hash_tag
+2     #euro2012	hash_tag
+2     #fcbayern	hash_tag
+2     #fcsp	hash_tag
+2     #federball	hash_tag
+2     #film	hash_tag
+2     #fm303	hash_tag
+2     #forum	hash_tag
+2     #gangbang	hash_tag
+2     #gebloggt	hash_tag
+2     #gov20	hash_tag
+2     #gov2vie	hash_tag
+2     #gruene	hash_tag
+2     #holzfäller	hash_tag
+2     #jena	hash_tag
+2     #klimawandel	hash_tag
+2     #ksc	hash_tag
+2     #kulturzwitscher	hash_tag
+2     #ldkBB11	hash_tag
+2     #markt	hash_tag
+2     #mittelstand	hash_tag
+2     #musseinfachmalgesagtsein	hash_tag
+2     #poldi	hash_tag
+2     #promojob	hash_tag
+2     #rabatt	hash_tag
+2     #radio	hash_tag
+2     #rotblaulive	hash_tag
+2     #sc12	hash_tag
+2     #schlager	hash_tag
+2     #simulator	hash_tag
+2     #skichallenge	hash_tag
+2     #skyrim	hash_tag
+2     #socialmedia	hash_tag
+2     #spd11	hash_tag
+2     #ssnhd	hash_tag
+2     #svw	hash_tag
+2     #thedome	hash_tag
+2     #ttms	hash_tag
+2     #twa	hash_tag
+2     #tweetkalender	hash_tag
+2     #twexit	hash_tag
+2     #twitterlauftreff	hash_tag
+2     #twuenchen4	hash_tag
+2     #twuizzer	hash_tag
+2     #wdr	hash_tag
+2     #we	hash_tag
+2     #weihnachten	hash_tag
+2     #wettendas	hash_tag
+2     #xmas	hash_tag
+2     #Ãkostromanbieter	hash_tag
+2     #Ãkostromkosten	hash_tag
+2     #Ãkostrompreise	hash_tag
+2     @1DStreetteamGER	at_token
+2     @1selina	at_token
+2     @343max	at_token
+2     @Afelia	at_token
+2     @Aggi_2211	at_token
+2     @Aha_Ein_Keks_	at_token
+2     @Aitheena	at_token
+2     @Alan_Berlin69	at_token
+2     @AlicieLion	at_token
+2     @AlinaMoehn	at_token
+2     @AnEmptyPromise	at_token
+2     @AndreR241	at_token
+2     @AntonioGrazian	at_token
+2     @Applewar	at_token
+2     @ArianaBow	at_token
+2     @Arrivedwithyou	at_token
+2     @AthariDrawer	at_token
+2     @BeautyBetty84	at_token
+2     @Bers0lli	at_token
+2     @BlackChester	at_token
+2     @BoyItsOnlyU	at_token
+2     @BringCodyToGER	at_token
+2     @BugsB	at_token
+2     @BunterKneten	at_token
+2     @COMPUTENTsecure	at_token
+2     @CanBerber	at_token
+2     @Carinaaaa_	at_token
+2     @Caroouuu	at_token
+2     @Caros_Kaffee	at_token
+2     @Chazewill	at_token
+2     @ChrisPrinzMusik	at_token
+2     @Chrissie_61	at_token
+2     @ClaudusQa	at_token
+2     @Claus_Pandi	at_token
+2     @Coladewe	at_token
+2     @DaKrys	at_token
+2     @DanKuta	at_token
+2     @DasDodo	at_token
+2     @Dear_Insanity	at_token
+2     @Divasmind	at_token
+2     @DonnahSummer	at_token
+2     @DrachenHerz	at_token
+2     @DuDoooo5	at_token
+2     @ESL	at_token
+2     @EchelonLaura	at_token
+2     @EgoTripMSR	at_token
+2     @Enigma424	at_token
+2     @ExMarbuergerin	at_token
+2     @FabelF	at_token
+2     @FabulousEsra	at_token
+2     @FcZuerich1	at_token
+2     @FelixBrandwein	at_token
+2     @FensterRentner	at_token
+2     @FineARTCologne	at_token
+2     @GameWolf	at_token
+2     @GermanStylators	at_token
+2     @Glamnbert	at_token
+2     @Glimmermaedchen	at_token
+2     @Gloeckchen27	at_token
+2     @GomezStew	at_token
+2     @HBrunoo	at_token
+2     @Habbo_Sm23	at_token
+2     @HandsomeLogan	at_token
+2     @HannaJulian	at_token
+2     @HerrDemodex	at_token
+2     @HerrIdefix	at_token
+2     @Hirngestoert	at_token
+2     @IJustinbieberJB	at_token
+2     @IboSC2	at_token
+2     @Inspiritx3	at_token
+2     @JananasGold	at_token
+2     @JayPlusPlus	at_token
+2     @Jeff_Tichar	at_token
+2     @Jemus42	at_token
+2     @Jettchen88	at_token
+2     @Jettlein	at_token
+2     @JuliaMellark	at_token
+2     @JulianDik	at_token
+2     @Julysmith19	at_token
+2     @JuneXOXO__	at_token
+2     @JwieJaci	at_token
+2     @KRABAT44	at_token
+2     @KathaFreaak	at_token
+2     @KephrenLIVE	at_token
+2     @KevinZukerman	at_token
+2     @KieBook	at_token
+2     @KleeneMelle81	at_token
+2     @KleinePfeife	at_token
+2     @KoebesJakob	at_token
+2     @Kuechendenker	at_token
+2     @Ladiesfirstify	at_token
+2     @LadyColonia	at_token
+2     @Lake_Master	at_token
+2     @Laurax3Sami	at_token
+2     @Lena_HeartLeaf	at_token
+2     @LesPapillions	at_token
+2     @LieutenantGustl	at_token
+2     @Lische_n	at_token
+2     @MacSnider	at_token
+2     @MakMaksan	at_token
+2     @Mariella_x3	at_token
+2     @Marleenx3Sami	at_token
+2     @MartinBeyond	at_token
+2     @Marvication	at_token
+2     @McSchnitzel87	at_token
+2     @Mc_Lina_	at_token
+2     @MeLikeyKendall	at_token
+2     @MeinJadoreYT	at_token
+2     @MemiCrown	at_token
+2     @MerkelsSchatten	at_token
+2     @MerlinausAvalon	at_token
+2     @MichaelJaegerTV	at_token
+2     @Minusmensch	at_token
+2     @Miri_the_Kiri	at_token
+2     @MissRandom1986	at_token
+2     @MissVanilly	at_token
+2     @Missdilan	at_token
+2     @Monnty2690	at_token
+2     @Mortefarfalla	at_token
+2     @MoviezKult	at_token
+2     @MrWeg	at_token
+2     @Muermel	at_token
+2     @MurielKelleher	at_token
+2     @NellyNiveaulog	at_token
+2     @NessysWelt	at_token
+2     @NewHowTV	at_token
+2     @Nicoo4797	at_token
+2     @NikSput	at_token
+2     @NinaLovesAriana	at_token
+2     @NoodLe3105	at_token
+2     @OfficialArdianB	at_token
+2     @OhOh_itsMagic	at_token
+2     @OneDirectionAUT	at_token
+2     @PaImtopTiger	at_token
+2     @PatrickBernau	at_token
+2     @Pendlomator	at_token
+2     @PinkPlushWolfy	at_token
+2     @PottAgent	at_token
+2     @RADiO_HYSTERiA	at_token
+2     @RRRockstah	at_token
+2     @RazulAllah	at_token
+2     @RedAngryBird	at_token
+2     @Reinholdus	at_token
+2     @Roockwood	at_token
+2     @Roxaen	at_token
+2     @SPIEGELONLINE	at_token
+2     @Samaire	at_token
+2     @SarahIsPlobnrg	at_token
+2     @SarahK_96	at_token
+2     @Sassu77	at_token
+2     @SchokooMaedchen	at_token
+2     @SeaShepherdDe	at_token
+2     @ShannyVengeance	at_token
+2     @SkySportNewsHD	at_token
+2     @SmilerFiona	at_token
+2     @SnowWittchen	at_token
+2     @Snowcat2070	at_token
+2     @Sollozzo01	at_token
+2     @Sommermaedchen_	at_token
+2     @StarlightCyrus	at_token
+2     @Stef_aus_NRW	at_token
+2     @Steffenster	at_token
+2     @StereoSushisu	at_token
+2     @SteveKanonfreak	at_token
+2     @SteveRueck	at_token
+2     @Stousn	at_token
+2     @Suizidkatze87	at_token
+2     @TheHeartBeatx	at_token
+2     @TheHollyBennett	at_token
+2     @TheOnlyKatha	at_token
+2     @TiinaaLOL	at_token
+2     @TimCattrall	at_token
+2     @Timbanikki	at_token
+2     @UARRR	at_token
+2     @Unschuldsjunge	at_token
+2     @UnsurpassableS	at_token
+2     @VFC_FreakYoYo95	at_token
+2     @Valerieous	at_token
+2     @VellaAhalla	at_token
+2     @Vicky_Freaky	at_token
+2     @Voutshy	at_token
+2     @Waldseepiratin	at_token
+2     @Weseresk	at_token
+2     @Whitypo	at_token
+2     @Wishu_Kaiser	at_token
+2     @Xanatori	at_token
+2     @YahooDE	at_token
+2     @Youarenotme2	at_token
+2     @Zoor	at_token
+2     @Zott_Monti	at_token
+2     @Zuckermaedchen_	at_token
+2     @_CaptainDan_	at_token
+2     @_EnsarAnanas	at_token
+2     @_Germanboy_	at_token
+2     @_LadyGomez	at_token
+2     @_Wolfsmaedchen	at_token
+2     @_kleinMue	at_token
+2     @_konna_	at_token
+2     @_noujoum	at_token
+2     @_phoeni	at_token
+2     @_windrunner	at_token
+2     @aceitocartao	at_token
+2     @aecids	at_token
+2     @aggro_	at_token
+2     @alexdd55	at_token
+2     @alleineohnedich	at_token
+2     @ally_alert	at_token
+2     @alostsong	at_token
+2     @alx42	at_token
+2     @andiheimann	at_token
+2     @andizottmann	at_token
+2     @annafeebaum	at_token
+2     @antiprodukt	at_token
+2     @anton290	at_token
+2     @apfelcutter	at_token
+2     @apple_Paaaapple	at_token
+2     @atomazing	at_token
+2     @babyfell	at_token
+2     @babylovely_	at_token
+2     @bartmeise	at_token
+2     @beastlygray	at_token
+2     @benni_b	at_token
+2     @birtily	at_token
+2     @blutenderEngel	at_token
+2     @buergerstimme	at_token
+2     @cajongroove	at_token
+2     @caro_JM4ever	at_token
+2     @chanmahardhika	at_token
+2     @chieff89	at_token
+2     @chresmos	at_token
+2     @christiansoeder	at_token
+2     @christopherkohn	at_token
+2     @christopheruck	at_token
+2     @codePrincess	at_token
+2     @coldmirror	at_token
+2     @copgirl2	at_token
+2     @crazyJEADHEAD	at_token
+2     @daelancrew	at_token
+2     @dailyCbreak	at_token
+2     @danielleicher	at_token
+2     @danielmack	at_token
+2     @danintown	at_token
+2     @dave83x	at_token
+2     @derSachse	at_token
+2     @diamond_tears7	at_token
+2     @dieseStella	at_token
+2     @doktordab	at_token
+2     @dorfgirl	at_token
+2     @dpmdogma	at_token
+2     @einefraueinwort	at_token
+2     @eisy	at_token
+2     @elenoreAM	at_token
+2     @errinatamarad	at_token
+2     @evelinhuter	at_token
+2     @ffleon87	at_token
+2     @flederzombie	at_token
+2     @flexi_bell	at_token
+2     @for_takeaway	at_token
+2     @frasch25	at_token
+2     @fuckyeahitsjuli	at_token
+2     @gallenbitter	at_token
+2     @gelsen	at_token
+2     @gerryreinhardt	at_token
+2     @ggvogt	at_token
+2     @girlontravel	at_token
+2     @gruene_at	at_token
+2     @habichthorn	at_token
+2     @haekelschwein	at_token
+2     @haiku_shelf	at_token
+2     @halbbluthobbit	at_token
+2     @hausmeistah	at_token
+2     @heise_de_tp	at_token
+2     @helenS_mars	at_token
+2     @helmi	at_token
+2     @herrlarbig	at_token
+2     @herzensdenkerin	at_token
+2     @hildwin	at_token
+2     @himbeermaedel	at_token
+2     @hmull	at_token
+2     @hoergen	at_token
+2     @hofrat	at_token
+2     @holadiho	at_token
+2     @hutchinsane_	at_token
+2     @huxi	at_token
+2     @hvkson	at_token
+2     @iHuzu	at_token
+2     @iMarcintosh	at_token
+2     @iPodTouchMichi	at_token
+2     @iceprincess761	at_token
+2     @ichwillansMeer	at_token
+2     @infopointaudim	at_token
+2     @inforrupt	at_token
+2     @inkabrunini	at_token
+2     @inschka	at_token
+2     @jammiHH	at_token
+2     @jensbernau	at_token
+2     @jenshoffmann	at_token
+2     @jensscholz	at_token
+2     @joch_n	at_token
+2     @johoheka4G	at_token
+2     @julia_witt	at_token
+2     @karin1210	at_token
+2     @karrierebibel	at_token
+2     @kc__dc	at_token
+2     @kegelklub	at_token
+2     @kesseltv	at_token
+2     @kikamagazin	at_token
+2     @kleinerrpunkt	at_token
+2     @knuddellove	at_token
+2     @knuffelbaerchen	at_token
+2     @komal187	at_token
+2     @koolsavas	at_token
+2     @korbinian	at_token
+2     @laRossa05	at_token
+2     @laprintemps	at_token
+2     @lelei	at_token
+2     @lieselm	at_token
+2     @linksfraktion	at_token
+2     @lisa_germany	at_token
+2     @luisas_view	at_token
+2     @lutzii_TBG	at_token
+2     @luziehtan_blog	at_token
+2     @macerkopf_de	at_token
+2     @madame_dine	at_token
+2     @maharradit	at_token
+2     @mala1978	at_token
+2     @marcopolo71	at_token
+2     @marcozehe	at_token
+2     @marslight1185	at_token
+2     @matthiasoomen	at_token
+2     @mattiada	at_token
+2     @maybe_innocent	at_token
+2     @melimedhe	at_token
+2     @meloveshopesolo	at_token
+2     @menschentalent	at_token
+2     @mh120480	at_token
+2     @michl_mueller	at_token
+2     @mingo713	at_token
+2     @mischpoke84	at_token
+2     @mix3bi	at_token
+2     @moellus	at_token
+2     @moni004	at_token
+2     @moritzadler	at_token
+2     @mrschtief	at_token
+2     @mrsjaebeom_	at_token
+2     @mueslikind	at_token
+2     @my7voices	at_token
+2     @nannilinchen	at_token
+2     @nasenfaktor	at_token
+2     @natalierulez_	at_token
+2     @nerdprinzessli	at_token
+2     @netnrd	at_token
+2     @neverchuckless	at_token
+2     @neverevertown	at_token
+2     @nichtstefanraab	at_token
+2     @nightingale78	at_token
+2     @nkaulfuss	at_token
+2     @nkotbgermany	at_token
+2     @oberschaetzchen	at_token
+2     @ozanstoppable	at_token
+2     @pantoffelpunk	at_token
+2     @pauli_pirat	at_token
+2     @peed62	at_token
+2     @peterbreuer	at_token
+2     @petertauber	at_token
+2     @phoenix_de	at_token
+2     @photobix	at_token
+2     @phroton	at_token
+2     @piratenproll	at_token
+2     @prasti_minja	at_token
+2     @prinzessin_cat	at_token
+2     @promotionbasis	at_token
+2     @pseudoerbse	at_token
+2     @queen0fpr0mise	at_token
+2     @radiocottbus	at_token
+2     @rebiger	at_token
+2     @remaininlullaby	at_token
+2     @ricardo_ch	at_token
+2     @riotburnz	at_token
+2     @rnl_handball	at_token
+2     @roxor1911	at_token
+2     @rrho	at_token
+2     @sannipopanni	at_token
+2     @saschu2011	at_token
+2     @schokoeeis	at_token
+2     @sekor	at_token
+2     @simonelang	at_token
+2     @simyo	at_token
+2     @sleepy_housecat	at_token
+2     @solflora	at_token
+2     @spdbawue	at_token
+2     @spox	at_token
+2     @stn1978	at_token
+2     @sunnypedia1987	at_token
+2     @sunra1n_	at_token
+2     @svente_fox	at_token
+2     @swaglikemileyx	at_token
+2     @sweetJordanK	at_token
+2     @tanjanonymous	at_token
+2     @thalertom	at_token
+2     @theuer	at_token
+2     @thomrosenhagen	at_token
+2     @tilman36	at_token
+2     @timpritlove	at_token
+2     @tinchenxxxx	at_token
+2     @titanic	at_token
+2     @tobiasgillen	at_token
+2     @tolga93	at_token
+2     @trmtnzr	at_token
+2     @trueffi	at_token
+2     @ttms_de	at_token
+2     @ufomedia	at_token
+2     @validom	at_token
+2     @vivaonline	at_token
+2     @wandgrab	at_token
+2     @wellpresso	at_token
+2     @westsideblogger	at_token
+2     @woiz	at_token
+2     @worst_day_ever	at_token
+2     @wsonja35	at_token
+2     @wunderfitzig	at_token
+2     @wurstkommission	at_token
+2     @xAussenseiterin	at_token
+2     @xFraanzii	at_token
+2     @xSmileForBTRx	at_token
+2     @xTherapie	at_token
+2     @xUschiObermyla	at_token
+2     @xheckyesbieber	at_token
+2     @xtypischtieners	at_token
+2     @yanyanmerong	at_token
+2     @yewa	at_token
+2     @zeitimbild	at_token
+2     @zimtsternin	at_token
+2     @zwyback	at_token
+2     ABE	
+2     ATO40	
+2     AWESOME	
+2     AX	
+2     Aaron	
+2     Abs	
+2     Achern	
+2     Active	
+2     Actors	
+2     Admin	
+2     Ads	
+2     Agility	
+2     Ahh	
+2     Ahhh	
+2     Akoya	
+2     Al	
+2     Aloha	
+2     Alois	
+2     America	
+2     Anastasia	
+2     Andi	
+2     Angelo	
+2     Angels	
+2     Animexx	
+2     Anschlußstelle	
+2     Anstoss	
+2     Arcanoa	
+2     Arlberg	
+2     Aspire	
+2     Aussenbordmotor	
+2     Ausserdem	
+2     Autsch	
+2     Ava	
+2     Axo	
+2     Azubi	
+2     Azumi	
+2     BB	
+2     BKH	
+2     BMV	
+2     BROTHER	
+2     BTR	
+2     BTW	
+2     Banksterkanzlerin	
+2     Baunatal	
+2     Bautzen	
+2     Bazooka	
+2     Be	
+2     Beauty	
+2     Beckum	
+2     Bells	
+2     Berchet	
+2     Berlinale	
+2     Bernau	
+2     Bienchen	
+2     Bitch	
+2     BlackBerry	
+2     Blade	
+2     Blah	
+2     Blue	
+2     Bobadilla	
+2     Bogy	
+2     Bolle	
+2     Bond	
+2     BossHoss	
+2     Bots	
+2     Bundle	
+2     Buzzer	
+2     Börner	
+2     Büsser	
+2     CARDEA	
+2     CARE	
+2     CC	
+2     CE	
+2     CHF	
+2     CLOSE	
+2     CPI	
+2     CSS	
+2     CUBASE	
+2     CX	
+2     Cadeautjes	
+2     Cafe	
+2     Call	
+2     Card	
+2     Casa	
+2     Casper	
+2     Casting	
+2     Castings	
+2     CentrO	
+2     Central	
+2     Championship	
+2     Chelsea	
+2     Chihuahuas	
+2     Chillen	
+2     Chocola	
+2     Christkindlmarkt	
+2     Christopher	
+2     Chrome	
+2     Cindy	
+2     CityVille	
+2     Clasico	
+2     Classic	
+2     Click	
+2     Cloud	
+2     Cocina	
+2     Coda	
+2     Coen	
+2     Commerce	
+2     Connox	
+2     Contest	
+2     Cosmo	
+2     Court	
+2     Crystal	
+2     Cyrus	
+2     DHB	
+2     DIe	
+2     DOSB	
+2     Dabeisein	
+2     Dachdämmung	
+2     Dahoam	
+2     DailyDeal	
+2     Dawn	
+2     Days	
+2     Dbox2	
+2     Demosthenes	
+2     Derby	
+2     Despora	
+2     Deu	
+2     Diaries	
+2     Dikka	
+2     Dinner	
+2     Direction	
+2     Directory	
+2     Dott	
+2     DropBox	
+2     Dropbox	
+2     DuMont	
+2     Durban	
+2     EA	
+2     EBK	
+2     EHF	
+2     EYES	
+2     Easy	
+2     Ebay	
+2     Ebersbach	
+2     Ehr	
+2     Elektrogeraet	
+2     Elvis	
+2     Emmy	
+2     Emo	
+2     Eppendorf	
+2     Equinet	
+2     Eric	
+2     Erlanger	
+2     Erotikmesse	
+2     Exo	
+2     FCB	
+2     FEB	
+2     FOCUS	
+2     FPÖ	
+2     FU	
+2     FUCK	
+2     Faißt	
+2     Fake	
+2     Fanclub	
+2     Fanpage	
+2     Farid	
+2     Feed	
+2     Figl	
+2     Finance	
+2     Flo	
+2     Flux	
+2     Fohr	
+2     Folgenswert	
+2     Follow	
+2     Force	
+2     Forsc	
+2     Foursquare	
+2     Fraport	
+2     Fred	
+2     Fuchsberger	
+2     Full	
+2     Fussball	
+2     GERMAN	
+2     GORGEOUS	
+2     Gagas	
+2     Gameplay	
+2     Gaming	
+2     Garavani	
+2     Gary	
+2     Gastebuch	
+2     Gentner	
+2     Gero	
+2     Get	
+2     Gibts	
+2     Gin	
+2     Gladbeck	
+2     Glitzer	
+2     Glucksquell	
+2     Glueck	
+2     Go	
+2     Goalunited	
+2     Goerke24.	
+2     Gomez	
+2     Goodbye	
+2     Grand	
+2     Grosse	
+2     Grossmütter	
+2     Group	
+2     Gähn	
+2     Götz	
+2     HIERBOVEN	
+2     HOCK	
+2     HSV	
+2     HTCInside	
+2     Ha	
+2     Haan	
+2     Haas	
+2     Hamid	
+2     Hamm	
+2     Hamsterrad	
+2     Hangouts	
+2     Hansel	
+2     Hartz	
+2     Head	
+2     Hebeanlage	
+2     Heesters	
+2     Hehe	
+2     Hello	
+2     Helloween	
+2     Henava	
+2     Herdprämie	
+2     Herman	
+2     Heroine	
+2     Herten	
+2     Herzogenrath	
+2     Heut	
+2     Heynckes	
+2     Hilfeeee	
+2     Hm.	
+2     Hofer	
+2     Holzspalter	
+2     Home	
+2     Hoppla	
+2     Huch	
+2     Hä	
+2     IKEA	
+2     IPad	
+2     Ian	
+2     Ibooks	
+2     Iconia	
+2     Ik	
+2     Indie	
+2     Infinity	
+2     Interio	
+2     Intro	
+2     Irwie	
+2     Isch	
+2     Jaaa	
+2     Jana	
+2     Jannis	
+2     Jap	
+2     Jessi	
+2     Jessie	
+2     Jingle	
+2     Joa	
+2     Jobber	
+2     Jobclick.	
+2     Joe	
+2     Jogi	
+2     Joko	
+2     Jop	
+2     Jos	
+2     Jump	
+2     KTM	
+2     Kabhi	
+2     Kanns	
+2     Kannste	
+2     Kareen	
+2     Karma	
+2     Karsai	
+2     Kerner	
+2     Kerpen	
+2     King	
+2     Kloten	
+2     Koble	
+2     Kommafehler	
+2     Komplottes	
+2     Kristina	
+2     Kroos	
+2     KsvTRbhL	
+2     Ku	
+2     Kühlschr.	
+2     LR	
+2     LTE	
+2     Lego	
+2     Leigh	
+2     Les	
+2     Leutle	
+2     Li	
+2     Lie	
+2     Lifestyle	
+2     Lillehammer	
+2     Linkliste	
+2     Lioness	
+2     Lippert	
+2     Literatwo	
+2     Little	
+2     Livecam	
+2     LoL	
+2     Logic	
+2     Loh	
+2     Lookslikelink	
+2     Loszeremonie	
+2     Ludwigslust	
+2     Lusso	
+2     Lyrics	
+2     Län	
+2     Lünen	
+2     MAGIX	
+2     MAS	
+2     MG	
+2     MT	
+2     MTN	
+2     MTV	
+2     MURO	
+2     MZ	
+2     Madipedia	
+2     Mahler	
+2     Majo	
+2     Mariah	
+2     Maronen	
+2     Marry	
+2     Mass	
+2     Maxi	
+2     Maxxus	
+2     Mbit	
+2     Mc	
+2     Mckinley	
+2     MediaMarkt	
+2     Mediadesign	
+2     Mediation	
+2     Medical	
+2     Medion	
+2     MeinPaket	
+2     Melancholia	
+2     Men	
+2     Mercury	
+2     Micro	
+2     Mikro	
+2     Mirko	
+2     Mittweida	
+2     Mixtape	
+2     Montana	
+2     MooTools	
+2     Mose	
+2     Motion	
+2     Movie	
+2     Mp3	
+2     Munchen	
+2     Music	
+2     Must	
+2     Märktel.	
+2     NDS	
+2     NEWAYS	
+2     NHL	
+2     NLP	
+2     NO	
+2     Nabucco	
+2     Nahles	
+2     Nails	
+2     Napster	
+2     Nationalelf	
+2     Navi	
+2     Neckholder	
+2     Nen	
+2     Nena	
+2     Net	
+2     Never	
+2     Newman	
+2     Newsticker	
+2     Ni	
+2     Nicolas	
+2     Nieblum	
+2     Niebüll	
+2     Niggemeier	
+2     Nivea	
+2     Noir	
+2     Norman	
+2     Nu	
+2     Nuala	
+2     Nudelfee	
+2     OG	
+2     OO	
+2     Ohja	
+2     Organizer	
+2     Osnabrücker	
+2     Oststeinbek	
+2     Outfit	
+2     PE	
+2     PUKY	
+2     PVR	
+2     Pa	
+2     Pasen	
+2     Pauli	
+2     Peer	
+2     Perlgarn	
+2     Perro	
+2     Petry	
+2     Pff	
+2     Pimp	
+2     Ping	
+2     Pinkelpause	
+2     Pjanoo	
+2     Pokemon	
+2     Polish	
+2     Polix	
+2     Pollitz	
+2     Polo	
+2     Polyester	
+2     Poncho	
+2     Ponyhof	
+2     Popcorn	
+2     Porn	
+2     Potter	
+2     Pr	
+2     Praktiko	
+2     Princess	
+2     Probier	
+2     Proclear	
+2     Prof	
+2     Prydz	
+2     Prödl	
+2     Pussy	
+2     Putins	
+2     QT	
+2     QooQoon	
+2     Quetschkalotten	
+2     Quizfrage	
+2     Quizspiel	
+2     Quotes	
+2     RETWEET	
+2     RIM	
+2     RL	
+2     RNK	
+2     ROFL	
+2     RSC	
+2     RSS	
+2     Ra	
+2     Rack	
+2     Radolfzell	
+2     Raffhose	
+2     Ramen	
+2     Rammschutz	
+2     Ranking	
+2     Ratenkredit	
+2     Rayman	
+2     Raymond	
+2     Rea	
+2     Reader	
+2     Rees	
+2     Reflecta	
+2     Reichensteuer	
+2     Relaunch	
+2     Remake	
+2     Replay	
+2     Reunion	
+2     Revelations	
+2     Rhodan	
+2     Rhon	
+2     Rica	
+2     Rida	
+2     Rihanna	
+2     Robertson	
+2     Rofl	
+2     Ron	
+2     Rosso	
+2     Rotz	
+2     Rousseff	
+2     Row	
+2     Ruhrpott	
+2     Ryan	
+2     Räikkönen	
+2     Rösler	
+2     Rübenberge	
+2     SALE	
+2     SEH	
+2     SL	
+2     SM	
+2     SN	
+2     SSD	
+2     ST2	
+2     SUV	
+2     SX	
+2     Saarlouis	
+2     Sachsenring	
+2     Sale	
+2     Sami	
+2     Sarkozy	
+2     Sarvar	
+2     Sat1	
+2     Scandlines	
+2     Scenery	
+2     Schatzchen	
+2     Scheffler	
+2     Schiri	
+2     Schoki	
+2     School	
+2     Schortens	
+2     Schutzengelbilder	
+2     Schwalbach	
+2     Scott	
+2     Script	
+2     Scrubs	
+2     Scénic	
+2     Sea	
+2     Second	
+2     Series	
+2     Setlur	
+2     Sevelen	
+2     Sexcam	
+2     Seyfarth	
+2     Shine	
+2     Shiply	
+2     Shirts	
+2     Shoppen	
+2     Simpson	
+2     Sinterklaas	
+2     Skyrim	
+2     Smartphones	
+2     Smeet	
+2     Smile	
+2     Solingen	
+2     Somerhalder	
+2     Sorgerecht	
+2     Soso	
+2     Sourcrowd	
+2     SpOn	
+2     Specials	
+2     Spencer	
+2     Spielemagazin	
+2     Std	
+2     Stendal	
+2     Sticks	
+2     Stocker	
+2     Stokke	
+2     Stop	
+2     Straks	
+2     Subliminals	
+2     Suesser	
+2     Summinet	
+2     Sunshine	
+2     Supi	
+2     Swingerparty	
+2     Sync	
+2     TB	
+2     TBG	
+2     TERRARIUM	
+2     TG	
+2     TIME	
+2     TUV	
+2     Tac	
+2     Tak	
+2     Tangled	
+2     TechniSat	
+2     Teds	
+2     Teen	
+2     Th	
+2     Thai	
+2     Thank	
+2     This	
+2     Tic	
+2     Tihi	
+2     Tips	
+2     Together	
+2     Tokyo	
+2     Tollwood	
+2     Torsten	
+2     Tr	
+2     Track	
+2     Tradigist	
+2     Trainee	
+2     Traume	
+2     Treasures”	
+2     Tripp	
+2     Tschagajew	
+2     Twitpic	
+2     UK	
+2     Uber	
+2     Uckermann	
+2     Uh	
+2     Ulbig	
+2     Uli	
+2     Usher	
+2     VIGNON	
+2     Val	
+2     Valentino	
+2     Vera	
+2     Verjaardag	
+2     Very	
+2     Vettel	
+2     VfL	
+2     Vielzitzenmäuse	
+2     Viersen	
+2     ViralUrl	
+2     Vitelle	
+2     Votze	
+2     WD	
+2     WH	
+2     WOW	
+2     WZ	
+2     Wa	
+2     Wah	
+2     Walk	
+2     Wau	
+2     Wave	
+2     Weicon	
+2     Welcome	
+2     Wels	
+2     Wenns	
+2     Why	
+2     WiFi	
+2     WikiLeaks	
+2     Wilpert	
+2     Windabweiser	
+2     Wintec	
+2     WippWalker	
+2     Wisconsin	
+2     Wissenschafter	
+2     Wohn	
+2     Women’s	
+2     WordPress	
+2     World	
+2     WpHG	
+2     Wuhu	
+2     Wulff	
+2     Wärmetauscher	
+2     Wünsch	
+2     XDDDDDD	
+2     XXL	
+2     Xmas	
+2     Xylitol	
+2     YB	
+2     YOUR	
+2     Yep	
+2     You	
+2     Young	
+2     Youporn	
+2     Zelda	
+2     Zillertal	
+2     Zubehoer	
+2     Zuviel	
+2     aba	
+2     abgesprengt	
+2     abierta	
+2     absicht	
+2     achja	
+2     adventskalender	
+2     aha	
+2     ahaha	
+2     ahahahah	
+2     ahhhh	
+2     al	
+2     alay	
+2     alls	
+2     amanha	
+2     andrea	
+2     anfang	
+2     ank	
+2     annoying	
+2     anschluss	
+2     anyone	
+2     are	
+2     arena	
+2     argh	
+2     artar	
+2     artikel	
+2     as	
+2     asia	
+2     atuh	
+2     ausser	
+2     ausserdem	
+2     aynen	
+2     baby	
+2     backbord	
+2     bad	
+2     bastel	
+2     bauch	
+2     bayreuth	
+2     bday	
+2     be	
+2     beat	
+2     beber	
+2     befreuntet	
+2     beine	
+2     beli	
+2     berug	
+2     beschä	
+2     best	
+2     better	
+2     bettwäsche	
+2     bieber	
+2     biin	
+2     bij	
+2     bilder	
+2     bins	
+2     bir	
+2     biste	
+2     bit.	
+2     boa	
+2     br	
+2     bravo	
+2     bro	
+2     broo	
+2     bu	
+2     buchstaben	
+2     button	
+2     ca	
+2     cam	
+2     cari	
+2     ccm	
+2     cd	
+2     checken	
+2     chillen	
+2     cih	
+2     club	
+2     cok	
+2     comSysto	
+2     coolsten	
+2     cyberport	
+2     daa	
+2     daaa	
+2     daar	
+2     dah	
+2     dallas	
+2     darfste	
+2     dd	
+2     deal	
+2     debatte	
+2     deh	
+2     deluxe	
+2     dennen	
+2     depri	
+2     dey	
+2     dh	
+2     dialekt	
+2     diamantiert	
+2     dirk	
+2     dissen	
+2     diye	
+2     doeix	
+2     dolle	
+2     donaukurier.	
+2     download	
+2     draussen	
+2     drum	
+2     duisburg	
+2     dun	
+2     duu	
+2     düsseldorf	
+2     düştükçe	
+2     ebay	
+2     een	
+2     eier	
+2     eigentl.	
+2     electronic	
+2     eltern	
+2     email	
+2     entfolgt	
+2     erdkunde	
+2     erinner	
+2     esch	
+2     ess	
+2     etw	
+2     eu	
+2     euro	
+2     ey.	
+2     fail	
+2     fands	
+2     fang	
+2     farbe	
+2     fernsehprogramm	
+2     feuerwehr	
+2     fi	
+2     fickmaul	
+2     first	
+2     fiyat	
+2     followerpower	
+2     form	
+2     forum	
+2     fotos	
+2     frauen	
+2     freitickets	
+2     freude	
+2     friedhöfe.	
+2     funny	
+2     fußball	
+2     fü	
+2     gaa	
+2     ganti	
+2     gay	
+2     gedanken	
+2     geheimnis	
+2     gelegenheit	
+2     geniesst	
+2     gepruft	
+2     gerad	
+2     geretweetet	
+2     geschenke	
+2     geschichte	
+2     geschichtsträchtige	
+2     geschri	
+2     gewundert	
+2     gg.	
+2     gibi	
+2     gigaspeed	
+2     git	
+2     gk	
+2     gladbach	
+2     gnaaa	
+2     goede	
+2     gold	
+2     gone	
+2     got	
+2     gottschalk	
+2     grosser	
+2     grosses	
+2     gruß	
+2     gud	
+2     hahahahaha	
+2     hannah	
+2     hass	
+2     haun	
+2     hauptsache	
+2     have	
+2     hdl	
+2     head	
+2     heey	
+2     heilbronn	
+2     heise	
+2     heisst	
+2     hihihi	
+2     hochgeladen.	
+2     hochzeit	
+2     hoff	
+2     homepage	
+2     homophoben	
+2     hot	
+2     hotel	
+2     hours	
+2     html5	
+2     huft	
+2     hund	
+2     hungry	
+2     hut	
+2     hälfte	
+2     hätts	
+2     höhöhö	
+2     iTunes	
+2     iedereen	
+2     iktisat	
+2     inner	
+2     iphone	
+2     isser	
+2     isso	
+2     itunes	
+2     iwelche	
+2     jagger	
+2     jahren	
+2     jap	
+2     jared	
+2     jed	
+2     jedermanns	
+2     jedesmal	
+2     jmd	
+2     jmd.	
+2     jtz	
+2     jup	
+2     jus	
+2     kackt	
+2     kalender	
+2     kali	
+2     kamel	
+2     kamer	
+2     kannste	
+2     kaya	
+2     ke	
+2     kek	
+2     kenapa	
+2     kijke	
+2     kino.	
+2     kinox	
+2     kiw	
+2     kkk	
+2     kkkkkkkk	
+2     klassiker	
+2     klavier	
+2     ko	
+2     kom	
+2     kommentar	
+2     konzert	
+2     kopfkratz	
+2     kos	
+2     koşan	
+2     krankenhaus	
+2     kucken	
+2     kuduro	
+2     kwi	
+2     kya	
+2     köln	
+2     laeuft	
+2     lak	
+2     lala	
+2     land	
+2     langeweile	
+2     laptop	
+2     laune	
+2     lebens	
+2     lebih	
+2     lenksäulensteuergerät	
+2     lenny	
+2     lern	
+2     letzt	
+2     leuten	
+2     leverkusen	
+2     lisawolf	
+2     loco	
+2     loh	
+2     looken	
+2     low	
+2     lsw	
+2     ludwigshafen	
+2     ly	
+2     läßt	
+2     lünkern	
+2     machts	
+2     mak	
+2     maken	
+2     manno	
+2     mas	
+2     mate	
+2     mathe	
+2     mati	
+2     maus	
+2     mcih	
+2     mega	
+2     meh	
+2     meister	
+2     merci	
+2     mim	
+2     mind	
+2     minuten	
+2     mist	
+2     mitn	
+2     ml	
+2     mlm	
+2     monate	
+2     monaten	
+2     montana	
+2     more	
+2     mousesports	
+2     muka	
+2     mund	
+2     mußte	
+2     naaa	
+2     nachhause	
+2     nachlegen	
+2     nachmittag	
+2     nachricht	
+2     naechsten	
+2     nanti	
+2     nase	
+2     naturgeile	
+2     nazis	
+2     neee	
+2     neeein	
+2     nenn	
+2     neuigkeiten	
+2     ng	
+2     niall	
+2     nichtmehr	
+2     niggas	
+2     nih	
+2     nit	
+2     nk	
+2     non	
+2     not	
+2     nou	
+2     now	
+2     nummer	
+2     nung	
+2     oda	
+2     ohje	
+2     ok.	
+2     oke	
+2     oki	
+2     opo	
+2     ordnung	
+2     ots	
+2     ouml	
+2     outfit	
+2     pa	
+2     pacha	
+2     pack	
+2     parah	
+2     park	
+2     paßt	
+2     pech	
+2     pengen	
+2     pietro	
+2     pingen	
+2     pinkelst	
+2     pisan	
+2     playing	
+2     pon	
+2     port	
+2     postet	
+2     posting	
+2     pra	
+2     proler	
+2     prust	
+2     puncak	
+2     pöbeln	
+2     random	
+2     rathaus	
+2     rbb	
+2     renn	
+2     reply	
+2     rest	
+2     rockt	
+2     rs	
+2     rt	
+2     rtl	
+2     sache	
+2     sachen	
+2     sama	
+2     sami	
+2     says	
+2     sc	
+2     schaft	
+2     schenk	
+2     schenkenhttp	
+2     schleime	
+2     schließ	
+2     schmeiß	
+2     schoen	
+2     schonwieder	
+2     school	
+2     schweiz	
+2     schweizer	
+2     schwester	
+2     seeeehr	
+2     seen	
+2     sehn	
+2     semoga	
+2     setz	
+2     sevinme	
+2     siapa	
+2     sidn	
+2     siehste	
+2     sies	
+2     sih	
+2     sim	
+2     sinn	
+2     sky	
+2     skype	
+2     slecht	
+2     sms	
+2     sol	
+2     song	
+2     spast	
+2     spasti	
+2     spontandemonstration	
+2     sport	
+2     spox.	
+2     stalker	
+2     staub	
+2     std	
+2     stehn	
+2     sten	
+2     story	
+2     strip	
+2     studier	
+2     stylische	
+2     sueddeutsche.	
+2     suit	
+2     szlig	
+2     sänger	
+2     sätze	
+2     süss	
+2     talep	
+2     tante	
+2     tapi	
+2     tasche	
+2     tee	
+2     temen	
+2     termin	
+2     text	
+2     than	
+2     therme	
+2     thumbs	
+2     thx.	
+2     till	
+2     tk	
+2     tl	
+2     tlg	
+2     toi	
+2     trag	
+2     tweetet	
+2     twiät.	
+2     typen	
+2     tätschel	
+2     tür	
+2     türchen	
+2     ua	
+2     uber	
+2     uch	
+2     uhhh	
+2     uhr.	
+2     uhuk	
+2     ujung	
+2     ukuran	
+2     umarm	
+2     umarmung	
+2     ur	
+2     uuh	
+2     vaillant	
+2     valla	
+2     vergess	
+2     verpeilt	
+2     verspätung	
+2     versuchs	
+2     vid	
+2     video.	
+2     vids	
+2     vietnam	
+2     vll	
+2     vllt.	
+2     vorweihnachtszeit	
+2     vou	
+2     vs	
+2     wahnsinn	
+2     wasser	
+2     weetje	
+2     wegn	
+2     weihnachtsmarkt	
+2     weilchen	
+2     well	
+2     werbung	
+2     whoa	
+2     wi	
+2     wiede	
+2     wirtschaft	
+2     wissenschaftl	
+2     wlan	
+2     woah	
+2     woche.	
+2     wohn	
+2     wolke	
+2     worte	
+2     ww	
+2     wärest.	
+2     xD.	
+2     xP	
+2     xperia	
+2     xxxx	
+2     yamaha	
+2     your	
+2     zB	
+2     zdf	
+2     zeiten	
+2     zock	
+2     zoll	
+2     zuende	
+2     zuguckn	
+2     zw.	
+2     ª	
+2     Ø	
+2     ß	
+2     änder	
+2     çok	
+2     é	
+2     öko	
+2     üb	
+2     überleg	
+2     “Amy	
+2     „WE	
+2     한편으로는	

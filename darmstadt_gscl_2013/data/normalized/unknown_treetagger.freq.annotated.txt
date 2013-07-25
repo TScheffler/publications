@@ -1,0 +1,1757 @@
+181   lt	link
+119   bpt112	
+112   gt	link
+96    wettendass	
+79    Facebook	ne:company
+76    Twitter	ne:company
+64    is	fw
+62    ff	abbr
+57    grad	 spell:gerade:deletion; slang
+45    @YouTube	at_token
+43    Amazon	ne:company
+42    Online	neologism
+41    Stardoll	ne:company
+41    n	 spell:ein:deletion; slang
+40    offenbings	
+39    YouTube	ne:company
+39    gepostet	loan
+39    haha	inj
+38    x	smiley
+36    Tweets	neologism
+36    online	neologism
+35    BGE	abbr
+34    News	loan
+33    Google	ne:company
+29    °C	dict
+29    ok	inj
+26    naja	inj
+26    w	
+26    wär	 spell:wäre:deletion; slang
+25    Haha	inj
+25    Youtube	ne:company
+25    gibts	
+24    Blog	neologism
+24    OMGermanTeen	
+24    Offenbings	
+24    gehts	 spell:geht es:deletion; slang
+24    net	
+22    :D	smiley
+22    fb	 ne:company; abbr
+21    e	
+21    find	
+21    nem	 spell:einem:deletion; slang
+19    D:	smiley
+19    iPhone	ne:product
+19    u	
+19    werd	
+18    Naja	inj
+18    Tweet	neologism
+18    WettenDass	
+17    b	
+17    d	
+17    on	fw
+17    sorry	 fw; inj
+17    twitter	ne:company
+16    EUR	abbr
+16    Social	loan
+16    Sorry	 fw; inj
+16    würd	 spell:würde:deletion; slang
+15    App	
+15    Download	
+15    htt	link
+15    i	
+15    ner	 spell:einer:deletion; slang
+14    DJ	loan
+14    Schweiger	ne:person
+14    s21	
+14    tvprogramm	
+14    tweets	neologism
+13    :'D	smiley
+13    Wettendass	
+13    bpt11	
+13    twittern	neologism
+12    DTN	abbr
+12    FB	 ne:company; abbr
+12    Galaxy	ne:product
+12    Nö	slang
+12    fur	spell:für:substitution
+12    min	abbr
+11    GB	abbr
+11    Game	fw
+11    Nowitzki	ne:person
+11    OMG	
+11    Pageballs	ne:company
+11    Player	fw
+11    Stream	loan
+11    Video.	token
+11    co	link
+11    cont	fw
+11    hehe	inj
+11    ma	
+11    my	fw
+11    nicht.	token
+11    o	
+11    t.	
+11    to	fw
+10    DVD	neologism
+10    Domian	
+10    HANSGROHE	ne:company
+10    Happy	fw
+10    Piratenpartei	compound
+10    Porno	dict
+10    Voice	fw
+10    c	
+10    cc	slang
+10    fail	loan
+10    geb	abbr
+10    hPa	abbr
+10    habs	 spell:habe es:deletion; slang
+10    hahaha	inj
+10    hm	inj
+10    iOS	ne:product
+10    jaa	 elongation; inj
+10    mmt28	
+10    nowplaying	
+10    stapo24	
+10    v	
+10    video	dict
+10    xx	smiley
+9     BPT112	
+9     Blu	ne:product
+9     Hi	inj
+9     Quoka	
+9     Reus	ne:person
+9     S21	
+9     Timeline	loan
+9     boah	inj
+9     facebook	ne:company
+9     garnicht	spell:gar nicht:deletion
+9     hach	inj
+9     iPad	ne:product
+9     nö	slang
+9     ned	 spell:nicht:substitution/deletion; slang
+9     news	loan
+9     no	
+9     scho	spell:schon:deletion
+9     wars	 spell:war es:deletion; slang
+9     wow	inj
+9     youtube	ne:company
+8     Day	fw
+8     Hbf	abbr
+8     Like	fw
+8     MP3	
+8     Night	fw
+8     ONLINE	neologism
+8     Weihnachts	token
+8     aw	abbr
+8     berlin	ne:geo
+8     by	fw
+8     domian	
+8     followerpower	loan
+8     gÃ¼nstigsten	dict
+8     ht	link
+8     inkl	dict
+8     like	fw
+8     mann	dict
+8     nee	slang
+8     omg	
+8     ppm	abbr
+8     tweet	neologism
+8     we	
+8     zdf	ne:company
+7     Account	loan
+7     Android	ne:product
+7     Bonds	dict
+7     Browsergame	compound
+7     Chat	neologism
+7     Chihuahua	dict
+7     Christmas	fw
+7     Euro2012	
+7     Hammergruppe	compound
+7     Hm	inj
+7     Let	fw
+7     Maffay	ne:person
+7     Nee	slang
+7     Notebook	neologism
+7     Och	inj
+7     Receiver	loan
+7     Red	fw
+7     Sky	ne:company
+7     Titten	slang
+7     Twitterer	neologism
+7     Weltcup	loan
+7     alverde	
+7     aww	inj
+7     bge	abbr
+7     deal	loan
+7     dr	spell:dran:deletion
+7     f	
+7     Äh	inj
+7     hammer	dict
+7     immernoch	spell:immer noch:deletion
+7     iwie	spell:irgendwie:deletion
+7     jetz	spell:jetzt:deletion
+7     machen.	token
+7     quot	fw
+7     ray	ne:product
+7     schaun	 spell:schauen:deletion; slang
+7     schonmal	spell:schon mal:deletion
+7     sry	
+7     twittert	neologism
+7     vllt	spell:vielleicht:deletion
+7     you	fw
+7     z	
+6     Biel	ne:geo
+6     Breaking	fw
+6     Browserspiel	compound
+6     CROCS	ne:product
+6     Cayman	ne:product
+6     FCB	abbr
+6     Find	
+6     Follower	
+6     Gasanbieter	
+6     GermanTeens	
+6     Hot	
+6     IQ	abbr
+6     Jaa	 elongation; inj
+6     Life	fw
+6     Limmat	ne:geo
+6     Livestream	loan
+6     Liveticker	loan
+6     Meat	fw
+6     No	
+6     Now	fw
+6     Oo	
+6     Playmobil	ne:product
+6     Trailer	loan
+6     UnderTheMistletö	
+6     WTF	 inj; slang
+6     Wow	inj
+6     Xbox	ne:product
+6     Yeah	inj
+6     auch.	token
+6     aufm	dict
+6     augen	dict
+6     dapd	ne:company
+6     down	fw
+6     eig.	abbr
+6     fcb	abbr
+6     fuck	
+6     gesehn	 spell:gesehen:deletion; slang
+6     go	fw
+6     haben.	token
+6     hmm	inj
+6     hätt	 spell:hätte:deletion; slang
+6     isch	
+6     mum	slang
+6     okay	inj
+6     retweetet	neologism
+6     tja	inj
+6     top	loan
+6     tv	
+6     vo	spell:vor:deletion
+6     wenns	
+6     wirds	 spell:wird es:deletion; slang
+6     wochenende	compound
+5     Acer	ne:company
+5     Achso	
+5     Audio	dict
+5     Avatar	ne:person
+5     Aw	abbr
+5     Axor	ne:product
+5     BPT	abbr
+5     Bieber	ne:person
+5     Big	fw
+5     Britney	ne:person
+5     Bushido	fw
+5     Cain	ne:person
+5     Carrier	fw
+5     Cover	fw
+5     Cyber	fw
+5     Doku	slang
+5     Flash	neologism
+5     FragdieGurus	
+5     Gingerbread	ne:product
+5     GuruAdventskalender	
+5     Hach	inj
+5     IPT110	
+5     Ick	 spell:Ich:substitution; slang
+5     Juhu	inj
+5     Loaf	ne:person
+5     Map	fw
+5     Minecraft	ne:product
+5     Muschi	slang
+5     %NegSmileyen	
+5     Newsfunk	
+5     Onlineshop	 compound; loan
+5     Path	fw
+5     Playing	fw
+5     Podolski	ne:person
+5     Sat1	ne:company
+5     Skyrim	ne:product
+5     Temp	abbr
+5     USB	neologism
+5     WAVE	fw
+5     Werd	
+5     Yahoo	ne:company
+5     achso	
+5     bier	dict
+5     blah	inj
+5     blog	neologism
+5     bpt	abbr
+5     eBay	ne:company
+5     effzeh	
+5     ehm	inj
+5     em2012	
+5     faven	 slang; neologism
+5     finds	fw
+5     gebloggt	neologism
+5     getwittert	neologism
+5     gg	 smiley; inj
+5     gott	dict
+5     hats	 spell:hat es:deletion; slang
+5     heuteshow	
+5     iTunes	ne:product
+5     ist.	token
+5     ju	inj
+5     ka	
+5     les	 spell:lese:deletion; slang
+5     life	fw
+5     mh	inj
+5     nehm	 spell:nehme:deletion; slang
+5     off	fw
+5     offline	neologism
+5     prÃ¼fen	dict
+5     quoka	
+5     r	
+5     retweeten	neologism
+5     rtl	ne:company
+5     seh	
+5     sem	
+5     smo	
+5     so.	token
+5     suchmaschinenoptimierung	
+5     uhr	dict
+5     un	spell:und:deletion
+5     werden.	token
+5     wochen	dict
+5     wärs	 spell:wäre es:deletion; slang
+4     Anti	token
+4     Ardian	ne:person
+4     Autokorrektur	compound
+4     Bag	fw
+4     Bauchfett	compound
+4     Berben	ne:person
+4     Blitzer	slang
+4     Boah	inj
+4     Bujupi	ne:person
+4     Camera	ne:product
+4     Cap	ne:product
+4     Client	loan
+4     Community	loan
+4     Cup	loan
+4     ;D	smiley
+4     DSDS	abbr
+4     Danisch	spell:Dänisch:substitution
+4     Dez	abbr
+4     Dschungelcamp	compound
+4     EM2012	
+4     Elstner	ne:person
+4     Eurokrise	compound
+4     FQ	
+4     Fantasy	fw
+4     Faymann	ne:person
+4     Frauen.	
+4     Friends	fw
+4     Girls	fw
+4     Güss	
+4     Headset	loan
+4     Hmm	inj
+4     IPTFFFFFF	
+4     Ice	fw
+4     Ih	inj
+4     Kindle	ne:product
+4     Laminat	neologism
+4     Lattek	ne:person
+4     Lopes	ne:person
+4     NBA	ne:company
+4     Nokia	ne:company
+4     Ohh	inj
+4     Open	fw
+4     PLZ	abbr
+4     Piratenchef	compound
+4     Piraterie	dict
+4     Play	fw
+4     Podcast	loan
+4     Promi	slang
+4     Purple	
+4     Read	fw
+4     Ribéry	
+4     Ryanair	ne:company
+4     SSNHD	
+4     Salzungen	ne:geo
+4     Schoko	token
+4     Shit	 fw;  slang; inj
+4     Smartphone	neologism
+4     SocialMedia	
+4     South	fw
+4     Spongebob	ne:person
+4     Steinbrück	ne:person
+4     Store	fw
+4     Style	fw
+4     Tablet	neologism
+4     Tablets	neologism
+4     Tach	 spell:Tag:substitution; slang
+4     Terrortrio	compound
+4     ThyssenKrupp	ne:company
+4     Ticker	loan
+4     Tja	inj
+4     Touch	ne:product
+4     Tweetdiebstahl	compound
+4     Tweetkalender	
+4     Ui	inj
+4     Updates	loan
+4     Vegas	ne:geo
+4     Wah	inj
+4     Webkatalog	compound
+4     Website	loan
+4     Westerwald	ne:geo
+4     Winehouse	ne:person
+4     With	fw
+4     add	
+4     adventskalender	compound
+4     amp	fw
+4     an.	token
+4     app	
+4     arbeit	dict
+4     ard	ne:company
+4     at	fw
+4     auf.	token
+4     awesome	fw
+4     bayern	ne:geo
+4     buli	
+4     bundesliga	
+4     christmas	fw
+4     deutschland	ne:geo
+4     entfolgen	neologism
+4     evmakir	
+4     gibt.	token
+4     good	fw
+4     google	ne:company
+4     gottschalk	ne:person
+4     hahah	inj
+4     ähm	inj
+4     iPod	ne:product
+4     ic	spell:ich:deletion
+4     ich.	token
+4     jährige	dict
+4     jähriges	dict
+4     jz	 spell:jetzt:deletion; slang
+4     kmh	abbr
+4     leute	dict
+4     liked	fw
+4     menschen	dict
+4     münchen	
+4     out	fw
+4     pc	neologism
+4     pic	 fw; slang
+4     piraten	
+4     problem	dict
+4     response	fw
+4     riesenehre	compound
+4     rofl	
+4     se	 spell:sie:deletion; slang
+4     shoppen	loan
+4     thanks	
+4     tommys	ne:person
+4     twikolaus	
+4     twitterst	neologism
+4     typ	dict
+4     ui	inj
+4     unwiderstehl	
+4     uuml	fw
+4     very	fw
+4     voice	fw
+4     vorallem	
+4     weils	 spell:weil es:deletion; slang
+4     x2	slang
+4     x25	
+4     x27	
+4     yeah	inj
+4     zb	abbr
+4     zurück.	token
+3     A3	abbr
+3     ABBA	ne:company
+3     Achja	inj
+3     Admin	slang
+3     Assassin	ne:product
+3     Atomic	fw
+3     Axo	
+3     BE	
+3     Bahrain	ne:geo
+3     Bandana	dict
+3     Beckum	ne:geo
+3     BenQ	ne:product
+3     Birthday	fw
+3     Blogs	neologism
+3     Books	fw
+3     Broker	
+3     Börsenjournalisten	compound
+3     Buys	fw
+3     CELAC	abbr
+3     CO2	abbr
+3     Canvas	loan
+3     Carrerabahn	compound
+3     Case	
+3     Castor	
+3     Channel	loan
+3     Christkindlmarkt	compound
+3     Clips	loan
+3     Coral	ne:geo
+3     Creed	ne:product
+3     :-D	smiley
+3     DGAP	abbr
+3     DSL	abbr
+3     Dark	fw
+3     December	fw
+3     Despres	ne:person
+3     Duma	fw
+3     Easy	fw
+3     Ego	dict
+3     End	fw
+3     Entertainment	fw
+3     Escort	loan
+3     FFM	abbr
+3     FML	abbr
+3     FPÖ	ne:company
+3     Feng	fw
+3     Fewo	
+3     Firefox	ne:product
+3     Flavonmax	ne:company
+3     Fotze	slang
+3     Free	fw
+3     Fuck	
+3     Games	fw
+3     Girl	fw
+3     Good	fw
+3     Goodbye	 fw; inj
+3     HTML5	neologism
+3     Hahahaha	inj
+3     Hartz	neologism
+3     Hashtag	neologism
+3     Heels	loan
+3     Hellboy	ne:person
+3     Hetero	dict
+3     Hidden	fw
+3     Hihi	inj
+3     Hobbies	dict
+3     Hoffenheim	ne:geo
+3     Hunziker	ne:person
+3     Husky	dict
+3     IKEA	ne:company
+3     Jähriger	dict
+3     Jülich	
+3     Ka	
+3     Kanalbanner	 neologism; compound
+3     Kanaldesign	compound
+3     Karsai	ne:person
+3     Keep	fw
+3     Keramag	ne:product
+3     Keys	fw
+3     Kindervon	spell:Kinder von:deletion
+3     Kombo	slang
+3     Konfuzius	ne:person
+3     LV	abbr
+3     Labbadia	ne:person
+3     League	fw
+3     MDR	ne:company
+3     MEGATEST	
+3     Ma	
+3     MacBook	ne:product
+3     Maps	fw
+3     Maroon	ne:company
+3     Mascara	ne:product
+3     McDonald	ne:company
+3     Medion	ne:product
+3     Multiplayer	loan
+3     NLP	abbr
+3     Nachti	 spell:Nacht:insertion; slang
+3     Netzsperren	compound
+3     Neuss	ne:geo
+3     Nike	ne:product
+3     Norris	ne:person
+3     O2	abbr
+3     Oha	inj
+3     PS3	ne:product
+3     Palace	fw
+3     Paradise	fw
+3     Patch	neologism
+3     Payne	ne:person
+3     Phase10	
+3     Pinnwand	dict
+3     Plait	ne:product
+3     Please	 inj; fw
+3     Pocket	fw
+3     %PosSmileyas	
+3     Poster	loan
+3     Prelaunch	loan
+3     Primera	
+3     Proble	spell:Probleme:deletion
+3     Promo	 slang; neologism
+3     PunktenIch	spell:Punkten Ich:deletion
+3     Putin	ne:person
+3     Puzzlepaneelen	compound
+3     Reisegeier	compound
+3     Reitbeteiligungen	compound
+3     Rinderschocker	compound
+3     Rommé	fw
+3     Ruhl	ne:geo
+3     SF	abbr
+3     SPD.	 ne:company; token
+3     SSL	abbr
+3     SVP	abbr
+3     SWTOR	
+3     Sarkozy	ne:person
+3     Security	loan
+3     Seller	loan
+3     Shopping	loan
+3     Shops	loan
+3     Smartphones	neologism
+3     Sms	neologism
+3     Soundtrack	loan
+3     Sry	
+3     Starck	ne:product
+3     Strompreisvergleich	
+3     THQ	abbr
+3     TK	
+3     Tenny	slang
+3     TheDome	
+3     Tiefpreisgarantie	compound
+3     Traffic	loan
+3     Treasures	
+3     Tweetklau	compound
+3     Vattenfall	ne:company
+3     Veganer	dict
+3     Videoplattform	compound
+3     Vinyl	dict
+3     Virtual	fw
+3     Vorallem	
+3     Webdesign	compound
+3     Webverzeichnis	compound
+3     White	fw
+3     Xing	
+3     YEAH	inj
+3     Yay	inj
+3     Yes	 inj; fw
+3     ZDFinfo	
+3     Zelda	ne:person
+3     account	loan
+3     adden	loan
+3     ahh	inj
+3     aka	slang
+3     aku	 abbr; slang
+3     angezeigt.	token
+3     auftauchten.	token
+3     aus.	token
+3     bb	
+3     bissl	slang
+3     bvb	
+3     bye	 fw; inj
+3     bzw	dict
+3     ch	link
+3     chemie	dict
+3     chrom	dict
+3     crocs	ne:product
+3     dad	 loan; slang
+3     das.	token
+3     dat	 spell:das:substitution; slang
+3     downloaden	neologism
+3     drauf.	token
+3     düsseldorf	ne:geo
+3     ebay	ne:company
+3     ebook	neologism
+3     ei	dict
+3     eig	abbr
+3     entfolgst	neologism
+3     erlich	spell:ehrlich:deletion
+3     euro	 neologism; dict
+3     familie	dict
+3     feat	fw
+3     fehler	dict
+3     flasche	dict
+3     follower	
+3     free	fw
+3     gaga	ne:person
+3     gefragt.	token
+3     gehn	spell:gehen:deletion
+3     gemacht.	token
+3     gitarre	dict
+3     hö	inj
+3     äh	inj
+3     habn	 spell:haben:deletion; slang
+3     ham	 spell:haben:substitution/deletion; slang
+3     happy	fw
+3     hinbekomme	dict
+3     hochgeladen	dict
+3     home	
+3     hät	spell:hätte:deletion
+3     hust	inj
+3     jaja	inj
+3     japp	inj
+3     jep	inj
+3     jepp	inj
+3     jez	spell:jetzt:deletion
+3     jährigen	dict
+3     jähriger	dict
+3     jobsuche	
+3     justin	ne:person
+3     k	
+3     kann.	token
+3     kanns	
+3     knp	
+3     kommentiert.	token
+3     komt	spell:kommt:deletion
+3     le	
+3     lmao	slang
+3     markt.	token
+3     mathe	slang
+3     max	
+3     me	fw
+3     mer	 spell:mir:substitution; slang
+3     mitte	dict
+3     mom	
+3     movie	fw
+3     much	fw
+3     nä	inj
+3     n8	spell:Nacht:substitution
+3     nciht	spell:nicht:substitution
+3     ni	
+3     nice	fw
+3     nurnoch	spell:nur noch:deletion
+3     oO	
+3     och	inj
+3     oha	inj
+3     oje	inj
+3     okay.	token
+3     olle	slang
+3     org	
+3     p	
+3     philosophy	
+3     phoenix	
+3     present	fw
+3     q	
+3     right	fw
+3     sau	dict
+3     schatje	fw
+3     sein.	
+3     selbe	dict
+3     selbst.	token
+3     sic	spell:sicher:deletion
+3     sind.	
+3     sis	slang
+3     sky	ne:company
+3     sorry.	token
+3     spd	
+3     stehts	 spell:steht es:deletion; slang
+3     österreich	ne:geo
+3     sz	
+3     szonline	
+3     tages	dict
+3     tausende	dict
+3     taz	
+3     teamfollowback	
+3     test	dict
+3     timeline	loan
+3     trends	
+3     twittere	neologism
+3     twoff	
+3     tztztz	inj
+3     upd	fw
+3     usw	dict
+3     ve	
+3     ver	link
+3     vi	spell:viel:deletion
+3     voten	loan
+3     vs.	dict
+3     week	fw
+3     wel	fw
+3     welt	dict
+3     wlan	
+3     work	fw
+3     yay	inj
+2     A200	ne:product
+2     A6	ne:product
+2     ABE	abbr
+2     ATO40	abbr
+2     AWESOME	fw
+2     Abo	 spell:Abonnement:deletion; slang
+2     Abs	abbr
+2     Accounts	loan
+2     Achern	ne:geo
+2     Active	fw
+2     Actors	fw
+2     Ads	neologism
+2     Adventsbrunch	compound
+2     Adventsk	
+2     Agility	fw
+2     Ahh	inj
+2     Aichacher	
+2     Akoya	ne:product
+2     America	fw
+2     Angebotsende	compound
+2     Angebotsgebühr	
+2     Angels	fw
+2     Animexx	ne:company
+2     Arbeitsreferenzen	compound
+2     Arcanoa	ne:company
+2     Arschgeweih	compound
+2     Aspire	ne:product
+2     Austria	
+2     Autsch	inj
+2     Azubi	 dict; slang
+2     Azumi	ne:person
+2     BKH	abbr
+2     BMV	ne:company
+2     BPT11	
+2     BREMSSATTEL	compound
+2     BROTHER	fw
+2     BTW	 fw;  inj; slang
+2     Babyzimmer	compound
+2     Banksterkanzlerin	compound
+2     Basseigenschaften	compound
+2     Battlefield3	
+2     Baunatal	ne:geo
+2     Bazooka	fw
+2     Beamer	neologism
+2     BeaverCreek	
+2     Berchet	ne:company
+2     Berechtigungsmanagement	
+2     Birkenbihl	
+2     Bitch	 slang; fw
+2     BlackBerry	ne:product
+2     Blacky	
+2     Blade	ne:product
+2     Blah	inj
+2     Bloggen	neologism
+2     Blogger	neologism
+2     Blue	
+2     Bobadilla	ne:person
+2     Bogy	ne:person
+2     Bond	ne:person
+2     BossHoss	ne:company
+2     Bärin	dict
+2     Börner	ne:company
+2     BuLi	
+2     Bundle	fw
+2     Businessplan	
+2     Buzzer	neologism
+2     Bvb	
+2     CARDEA	ne:product
+2     CE	ne:product
+2     CHF	abbr
+2     CLOSE	fw
+2     CPI	abbr
+2     CPU	neologism
+2     CSS	abbr
+2     CUBASE	ne:product
+2     CX	ne:product
+2     Call	fw
+2     Canon	ne:product
+2     Cars	
+2     Casting	neologism
+2     Castings	neologism
+2     CentrO	ne:geo
+2     Central	ne:company
+2     Championship	fw
+2     Charts	loan
+2     Chelsea	ne:company
+2     Chihuahuas	dict
+2     Chillen	loan
+2     Chinchilla	dict
+2     Chrome	ne:product
+2     CityVille	ne:product
+2     Clasico	ne:company
+2     Classic	ne:product
+2     Click	loan
+2     Clip	loan
+2     Cloud	loan
+2     Clubkinder	compound
+2     Cön	
+2     Coats	ne:company
+2     Cocina	ne:product
+2     Coda	ne:product
+2     ComedyCentral	
+2     Commerce	fw
+2     Connox	ne:company
+2     Contest	fw
+2     Cosmo	ne:person
+2     Court	ne:geo
+2     CuReSoft	
+2     Cyberport	
+2     ='D	smiley
+2     D64	abbr
+2     DDD	smiley
+2     DEPR	
+2     DM.	token
+2     DOMEA	
+2     DOSB	abbr
+2     DVDs	neologism
+2     Dahoam	slang
+2     DailyDeal	fw
+2     Datenkralle	compound
+2     Dawn	fw
+2     Days	fw
+2     Dbox2	ne:product
+2     Demosthenes	ne:person
+2     Despora	fw
+2     Deu	spell:Deutsch:deletion
+2     Deutschlandwetter	compound
+2     Diaries	fw
+2     Dikka	 spell:Dicker:substitution; slang
+2     Direction	fw
+2     Directory	fw
+2     Diätwahn	compound
+2     DonGermanTVtoday	
+2     Doodle	
+2     Dressursattel	compound
+2     DropBox	ne:product
+2     Dropbox	ne:product
+2     DuMont	ne:company
+2     Durban	ne:geo
+2     E29	abbr
+2     EBK	abbr
+2     EHF	abbr
+2     EM12	
+2     EYES	fw
+2     Ebay	ne:company
+2     Eckernförde	ne:geo
+2     EinsExtra	
+2     Elementarbuch	compound
+2     Emo	neologism
+2     Eppendorf	ne:geo
+2     Equinet	ne:company
+2     Ergometer	dict
+2     Erotikmesse	compound
+2     Eurobonds	
+2     Exo	fw
+2     ÜFA	
+2     FAIL	loan
+2     FCBayern	
+2     FEB	abbr
+2     FFFUUU	
+2     FUCK	
+2     Faisst	
+2     Fake	loan
+2     Familie.	
+2     Fanpage	 compound; loan
+2     Features	
+2     Feed	loan
+2     Figl	ne:geo
+2     Finance	fw
+2     Firmware	neologism
+2     Fitnesscenter	compound
+2     Flatrate	neologism
+2     Fliesenschneider	compound
+2     Flo	fw
+2     FloraPower	
+2     Flux	ne:product
+2     Fohr	ne:geo
+2     Folgenswert	compound
+2     Folienschneider	compound
+2     Follow	fw
+2     FollowFriday	
+2     Followerpower	loan
+2     Force	fw
+2     Forex	
+2     Forsc	spell:Forschung:deletion
+2     Foursquare	ne:company
+2     Fraport	ne:company
+2     Frauchen	dict
+2     Friday	fw
+2     Fukushima	ne:geo
+2     Full	fw
+2     Fussballquiz	
+2     GORGEOUS	fw
+2     Gagas	ne:person
+2     Gameplay	loan
+2     Garavani	ne:person
+2     Gartensessel	compound
+2     Gastebuch	umlaut
+2     Gentner	ne:person
+2     Geschenkset	compound
+2     Get	fw
+2     Gibts	
+2     Gladbeck	ne:geo
+2     Glitzer	dict
+2     Glucksquell	umlaut
+2     Go	fw
+2     Goalunited	ne:product
+2     Grabkerzen	compound
+2     Grand	
+2     Gästelistenplätze	compound
+2     Guben	
+2     Gutscheincode	compound
+2     Hä	inj
+2     HIMYM	
+2     HTCInside	ne:company
+2     Hacker	neologism
+2     Hahaha	inj
+2     Hamm	ne:geo
+2     Hammerturnier	compound
+2     Hampton	ne:geo
+2     Handwäsche	compound
+2     Handynutzer	compound
+2     Hangouts	neologism
+2     Hardcore	neologism
+2     Heesters	ne:person
+2     Hehe	inj
+2     Henava	ne:company
+2     Herdprämie	compound
+2     Heroine	ne:person
+2     Herten	ne:geo
+2     Herzogenrath	ne:geo
+2     Heynckes	ne:person
+2     Höhner	
+2     Hm.	 token; inj
+2     Hochzeitsbräuche	compound
+2     Holzspalter	dict
+2     Home	
+2     Homepage	loan
+2     Hoppla	inj
+2     Hunziger	
+2     IPad	ne:product
+2     Ibooks	ne:product
+2     Iconia	ne:product
+2     Ik	
+2     Indesit	
+2     Indie	fw
+2     Infinity	ne:product
+2     Informationsbuch	compound
+2     Interio	ne:product
+2     Internets	dict
+2     Internetverbindung	compound
+2     Intro	slang
+2     Irish	
+2     Irwie	 spell:irgendiwe:deletion; slang
+2     Isch	
+2     Jamie	
+2     Jap	inj
+2     Jericho	ne:geo
+2     Jessi	ne:person
+2     Jessie	ne:person
+2     Jährige	dict
+2     Jobber	slang
+2     Jogi	ne:person
+2     Jop	inj
+2     Jump	fw
+2     KABEL1	
+2     KTM	abbr
+2     Kaminofen	compound
+2     Kanns	
+2     Karma	dict
+2     Kegelklubtreffen	compound
+2     Kerpen	ne:geo
+2     Kühlschr.	abbr
+2     Kinderpornografie	compound
+2     Kloten	ne:geo
+2     Koble	spell:Koblenz:deletion
+2     Komplottes	dict
+2     Kroos	ne:person
+2     KsvTRbhL	link
+2     Ku	
+2     LR	ne:company
+2     LTE	abbr
+2     Lachflash	 compound; loan
+2     LastActionSEO	
+2     Laubbläser	compound
+2     Laugenpumpe	compound
+2     Lego	ne:product
+2     Leigh	ne:person
+2     Leutle	slang
+2     Lich	
+2     Linkliste	compound
+2     Lioness	fw
+2     Literatwo	ne:company
+2     Livecam	neologism
+2     Län	spell:Länge:deletion
+2     Loh	
+2     Lookslikelink	ne:person
+2     Loszeremonie	compound
+2     Lösungsassistent	compound
+2     Ludwigslust	ne:geo
+2     Lusso	ne:product
+2     Lyrics	fw
+2     M7600	abbr
+2     MAGIX	ne:company
+2     MAS	
+2     MEGADOTS	
+2     MTN	abbr
+2     MURO	ne:company
+2     MW3	
+2     Madipedia	ne:company
+2     Mails	loan
+2     Mariah	ne:person
+2     Mas	
+2     Maxxus	ne:product
+2     Mbit	 neologism; abbr
+2     McDonald´s	ne:company
+2     Mckinley	ne:person
+2     MediaMarkt	ne:company
+2     Mediadesign	ne:company
+2     MeinPaket	ne:company
+2     Melancholia	fw
+2     Memo	slang
+2     Men	ne:company
+2     Mh	inj
+2     Minimalpolynom	compound
+2     Mittweida	ne:geo
+2     Mixtape	neologism
+2     Monatskalender	compound
+2     Montana	ne:person
+2     MooTools	ne:product
+2     Mose	ne:person
+2     Movie	fw
+2     Mp3	
+2     Märktel.	token
+2     Munchen	 ne:geo; umlaut
+2     Must	fw
+2     NDS	abbr
+2     NEWAYS	ne:company
+2     NFS	ne:company
+2     NGO´s	token
+2     NHL	ne:company
+2     Nabucco	ne:company
+2     Nachrichte	
+2     Nahles	ne:person
+2     Nails	ne:company
+2     Napster	ne:company
+2     Navi	slang
+2     Neckholder	ne:company
+2     %NegSmileyeria	
+2     Netzpolitik	
+2     Netzwerkkabel	compound
+2     Never	fw
+2     Newman	ne:person
+2     Newsletter	loan
+2     Newsticker	loan
+2     Ni	
+2     Nice	fw
+2     Niebüll	ne:geo
+2     Nieblum	ne:geo
+2     Niggemeier	ne:person
+2     Nivea	
+2     Noir	fw
+2     Nuala	ne:person
+2     Nutella	ne:product
+2     O’Faolain	ne:person
+2     OG	abbr
+2     Occupy	
+2     Ohja	inj
+2     Ohrhörer	
+2     Organizer	loan
+2     Ort.	token
+2     Oststeinbek	ne:geo
+2     :P	smiley
+2     PSN	
+2     PUKY	ne:product
+2     PVR	abbr
+2     Panasonic	
+2     Perlgarn	compound
+2     Perro	ne:company
+2     Pimp	fw
+2     Pinkelpause	compound
+2     Pjanoo	fw
+2     Pokemon	ne:person
+2     Polish	fw
+2     Polix	ne:product
+2     Pollitz	ne:geo
+2     Popcorn	 loan; dict
+2     Porn	 fw; slang
+2     %%PosSmiley	
+2     %PosSmileyIch	
+2     %PosSmileyRT	
+2     %PosSmileyaniel	
+2     %PosSmileyie	
+2     Postings	
+2     Potter	ne:person
+2     Pr	spell:Preis:deletion
+2     Prödl	ne:person
+2     ProSieben	
+2     Proclear	ne:product
+2     Profilbild	compound
+2     Promifunk	
+2     Provider	loan
+2     Prydz	ne:person
+2     Pussy	 fw; slang
+2     Put	 ne:person; spell:Putin:deletion
+2     QT	hash_tag
+2     QooQoon	ne:company
+2     Quetschkalotten	compound
+2     Quotes	fw
+2     RIM	ne:company
+2     RL	abbr
+2     RNK	abbr
+2     ROFL	
+2     RSC	abbr
+2     RSS	neologism
+2     RTL2	
+2     Rack	ne:product
+2     Raffhose	compound
+2     Ramen	fw
+2     Ranking	loan
+2     Rayman	 ne:person; ne:product
+2     Reader	loan
+2     Recht.	
+2     Rees	ne:geo
+2     Reflecta	ne:product
+2     Reichensteuer	compound
+2     Relaunch	loan
+2     Remake	loan
+2     Replay	loan
+2     Reply	fw
+2     Retweet	
+2     Revelations	fw
+2     Rhodan	ne:person
+2     Rhon	ne:geo
+2     Riesenglocken	compound
+2     Rihanna	ne:person
+2     Räikkönen	ne:person
+2     Robertson	ne:person
+2     Rofl	
+2     Rollläden	dict
+2     Rosso	
+2     Rousseff	ne:person
+2     Row	ne:product
+2     Rösler	ne:person
+2     S04	abbr
+2     S2	abbr
+2     SALE	
+2     SEH	
+2     SPAM	neologism
+2     SSD	 abbr; neologism
+2     SUV	 abbr; neologism
+2     SWR	
+2     SX	ne:product
+2     Saints	ne:product
+2     Sale	
+2     Sarvar	ne:geo
+2     Scandlines	ne:company
+2     Scenery	loan
+2     Schaltknauf	compound
+2     Schatzchen	umlaut
+2     Scheffler	ne:person
+2     Schiri	slang
+2     Schoki	slang
+2     Schortens	ne:geo
+2     Schuherotik	compound
+2     Schutzengelbilder	compound
+2     Scénic	ne:product
+2     Script	loan
+2     Scrubs	 fw; ne:product
+2     Sea	ne:geo
+2     Second	fw
+2     Sedo	
+2     Series	fw
+2     Servern	neologism
+2     Setlur	ne:person
+2     Sevelen	ne:company
+2     Sexcam	loan
+2     Seyfarth	ne:company
+2     Shiply	ne:company
+2     Shoppen	loan
+2     Silent	
+2     Simpson	ne:person
+2     Skype	ne:product
+2     Sleepers	
+2     Smeet	ne:product
+2     Smile	ne:product
+2     Somerhalder	ne:person
+2     Soso	inj
+2     Sourcrowd	fw
+2     SpOn	abbr
+2     Spencer	ne:person
+2     Spielemagazin	compound
+2     Spitzenduelle	compound
+2     Startseite	compound
+2     Std	
+2     Sticks	loan
+2     Stokke	ne:product
+2     Straks	 spell:stracks:deletion; slang
+2     Stromtarifrechner	compound
+2     Subliminals	fw
+2     Suchmaschinen	neologism
+2     Summinet	ne:company
+2     Sunshine	
+2     Superflat	
+2     Supi	 spell:super:substitution; slang
+2     Swingerparty	compound
+2     Sync	slang
+2     TBG	abbr
+2     TERRARIUM	dict
+2     TUV	umlaut
+2     Tac	token
+2     Tangled	ne:product
+2     Tarzan	ne:person
+2     Tech	
+2     TechniSat	ne:company
+2     Teds	ne:person
+2     Teen	loan
+2     Th	spell:Thema:deletion
+2     Thank	 inj; fw
+2     This	fw
+2     Tihi	inj
+2     Together	fw
+2     Tokyo	ne:geo
+2     Tollwood	ne:geo
+2     Tonic	dict
+2     Topspiel	compound
+2     Topthemen	compound
+2     Tr	spell:Trade:deletion
+2     Track	loan
+2     Tradigist	ne:geo
+2     Trainee	fw
+2     Trainerlegende	compound
+2     Tripp	ne:product
+2     Tschagajew	ne:person
+2     Tv	
+2     Twittercharts	
+2     U19	abbr
+2     U21	abbr
+2     Uber	umlaut
+2     Uckermann	ne:person
+2     Ulbig	ne:person
+2     Umschalttaste	compound
+2     Usher	ne:person
+2     VIGNON	ne:product
+2     VLC	
+2     VOICE	fw
+2     VRR	
+2     Verden	
+2     Vettel	ne:person
+2     VfL	abbr
+2     Vibrator	dict
+2     Vielzitzenmäuse	compound
+2     Viersen	ne:geo
+2     ViralUrl	ne:company
+2     Vitelle	ne:product
+2     Vodafone	
+2     Votze	slang
+2     WD	abbr
+2     WH	abbr
+2     WLAN	
+2     WOW	inj
+2     WZ	abbr
+2     Warmblutstute	compound
+2     Waschtischmischer	compound
+2     Wau	inj
+2     Wave	fw
+2     We	
+2     Webcam	
+2     Webradio	compound
+2     Webseiten	compound
+2     Weicon	ne:product
+2     Welcome	 inj; fw
+2     Wels	dict
+2     Wenns	
+2     WettenDas	
+2     Why	fw
+2     WiFi	 abbr; neologism
+2     WikiLeaks	ne:company
+2     Wilpert	ne:person
+2     Windabweiser	dict
+2     Wintec	ne:product
+2     WippWalker	ne:product
+2     Wissenschafter	spell:Wissenschaftler:deletion
+2     WordPress	ne:product
+2     World	fw
+2     WpHG	abbr
+2     Wuhu	inj
+2     Wutbürger	 neologism; compound
+2     XIII	
+2     XXL	
+2     Xmas	 slang; fw
+2     Xylitol	dict
+2     YB	abbr
+2     YOUR	fw
+2     You	fw
+2     Youporn	ne:company
+2     Zillertal	ne:geo
+2     Zuchtboxen	compound
+2     ab.	token
+2     abierta	ne:company
+2     achja	inj
+2     achten.	
+2     adobe	
+2     af	
+2     ahaha	inj
+2     akku	
+2     alls	spell:alles:deletion
+2     ang	
+2     angst	dict
+2     anyone	fw
+2     are	fw
+2     arena	
+2     argh	inj
+2     aso	spell:also:deletion
+2     auslosung	
+2     ava	slang
+2     awlb	
+2     aynen	fw
+2     bayreuth	ne:geo
+2     bcruhr5	
+2     bday	 fw;  spell:birthday:deletion; slang
+2     be	
+2     befreuntet	spell:befreundet:deletion
+2     beide.	token
+2     bekommen.	
+2     berli	
+2     beschä	spell:beschämen:deletion
+2     better	fw
+2     beuel	
+2     bäh	
+2     bieber	ne:person
+2     biin	elongation
+2     bins	 spell:bin es:deletion; slang
+2     blocke	dict
+2     boa	
+2     bonn	
+2     bpt112.	
+2     br	fw
+2     bremen	
+2     bringen.	token
+2     broo	fw
+2     bus	dict
+2     ca	 abbr; dict
+2     cam	 abbr; loan
+2     campixx	
+2     chillen	loan
+2     cicero	
+2     cih	spell:ich:substitution
+2     com	link
+2     comSysto	ne:company
+2     cop17	
+2     cro	
+2     cyberport	
+2     :d	smiley
+2     d64	abbr
+2     dallas	ne:geo
+2     darfste	 spell:darfst du:deletion; slang
+2     dd	abbr
+2     deluxe	ne:product
+2     dennen	spell:denen:insertion
+2     depri	 spell:deprimiert:deletion; slang
+2     derStandardNewsroom	
+2     dezember	
+2     döi	
+2     diamantiert	dict
+2     dich.	token
+2     dissen	slang
+2     dm	spell:dem:deletion
+2     download	
+2     duisburg	ne:geo
+2     duu	elongation
+2     eben.	token
+2     eigentl.	abbr
+2     einsam.	token
+2     ek2012	
+2     electronic	
+2     email	neologism
+2     entfolgt	neologism
+2     eps	
+2     erhältlich.	token
+2     esports	
+2     etw	spell:etwas:deletion
+2     euro2012	
+2     ey.	inj
+2     fü	spell:für:deletion
+2     facepalm	
+2     fands	 spell:fand es:deletion; slang
+2     fcbayern	
+2     fck	
+2     fcsp	
+2     felixsturm	
+2     fi	
+2     fickmaul	slang
+2     fine	spell:finde:deletion
+2     first	fw
+2     fm303	
+2     freiemedien	
+2     freitickets	 compound; loan
+2     früherwarallesbesser	
+2     friedhöfe.	token
+2     friends	fw
+2     funny	loan
+2     fussball	
+2     games	fw
+2     gay	neologism
+2     ge	spell:gestern:deletion
+2     gedanken	dict
+2     gefallen.	
+2     gepruft	umlaut
+2     gerad	 spell:gerade:deletion; slang
+2     geretweetet	neologism
+2     geschri	spell:geschrieben:deletion
+2     gesehen.	
+2     gesenkt.	
+2     getrunken.	
+2     gewesen.	
+2     gg.	abbr
+2     gibi	fw
+2     gigaspeed	ne:product
+2     git	
+2     gladbach	ne:geo
+2     gnaaa	inj
+2     gold	dict
+2     gone	fw
+2     got	fw
+2     gov20	
+2     gov2vie	
+2     grundeinkommen	
+2     gruppe	dict
+2     göttingen	
+2     gut.	
+2     hahahaha	inj
+2     hannah	ne:person
+2     hat.	
+2     haun	 spell:hauen:deletion; slang
+2     hauptsache	compound
+2     have	fw
+2     hdl	abbr
+2     heey	inj
+2     heidelberg	
+2     heilbronn	ne:geo
+2     heimat	
+2     heise	
+2     hertha	
+2     höhöhö	inj
+2     hihi	inj
+2     hinzugefügt.	token
+2     Ähm	
+2     ho	inj
+2     hochgeladen.	token
+2     holland	ne:geo
+2     holzfäller	
+2     homepage	loan
+2     homophoben	dict
+2     hours	fw
+2     html5	neologism
+2     hätts	 spell:hätte es:deletion; slang
+2     hut	fw
+2     ikea	ne:company
+2     inner	spell:innere:deletion
+2     internet	dict
+2     iphone	ne:product
+2     itunes	ne:product
+2     iwelche	 spell:irgendwelche:deletion; slang
+2     jagger	ne:person
+2     jap	inj
+2     jed	spell:jeder:deletion
+2     jena	
+2     jmd	abbr
+2     jmd.	abbr
+2     joa	
+2     jtz	spell:jetzt:deletion
+2     juhu	inj
+2     jup	inj
+2     kaffee	
+2     kalender	dict
+2     kamel	dict
+2     ke	spell:keinen:deletion
+2     kinox	ne:company
+2     klasse	dict
+2     klicke	neologism
+2     klimawandel	
+2     köln	
+2     könn	
+2     können.	
+2     komme.	
+2     kommis	
+2     kopfkratz	smiley
+2     Ãkostromanbieter	
+2     Ãkostromkosten	
+2     Ãkostrompreise	
+2     ksc	
+2     kucken	 spell:gucken:substitution; slang
+2     kulturzwitscher	
+2     land	dict
+2     langeweile	dict
+2     laptop	neologism
+2     laune	dict
+2     ldkBB11	
+2     leiden.	token
+2     lenksäulensteuergerät	compound
+2     let	fw
+2     lisawolf	ne:person
+2     lünkern	slang
+2     loh	
+2     low	fw
+2     ludwigshafen	ne:geo
+2     m²	abbr
+2     m2	abbr
+2     macht.	token
+2     machts	 spell:macht es:deletion; slang
+2     mak	fw
+2     mas	
+2     mate	ne:product
+2     mcih	spell:mich:substitution
+2     mega	dict
+2     meh	inj
+2     mehr.	token
+2     mensch	
+2     merci	 fw; inj
+2     mögen.	token
+2     mind	abbr
+2     mitn	 spell:mit einem:deletion; slang
+2     mittelstand	
+2     moment	dict
+2     montana	ne:person
+2     more	fw
+2     mousesports	ne:company
+2     mund	dict
+2     musik	
+2     muss.	token
+2     musseinfachmalgesagtsein	
+2     naar	fw
+2     nase	
+2     natur	
+2     naturgeile	dict
+2     nazis	 dict; slang
+2     nd	
+2     änder	spell:ändern:deletion
+2     niall	ne:person
+2     nichtmehr	spell:nicht mehr:deletion
+2     nit	spell:nicht:deletion
+2     nix.	
+2     nog	spell:noch:substitution
+2     non	fw
+2     now	fw
+2     ohh	inj
+2     ohje	inj
+2     ok.	 inj; token
+2     ordnung	dict
+2     ots	abbr
+2     ouml	fw
+2     papst	
+2     pech	dict
+2     pinkelst	 dict; slang
+2     pls	 fw;  spell:please:deletion; slang
+2     pon	fw
+2     postet	neologism
+2     posting	loan
+2     proler	slang
+2     prust	smiley
+2     rabatt	
+2     radio	
+2     random	fw
+2     rathaus	dict
+2     rbb	abbr
+2     reply	fw
+2     rotblaulive	
+2     rs	abbr
+2     rt	slang
+2     sachen	dict
+2     sale	
+2     says	fw
+2     sc	spell:schwerer:deletion
+2     sc12	
+2     schalke	
+2     schatz	dict
+2     schenkenhttp	spell:schenken http:deletion
+2     schlager	
+2     schonwieder	spell:schon wieder:deletion
+2     seen	
+2     sehen.	
+2     seo	
+2     show	
+2     si	fw
+2     sidn	spell:sind:substitution
+2     sie.	
+2     siehste	 spell:siehst du:deletion/substitution; slang
+2     skichallenge	
+2     skype	ne:product
+2     skyrim	ne:product
+2     sms	neologism
+2     socialmedia	
+2     sol	spell:solche:deletion
+2     spast	
+2     spasti	slang
+2     spd11	
+2     ss	
+2     ssnhd	
+2     süüss	
+2     stalker	neologism
+2     std	
+2     stehen.	
+2     stehn	 spell:stehen:deletion; slang
+2     sten	token
+2     stuck	
+2     stylische	dict
+2     suit	inj
+2     svw	
+2     szlig	fw
+2     tabletten	dict
+2     tasche	dict
+2     than	fw
+2     thanks.	
+2     thedome	
+2     thumbs	fw
+2     tl	abbr
+2     toi	inj
+2     too	fw
+2     trotzdem.	token
+2     ts	inj
+2     ttms	
+2     tätschel	smiley
+2     twannheim	
+2     tweetet	neologism
+2     tweetkalender	
+2     twiät.	link
+2     twitterlauftreff	
+2     twünchen4	
+2     twuizzer	
+2     tz	
+2     ua	abbr
+2     uber	umlaut
+2     uch	inj
+2     uh	
+2     uhr.	token
+2     umarm	 spell:umarme:deletion; slang
+2     unverschlüsselt	
+2     usb	neologism
+2     uuh	inj
+2     vaillant	ne:product
+2     verarscht	slang
+2     vergess	 spell:vergesse:deletion; slang
+2     verpeilt	slang
+2     video.	token
+2     vids	 spell:videos:deletion; slang
+2     vie	
+2     vll	abbr
+2     vllt.	token
+2     vorbei.	token
+2     wahnsinn	dict
+2     was.	token
+2     wdr	
+2     wech	
+2     weg.	token
+2     wegn	spell:wegen:deletion
+2     wettendas	
+2     wi	spell:wir:deletion
+2     wiede	spell:wieder:deletion
+2     wieder.	token
+2     will.	
+2     wird.	token
+2     wissenschaftl	spell:wissenschaftliche:deletion
+2     woche.	token
+2     wort	dict
+2     wärest.	token
+2     ww	link
+2     x3	smiley
+2     xd	smiley
+2     xmas	 slang; fw
+2     yamaha	ne:product
+2     yg	fw
+2     your	fw
+2     zB	abbr
+2     zock	slang
+2     zuguckn	 spell:zuguckn:deletion; slang

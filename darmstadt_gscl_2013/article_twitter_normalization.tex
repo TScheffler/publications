@@ -1,0 +1,650 @@
+\documentclass[citeauthoryear]{llncs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{paralist} % for inparaenum
+\usepackage{multirow} % for multirow
+\usepackage{tabularx} % for centering in table
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\totaloov}{\% of total OOVs}
+\newcommand{\uniqoov}{\% of unique OOVs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{headings}  % switches on printing of running heads
+\title{MT @HanBaldwin: Fightin OOVs in German \#twitter}
+\titlerunning{Makn Sens a Germa \#twitter}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Max Mustermann \and Otto Normalverbraucher \and John Doe}
+%
+\authorrunning{xxx et al.} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{Max Mustermann, Otto Normalverbraucher, John Doe}
+%
+\institute{University of Universe, Milky Way City,\\
+  \email{max@example.com, %
+    otto@example.com, %
+    john@example.com},\\
+  WWW home page: \texttt{http://www.example.com}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+  %% Since its launch in March 2006 and until today Twitter constantly
+  %% gained more and more popularity as a communication means among the
+  %% Internet users. As of the end of 2012, approximately half a billion
+  %% messages were published every day by using its services (Terdiman,
+  %% \cite{terdiman}).  But, unfortunately, this abundant resource of
+  %% textual information can not be exploited to the full extent by
+  %% solely relying on standard NLP frameworks, because misspellings,
+  %% active usage of slang, and various other aspects of texting language
+  %% significantly decrease the chances of successful automatic analysis
+  %% of this kind of data.
+
+  This article gives an overview of existing approaches to the
+  problems of out-of-vocabulary tokens and noisiness effects in
+  natural language texts. Additionally, quantitative and qualitative
+  analyses of unknown words in German tweets are conducted in order to
+  assess how widely this textual genre differs from standard language
+  texts with regard to noisiness phenomena. Subsequently, we present a
+  set of ad-hoc techniques which are supposed to tackle some of the
+  most prominent disturbing effects and show how this set of
+  techniques allows us to lower the average rate of out-of-vocabulary
+  tokens in Twitter messages.
+
+  \keywords{twitter, social media, text normalization, spelling
+    correction}
+\end{abstract}
+%
+\section{Introduction}
+When Jack Dorsey, the present CEO of Twitter Inc., was sending the
+very first tweet on March 21, 2006 (Dorsey, \cite{dorsey}), he
+probably could not imagine that a few years later presidents and
+government officials would use this service to communicate with their
+voters and the Pope would be posting short messages holding an iPad in
+his hand (Pianigiani, \cite{nyt:pope}). Yet another thing that Jack
+Dorsey was apparently not aware of at that moment, was the fact that
+his message -- ``just setting up my twttr'' -- already contained a
+word which was unknown to the majority of NLP applications existing at
+that time, and that there would be many of such words in future
+causing a lot of headache to natural language specialists.
+
+Though the problem of out-of-vocabulary (OOV) words and its related
+task of text normalization have been extensively studied in
+computational linguistics since as early as the late 1950s
+(cf. Petersen, \cite{petersen}) and were certainly anything but new at
+the time when mobile communication emerged, it were small messages
+that revived interest in this area in the past two decades.
+
+%% One of the first scientific milestones which marked the renaissance of
+%% OOV studies in CL was a comprehensive article by Karen Kukich
+%% published in the renowned ACM journal on December 4-th 1992
+%% \cite{kukich}. By an interesting coincidence, just exactly one day
+%% before that, a British engineer called Neil Papworth had sent the
+%% world's first ever SMS-message \cite{guardian:sms}. But in contrast to
+%% Papworth's SMS which only said ``Merry Christmas'' to one of his
+%% friends, Kukich's work comprised more than 60 pages and provided a
+%% fully-fledged review of the state of the art techniques for dealing
+%% with unknown words within the scope of spelling correction programs.
+
+In the next Section we will give a short overview of recent scientific
+approaches to the problem of tackling out-of-vocabulary words in
+non-standard texts. After that, in Section \ref{error:analysis} we
+will analyze which types of text noisiness phenomena are especially
+characteristic for German Twitter. Section \ref{normalization} will
+subsequently describe an automatic procedure for mitigating some of
+the most obvious of those effects. In a concluding step, we will
+perform an evaluation of the results of this procedure and give
+further suggestions for future research.
+
+\section{Related Work}
+
+Before proceeding with the description of existing methods for noisy
+text normalization (NTN) task, we first would like to define the
+criteria by which these methods could be classified. It should be
+noted that there already exist several classifications of NTN methods
+including, for example, Kukich (\cite{kukich}), Kobus et
+al. (\cite{kobus}), and Sproat et al. (\cite{sproat}). But all of
+these classification attempts seem to have one significant
+shortcoming, namely they try to involve several independent criteria
+within one classification scheme.
+
+Kukich (\cite{kukich}), for example, divided NTN techniques into six
+classes:
+\begin{enumerate}
+\item minimum edit distance techniques;
+\item similarity key techniques;
+\item rule-based techniques;
+\item \textit{n}-gram based techniques;
+\item probabilistic techniques;
+\item neural nets.
+\end{enumerate}
+
+Kobus (\cite{kobus}), on the contrary, referred to existing NTN
+methods as \textit{metaphors} and split them into the following
+three groups:
+\begin{enumerate}
+\item ``spell checking'' metaphor;
+\item ``translation'' metaphor;
+\item ``speech recognition'' metaphor.
+\end{enumerate}
+
+Though both divisions seem to be justified to some extent, it is
+difficult to determine using them whether an NTN approach that detects
+and restores incorrectly spelled words on the basis of phonetical
+\textit{n}-gram statistics should fall into \textit{n}-gram based,
+probabilistic, spell checking or speech recognition class.
+
+We instead suggest using two separate types of criteria which are
+unrelated to each other and characterize NTN approaches from different
+points of view.
+
+The first criterion is \emph{segmentation level}. It depends primarily
+on the maximal length of syntagmatic segments which are used
+\begin{inparaenum}[\itshape a\upshape)]
+\item to infer in-vocabulary (IV) equivalents for OOV
+  tokens\label{candidate:inferring} and
+\item to choose the most probable variant\label{candidate:selection}
+  among multiple possible suggestions\footnote{For the cases, when
+    segments of different lengths are used for tasks
+    \ref{candidate:inferring} and \ref{candidate:selection}, we note
+    it explicitly in our classification on which segmentation length
+    each subtask relies.}.
+\end{inparaenum} For this criterion we propose division into following
+classes:
+\begin{enumerate}
+  \item graphematic\footnote{Depending on whether phonetical
+    information is involved or not at this level, this class could be
+    further divided into a phonographematic and purely graphematic
+    subclasses.};
+  \item lexical;
+  \item phrasal.
+\end{enumerate}
+Each broader level of this hierarchy is also supposed to either
+incorporate or ignore information provided by its narrower
+subsegments. In this way, we only need to mention one (the broadest)
+hierarchical class for the cases when multiple segmentation levels are
+involved by some techniques.
+
+The second classification criterion regards the \emph{type of
+  information induction} that was used to devise the correction
+directives. This leads us to the usual NLP-taxonomy which divides all
+approaches into:
+\begin{enumerate}
+  \item rule-based;
+  \item statistical\footnote{Depending on the type of training data
+    required, this class is usually divided into unsupervised,
+    semi-supervised, and supervised groups.};
+  \item and hybrid ones.
+\end{enumerate}
+
+Equipped with these two criteria, we could now proceed to the
+description of main scientific works on NTN task which were done in
+recent years.
+
+It is worthwile noting that many approached to NTN, especially the
+earlier ones, were heavily influenced by the idea of noisy channel
+model. The underlying notion of this model was that observed sentences
+had to be considered as corrupted versions of some original language
+signals. In order to restore the undistorted signal, one had to come
+up with two probabilistic submodels: the error model (one which caused
+the corruption) and the language model (one which reflected the nature
+of initial signal source). To these works belong Brill and Moore
+(\cite{brill}), Sproat et al. (\cite{sproat}), Toutanova and Moore
+(\cite{toutanova}), Clark (\cite{alexander-clark}), Choudhury et
+al. (\cite{choudhury}), Cook and Stevenson (\cite{cook}), Beaufort et
+al. (\cite{beaufort}) etc. The majority of these methods used either
+purely graphematic (Brill and Moore, \cite{brill}; Sproat et al.,
+\cite{sproat}; Clark, \cite{alexander-clark}) or phonographematic
+segmentation (Toutanova and Moore \cite{toutanova}; Choudhury et al.,
+\cite{choudhury}; Cook and Stevenson, \cite{cook}) for error
+models. For language model, normally phrasal segments (word
+\textit{n}-grams) were used. From the point of view of information
+induction almost all of these techniques could be characterized as
+supervised statistical, with the exception of Cook and Stevenson
+(\cite{cook}) who claimed to use an unsupervised technique.
+
+The raising influence and improved quality of machine translation
+tools and applications in the 2000s lead to the development of NTN
+technologies which used broader levels of segmentation. In \cite{aw},
+Aw et al. suggested a supervised statistical system for normalization
+of SMS-messages. Their system operated exclusively on phrasal level. A
+few years later, Clark and Araki (\cite{clark-araki}) described a
+purely rule-based phrasal technique.
+
+As stated by Kobus et al. (\cite{kobus}), NTN methods relying on
+either graphematic or phrasal segments usually revealed complementary
+strengths and weaknesses. This notion led NLP scientists to the idea
+that incorporating multiple levels of language in one NTN system could
+improve the total quality of the system as a whole since different
+levels would benefit from each other. As a consequence of this notion,
+a wealth of combined techniques emerged in the past few years. Among
+these we should especially mention Kobus et al. (\cite{kobus}),
+Kaufmann (\cite{kaufmann}), Han and Baldwin (\cite{han}), and Oliva et
+al. (\cite{oliva}). The system suggested by Kobus et
+al. (\cite{kobus}), for example, used a hybrid phrasal approach in a
+pre-processing step and subsequently fed the output of this
+pre-processing into a finite state transducer (FST). The FST performed
+a phonographematic segmentation of data and derived normalization
+equivalents on the basis of statistical inference. Another approach
+proposed by Kaufmann (\cite{kaufmann}) first used unambigous lexical
+mappings and straightforward graphematic correction rules to reduce
+the noisiness effects and then redirected pre-normalized input to a
+statistical phrasal MT system.
+
+Eventually, in \cite{han}, an article called ``Lexical Normalization
+of Short Text Messages: Makn Sens a \#{}twitter'' was published by Han
+and Baldwin. In this article the authors separated the tasks of
+identification of ill-formed words and finding appropriate correction
+for them. For the former problem, they first generated a confusion set
+(CS) for each word unknown to \texttt{GNU aspell}. Based on this set,
+the decision was made whether a particular word had to be corrected or
+regarded as vlid. Subsequently, for words identified as ill-formed the
+most probable restoration candidate was chosen from CS by combining
+features resulting from dictionary lookup, analysis of surrounding
+context, and estimating word similarity to each proposed correction
+variant. According to authors' estimations, this combination allowed
+them to outperform most of the NTN methods existing at that time.
+
+In our next section will also perform quantitive and qualitative
+analyses of unknown words in German Twitter texts in order to assess
+whether and to what extent the problem of ill-formed words is relevant
+for them. Relying on these analyses we then will suggest a set of
+ad-hoc techniques which could help one lower the average rate of
+incorrectly spelled words in this kind of text.
+
+\section{Analysis of Unknown Tokens}\label{error:analysis}
+
+In order to estimate the percentage of unknown words in Twitter
+messages, we randomly selected 10,000 tweets from a previously
+collected corpus, split them into sentences and tokenized using social
+media aware tokenizer by Christopher Potts
+\footnote{\url{http://sentiment.christopherpotts.net/code-data/happyfuntokenizing.py}}.
+After skipping all words which did not contain any alphabetic
+character or consisted only of a single letter, we
+obtained a list of 129,146 tokens. As reference systems for dictionary
+lookup we used open source spell checking program
+\texttt{hunspell}\footnote{Ispell Version 3.2.06 (Hunspell Version
+  1.3.2); dictionary de\_DE.} and publicly available part-of-speech
+tagger \texttt{TreeTagger}\footnote{Version 3.2 with German parameter
+  file UTF-8.} (Schmid, \cite{schmid}).
+
+Out of this token list, 26,018 tokens (20.15~\%) were regarded as
+unknown by \texttt{hunspell} and 28,389 tokens (21.98~\%) were
+considered as OOV by \texttt{TreeTagger}. We also performed similar
+estimations after leaving only unique words without taking into
+account their frequencies. This allowed us to shrink our initial token
+list by four times to 32,538 unique tokens. The relative rate of
+unknown words raised as expected and run up to 46.96~\% for
+\texttt{hunspell} and 58.24~\% for \texttt{TreeTagger}.
+
+Here once again the question of classification arose but this time
+with regard to the reasons, why different tokens could have been
+omitted from corresponding applications' dictionaries. In this
+respect, division into following groups seemed to be appropriate for
+us:
+\begin{enumerate}
+  \item \textbf{Objective limitedness of machine-readable dictionary
+    (MRD)}. To this group we counted words of basic vocabulary which
+    did not get into applications' MRD either because they supposedly
+    were rare or because they did not exist at the time when
+    dictionaries were created. Another reason for inclusion in this
+    type was the belonging of a word to an open lexical or
+    part-of-speech class (like, for example, named entities or
+    interjections) which are usually deliberately not included in MRDs
+    due to impossibility to cover these classes fully;\label{dict}
+  \item \textbf{Unintended sloppiness of user's input}. In the scope
+    of this group we considered unintended typos including unexpected
+    truncation of words at the end of Twitter messages\footnote{As is
+      generally known, Twitter imposes a strong restriction on the
+      length of posted messages which can be no longer than 140
+      characters. Upon exceeding this length, tweets get automatically
+      truncated.};\label{spell}
+  \item \textbf{Stylistic specifics of text genre}. This group
+    comprised words which could be considered as illegal from the
+    point of view of standard language texts but were perfectly valid
+    terms in the domain of web discourse and Twitter
+    communication.\label{style}
+\end{enumerate}
+
+In order to see how out-of-vocabulary words were distributed among and
+within these 3 major groups, we manually analyzed all OOV tokens which
+appeared in text more than once and also looked at 1,000 randomly
+selected hapax legomena. The results of these estimations are shown
+and explained below.
+
+We subdivided group \ref{dict} into the following subgroups:
+\begin{enumerate}
+\item regular German words, e.g. \textit{aufm}, \textit{losziehen};\label{regular}
+\item compounds, e.g.  \textit{Altwein}, \textit{Amtsapothekerin};\label{compound}
+\item abbreviations, e.g. \textit{NBG}, \textit{OL};\label{abbr}
+\item interjections, e.g.  \textit{aja}, \textit{haha};\label{inj}
+\item named entities, with subclasses:\label{ne}
+  \begin{enumerate}
+  \item persons, e.g.  \textit{Ahmadinedschad}, \textit{Schweiger};
+  \item geographic locations, e.g.  \textit{Biel}, \textit{Limmat};
+  \item companies, e.g. \textit{Apple}, \textit{Facebook};
+  \item product names, e.g. \textit{iPhone}, \textit{MacBook};
+  \end{enumerate}
+\item neologisms, with subclasses:\label{neolog}
+  \begin{enumerate}
+    \item newly coined German terms, e.g. \textit{entfolgen},
+      \textit{geskypt};\label{new}
+    \item loanwords, e.g. \textit{Community},
+      \textit{Stream};\label{loan}
+  \end{enumerate}
+\item and, finally, foreign words like \textit{is} or \textit{now}
+  which in contrast to \ref{loan} were not mentioned in any existing
+  German lexicons nor they complied with inflectional rules of German
+  grammar.\label{fw}
+\end{enumerate}
+Though this division is admittedly arbitrarily to a certain degree and
+involves different linguistic criteria simultaneously, the underlying
+notion for it was simple. Valid words could have been omitted from an
+MRD either due to the limitation of developers' capacities (group
+\ref{regular}), active word formation or lexical productivity of the
+language (groups \ref{compound} through \ref{new}) or also due to
+language's openness to foreign language systems (groups \ref{loan} and
+\ref{fw}).
+
+In Table \ref{table:mrd} percentage figures for each of the above
+subgroups are shown. We have considered OOV-distribution for both
+\texttt{hunspell} and \texttt{TreeTagger}. For both of them we
+estimated the percentage of particular subclass with regard to the
+total number of occurrences of OOV-tokens (column ``\totaloov{}'') as
+well as with regard to their percentage in the list of unique OOVs
+(column ``\uniqoov{}'') without taking into account their frequencies.
+
+\begin{table}
+  \caption{Distribution of OOV words belonging to the class
+    ``objective limitedness of MRD''\label{table:mrd}}
+  \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
+    \hline\noalign{\smallskip}
+    \multirow{2}{*}{OOV subclass} & %
+    \multicolumn{2}{c}{\texttt{hunspell}} & %
+    \multicolumn{2}{c}{\texttt{TreeTagger}}\\
+    & \totaloov{} & \uniqoov{} & \totaloov{} & \uniqoov{}\\
+    \noalign{\smallskip} \hline
+    regular German words & 7.88 & 8.85 &  & \\
+    compounds & 1.22 & 2.42 &  & \\
+    abbreviations & 4.12 & 4.91 &  & \\
+    interjections & 5.93 & 4.47 &  & \\
+    person names & 4.79 & 6.45 &  & \\
+    geographic locations & 1.51 & 2.53 &  & \\
+    company names & 2.26 & 2.8 &  & \\
+    product names & 2.08 & 2.49 &  & \\
+    newly coined terms & 1.22 & 1.24 &  & \\
+    loanwords & 3.72 & 4.05 &  & \\
+    foreign words & 11.68 & 14 &  & \\\hline
+    {\bfseries total} & 46.41 & 54.21 &  & \\
+    \noalign{\smallskip} \hline
+  \end{tabular}
+\end{table}
+
+Similarly to class \ref{dict} we subdivided the group of misspellings
+into the following subgroups:
+\begin{enumerate}
+  \item insertion;
+  \item deletion;
+  \item substitution;
+\end{enumerate}
+according to the kind of operation which led to a particular spelling
+mistake. The statistics on distribution of these subgroups is shown in
+Table \ref{table:spell}.
+\begin{table}
+  \caption{Distribution of OOV words belonging to the class
+    ``unintended sloppiness of user's input''\label{table:spell}}
+  \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
+    \hline\noalign{\smallskip}
+    \multirow{2}{*}{OOV subclass} & %
+    \multicolumn{2}{c}{\texttt{hunspell}} & %
+    \multicolumn{2}{c}{\texttt{TreeTagger}}\\
+    & \totaloov{} & \uniqoov{} & \totaloov{} & \uniqoov{}\\
+    \noalign{\smallskip} \hline
+    insertion &  &  &  & \\
+    deletion &  &  &  & \\
+    substitution &  &  &  & \\\hline
+    {\bfseries total} &  &  &  & \\
+    \noalign{\smallskip} \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}
+  \caption{Distribution of OOV words belonging to the class
+    ``stylistic specifics of text genre''}
+  \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
+    \hline\noalign{\smallskip}
+    \multirow{2}{*}{OOV subclass} & %
+    \multicolumn{2}{c}{\texttt{TreeTagger}} & %
+    \multicolumn{2}{c}{\texttt{hunspell}}\\
+    & \totaloov{} & \uniqoov{} & \totaloov{} & \uniqoov{}\\
+    \noalign{\smallskip} \hline
+    hashtags &  &  &  & \\
+    @-tokens &  &  &  & \\
+    links &  &  &  & \\
+    smileys &  &  &  & \\
+    slang &  &  &  & \\\hline
+    {\bfseries total} &  &  &  & \\
+    \noalign{\smallskip} \hline
+  \end{tabular}
+\end{table}
+
+\section{Text Normalization Procedure}\label{normalization}
+\subsection{Replacement of Twitter-Specific Phenomena}
+%
+\subsection{Restoration of Umlauts}
+%
+\subsection{Squeezing of Elongated Words}
+%
+\subsection{Translation of Slang Idioms}
+%
+\section{Evaluation}\label{evaluation}
+
+
+\section{Conclusion}\label{concl}
+
+This article provided an overview of exisiting approaches to noisy
+text normalization task. Additionally, all mentioned methods were
+classified on the basis of two independent criteria. In section
+\ref{error:analysis}, we performed qulitative and quantitive analyses
+of out-of-vocabulary words in German tweets and suggested a set of
+ad-hoc techniques for mitigating their potential negative influence on
+natural language processing. This procedure allowed us to reduce the
+total OOV rate by ... \% for \texttt{hunspell} and by ... \% for
+\texttt{TreeTagger}.
+
+Nevertheless, we should honestly admit that our system still has
+potential for development and research, since it mainly addresses only
+one of three main groups of OOV tokens. Future directions should
+certainly include a more thorough tackling of unintentional spelling
+mistakes and especially their most prominent types -- deletions and
+substitutions.
+
+Furthemore, a better evalution technique as well as comparison with
+other systems are needed for our normalization procedure. On the one
+hand, an \textit{extrinsic} evaluation should be performed (cf. Sparck
+Jones and Galliers, \cite{sparck}) which means that we not only have
+to show how the rate of OOV words goes down but much more how this
+lower OOV rate affects the work of the whole NLP system. On the other
+hand, we need to assess the quality of our procedure's work on the
+basis of metrics used by other researchers.
+
+One possible estimation criterion which was used by Aw et
+al. (\cite{aw}), Kaufmann (\cite{kaufmann}), Beaufort et
+al. (\cite{beaufort}), and Oliva et al. (\cite{oliva}) is the BLEU
+score (Papineni et al., \cite{papineni}). Another possibility would be
+to use the Word (WER) and Sentence Error Rates (SER) as suggested by
+Kobus et al. (\cite{kobus}). However, an obvious difficulty that we
+already encountered here is that both metrics highly rely on a
+subjective notion of the look of a ``normalized'' message. While the
+BLEU score could be an approriate criterion for normalization of
+messages like ``i luv ma mather and wd do evrythin 4 her'' which in
+fact looks like as if it were not English. But such highly distorted
+tweets are rather atypical for German. In this regard, WER and SER
+could be considered as more appropriate measurement criteria. But
+these metrics once again are rather dealing with spelling mistakes and
+would highly depend on whether one, for example, would consider the
+hash sign in a hashtag as an error.
+
+\subsection*{\ackname}
+
+This work was financially supported by ... as part of collaborative
+project ``...''. The authors are also thankful to ... for help with
+the analysis of data.
+
+%
+% ---- Bibliography ----
+%
+\bibliographystyle{splncs}
+\begin{thebibliography}{}
+\bibitem[2006]{aw}
+  Aw, A., Zhang, M., Xiao, J., Su, J.: %
+  A Phrase-based Statistical Model for {SMS} Text Normalization. %
+  COLING/ACL (2006) 33--40 %
+
+\bibitem[2002]{bangalore}
+  Bangalore, S., Murdock, V., Riccardi, G.: %
+  Bootstrapping Bilingual Data using Consensus Translation for a %
+  Multilingual Instant Messaging System. %
+  COLING (2002) 33--40 %
+
+\bibitem [2010]{beaufort}
+  Beaufort, R., Roekhaut, S., Cougnon, L. A.,  Fairon, C.: %
+  A Hybrid Rule/Model-Based Finite-State Framework for %
+  Normalizing SMS Messages. %
+  ACL (2010) 770--779 %
+
+\bibitem[2000]{brill}
+  Brill, E., Moore, R. C.: %
+  An improved model for noisy channel spelling correction. %
+  ACL %
+  (2000) 286--293 %
+
+\bibitem[2003]{alexander-clark}
+  Clark, A.: %
+  Pre-processing very noisy text. %
+  In Proceedings of Workshop on Shallow Processing of Large Corpora. %
+  (2003) 12--22
+
+\bibitem[2007]{choudhury}
+  Choudhury, M., Saraf, R., Jain, V., Mukherjee, A., Sarkar, S., Basu %
+  A.: %
+  Investigation and Modeling of the Structure of Texting Language. %
+  International Journal of Document Analysis and Retrieval: Special %
+  Issue on Analytics of Noisy Text. {\bfseries 10} %
+  (2007) 157--174 %
+
+\bibitem[2011]{clark-araki}
+  Clark, E., Araki, K.: %
+  Text Normalization in Social Media: Progress, Problems and %
+  Applications for a Pre-processing System of Casual English. %
+  PACLING. Procedia - Social and Behavioral Sciences {\bfseries 27} %
+  (2011) 2--11
+
+\bibitem[2009]{cook}
+  Cook, P., Stevenson, S.: %
+  An unsupervised model for text message normalization, %
+  Proceedings of the Workshop on Computational Approaches %
+  to Linguistic Creativity. %
+  CALC '09. (2009) 71--78
+
+\bibitem[2006]{dorsey}
+  Dorsey, J.: %
+  "just setting up my twttr". %
+  \url{https://twitter.com/jack/status/20} %
+  Accessed February 26, 2013. (2006)
+
+\bibitem[2011]{han}
+  Han, B., Baldwin, T.: %
+  Lexical Normalization of Short Text Messages: Makn Sens %
+  a \#{}twitter. %
+  ACL HLT. %
+  (2011) 368--378
+
+\bibitem[2008]{jurafsky}
+  Jurafsky, D., Martin, J. H.: %
+  Speech and Language Processing. 2nd Edition. %
+  Prentice Hall (2008) 129, 323
+
+\bibitem [2010]{kaufmann}
+  Kaufmann, M.: %
+  Syntactic normalization of twitter messages. %
+  The 8-th International Conference on Natural Language Processing. %
+  (2010)
+
+\bibitem [2008]{kobus}
+  Kobus, C., Yvon, F., Damnati, G.: %
+  Normalizing {SMS}: are Two Metaphors Better than One? %
+  COLING (2008) 441--448
+
+\bibitem[1992]{kukich}
+  Kukich, K.: %
+  Techniques for Automatically Correcting Words in Text. %
+  ACM Computing Surveys {\bfseries 24/4} (1992) 378--439
+
+\bibitem[2012]{guardian:sms}
+  McVeigh, T.: %
+  Text messaging turns 20. %
+  The Observer (December 1, 2012)
+
+\bibitem [2013]{oliva}
+  Oliva, J., Serrano, J. I., and Del Castillo, M. D., %
+  and Igesias, Á.: %
+  A {SMS} normalization system integrating multiple %
+  grammatical resources. %
+  Natural Language Engineering. %
+  (2013) 121--141 %
+
+\bibitem [2002]{papineni}
+  Papineni, K., Roukos, S., Ward, T., Zhu, W.-J.: %
+  Bleu: a Method for Automatic Evaluation of Machine Translation. %
+  ACL (2002) 311--318
+
+\bibitem [1980]{petersen}
+  Petersen, L. J.: %
+  Computer Programs for Detecting and Correcting Spelling Errors. %
+  Communications of the ACM {\bfseries 23/ 12} (1980) 676--687
+
+\bibitem[2012]{nyt:pope}
+  Pianigiani, G., Donadio, R.: %
+  Twitter Has A New User: The Pope. %
+  The New York Times. Page A6. (December 4, 2012)
+
+\bibitem[2001]{sproat}
+  Sproat, R., Black, A. W., Chen, S. F., Kumar, S., %
+  Ostendorf, M., Richards, Ch.: %
+  Normalization of non-standard words. %
+  Computer Speech \& Language, {\bfseries 15/3} (2001) 287--333
+
+\bibitem[1994]{schmid}
+  Schmid, H.: %
+  Probabilistic Part-of-Speech Tagging Using Decision Trees. %
+  In Proceedings of International Conference on New Methods in %
+  Language Processing. (1994)
+
+\bibitem[1996]{sparck}
+  Sparck Jones, K., Galliers, J. R.: %
+  Evaluating Natural Language Processing Systems. %
+  An Analysis and Review. Lecture Notes in Computer %
+  Science 1083, Springer. (1996)
+
+\bibitem[2012]{terdiman}
+  Terdiman, D.: %
+  Report: Twitter hits half a billion tweets a day. %
+  \url{http://timmurphy.org/2009/07/22/line-spacing-in-latex-documents/},%
+  Accessed February 26, 2013. (2012)
+
+\bibitem[2002]{toutanova}
+  Toutanova, K., Moore, R. C.: %
+  Pronunciation Modeling for Improved Spelling Correction. %
+  ACL (2002) 144--151
+
+\end{thebibliography}
+%
+% ---- End of Bibliography ----
+%
+\end{document}

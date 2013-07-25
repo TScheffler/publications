@@ -1,0 +1,157 @@
+\documentclass[citeauthoryear]{llncs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[german]{babel}
+\usepackage{authblk}
+\usepackage{paralist}
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nnline}{\\[0.2cm]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{headings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{MT @HanBaldwin: Fightin OOVs in German \#twitter}
+\author{Uladzimir Sidarenka \and Tatjana Schef{}f{}ler \and Manfred Stede}
+\institute{Universit\"at Potsdam\nnline
+  Postanschrift: Universit\"at Potsdam\\
+  Karl-Liebknecht Str. 24-25, 2.32\\
+  14476 Potsdam\nnline
+  {\small E-Mail: \{uladzimir.sidarenka$|$tatjana.schef{}f{}ler$|$manfred.stede\}@uni-potsdam.de}
+  %% Homepage: \texttt{http://www.ling.uni-potsdam.de/acl-lab/SocMedia/main.htm}\\
+}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Mit 58 Millionen versendeten Kurznachrichten pro Tag stellt Twitter
+eine unsch\"atzbare Ressource an Textinformationen dar, deren
+qualit\"atvolle automatische Verarbeitung aber erst durch eine
+vorausgehende Normalisierung m\"oglich wird. Und obwohl es schon
+etliche Verfahren f\"ur Vorverarbeitung von englischen ``noisy''
+Texten gibt (vgl. Aw \cite{aw}, Kaufman \cite{kaufman}, Clark
+\cite{clark}, Han \cite{han}), m\"ochten wir in diesem Artikel ein
+neues Normalisierungsverfahren vorstellen, das explizit auf deutsche
+Tweets ausgerichtet ist und den st\"orenden Effekt von Faktoren der
+internetbasierten Kommunikation (IBK) in diesem Textgenre verringert.
+
+Um herauszufinden, welche Faktoren es eigentlich sind, analysierten
+wir 10,000 Tweets mit \texttt{TreeTagger} (Schmid, \cite{schmid}) und
+\texttt{GNU Hunspell} und berechneten dabei, wie viele Tokens des
+Eingabetexts von diesen Programmen als ``out-of-vocabulary'' (OOV)
+erkannt wurden. Durch eine Ausz\"ahlung und detaillierte manuelle
+Klassifizierung der OOV-W\"orter wurde festgestellt, dass OOV-Tokens
+im Durchschnitt mehr als 20~\% aller W\"orter im Twitter-Diskurs
+ausmachen und von diesen mehr als die H\"alfte auf
+Twitter-spezifisches Markup, IBK-Ph\"anomene oder auch
+Rechtschreibfehler zur\"uckzuf\"uhren ist.
+
+Um die Prozentrate der OOV-Tokens zu senken, wendeten wir unser Set
+von Heuristiken an. Im ersten Verarbeitungsschritt dieses Sets wurden
+Hashtag-Zeichen und Retweet-Angaben entfernt sowie
+Twitter-Erw\"ahnungen durch ein spezielles Wort ersetzt, das zum
+Lexikon der jeweiligen Tools auch hinzugef\"ugt wurde. In
+nachfolgenden Etappen wurden dann weitere h\"aufig beobachtete
+OOV-Ph\"anomene in Twitter adressiert vor allem durch:
+\begin{inparaenum}[a)]
+ \item Wiederherstellung von Umlauten (aus ``ae'', ``ue'' usw.),
+ \item R\"uckf\"uhrung von vervielfachten Buchstaben
+   (z.B. ``Haaalllloooo'') auf die Grundform,
+ \item Normalisierung von Slangausdr\"ucken und Kontraktionen
+   (``isser'') und
+ \item spezielle Satzgrenzenerkennung und Tokenisierung.
+\end{inparaenum}
+
+Durch die Anwendung dieser Verfahren wurde eine Reduzierung der
+durchschnittlichen OOV-Rate um 6 bis 9~\% erreicht. Eine nachfolgende
+Analyse der verbleibenden OOV-Tokens zeigte auch, dass der Rest der
+OOVs eher von der Unvollst\"andigkeit der maschinenlesbaren Lexika
+zeugt oder durch Produktivit\"at der Sprache selbst zu erkl\"aren ist,
+was aber auch in anderen Textgenres h\"aufig vorkommt.
+
+%% Seit seinem Start in 2006 und bis zu heutiger Zeit hat Twitter
+%% ununterbrochen immer mehr an Popularit\"at als Kommunikationsmittel
+%% unter Internet-Nutzern gewonnen. So wurden Ende 2012 jeden Tag fast
+%% eine halbe Milliarde Kurznachrichten weltweit \"uber diesen Service
+%% verschickt (vgl. Terdiman, \cite{terdiman}), was Twitter per se zu
+%% einem sehr interessanten Objekt computerlinguistischer Forschung
+%% machte.
+
+%% Es erwies sich allerdings bald, dass diese unsch\"atzbare Ressource
+%% von Textinformation leider nicht ohne Weiteres analysiert
+%% bzw. automatisch verarbeitet werden kann. Grund daf\"ur ist die
+%% Tatsache, dass die Besonderheiten des verwendeten Lexikons, das
+%% spezielle Markup und allgegenw\"artige Pr\"asenz von Schreibfehlern
+%% und Slangausdr\"ucken sich negativ auf die Qualit\"at der Arbeit
+%% vorhandener NLP-Werkzeuge auswirken, so dass eine Normalisierung des
+%% Eingabetexts vor der Verarbeitung n\"otig ist.
+
+%% Das Thema der Normalisierung von Lingo-Texten ist in der
+%% englischsprachigen Literatur schon vor zwei Jahrzehnten angeschnitten
+%% und seitdem massiv behandelt worden, was zum Teil aber auch dazu
+%% gef\"uhrt hat, dass vorgeschlagene Verfahren sich stark
+%% \"uberschnitten haben und schwer voneinander abzugrenzen waren. In
+%% unserem Artikel wird versucht, eine Klassifikation existierender
+%% Textnormalisierungsverfahren vorzunehmen, wobei auf zwei voneinander
+%% unabh\"angige Kriterien -- Segmentierungsl\"ange und Typ der
+%% Regelinduktion -- gest\"utzt wird.
+
+%% Im zweiten Teil des Berichts wird eine quantitative und qualitative
+%% Analyse von W\"ortern durchgef\"uhrt, die aus Sicht von zwei weit
+%% verbreiteten, frei verf\"ugbaren Textverarbeitungsprogrammen
+%% \texttt{TreeTagger} (Schmid, \cite{schmid}) und \texttt{GNU Hunspell}
+%% als unbekannt klassifiziert waren. Das Ziel dieser Analyse ist
+%% aufzuzeigen, welche sprachlichen Prozesse oder Erscheinungen zur
+%% Abwesenheit des jeweiligen Wortes im maschinenlesbaren Lexikon
+%% gef\"uhrt haben und wie die prozentuelle Verteilung dieser
+%% Erscheinungen aussieht, d.h. welche Ph\"anomene am meisten unbekannte
+%% Vokabeln produziert haben.
+
+%% Im abschlie\ss{}enden Teil stellen wir eine Reihe von automatischen
+%% Verfahren vor, mit deren Hilfe die Prozentrate von unbekannten
+%% W\"ortern in Tweets um bis zu 9~\% gesenkt werden kann, indem vor
+%% allem Twitter-spezifische Ph\"anomene wie Benutzernamen, Hyperlinks,
+%% Hashtags, Prolongationen von Buchstaben usw. behandelt werden.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{}
+%% \bibitem[2012]{terdiman} Terdiman, D.: %
+%%   Report: Twitter hits half a billion tweets a day. %
+%%   Unter \url{http://timmurphy.org/2009/07/22/line-spacing-in-latex-documents/},
+%%   [abgerufen am: 26.02.2013].
+
+\bibitem[2006]{aw} Aw, A., Zhang, M., Xiao ,J., Su, J.:
+  Lexical Normalization of Short Text Messages: Makn Sens a
+  \#{}twitter.
+  A Phrase-based Statistical Model for {SMS} Text Normalization.
+  In COLING/ACL Main Conference Poster Sessions,
+  Seiten 33--40.
+  (2011)
+
+\bibitem[2011]{han} Han, B., Baldwin T.:
+  Lexical Normalization of Short Text Messages: Makn Sens a
+  \#{}twitter.
+  In Proceedings of the 49th Annual Meeting of the Association
+  for Computational Linguistics: Human Language Technologies (ACL
+  HLT). Seiten 368--378.
+  (2011)
+
+\bibitem[2011]{clark} Clark E., Araki, K.:
+  Text Normalization in Social Media: Progress, Problems
+  and Applications for a Pre-processing System of Casual
+  English.
+  In Pacific Association for Computational Linguistics
+  (PACLING)
+  (2011)
+
+\bibitem[2010]{kaufman} Kaufman M.:
+  Syntactic normalization of twitter messages.
+  International Conference on Natural Language Processing
+  (2010)
+
+\bibitem[1994]{schmid} Schmid, H.:
+  Probabilistic Part-of-Speech Tagging Using Decision Trees.
+  International Conference on New Methods in Language Processing.
+  (1994)
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,93 @@
+#!/usr/bin/env runawk
+
+#################################################################
+#use "power_getopt.awk"
+#use "xgetline.awk"
+#use "alt_assert.awk"
+#################################################################
+#.begin-str help
+# This script chooses N random lines from a given set of lines.
+#
+# USAGE:
+# script [OPTIONS] -c config-file [FILES]
+#
+# OPTIONS:
+# -h|--help	print this screen and exit
+# =c|--config-file	configuration file with classes
+# -u|--unique	do not take counts into account
+#.end-str
+##################################################################
+
+BEGIN {
+    cfile = getarg("c", 0)
+    uniqt = getarg("u", 0)
+    assert(cfile, "config file not specified", 1)
+    while (xgetline0(cfile)) {
+	if (NF == 1)
+	    stat[$1] = 0
+    }
+    spell["deletion"] = 0
+    spell["insertion"] = 0
+    spell["substitution"] = 0
+    m = i = j = ecnt = total = 0
+    cnt = 1
+}
+
+NF > 2 {
+    assert($1 ~ /^[[:digit:]]+$/, "Invalid format of input line", 2)
+    if (! uniqt)
+	cnt = 0 + $1
+    $1 = $2 = ""
+    sub(/^[[:blank:]]+/, "", $0)
+    sub(/[[:blank:]]+$/, "", $0)
+    m = split($0, marks, /[[:blank:]]*;[[:blank:]]*/)
+    for (i=1; i <= m; ++i) {
+	if (marks[i] in stat) {
+	    stat[marks[i]] += cnt
+	    total += cnt
+	} else if (marks[i] ~ /^spell:/) {
+	    assert(split(marks[i], errs, ":") == 3, "Invalid format of spell mark", 3)
+	    ecnt = split(errs[3], errt, /[\/,]/)
+	    for (j = 1; j <= ecnt; ++j) {
+		assert((errt[j] in spell), "Unknown type of spelling mistake", 4)
+		spell[errt[j]] += cnt
+		total += cnt
+	    }
+	} else if (marks[i]) {
+	    assert(0, "Unrecognized OOV class", 5)
+	}
+    }
+    next
+}
+
+assert(0, "Invalid number of tokens in input file", 6)
+
+END {
+    assert(total > 0, "No input lines were analyzed", 7)
+    _total_ = 0.0
+    for (class in stat) {
+	printf("%-15s%.2f\n", class, (stat[class] /= total) * 100)
+	_total_ += stat[class]
+    }
+
+    for (class in spell) {
+	printf("spell::%-15s%.2f\n", class, (spell[class] /= total) * 100)
+	_total_ += spell[class]
+    }
+    # we use `< 0.00000001' because of the problems with floating point numbers
+    assert(((_total_ - 1.0) < 0.00000001), "Percentages sum up to a number other than 1: " _total_, 8)
+    # printf("Group I:%.2f%%\n", stat["dict"] + \
+    # 	   stat["compound"] + stat["ne:person"] + stat["ne:bio"] +    \
+    # 	   stat["ne:geo"] + stat["ne:company"] + stat["ne:product"] + \
+    # 	   stat["abbr"] + stat["inj"] + stat["neologism"] + stat["loan"] + \
+    # 	   stat["fw"])
+    # printf("Group II:%.2f%%\n", (spell["deletion"] +			\
+    # 				 spell["insertion"] +			\
+    # 				       spell["substitution"]) / total)
+    # printf("Group III:%.2f%%\n", stat["at_token"] +	 \
+    # 	   stat["hash_tag"] +				 \
+    # 	   stat["link"] +				 \
+    # 	   stat["slang"] +				 \
+    # 	   stat["smiley"])
+    # printf("Token:%.2f%%\n", stat["token"])
+}

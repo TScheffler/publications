@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+##################################################################
+set -e -o pipefail
+
+##################################################################
+tree-tagger -token -lemma -cap-heuristics \
+    -lex "${SOCMEDIA_LSRC}/dict/special_tokens.lex" \
+    "${SOCMEDIA_BIN}/german-par-linux-3.2-utf8.bin" $@ | \
+awk -F '	' '$3 == "<unknown>" {print $1}' | \
+    LC_ALL=C.UTF-8 sort -d

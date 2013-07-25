@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+##################################################################
+if test $# -ne 1; then
+    echo<<EOF >&2
+USAGE:
+$(basename $0) input_file
+EOF
+    exit 1
+fi
+
+HL_FILE=1.$$
+HL_SELECTION=1000
+trap 'rm -f ${HL_FILE}' ERR EXIT
+##################################################################
+ifile=$1
+shift
+
+LC_ALL=C sort -d ${ifile} | \
+    LC_ALL=C uniq -c | \
+    LC_ALL=C sort -k1,1nr -k2,2d | \
+    gawk -v hl_file="${HL_FILE}" '
+function classify(ostr) {
+  sub(/^[[:blank:]]+/, "", ostr)
+  ostr = ostr "\t"
+  if (ostr ~ /^@/)
+    ostr = ostr "at_token"
+  else if (ostr ~ /^\#/)
+    ostr = ostr "hash_tag"
+  return ostr
+}
+
+length($2) < 2 {
+    next
+}
+
+# unconditionally print words with occurrence greater than 1
+0 + $1 > 1 {
+  printf("%-5s ", $1)
+  $1 = ""
+  printf("%s\n", classify($0))
+  next
+}
+
+# words with frequency 1 will be print to hlfile
+NF > 1 {
+  $1="" # delete count
+  printf("%-5d ", 1) >> hl_file
+  print classify($0) >> hl_file
+  next
+}' | LC_ALL=C sort -k1,1nr -k2,2d > ${ifile%%txt}freq.txt
+
+# for the case when this file was not created
+touch ${HL_FILE}
+select_random_line -n ${HL_SELECTION} ${HL_FILE} | \
+    LC_ALL=C sort -k2,2d > ${ifile%%txt}hl.1000.txt

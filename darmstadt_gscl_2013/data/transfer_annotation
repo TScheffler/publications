@@ -1,0 +1,52 @@
+#!/usr/bin/env runawk
+
+##################################################################
+# Modules:
+#use "power_getopt.awk"
+#use "xgetline.awk"
+#use "alt_assert.awk"
+#use "heapsort.awk"
+
+##################################################################
+# Help String
+
+##################################################################
+# Begin
+BEGIN {
+    assert(ARGC == 3)
+    afile = ARGV[1]
+    key = ""
+    while (xgetline0(afile)) {
+	assert(NF > 2)
+	key = tolower($2)
+	$1 = $2 = ""
+	sub(/^[[:blank:]]+/, "", $0)
+	cnt = split($0, marks, ";")
+	heapsort(marks, remap, 1, cnt)
+	$0 = marks[remap[1]]
+	for (i = 2; i <= cnt; ++i)
+	    $0 = $0 "; " marks[remap[i]]
+	if (((key in annotated) && \
+	     (tolower(annotated[key]) != tolower($0))) ||	\
+	    (key in ambig_annotation)) {
+	    delete annotated[key]
+	    ambig_annotation[key] = 1
+	} else {
+	    annotated[key] = $0
+	}
+    }
+    ARGV[1] = ""
+}
+
+##################################################################
+# Main
+NF == 2 {
+    key = tolower($2)
+    if (key in annotated)
+	print $0 annotated[key]
+    else
+	print
+    next
+}
+
+1
