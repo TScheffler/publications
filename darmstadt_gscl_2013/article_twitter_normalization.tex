@@ -17,18 +17,18 @@
 %                                     also used for the TOC unless
 %                                     \toctitle is used
 %
-\author{Max Mustermann \and Otto Normalverbraucher \and John Doe}
+\author{Uladzimir Sidarenka \and Tatjana Schef\/f\/ler \and Manfred Stede}
 %
-\authorrunning{xxx et al.} % abbreviated author list (for running head)
+\authorrunning{Sidarenka et al.} % abbreviated author list (for running head)
 %
 %%%% list of authors for the TOC (use if author list has to be modified)
-\tocauthor{Max Mustermann, Otto Normalverbraucher, John Doe}
+\tocauthor{Uladzimir Sidarenka, Tatjana Schef\/f\/ler, Manfred Stede}
 %
-\institute{University of Universe, Milky Way City,\\
-  \email{max@example.com, %
-    otto@example.com, %
-    john@example.com},\\
-  WWW home page: \texttt{http://www.example.com}}
+\institute{University of Potsdam,\\
+  \email{{uladzimir.sidarenka@uni-potsdam.de,
+      tatjana.scheffler@uni-potsdam.de,
+      manfred.stede@uni-potsdam.de},\\ WWW home page:
+    \texttt{http://www.ling.uni-potsdam.de/acl-lab/SocMedia/main.htm}}}
 
 \maketitle              % typeset the title of the contribution
 
@@ -44,16 +44,20 @@
   %% significantly decrease the chances of successful automatic analysis
   %% of this kind of data.
 
-  This article gives an overview of existing approaches to the
-  problems of out-of-vocabulary tokens and noisiness effects in
-  natural language texts. Additionally, quantitative and qualitative
-  analyses of unknown words in German tweets are conducted in order to
-  assess how widely this textual genre differs from standard language
-  texts with regard to noisiness phenomena. Subsequently, we present a
-  set of ad-hoc techniques which are supposed to tackle some of the
-  most prominent disturbing effects and show how this set of
-  techniques allows us to lower the average rate of out-of-vocabulary
-  tokens in Twitter messages.
+  This article gives an overview of existing approaches to the problem
+  of out-of-vocabulary (OOV) tokens and noisiness phenomena in natural
+  language texts. These approaches are classified with regard to the
+  size of text spans and knowledge inference mechanisms which they use
+  in their work. Subsequently, quantitative and qualitative analyses
+  of unknown words are conducted on German Twitter messages, in order
+  to see how relevant the OOV issue is for this particular kind of
+  micro-texts and to determine which peculiarities are especially
+  characteristic for them. In a concluding step, we present a set of
+  ad-hoc techniques which are supposed to tackle some of the most
+  prominent disturbing effects found during the analyses and show how
+  this set of techniques helps us to lower the average rate of
+  out-of-vocabulary tokens in Twitter messages thereby improving their
+  automatic Part-of-speech tagging quality.
 
   \keywords{twitter, social media, text normalization, spelling
     correction}
@@ -72,12 +76,21 @@ word which was unknown to the majority of NLP applications existing at
 that time, and that there would be many of such words in future
 causing a lot of headache to natural language specialists.
 
-Though the problem of out-of-vocabulary (OOV) words and its related
-task of text normalization have been extensively studied in
+Though the problem of out-of-vocabulary (OOV) words and its closely
+related task of textual normalization have been extensively studied in
 computational linguistics since as early as the late 1950s
 (cf. Petersen, \cite{petersen}) and were certainly anything but new at
 the time when mobile communication emerged, it were small messages
-that revived interest in this area in the past two decades.
+that revived interest in this research area in the past two
+decades.
+
+Starting from the second half of 1990-ies, the rise of SMS messages,
+growing popularity of online chats and launch of social networks lead
+to a significant boost in the number of publications on preprocessing
+casually typed texts. But despite this increased number of researches,
+the main focus of the majority of these works was on English data with
+a few exceptions of works on Spanish (Oliva et al., \cite{oliva}) and
+French (Beaufort et al., \cite{beaufort}).
 
 %% One of the first scientific milestones which marked the renaissance of
 %% OOV studies in CL was a comprehensive article by Karen Kukich
@@ -91,26 +104,25 @@ that revived interest in this area in the past two decades.
 %% with unknown words within the scope of spelling correction programs.
 
 In the next Section we will give a short overview of recent scientific
-approaches to the problem of tackling out-of-vocabulary words in
-non-standard texts. After that, in Section \ref{error:analysis} we
-will analyze which types of text noisiness phenomena are especially
-characteristic for German Twitter. Section \ref{normalization} will
-subsequently describe an automatic procedure for mitigating some of
-the most obvious of those effects. In a concluding step, we will
-perform an evaluation of the results of this procedure and give
-further suggestions for future research.
+approaches to the problem of out-of-vocabulary words in non-standard
+texts. After that, in Section \ref{error:analysis} we will analyze
+which types of noisiness phenomena are especially characteristic for
+German Twitter. Section \ref{normalization} will subsequently describe
+an automatic procedure for mitigating some of the most obvious of
+those effects. In a concluding step, we will perform an evaluation of
+the results of this procedure and give further suggestions for future
+research.
 
 \section{Related Work}
 
 Before proceeding with the description of existing methods for noisy
-text normalization (NTN) task, we first would like to define the
-criteria by which these methods could be classified. It should be
-noted that there already exist several classifications of NTN methods
-including, for example, Kukich (\cite{kukich}), Kobus et
-al. (\cite{kobus}), and Sproat et al. (\cite{sproat}). But all of
-these classification attempts seem to have one significant
-shortcoming, namely they try to involve several independent criteria
-within one classification scheme.
+text normalization (NTN), we first would like to define the criteria
+by which these methods could be classified. It should be noted that
+there already exist several classifications of NTN methods including,
+for example, Kukich (\cite{kukich}), Kobus et al. (\cite{kobus}), and
+Sproat et al. (\cite{sproat}). But all of these classification
+attempts seem to have one common shortcoming, namely they try to
+involve several independent criteria within one classification scheme.
 
 Kukich (\cite{kukich}), for example, divided NTN techniques into six
 classes:
@@ -587,6 +599,17 @@ the analysis of data.
   ACM Computing Surveys {\bfseries 24/4} (1992) 378--439
 
 \bibitem[2012]{guardian:sms}
+  McVeigh, T.: %
+  Text messaging turns 20. %
+  The Observer (December 1, 2012)
+
+\bibitem[2012]{mukherjee}
+  Mukherjee, S., Malu, A., Balamurali, A. R., Bhattacharyya, P.: %
+  TwiSent: A Multistage System for Analyzing Sentiment in Twitter. %
+  In Proceedings of The 21st ACM Conference on Information and %
+  Knowledge Management CIKM 2012, Hawai, (Oct 29 - Nov 2, 2012)
+
+
   McVeigh, T.: %
   Text messaging turns 20. %
   The Observer (December 1, 2012)
