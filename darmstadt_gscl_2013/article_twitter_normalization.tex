@@ -47,17 +47,17 @@
   This article gives an overview of existing approaches to the problem
   of out-of-vocabulary (OOV) tokens and noisiness phenomena in natural
   language texts. These approaches are classified with regard to the
-  size of text spans and knowledge inference mechanisms which they use
-  in their work. Subsequently, quantitative and qualitative analyses
-  of unknown words are conducted on German Twitter messages, in order
-  to see how relevant the OOV issue is for this particular kind of
-  micro-texts and to determine which peculiarities are especially
-  characteristic for them. In a concluding step, we present a set of
+  size of text spans and knowledge inference mechanisms which they
+  rely on in their work. Subsequently, quantitative and qualitative
+  analyses of unknown words are conducted on German Twitter messages,
+  in order to show how relevant the OOV and text normalization
+  problems are for this particular kind of micro-texts and what their
+  characteristics are there. In a concluding step, we present a set of
   ad-hoc techniques which are supposed to tackle some of the most
   prominent disturbing effects found during the analyses and show how
   this set of techniques helps us to lower the average rate of
-  out-of-vocabulary tokens in Twitter messages thereby improving their
-  automatic Part-of-speech tagging quality.
+  out-of-vocabulary tokens in Twitter messages thereby improving the
+  quality of their automatic Part-of-speech tagging.
 
   \keywords{twitter, social media, text normalization, spelling
     correction}
@@ -76,53 +76,60 @@ word which was unknown to the majority of NLP applications existing at
 that time, and that there would be many of such words in future
 causing a lot of headache to natural language specialists.
 
-Though the problem of out-of-vocabulary (OOV) words and its closely
-related task of textual normalization have been extensively studied in
+Though the problem of out-of-vocabulary words and its closely related
+task of textual normalization have been extensively studied in
 computational linguistics since as early as the late 1950s
 (cf. Petersen, \cite{petersen}) and were certainly anything but new at
 the time when mobile communication emerged, it were small messages
-that revived interest in this research area in the past two
-decades.
+that revived interest in this research area in the past two decades.
 
-Starting from the second half of 1990-ies, the rise of SMS messages,
-growing popularity of online chats and launch of social networks lead
-to a significant boost in the number of publications on preprocessing
-casually typed texts. But despite this increased number of researches,
-the main focus of the majority of these works was on English data with
-a few exceptions of works on Spanish (Oliva et al., \cite{oliva}) and
-French (Beaufort et al., \cite{beaufort}).
+Starting from the second half of the 1990s, not only the number of
+publications on automatic text correction gradually increased every
+year but also the focus of those researches steadily turned away from
+normalization of manually typed or OCR processed official documents to
+the processing of sloppily created user messages and online chat
+posts. But even despite this increased interest, most of the
+researches still were dealing with only English text data. A few
+exceptions from that are works on French (Beaufort et al.,
+\cite{beaufort}) and Spanish (Oliva et al., \cite{oliva}).
 
-%% One of the first scientific milestones which marked the renaissance of
-%% OOV studies in CL was a comprehensive article by Karen Kukich
+%% One of the first scientific milestones which marked the renaissance
+%% of OOV studies in CL was a comprehensive article by Karen Kukich
 %% published in the renowned ACM journal on December 4-th 1992
 %% \cite{kukich}. By an interesting coincidence, just exactly one day
 %% before that, a British engineer called Neil Papworth had sent the
-%% world's first ever SMS-message \cite{guardian:sms}. But in contrast to
-%% Papworth's SMS which only said ``Merry Christmas'' to one of his
+%% world's first ever SMS-message \cite{guardian:sms}. But in contrast
+%% to Papworth's SMS which only said ``Merry Christmas'' to one of his
 %% friends, Kukich's work comprised more than 60 pages and provided a
 %% fully-fledged review of the state of the art techniques for dealing
-%% with unknown words within the scope of spelling correction programs.
+%% with unknown words within the scope of spelling correction
+%% programs.
 
-In the next Section we will give a short overview of recent scientific
-approaches to the problem of out-of-vocabulary words in non-standard
-texts. After that, in Section \ref{error:analysis} we will analyze
-which types of noisiness phenomena are especially characteristic for
-German Twitter. Section \ref{normalization} will subsequently describe
-an automatic procedure for mitigating some of the most obvious of
-those effects. In a concluding step, we will perform an evaluation of
-the results of this procedure and give further suggestions for future
-research.
+In this article we are going to provide some more insight about the
+relevance of OOV issues for German language by showing how many
+out-of-vocabulary tokens are found in German online texts on average
+and what kind of linguistic phenomena are main sources of these
+OOVs. The next Section will first give a short overview and provide a
+classification of recent scientific approaches to the problem of
+out-of-vocabulary words in non-standard texts. After that, in Section
+\ref{error:analysis} we will analyze which types of noisiness
+phenomena are especially common in German Twitter. Section
+\ref{normalization} will subsequently describe an automatic procedure
+for mitigating some of the most prominent of those effects. In a
+concluding step, we will perform an evaluation of the results of this
+procedure and give some further suggestions for future research.
 
 \section{Related Work}
 
 Before proceeding with the description of existing methods for noisy
 text normalization (NTN), we first would like to define the criteria
 by which these methods could be classified. It should be noted that
-there already exist several classifications of NTN methods including,
-for example, Kukich (\cite{kukich}), Kobus et al. (\cite{kobus}), and
-Sproat et al. (\cite{sproat}). But all of these classification
-attempts seem to have one common shortcoming, namely they try to
-involve several independent criteria within one classification scheme.
+there already exist several classifications of NTN approaches
+including, for example, Kukich (\cite{kukich}), Kobus et
+al. (\cite{kobus}), and Sproat et al. (\cite{sproat}). But all of
+these classifications seem to share one significant common
+shortcoming, namely they try to involve several independent criteria
+within one classification scheme.
 
 Kukich (\cite{kukich}), for example, divided NTN techniques into six
 classes:
@@ -135,9 +142,8 @@ classes:
 \item neural nets.
 \end{enumerate}
 
-Kobus (\cite{kobus}), on the contrary, referred to existing NTN
-methods as \textit{metaphors} and split them into the following
-three groups:
+Kobus (\cite{kobus}), on the contrary, referred to NTN methods as
+\textit{metaphors} and split them into the following three groups:
 \begin{enumerate}
 \item ``spell checking'' metaphor;
 \item ``translation'' metaphor;
@@ -147,14 +153,14 @@ three groups:
 Though both divisions seem to be justified to some extent, it is
 difficult to determine using them whether an NTN approach that detects
 and restores incorrectly spelled words on the basis of phonetical
-\textit{n}-gram statistics should fall into \textit{n}-gram based,
+\textit{n}-gram statistics should fall into the \textit{n}-gram based,
 probabilistic, spell checking or speech recognition class.
 
-We instead suggest using two separate types of criteria which are
-unrelated to each other and characterize NTN approaches from different
-points of view.
+Instead of that, we suggest using two separate types of criteria which
+are unrelated to each other and characterize NTN approaches from
+different points of view.
 
-The first criterion is \emph{segmentation level}. It depends primarily
+The first criterion is \emph{segmentation level}. It primarily depends
 on the maximal length of syntagmatic segments which are used
 \begin{inparaenum}[\itshape a\upshape)]
 \item to infer in-vocabulary (IV) equivalents for OOV
@@ -164,8 +170,8 @@ on the maximal length of syntagmatic segments which are used
     segments of different lengths are used for tasks
     \ref{candidate:inferring} and \ref{candidate:selection}, we note
     it explicitly in our classification on which segmentation length
-    each subtask relies.}.
-\end{inparaenum} For this criterion we propose division into following
+    each of these subtasks relies.}.
+\end{inparaenum} For this criterion we propose division into the following
 classes:
 \begin{enumerate}
   \item graphematic\footnote{Depending on whether phonetical
@@ -177,47 +183,48 @@ classes:
 \end{enumerate}
 Each broader level of this hierarchy is also supposed to either
 incorporate or ignore information provided by its narrower
-subsegments. In this way, we only need to mention one (the broadest)
-hierarchical class for the cases when multiple segmentation levels are
-involved by some techniques.
+subsegments. In this way, only one (the broadest) hierarchical class
+needs to be mentioned for the cases when multiple segmentation levels
+are involved by some techniques.
 
 The second classification criterion regards the \emph{type of
-  information induction} that was used to devise the correction
+  information induction} that is used to devise the correction
 directives. This leads us to the usual NLP-taxonomy which divides all
 approaches into:
 \begin{enumerate}
   \item rule-based;
   \item statistical\footnote{Depending on the type of training data
-    required, this class is usually divided into unsupervised,
+    required, this class is in turn usually divided into unsupervised,
     semi-supervised, and supervised groups.};
   \item and hybrid ones.
 \end{enumerate}
 
-Equipped with these two criteria, we could now proceed to the
-description of main scientific works on NTN task which were done in
-recent years.
+Equipped with these two criteria, it should now be easier to get a
+clear picture of the development and recent tendencies in NTN
+research.
 
-It is worthwile noting that many approached to NTN, especially the
+It is worthwile noting that many approaches to NTN, especially the
 earlier ones, were heavily influenced by the idea of noisy channel
 model. The underlying notion of this model was that observed sentences
-had to be considered as corrupted versions of some original language
-signals. In order to restore the undistorted signal, one had to come
-up with two probabilistic submodels: the error model (one which caused
-the corruption) and the language model (one which reflected the nature
-of initial signal source). To these works belong Brill and Moore
-(\cite{brill}), Sproat et al. (\cite{sproat}), Toutanova and Moore
-(\cite{toutanova}), Clark (\cite{alexander-clark}), Choudhury et
-al. (\cite{choudhury}), Cook and Stevenson (\cite{cook}), Beaufort et
-al. (\cite{beaufort}) etc. The majority of these methods used either
-purely graphematic (Brill and Moore, \cite{brill}; Sproat et al.,
-\cite{sproat}; Clark, \cite{alexander-clark}) or phonographematic
-segmentation (Toutanova and Moore \cite{toutanova}; Choudhury et al.,
-\cite{choudhury}; Cook and Stevenson, \cite{cook}) for error
-models. For language model, normally phrasal segments (word
-\textit{n}-grams) were used. From the point of view of information
-induction almost all of these techniques could be characterized as
-supervised statistical, with the exception of Cook and Stevenson
-(\cite{cook}) who claimed to use an unsupervised technique.
+had to be considered as corrupted versions of their respective
+original language signals. In order to restore the undistorted signal,
+one had to come up with two probabilistic submodels: the error model
+(one which caused the corruption) and the language model (one which
+reflected the nature of initial signal source). To these works belong
+Brill and Moore (\cite{brill}), Sproat et al. (\cite{sproat}),
+Toutanova and Moore (\cite{toutanova}), Clark
+(\cite{alexander-clark}), Choudhury et al. (\cite{choudhury}), Cook
+and Stevenson (\cite{cook}), Beaufort et al. (\cite{beaufort})
+etc. The majority of these methods used either purely graphematic
+(Brill and Moore, \cite{brill}; Sproat et al., \cite{sproat}; Clark,
+\cite{alexander-clark}) or phonographematic segmentation (Toutanova
+and Moore \cite{toutanova}; Choudhury et al., \cite{choudhury}; Cook
+and Stevenson, \cite{cook}) for error models. For language model,
+normally phrasal segments (word \textit{n}-grams) were used. From the
+point of view of information induction almost all of these techniques
+could be characterized as supervised statistical, with the exception
+of Cook and Stevenson (\cite{cook}) who claimed to use an unsupervised
+technique.
 
 The raising influence and improved quality of machine translation
 tools and applications in the 2000s lead to the development of NTN
@@ -261,7 +268,7 @@ context, and estimating word similarity to each proposed correction
 variant. According to authors' estimations, this combination allowed
 them to outperform most of the NTN methods existing at that time.
 
-In our next section will also perform quantitive and qualitative
+In the next Section will also perform quantitive and qualitative
 analyses of unknown words in German Twitter texts in order to assess
 whether and to what extent the problem of ill-formed words is relevant
 for them. Relying on these analyses we then will suggest a set of
@@ -307,14 +314,14 @@ us:
     type was the belonging of a word to an open lexical or
     part-of-speech class (like, for example, named entities or
     interjections) which are usually deliberately not included in MRDs
-    due to impossibility to cover these classes fully;\label{dict}
-  \item \textbf{Unintended sloppiness of user's input}. In the scope
+    due to impossibility to fully cover these classes;\label{dict}
+  \item \textbf{Unintended sloppiness of users' input}. In the scope
     of this group we considered unintended typos including unexpected
     truncation of words at the end of Twitter messages\footnote{As is
       generally known, Twitter imposes a strong restriction on the
       length of posted messages which can be no longer than 140
       characters. Upon exceeding this length, tweets get automatically
-      truncated.};\label{spell}
+      truncated to maximal allowed length.};\label{spell}
   \item \textbf{Stylistic specifics of text genre}. This group
     comprised words which could be considered as illegal from the
     point of view of standard language texts but were perfectly valid
@@ -350,7 +357,7 @@ We subdivided group \ref{dict} into the following subgroups:
   \end{enumerate}
 \item and, finally, foreign words like \textit{is} or \textit{now}
   which in contrast to \ref{loan} were not mentioned in any existing
-  German lexicons nor they complied with inflectional rules of German
+  German lexicons and did not comply with inflectional rules of German
   grammar.\label{fw}
 \end{enumerate}
 Though this division is admittedly arbitrarily to a certain degree and
@@ -408,7 +415,7 @@ mistake. The statistics on distribution of these subgroups is shown in
 Table \ref{table:spell}.
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
-    ``unintended sloppiness of user's input''\label{table:spell}}
+    ``unintended sloppiness of users' input''\label{table:spell}}
   \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
     \hline\noalign{\smallskip}
     \multirow{2}{*}{OOV subclass} & %
