@@ -6,7 +6,7 @@
 #use "alt_assert.awk"
 #################################################################
 #.begin-str help
-# This script chooses N random lines from a given set of lines.
+# This script calculates statistics on OOV classes from tagged file.
 #
 # USAGE:
 # script [OPTIONS] -c config-file [FILES]

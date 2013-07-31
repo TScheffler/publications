@@ -11,15 +11,15 @@ EOF
     exit 1
 fi
 
-HL_FILE=1.$$
+HL_FILE=${ifile%%txt}hl.txt
 HL_SELECTION=1000
 trap 'rm -f ${HL_FILE}' ERR EXIT
+
 ##################################################################
 ifile=$1
 shift
 
-LC_ALL=C sort -d ${ifile} | \
-    LC_ALL=C uniq -c | \
+LC_ALL=C sort -d ${ifile} | LC_ALL=C uniq -c | \
     LC_ALL=C sort -k1,1nr -k2,2d | \
     gawk -v hl_file="${HL_FILE}" '
 function classify(ostr) {
@@ -53,6 +53,6 @@ NF > 1 {
 }' | LC_ALL=C sort -k1,1nr -k2,2d > ${ifile%%txt}freq.txt
 
 # for the case when this file was not created
-touch ${HL_FILE}
-select_random_line -n ${HL_SELECTION} ${HL_FILE} | \
-    LC_ALL=C sort -k2,2d > ${ifile%%txt}hl.1000.txt
+# touch ${HL_FILE}
+# select_random_line -n ${HL_SELECTION} ${HL_FILE} | \
+#     LC_ALL=C sort -k2,2d > ${ifile%%txt}hl.1000.txt

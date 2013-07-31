@@ -31,7 +31,7 @@
 29    °C	dict
 29    Haha	inj
 29    naja	inj
-28    lol	smiley
+28    lol	slang; inj; smiley
 26    :-D	smiley
 26    net	slang; spell:nicht:substitution,deletion
 26    wär	spell:wäre:deletion; slang
@@ -116,7 +116,7 @@
 10    Game	fw
 10    HANSGROHE	ne:company
 10    Happy	fw
-10    Lol	smiley
+10    Lol	slang; inj; smiley
 10    Player	fw
 10    at	fw
 10    cc	slang
@@ -193,7 +193,7 @@
 7     #Euro2012	hash_tag
 7     Jaa	elongation; inj
 7     #Kleinanzeige	hash_tag
-7     LOL	inj; smiley
+7     LOL	slang; inj; smiley
 7     Let	fw
 7     Like	fw
 7     Maffay	ne:person
@@ -1573,7 +1573,7 @@
 2     Hochzeitsbräuche	compound
 2     #Holland	hash_tag
 2     Holzspalter	dict
-2     Home	
+2     Home	fw
 2     Homepage	loan
 2     Hoppla	inj
 2     #Hotel	hash_tag
@@ -1588,7 +1588,7 @@
 2     @Ich_Manu	at_token
 2     @Ich_halt_	at_token
 2     Iconia	ne:product
-2     Ik	
+2     Ik	fw
 2     Indie	fw
 2     Infinity	ne:product
 2     Informationsbuch	compound
@@ -1598,7 +1598,7 @@
 2     Internetverbindung	compound
 2     Intro	slang
 2     Irwie	spell:irgendiwe:deletion; slang
-2     Isch	
+2     Isch	slang; spell:Ich:insertion
 2     Jaaa	elongation; inj
 2     @JananasGold	at_token
 2     Jap	inj
@@ -1629,7 +1629,8 @@
 2     Kabhi	fw
 2     Kaminofen	compound
 2     Kanaldesign	compound
-2     Kanns	
+1     Kanns	spell:Kannst:deletion
+1     Kanns	spell:Kann das:deletion
 2     Kannste	spell:kannst du:deletion/substitution; slang
 2     #Kapstadt	hash_tag
 2     Karma	dict
@@ -1653,7 +1654,7 @@
 2     #Kreuzberg	hash_tag
 2     Kroos	ne:person
 2     KsvTRbhL	link
-2     Ku	
+2     Ku	slang; token
 2     @Kuechendenker	at_token
 2     LR	ne:company
 2     LTE	abbr
@@ -1679,9 +1680,9 @@
 2     Literatwo	ne:company
 2     Livecam	neologism
 2     Län	spell:Länge:deletion
-2     LoL	
+2     LoL	slang; inj; smiley
 2     Logic	ne:product
-2     Loh	
+2     Loh	fw
 2     @London_soul	at_token
 2     Lookslikelink	ne:person
 2     Loszeremonie	compound
@@ -1692,7 +1693,7 @@
 2     @M1er	at_token
 2     M7600	abbr
 2     MAGIX	ne:company
-2     MAS	
+2     MAS	token
 2     MDR	ne:company
 2     #MEGADOTS	hash_tag
 2     #MEGATEST	hash_tag
@@ -1750,7 +1751,7 @@
 2     Mose	ne:person
 2     Movie	fw
 2     @MoviezKult	at_token
-2     Mp3	
+2     Mp3	abbr
 2     @MrWeg	at_token
 2     Märktel.	token
 2     @Muermel	at_token
@@ -1774,23 +1775,23 @@
 2     Navi	slang
 2     Neckholder	ne:company
 2     @NellyNiveaulog	at_token
-2     Nen	
+2     Nen	spell:einen:deletion; slang
 2     @NessysWelt	at_token
-2     Net	
+2     Net	spell:nicht:substitution/insertion; slang
 2     Netzwerkkabel	compound
 2     #Neu	hash_tag
 2     Never	fw
 2     @NewHowTV	at_token
 2     Newman	ne:person
 2     Newsticker	loan
-2     Ni	
+2     Ni	fw
 2     @Nicoo4797	at_token
 2     Niebüll	ne:geo
 2     Nieblum	ne:geo
 2     Niggemeier	ne:person
 2     @NikSput	at_token
 2     @NinaLovesAriana	at_token
-2     Nivea	
+2     Nivea	ne:company
 2     Noir	fw
 2     @NoodLe3105	at_token
 2     #Nürnberg	hash_tag
@@ -1807,7 +1808,8 @@
 2     Oststeinbek	ne:geo
 2     PUKY	ne:product
 2     PVR	abbr
-2     Pa	
+1     Pa	spell:Partei:deletion
+1     Pa	fw
 2     @PaImtopTiger	at_token
 2     @_Papa_baer_	at_token
 2     @Pappklappe	at_token
@@ -1860,11 +1862,11 @@
 2     Quetschkalotten	compound
 2     Quotes	fw
 2     @RADiO_HYSTERiA	at_token
-2     RETWEET	
+2     RETWEET	loan; neologism
 2     RIM	ne:company
 2     RL	abbr
 2     RNK	abbr
-2     ROFL	
+2     ROFL	slang; inj; smiley
 2     @RRRockstah	at_token
 2     RSC	abbr
 2     RSS	neologism
@@ -1896,18 +1898,21 @@
 2     Rihanna	ne:person
 2     Räikkönen	ne:person
 2     Robertson	ne:person
-2     Rofl	
+2     Rofl	slang; inj; smiley
 2     Rollläden	dict
 2     @Roockwood	at_token
-2     Rosso	
+1     Rosso	ne:person
+1     Rosso	ne:product
 2     Rousseff	ne:person
 2     Row	ne:product
 2     @Roxaen	at_token
 2     Rösler	ne:person
 2     #Ruhrgebiet	hash_tag
 2     S04	abbr
-2     SALE	
-2     SEH	
+1     SALE	loan
+1     SALE	ne:product
+1     SEH	spell:SEHE:deletion
+1     SEH	spell:THE:substitution,substitution
 2     SPD.	ne:company; token
 2     @SPIEGELONLINE	at_token
 2     SSD	abbr; neologism
@@ -1916,7 +1921,7 @@
 2     #SWR	hash_tag
 2     #SWTOR	hash_tag
 2     SX	ne:product
-2     Sale	
+2     Sale	loan
 2     @Samaire	at_token
 2     @SarahIsPlobnrg	at_token
 2     @SarahK_96	at_token
@@ -1979,7 +1984,7 @@
 2     Spitzenduelle	compound
 2     @StarlightCyrus	at_token
 2     Startseite	compound
-2     Std	
+2     Std	abbr
 2     @Stef_aus_NRW	at_token
 2     @Steffenster	at_token
 2     @StereoSushisu	at_token
@@ -1997,7 +2002,8 @@
 2     Suesser	umlaut
 2     @Suizidkatze87	at_token
 2     Summinet	ne:company
-2     Sunshine	
+1     Sunshine	ne:product
+1     Sunshine	loan
 2     #Superflat	hash_tag
 2     Supi	spell:super:substitution; slang
 2     Swingerparty	compound
@@ -2072,7 +2078,7 @@
 2     WD	abbr
 2     „WE	token
 2     WH	abbr
-2     WLAN	
+2     WLAN	abbr; loan
 2     WOW	inj
 2     WZ	abbr
 2     Wah	inj
@@ -2089,7 +2095,7 @@
 2     #Weiterbildung	hash_tag
 2     Welcome	inj; fw
 2     Wels	dict
-2     Wenns	
+2     Wenns	spell:Wenn es:deletion
 2     #Werteverfall	hash_tag
 2     @Weseresk	at_token
 2     #WettenDas	hash_tag
@@ -2115,8 +2121,8 @@
 2     Wutbürger	neologism; compound
 2     „X	token
 2     XDDDDDD	smiley
-2     XIII	
-2     XXL	
+2     XIII	ne:product
+2     XXL	ne:product
 2     @Xanatori	at_token
 2     Xmas	slang; fw
 2     Xylitol	dict
@@ -2185,7 +2191,8 @@
 2     bayreuth	ne:geo
 2     #bcruhr5	hash_tag
 2     bday	fw;  spell:birthday:deletion; slang
-2     be	
+1     be	fw
+1     be	spell:betrinken:deletion
 2     @beastlygray	at_token
 2     beber	fw
 2     befreuntet	spell:befreundet:deletion
@@ -2241,12 +2248,13 @@
 2     #cop17	hash_tag
 2     @copgirl2	at_token
 2     @crazyJEADHEAD	at_token
-2     cyberport	
+2     cyberport	ne:company
 2     daa	elongation
 2     daaa	elongation
 2     daar	fw
 2     @daelancrew	at_token
-2     dah	
+1     dah	spell:da:insertion
+1     dah	fw
 2     @dailyCbreak	at_token
 2     dallas	ne:geo
 2     @danielleicher	at_token
@@ -2282,23 +2290,26 @@
 2     @doktordab	at_token
 2     donaukurier.	token
 2     @dorfgirl	at_token
-2     download	
+2     download	neologism; loan
 2     @dpmdogma	at_token
 2     drauf.	token
 2     düsseldorf	ne:geo
 2     düştükçe	fw
 2     duisburg	ne:geo
-2     dun	
+1     dun	fw
+1     dun	spell:dann:substitution,deletion
 2     duu	elongation
 2     ebay	ne:company
 2     eben.	token
-2     een	
+1     een	spell:einen:deletion; slang
+1     een	fw
 2     eigentl.	abbr
 2     @einefraueinwort	at_token
 2     einsam.	token
 2     @eisy	at_token
 2     #ek2012	hash_tag
-2     electronic	
+1     electronic	ne:company
+1     electronic	ne:product
 2     @elenoreAM	at_token
 2     email	neologism
 2     entfolgt	neologism
@@ -2321,7 +2332,8 @@
 2     #fcsp	hash_tag
 2     #federball	hash_tag
 2     @ffleon87	at_token
-2     fi	
+1     fi	spell:finde:deletion
+1     fi	fw
 2     fickmaul	slang
 2     #film	hash_tag
 2     first	fw
@@ -2334,7 +2346,7 @@
 2     #forum	hash_tag
 2     @frasch25	at_token
 2     friedhöfe.	token
-2     fußball	
+2     fußball	dict
 2     @fuckyeahitsjuli	at_token
 2     funny	loan
 2     gaa	fw
@@ -2356,7 +2368,8 @@
 2     gibi	fw
 2     gigaspeed	ne:product
 2     @girlontravel	at_token
-2     git	
+1     git	spell:gibt:deletion
+1     git	ne:product
 2     gk	fw
 2     gladbach	ne:geo
 2     gnaaa	inj
@@ -2367,7 +2380,7 @@
 2     gottschalk	ne:person
 2     #gov20	hash_tag
 2     #gov2vie	hash_tag
-2     gräber	
+2     gräber	dict
 2     #gruene	hash_tag
 2     @gruene_at	at_token
 2     gruppe	dict
@@ -2386,7 +2399,7 @@
 2     head	fw
 2     heey	inj
 2     heilbronn	ne:geo
-2     heise	
+2     heise	ne:company
 2     @heise_de_tp	at_token
 2     @helenS_mars	at_token
 2     @helmi	at_token
@@ -2406,7 +2419,7 @@
 2     #holzfäller	hash_tag
 2     homepage	loan
 2     homophoben	dict
-2     hot	
+2     hot	fw
 2     hours	fw
 2     html5	neologism
 2     http://t.c	link
@@ -2455,7 +2468,8 @@
 2     @ichwillansMeer	at_token
 2     iedereen	fw
 2     iktisat	fw
-2     info	
+1     info	slang
+1     info	token
 2     @infopointaudim	at_token
 2     @inforrupt	at_token
 2     @inkabrunini	at_token
@@ -2486,7 +2500,8 @@
 2     jup	inj
 2     kalender	dict
 2     kali	fw
-2     kamer	
+1     kamer	fw
+1     kamer	spell:kammer:deletion
 2     kannste	spell:kannst du:deletion/substitution; slang
 2     @karin1210	at_token
 2     @karrierebibel	at_token
@@ -2501,8 +2516,8 @@
 2     kino.	token
 2     kinox	ne:company
 2     kiw	fw
-2     kkk	
-2     kkkkkkkk	
+2     kkk	inj
+2     kkkkkkkk	inj
 2     klasse	dict
 2     @_kleinMue	at_token
 2     @kleinerrpunkt	at_token
@@ -2538,7 +2553,8 @@
 2     laptop	neologism
 2     laune	dict
 2     #ldkBB11	hash_tag
-2     le	
+1     le	spell:legen:deletion
+1     le	spell:leiden:deletion
 2     lebih	fw
 2     leiden.	token
 2     @lelei	at_token
@@ -2549,7 +2565,7 @@
 2     lisawolf	ne:person
 2     lünkern	slang
 2     loco	fw
-2     loh	
+2     loh	fw
 2     looken	loan
 2     low	fw
 2     ludwigshafen	ne:geo
@@ -2568,12 +2584,12 @@
 2     mak	fw
 2     maken	loan
 2     @mala1978	at_token
-2     manno	
+2     manno	inj
 2     @marcopolo71	at_token
 2     @marcozehe	at_token
 2     #markt	hash_tag
 2     @marslight1185	at_token
-2     mas	
+2     mas	token
 2     mate	ne:product
 2     mathe	slang
 2     @matthiasoomen	at_token
@@ -2616,7 +2632,7 @@
 2     naechsten	umlaut
 2     @nannilinchen	at_token
 2     nanti	fw
-2     nase	
+2     nase	dict
 2     @nasenfaktor	at_token
 2     @natalierulez_	at_token
 2     naturgeile	dict
@@ -2628,7 +2644,8 @@
 2     #neu	hash_tag
 2     @neverchuckless	at_token
 2     @neverevertown	at_token
-2     ng	
+1     ng	fw
+1     ng	abbr
 2     niall	ne:person
 2     nichtmehr	spell:nicht mehr:deletion
 2     @nichtstefanraab	at_token
@@ -2658,7 +2675,8 @@
 2     ouml	fw
 2     outfit	loan
 2     @ozanstoppable	at_token
-2     pa	
+1     pa	inj
+1     pa	fw
 2     @pantoffelpunk	at_token
 2     parah	fw
 2     @pauli_pirat	at_token
@@ -2678,7 +2696,7 @@
 2     playing	fw
 2     #poldi	hash_tag
 2     pon	fw
-2     posten	
+2     posten	neologism
 2     postet	neologism
 2     posting	loan
 2     pra	fw
@@ -2724,14 +2742,16 @@
 2     @schokoeeis	at_token
 2     schonwieder	spell:schon wieder:deletion
 2     seeeehr	elongation
-2     seen	
+1     seen	fw
+1     seen	spell:sehen:deletion
 2     @sekor	at_token
 2     semoga	fw
 2     sevinme	fw
 2     siapa	fw
 2     sidn	spell:sind:substitution
 2     siehste	spell:siehst du:deletion/substitution; slang
-2     sies	
+1     sies	fw
+1     sies	spell:sie es:deletion
 2     sih	fw
 2     @simonelang	at_token
 2     #simulator	hash_tag
@@ -2748,16 +2768,16 @@
 2     #socialmedia	hash_tag
 2     sol	spell:solche:deletion
 2     @solflora	at_token
-2     spast	
+2     spast	spell:spasst:deletion
 2     spasti	slang
 2     #spd11	hash_tag
 2     @spdbawue	at_token
 2     @spox	at_token
 2     spox.	token
 2     #ssnhd	hash_tag
-2     stadt	
+2     stadt	dict
 2     stalker	neologism
-2     std	
+2     std	abbr
 2     stehn	spell:stehen:deletion; slang
 2     sten	token
 2     @stn1978	at_token
@@ -2789,11 +2809,12 @@
 2     @timpritlove	at_token
 2     @tinchenxxxx	at_token
 2     @titanic	at_token
-2     tk	
+1     tk	fw
+1     tk	link
 2     tl	abbr
 2     tlg	fw
 2     @tobiasgillen	at_token
-2     tod	
+2     tod	dict
 2     toi	inj
 2     @tolga93	at_token
 2     @trmtnzr	at_token

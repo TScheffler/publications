@@ -25,7 +25,7 @@
 30    sowas	dict
 29    Haha	inj
 29    naja	inj; spell:na ja:deletion
-28    lol	 slang; inj
+28    lol	slang; inj; smiley
 26    :-D	smiley
 26    heut	spell:heute:deletion; slang
 26    net	spell:nicht:substitution/deletion; slang
@@ -131,7 +131,7 @@
 10    Gladbach	ne:geo
 10    HANSGROHE	ne:company
 10    Happy	fw
-10    Lol	 slang; inj
+10    Lol	slang; inj; smiley
 10    cc	slang
 10    geb	abbr
 10    hPa	abbr
@@ -218,7 +218,7 @@
 7     Christmas	fw
 7     Gottschalks	ne:person
 7     Jaa	 elongation; inj
-7     LOL	 slang; inj
+7     LOL	slang; inj; smiley
 7     Let	fw
 7     Like	fw
 7     Maffay	ne:person
@@ -2156,7 +2156,7 @@
 2     Literatwo	ne:company
 2     Little	fw
 2     Livecam	neologism
-2     LoL	 slang; inj
+2     LoL	slang; inj; smiley
 2     Logic	ne:product
 2     Loh	fw
 2     Lookslikelink	ne:person
@@ -2167,7 +2167,7 @@
 2     Län	spell:Länge:deletion
 2     Lünen	ne:geo
 2     MAGIX	ne:company
-2     MAS	fw
+2     MAS	token
 2     MG	abbr
 2     MT	at_token
 2     MTN	abbr
@@ -2222,9 +2222,9 @@
 2     Nationalelf	compound
 2     Navi	slang
 2     Neckholder	ne:company
-2     Nen	spell:einen:deletion; dict
+2     Nen	spell:einen:deletion; slang
 2     Nena	ne:person
-2     Net	spell:nicht:substitution/insertion; dict
+2     Net	spell:nicht:substitution/insertion; slang
 2     Never	fw
 2     Newman	ne:person
 2     Newsticker	 loan
@@ -2288,11 +2288,11 @@
 2     Quizfrage	compound
 2     Quizspiel	compound
 2     Quotes	fw
-2     RETWEET	slang
+2     RETWEET	loan; neologism
 2     RIM	ne:company
 2     RL	abbr
 2     RNK	abbr
-2     ROFL	abbr
+2     ROFL	slang; inj; smiley
 2     RSC	abbr
 2     RSS	neologism
 2     Ra	fw
@@ -2321,7 +2321,7 @@
 2     Rida	ne:person
 2     Rihanna	ne:person
 2     Robertson	ne:person
-2     Rofl	abbr
+2     Rofl	slang; inj; smiley
 2     Ron	ne:person
 2     Rosso	fw; ne:person
 2     Rotz	dict; slang
@@ -2333,7 +2333,8 @@
 2     Rösler	ne:person
 2     Rübenberge	ne:geo
 2     SALE	loan
-2     SEH	fw
+1     SEH	spell:SEHE:deletion
+1     SEH	spell:THE:substitution,substitution
 2     SL	abbr
 2     SM	abbr
 2     SN	abbr
@@ -2398,7 +2399,8 @@
 2     Subliminals	fw
 2     Suesser	umlaut
 2     Summinet	ne:company
-2     Sunshine	fw
+1     Sunshine	ne:product
+1     Sunshine	loan
 2     Supi	 spell:super:substitution; slang
 2     Swingerparty	compound
 2     Sync	slang
@@ -2486,8 +2488,8 @@
 2     Wärmetauscher	compound
 2     Wünsch	spell:wünsche:deletion; slang
 2     XDDDDDD	smiley
-2     XXL	abbr
-2     Xmas	 slang; fw
+2     XXL	ne:product
+2     Xmas	slang; fw
 2     Xylitol	dict
 2     YB	abbr
 2     YOUR	fw
@@ -2576,11 +2578,12 @@
 2     cok	fw
 2     comSysto	ne:company
 2     coolsten	loan
-2     cyberport	loan
+2     cyberport	ne:company
 2     daa	elongation
 2     daaa	elongation
 2     daar	fw
-2     dah	fw
+1     dah	spell:da:insertion
+1     dah	fw
 2     dallas	ne:geo
 2     darfste	 spell:darfst du:deletion; slang
 2     dd	abbr
@@ -2604,15 +2607,18 @@
 2     draussen	spell:draußen:substitution; dict
 2     drum	spell:darum:deletion; slang
 2     duisburg	ne:geo
-2     dun	fw
+1     dun	fw
+1     dun	spell:dann:substitution,deletion
 2     duu	elongation
 2     düsseldorf	ne:geo
 2     düştükçe	fw
 2     ebay	ne:company
-2     een	spell:einen:deletion; slang; fw
+1     een	spell:einen:deletion; slang
+1     een	fw
 2     eier	dict
 2     eigentl.	abbr
-2     electronic	fw
+1     electronic	ne:company
+1     electronic	ne:product
 2     eltern	dict
 2     email	neologism
 2     entfolgt	neologism
@@ -2630,7 +2636,8 @@
 2     farbe	dict
 2     fernsehprogramm	compound
 2     feuerwehr	dict
-2     fi	fw
+1     fi	fw
+1     fi	spell:finde:deletion
 2     fickmaul	slang
 2     first	fw
 2     fiyat	fw
@@ -2740,8 +2747,8 @@
 2     kino.	token
 2     kinox	ne:company
 2     kiw	fw
-2     kkk	abbr; fw
-2     kkkkkkkk	fw
+2     kkk	inj
+2     kkkkkkkk	inj
 2     klassiker	dict
 2     klavier	dict
 2     ko	fw
@@ -2786,7 +2793,7 @@
 2     mak	fw
 2     maken	loan
 2     manno	inj
-2     mas	fw
+2     mas	token
 2     mate	ne:product
 2     mathe	slang
 2     mati	fw
@@ -3001,7 +3008,7 @@
 2     wiede	spell:wieder:deletion
 2     wirtschaft	dict
 2     wissenschaftl	spell:wissenschaftliche:deletion
-2     wlan	abbr; fw; loan
+2     wlan	abbr; loan
 2     woah	inj
 2     woche.	token
 2     wohn	spell:wohne:deletion; slang
