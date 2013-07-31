@@ -1,0 +1,80 @@
+#!/usr/bin/env runawk
+
+#################################################################
+
+#use "power_getopt.awk"
+#use "xgetline.awk"
+#use "alt_assert.awk"
+#use "quicksort.awk"
+#use "exitnow.awk"
+
+#################################################################
+#.begin-str help
+#
+# This script removes words present in first file but not present in
+# the second file. Removed words are replaced with randomly selected
+# words which are present in only second file.
+#
+# USAGE:
+# script [OPTIONS] FILE1 FILE2
+#
+# OPTIONS:
+# -h|--help	print this screen and exit
+#
+#.end-str
+##################################################################
+function getkey1( \
+    arr) {
+    xgetline(ifile1)
+    iline1 = __input
+    assert(split(iline1, arr) > 2)
+    ikey1 = arr[2]
+}
+
+##################################################################
+BEGIN {
+    if (ARGC != 3) {
+	print_help()
+	exitnow(2)
+    }
+
+    ifile1 = ARGV[1]
+    delete ARGV[1]
+    getkey1()
+
+    gone_lines = 0
+    i = 0
+    srand()
+}
+
+! NF {
+    next
+}
+
+1 {
+    ikey2 = "" $2
+
+    while (iline1 && ikey1 < ikey2) {
+	++gone_lines
+	getkey1()
+    }
+
+    if (ikey1 == ikey2) {
+	print iline1
+	getkey1()
+
+    } else {
+	additional_lines[++i] = $0
+	random_arr[i] = rand()
+    }
+}
+
+END {
+    quicksort(random_arr, remap_arr, 1, i)
+
+    if (gone_lines > i)
+	gone_lines = i
+
+    for (i = 1; i <= gone_lines; ++i)
+	print additional_lines[remap_arr[i]]
+}
