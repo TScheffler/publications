@@ -65,8 +65,39 @@ assert(0, "Invalid number of tokens in input file", 6)
 END {
     assert(total > 0, "No input lines were analyzed", 7)
     _total_ = 0.0
-    for (class in stat) {
-	printf("%-15s%.2f\n", class, (stat[class] /= total) * 100)
+
+    # insertion;
+    # deletion;
+    # substitution;
+
+    # hashtags
+    # @-tokens
+    # links
+    # smileys
+    # slang
+
+    i = 1
+    print_stat[i]   = "dict"
+    print_stat[++i] = "compound"
+    print_stat[++i] = "abbr"
+    print_stat[++i] = "inj"
+    print_stat[++i] = "ne:person"
+    print_stat[++i] = "ne:geo"
+    print_stat[++i] = "ne:company"
+    print_stat[++i] = "ne:product"
+    print_stat[++i] = "neologism"
+    print_stat[++i] = "loan"
+    print_stat[++i] = "fw"
+
+    print_stat[++i] = "at_token"
+    print_stat[++i] = "hash_tag"
+    print_stat[++i] = "link"
+    print_stat[++i] = "smiley"
+    print_stat[++i] = "slang"
+
+
+    for (j=1; j <=i; ++j) {
+	printf("%-15s%.2f\n", print_stat[j], (stat[print_stat[j]] /= total) * 100)
 	_total_ += stat[class]
     }
 

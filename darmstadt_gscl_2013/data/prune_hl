@@ -25,10 +25,13 @@
 ##################################################################
 function getkey1( \
     arr) {
-    xgetline(ifile1)
-    iline1 = __input
-    assert(split(iline1, arr) > 2)
-    ikey1 = arr[2]
+    if (xgetline(ifile1)) {
+	iline1 = __input
+	assert(split(iline1, arr) > 2)
+	ikey1 = arr[2]
+	return
+    }
+    iline1 = ""
 }
 
 ##################################################################
@@ -55,17 +58,18 @@ BEGIN {
     ikey2 = "" $2
 
     while (iline1 && ikey1 < ikey2) {
-	++gone_lines
-	getkey1()
+    	print "Gone: ", iline1 > "/dev/stderr"
+    	++gone_lines
+    	getkey1()
     }
 
     if (ikey1 == ikey2) {
-	print iline1
-	getkey1()
+    	print iline1
+    	getkey1()
 
     } else {
-	additional_lines[++i] = $0
-	random_arr[i] = rand()
+    	additional_lines[++i] = $0
+    	random_arr[i] = rand()
     }
 }
 
