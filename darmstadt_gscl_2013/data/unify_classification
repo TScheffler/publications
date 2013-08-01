@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+# -*- encoding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+require 'pp'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+FIELD_SEP = Regexp.new('\t+')
+CLASS_SEP = Regexp.new(';\s*')
+SPELL_CLASS_SEP = Regexp.new('[:/,]')
+
+@key1  = ""
+@tokens1 = ""
+@line1 = ""
+@file1 = nil
+
+@key2  = ""
+@tokens2 = ""
+
+
+##################################################################
+# Methods
+def getline1()
+  @line1 = @file1.gets()
+  if @line1
+    @line1.chomp!()
+    @tokens1 = @line1.split(FIELD_SEP)
+    @key1 = @tokens1[1]
+  else
+    @tokens1 = @key1 = nil
+    alias :getline1 :pass
+  end
+end
+
+def pass()
+  return nil
+end
+
+def get_oov_classes(iline)
+  iline.strip!()
+  iline.split(CLASS_SEP).sort().collect() do |oov_class|
+    if SPELL_CLASS_SEP.match(oov_class)
+      oov_class = oov_class.split(SPELL_CLASS_SEP).sort()
+    end
+    oov_class
+  end
+end
+
+##################################################################
+# Main
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+#{myname} checks if lines having similar keys (i.e. 2-nd fields) in 2
+input files have similar assigned classes.
+
+USAGE:
+#{myname} FILE1 FILE2
+  EOF
+end.parse!()
+
+if (arglen = ARGV.length()) != 2
+  raise <<-EOF
+Incorrect number of arguments: #{arglen} instead of 2. Type --help to
+see usage.
+  EOF
+end
+
+##################################################################
+# Main
+
+@file1 = File.open(ARGV[0])
+getline1()
+ARGV.shift()
+
+while gets
+  $_.chomp!()
+  @tokens2 = $_.split(FIELD_SEP)
+  @key2 = @tokens2[1]
+
+  while @key1 and @key1 < @key2
+    getline1()
+  end
+
+  if @key1 == @key2
+    if get_oov_classes(@tokens1[2]) != \
+      get_oov_classes(@tokens2[2])
+      puts '<<< ' +  @line1
+      puts '>>> ' +  $_
+      puts
+    end
+    getline1()
+  end
+end
