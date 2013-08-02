@@ -57,8 +57,8 @@
   tackle some of the most prominent disturbing effects found during
   these analyses and show how this set of techniques helps us lower
   the average rate of out-of-vocabulary tokens in Twitter messages and
-  how this lower OOV-rate helps improve the quality of automatic
-  part-of-speech tagging.
+  how this lower OOV-rate in turn helps improve the quality of
+  automatic part-of-speech tagging.
 
   \keywords{twitter, social media, text normalization, spelling
     correction}
@@ -163,19 +163,20 @@ Kobus (\cite{kobus}), on the contrary, referred to NTN methods as
 Though both divisions seem to be justified to some extent, it is
 difficult to determine using them whether an NTN approach that detects
 and restores incorrectly spelled words on the basis of phonetical
-\textit{n}-gram statistics should fall into \textit{n}-gram based,
+\textit{n}-gram statistics should fall into the \textit{n}-gram based,
 probabilistic, spell checking or speech recognition class.
 
 The reason for this confusion is the fact that the above
 classifications both rely on several independent criteria at the same
-time though each of these criteria characterizes an NTN system from a
+time, though each of these criteria characterizes an NTN system from a
 different point of view. As a consequence, unambiguous assignment of
 an NTN approach to one particular class often becomes impossible. In
 order to avoid this, we instead suggest using separate classifications
-for each criterion which might characterize an NTN technique.
+for each type of involved criteria which might characterize an NTN
+technique.
 
 One of such criteria which in our opinion would be worth a separate
-classification is \emph{segmentation level} which is used
+classification is \emph{segmentation level} that is used
 \begin{inparaenum}[\itshape a\upshape)]
 \item to infer in-vocabulary (IV) equivalents for OOV
   tokens\label{candidate:inferring} and
@@ -219,14 +220,14 @@ in recent years.
 The earlier works on NTN commonly relied on either purely graphematic
 or phonographematic levels of segmentation for deriving normalization
 variants of incorrectly spelled words. To purely graphematic systems
-belong methods suggested Brill and Moore (\cite{brill}), Sproat et
+belong methods suggested by Brill and Moore (\cite{brill}), Sproat et
 al. (\cite{sproat}), and Clark (\cite{alexander-clark}). As
 phonographematic approaches one could regard works done by Toutanova
 and Moore (\cite{toutanova}), Choudhury et al. (\cite{choudhury}),
 Cook and Stevenson (\cite{cook}) etc. With regard to the type of
 information inference, practically all of these methods were
 supervised with the exception of Cook and Stevenson (\cite{cook}) who
-claimed to uns an unsupervised technique.
+claimed to use an unsupervised technique.
 
 Starting from the second half of the 2000s, the raising influence and
 improved quality of machine translation tools lead to the development
@@ -284,13 +285,13 @@ collected corpus, split them into sentences and tokenized using social
 media-aware tokenizer by Christopher Potts
 \footnote{\url{http://sentiment.christopherpotts.net/code-data/happyfuntokenizing.py}}.
 After skipping all words which did not contain any alphabetic
-character in them or consisted only of a single letter, we obtained a
-list of 129,146 tokens. As reference systems for dictionary lookup we
-used open source spell checking program
-\texttt{hunspell}\footnote{Ispell Version 3.2.06 (Hunspell Version
-  1.3.2); dictionary de\_DE.} and publicly available part-of-speech
-tagger \texttt{TreeTagger}\footnote{Version 3.2 with German parameter
-  file UTF-8.} (Schmid, \cite{schmid}).
+characters or consisted only of a single letter, we obtained a list of
+129,146 tokens. As reference systems for dictionary lookup we used
+open source spell checking program \texttt{hunspell}\footnote{Ispell
+  Version 3.2.06 (Hunspell Version 1.3.2); dictionary de\_DE.} and
+publicly available part-of-speech tagger
+\texttt{TreeTagger}\footnote{Version 3.2 with German parameter file
+  UTF-8.} (Schmid, \cite{schmid}).
 
 Out of this token list, 26,018 tokens (20.15~\%) were regarded as
 unknown by \texttt{hunspell} and 28,389 tokens (21.98~\%) were
@@ -304,24 +305,25 @@ unknown words raised as expected and run up to 46.96~\% for
 Here once again the question of classification arose. This time with
 regard to the reasons, why different tokens could have been omitted
 from corresponding applications' dictionaries. In this respect,
-division into following groups seemed to be appropriate for us:
+division into following groups seemed to us to be appropriate:
 \begin{enumerate}
   \item \textbf{Objective limitedness of machine-readable dictionary
-    (MRD)}. To this group we counted words of basic vocabulary which
-    did not get into applications' MRD either because they supposedly
-    were rare or because they did not exist at the time when
-    dictionaries were created. Another reason for the inclusion in
-    this type was the belonging of a word to an open lexical or
+    (MRD)}. Among this group, we counted words of basic vocabulary
+    which did not get into applications' MRD either because they
+    supposedly were rare or because they did not exist at the time
+    when dictionaries were created. Another reason for the inclusion
+    in this type was the belonging of a word to an open lexical or
     part-of-speech class (like, for example, named entities or
     interjections) which are often omitted from MRDs due to
-    impossibility to fully cover these classes;\label{dict}
-  \item \textbf{Unintended sloppiness of users' input}. In the scope
-    of this second group, we considered unintended typos;\label{spell}
+    the impossibility to fully cover these classes;\label{dict}
+  \item \textbf{Sloppiness of users' input}. In the scope of this
+    second group, we considered incorrect spellings of words
+    encountered in text;\label{spell}
   \item \textbf{Stylistic specifics of text genre}. This group
     comprised words which could be considered as illegal from the
-    point of view of standard language texts but were perfectly valid
-    terms in the domain of web discourse and Twitter communication in
-    particular.\label{style}
+    point of view of standard language but were perfectly valid terms
+    in the domain of web discourse or more specifically in Twitter
+    communication.\label{style}
 \end{enumerate}
 
 In order to see how detected out-of-vocabulary words were distributed
@@ -330,7 +332,7 @@ tokens which appeared in text more than once and also looked at 1,000
 randomly selected hapax legomena. The results of these estimations are
 shown and explained below.
 
-We subdivided group \ref{dict} into the following subgroups:
+We subdivided the class \ref{dict} into the following subclasses:
 \begin{enumerate}
 \item regular German words, e.g. \textit{aufm},
   \textit{losziehen};\label{regular}
@@ -354,42 +356,29 @@ We subdivided group \ref{dict} into the following subgroups:
   \end{enumerate}
 \item and, finally, foreign words like \textit{is} or \textit{now}
   which in contrast to \ref{loan} were not mentioned in any existing
-  German lexicons and did not comply with inflectional rules of German
+  German lexica and did not comply with inflectional rules of German
   grammar.\label{fw}
 \end{enumerate}
 Though this division is admittedly arbitrarily to a certain degree and
-involves different linguistic criteria simultaneously, the underlying
-notion for it is simple. Valid words could have been omitted from an
-MRD either due to the limitation of developers' capacities (group
-\ref{regular}), active word formation or lexical productivity of the
-language (groups \ref{compound} through \ref{new}) or also due to
+also has the disadvantage of simultaneously involving different
+linguistic criteria, the underlying notion here was simple -- valid
+words could have been omitted from an MRD either due to the
+limitations of developers' capacities (group \ref{regular}), active
+word formation processes or lexical productivity of the language
+itself (groups \ref{compound} through \ref{new}) or also due to
 language's openness to foreign language systems (groups \ref{loan} and
 \ref{fw}).
 
 In Table \ref{table:mrd}, percentage figures for each of the above
-subgroups are shown. We have considered OOV-distribution for both
+subgroups are shown. We have considered OOV-distributions for both
 \texttt{hunspell} and \texttt{TreeTagger}. For each of them, we
 estimated the percentage of a particular subclass with regard to the
 total number of occurrences of OOV-tokens (column ``\totaloov{}'') as
 well as with regard to their percentage rate in the list of only
-unique OOVs (column ``\uniqoov{}''), i.e. disregarding their
-frequencies.
-
-dict           3.49
-compound       4.55
-abbr           3.44
-inj            4.29
-ne:person      3.47
-ne:geo         1.88
-ne:company     3.01
-ne:product     3.23
-neologism      2.38
-loan           2.87
-fw             10.91
-
+unique OOVs disregarding their frequencies (column ``\uniqoov{}'').
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
-    ``objective limitedness of MRD''\label{table:mrd}}
+    ``Objective limitedness of MRD''\label{table:mrd}}
   \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
     \hline\noalign{\smallskip}
     \multirow{2}{*}{OOV subclass} & %
@@ -413,22 +402,21 @@ fw             10.91
   \end{tabular}
 \end{table}
 
-Similarly to class \ref{dict}, we subdivided the class ``Unintended
-sloppiness of users' input'' into the following subgroups:
+Similarly to the class \ref{dict}, we subdivided the group
+``Sloppiness of users' input'' into the following subgroups:
 \begin{enumerate}
-  \item insertion;
-  \item deletion;
-  \item substitution;
+  \item insertions, e.g. \textit{dennen} instead of \textit{denen};
+  \item deletions, e.g. \textit{scho} instead of \textit{schon};
+  \item substitutions, e.g. \textit{fur} instead of \textit{f\"ur};
 \end{enumerate}
-according to the kind of operation which led to a particular spelling
+according to the type of operation which led to a particular spelling
 mistake. In cases when multiple different operations were involved
 simultaneously, we explicitly marked each of these operations in our
-data. You can see the statistics on distribution of these subgroups in
-Table \ref{table:spell}.
-
+data. Statistical distribution of these subclasses is shown in Table
+\ref{table:spell}.
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
-    ``unintended sloppiness of users' input''\label{table:spell}}
+    ``Sloppiness of users' input''\label{table:spell}}
   \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
     \hline\noalign{\smallskip}
     \multirow{2}{*}{OOV subclass} & %
@@ -436,27 +424,44 @@ Table \ref{table:spell}.
     \multicolumn{2}{c}{\texttt{TreeTagger}}\\
     & \totaloov{} & \uniqoov{} & \totaloov{} & \uniqoov{}\\
     \noalign{\smallskip} \hline
-    insertion & 0.49 & 1 & 0.18 & 0.34 \\
-    deletion & 8.44 & 6.38 & 6.52 & 5.27 \\
-    substitution & 2.17 & 3.37 & 1.11 & 1.2 \\\hline
+    insertions & 0.49 & 1 & 0.18 & 0.34 \\
+    deletions & 8.44 & 6.38 & 6.52 & 5.27 \\
+    substitutions & 2.17 & 3.37 & 1.11 & 1.2 \\\hline
     {\bfseries total} & 11.1 & 10.75 & 7.81 & 6.81\\
     \noalign{\smallskip} \hline
   \end{tabular}
 \end{table}
 
-As it is clear from the table, deletions are by far the most common
-type of spelling mistakes. This results on the one hand from
-deliberate or unintended omissions of characters made by users but an
-even more common source of these ill-formed words was automatic
-truncation of words at the end of tweets made by Twitter service
-itself. \footnote{As is generally known, Twitter imposes a strong
-  restriction on the length of posted messages which can be no longer
-  than 140 characters. Upon exceeding this length, tweets get
-  automatically truncated to maximal allowed length.}
+As is clear from the table, deletions are by far the most common type
+of misspellings. The reasons for that are on the one hand either
+relatively frequent omissions of characters made by user or even more
+often automatic truncations of too long messages which were performed
+by Twitter service itself.\footnote{As is generally known, Twitter
+  imposes a strong restriction on the length of posted messages which
+  can be no longer than 140 characters. Upon exceeding this length,
+  tweets get automatically truncated to the maximal allowed length.}
 
+Finally, the third group -- ``Stylistic specifics of text genre'' --
+was subdivided into the subgroups:
+\begin{enumerate}
+  \item hashtags, e.g. \textit{\#Kleinanzeigen};
+  \item @-tokens, e.g. \textit{@ZDFonline};
+  \item links, e.g. \textit{http://t.co};
+  \item smileys, e.g. \textit{:-P};
+  \item slang, e.g. \textit{OMG}.
+\end{enumerate}
+according to the lexical or syntactic class which these tokens
+belonged to. Apart from lexical expressions pertaining to the genre of
+Internet-based communication, we also marked as \textit{slang}
+spelling variants of standard language words which could be regarded
+as their corresponding colloquial equivalents. As such equivalents, we
+considred spellings like \textit{ned} instead of \textit{nicht} or
+\textit{grad} instead of \textit{gerade}. These cases were marked by
+us both as misspellings and as slang. A detailed statistics on the
+above subgroups of class 3 is shown in Table \ref{table:style}:
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
-    ``Stylistic specifics of text genre''}
+    ``Stylistic specifics of text genre''\label{table:style}}
   \begin{tabular}{p{0.4\textwidth}*{4}{>{\centering\arraybackslash}p{0.15\textwidth}}}
     \hline\noalign{\smallskip}
     \multirow{2}{*}{OOV subclass} & %
@@ -474,6 +479,17 @@ itself. \footnote{As is generally known, Twitter imposes a strong
   \end{tabular}
 \end{table}
 
+A striking outlier of 16.22~\% for slang in column 1 of the table is
+due to the fact that the word ``RT'' which occurred 1,235 and was by
+far the most frequent OOV in our data was recognized as
+out-of-vocabulary by \texttt{hunspell} but not recognized as such by
+\texttt{TreeTagger}.
+
+This knowledge about composition of unknown and ill-formed words
+should now help us select or devise techniques for recognizing and
+correcting such tokens in cases where it is needed. These procedures
+are described in the next Section of the article.
+
 \section{Text Normalization Procedure}\label{normalization}
 \subsection{Replacement of Twitter-Specific Phenomena}
 %
@@ -488,48 +504,48 @@ itself. \footnote{As is generally known, Twitter imposes a strong
 
 \section{Conclusion}\label{concl}
 
-This article provided an overview of exisiting approaches to noisy
-text normalization task. Additionally, all mentioned methods were
-classified on the basis of two independent criteria. In section
-\ref{error:analysis}, we performed qulitative and quantitive analyses
-of out-of-vocabulary words in German tweets and suggested a set of
-ad-hoc techniques for mitigating their potential negative influence on
-natural language processing. This procedure allowed us to reduce the
-total OOV rate by ... \% for \texttt{hunspell} and by ... \% for
-\texttt{TreeTagger}.
+%% This article provided an overview of exisiting approaches to noisy
+%% text normalization task. Additionally, all mentioned methods were
+%% classified on the basis of two independent criteria. In section
+%% \ref{error:analysis}, we performed qulitative and quantitive analyses
+%% of out-of-vocabulary words in German tweets and suggested a set of
+%% ad-hoc techniques for mitigating their potential negative influence on
+%% natural language processing. This procedure allowed us to reduce the
+%% total OOV rate by ... \% for \texttt{hunspell} and by ... \% for
+%% \texttt{TreeTagger}.
 
-Nevertheless, we should honestly admit that our system still has
-potential for development and research, since it mainly addresses only
-one of three main groups of OOV tokens. Future directions should
-certainly include a more thorough tackling of unintentional spelling
-mistakes and especially their most prominent types -- deletions and
-substitutions.
+%% Nevertheless, we should honestly admit that our system still has
+%% potential for development and research, since it mainly addresses only
+%% one of three main groups of OOV tokens. Future directions should
+%% certainly include a more thorough tackling of unintentional spelling
+%% mistakes and especially their most prominent types -- deletions and
+%% substitutions.
 
-Furthemore, a better evalution technique as well as comparison with
-other systems are needed for our normalization procedure. On the one
-hand, an \textit{extrinsic} evaluation should be performed (cf. Sparck
-Jones and Galliers, \cite{sparck}) which means that we not only have
-to show how the rate of OOV words goes down but much more how this
-lower OOV rate affects the work of the whole NLP system. On the other
-hand, we need to assess the quality of our procedure's work on the
-basis of metrics used by other researchers.
+%% Furthemore, a better evalution technique as well as comparison with
+%% other systems are needed for our normalization procedure. On the one
+%% hand, an \textit{extrinsic} evaluation should be performed (cf. Sparck
+%% Jones and Galliers, \cite{sparck}) which means that we not only have
+%% to show how the rate of OOV words goes down but much more how this
+%% lower OOV rate affects the work of the whole NLP system. On the other
+%% hand, we need to assess the quality of our procedure's work on the
+%% basis of metrics used by other researchers.
 
-One possible estimation criterion which was used by Aw et
-al. (\cite{aw}), Kaufmann (\cite{kaufmann}), Beaufort et
-al. (\cite{beaufort}), and Oliva et al. (\cite{oliva}) is the BLEU
-score (Papineni et al., \cite{papineni}). Another possibility would be
-to use the Word (WER) and Sentence Error Rates (SER) as suggested by
-Kobus et al. (\cite{kobus}). However, an obvious difficulty that we
-already encountered here is that both metrics highly rely on a
-subjective notion of the look of a ``normalized'' message. While the
-BLEU score could be an approriate criterion for normalization of
-messages like ``i luv ma mather and wd do evrythin 4 her'' which in
-fact looks like as if it were not English. But such highly distorted
-tweets are rather atypical for German. In this regard, WER and SER
-could be considered as more appropriate measurement criteria. But
-these metrics once again are rather dealing with spelling mistakes and
-would highly depend on whether one, for example, would consider the
-hash sign in a hashtag as an error.
+%% One possible estimation criterion which was used by Aw et
+%% al. (\cite{aw}), Kaufmann (\cite{kaufmann}), Beaufort et
+%% al. (\cite{beaufort}), and Oliva et al. (\cite{oliva}) is the BLEU
+%% score (Papineni et al., \cite{papineni}). Another possibility would be
+%% to use the Word (WER) and Sentence Error Rates (SER) as suggested by
+%% Kobus et al. (\cite{kobus}). However, an obvious difficulty that we
+%% already encountered here is that both metrics highly rely on a
+%% subjective notion of the look of a ``normalized'' message. While the
+%% BLEU score could be an approriate criterion for normalization of
+%% messages like ``i luv ma mather and wd do evrythin 4 her'' which in
+%% fact looks like as if it were not English. But such highly distorted
+%% tweets are rather atypical for German. In this regard, WER and SER
+%% could be considered as more appropriate measurement criteria. But
+%% these metrics once again are rather dealing with spelling mistakes and
+%% would highly depend on whether one, for example, would consider the
+%% hash sign in a hashtag as an error.
 
 \subsection*{\ackname}
 

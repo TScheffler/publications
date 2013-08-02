@@ -1736,7 +1736,7 @@
 2	@NellyNiveaulog	at_token
 2	Nen	spell:einen:deletion; slang
 2	@NessysWelt	at_token
-2	Net	spell:nicht:substitution/insertion; slang
+2	Net	spell:nicht:substitution/deletion; slang
 2	Netzwerkkabel	compound
 2	#Neu	hash_tag
 2	Never	fw
