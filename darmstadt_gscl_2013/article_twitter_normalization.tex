@@ -55,10 +55,10 @@
   and what the characteristics of these OOVs are. In a concluding
   step, we present a set of ad-hoc techniques which are supposed to
   tackle some of the most prominent disturbing effects found during
-  these analyses and show how this set of techniques helps us lower
-  the average rate of out-of-vocabulary tokens in Twitter messages and
-  how this lower OOV-rate in turn helps improve the quality of
-  automatic part-of-speech tagging.
+  the analyses and show how this set of techniques helps us lower the
+  average rate of out-of-vocabulary tokens in Twitter messages and how
+  this lower OOV-rate in turn helps improve the quality of automatic
+  part-of-speech tagging.
 
   \keywords{twitter, social media, text normalization, spelling
     correction}
@@ -120,30 +120,27 @@ that revived interest in this research area in the past two decades.
 %% concluding step, we will perform an evaluation of the results of this
 %% procedure and give some further suggestions for future research.
 
-In the next Section we will give a short overview of recent scientific
-approaches to the problem of tackling out-of-vocabulary words in
-non-standard texts. After that, in Section \ref{error:analysis} we
-will analyze which types of noisiness phenomena are especially
-characteristic for German Twitter. Section \ref{normalization} will
-subsequently describe an automatic procedure for mitigating some of
-the most prominent of those effects. In a concluding step, we will
-perform an evaluation of the results of this procedure and give
-further suggestions for future research.
+In the next Section we will give a short overview of existing
+scientific approaches to the problem of tackling out-of-vocabulary
+words in non-standard texts. After that, in Section
+\ref{error:analysis} we will analyze which types of noisiness
+phenomena are especially characteristic for German Twitter. Section
+\ref{normalization} will subsequently describe an automatic procedure
+for mitigating some of the most prominent of those effects. In a
+concluding step, we will perform an evaluation of the results of this
+procedure and give further suggestions for future research.
 
 \section{Related Work}
 
-Before proceeding with the description of existing methods for noisy
+Before proceeding with the description of recent methods for noisy
 text normalization (NTN), we first would like to define the criteria
 by which these methods could be classified. It should be noted that
 there already exist several classifications of NTN approaches
-including Kukich (\cite{kukich}), Kobus et al. (\cite{kobus}), and
-Sproat et al. (\cite{sproat}).
-%% But all of these classifications seem to share one significant common
-%% shortcoming, namely they try to involve several independent criteria
-%% within one classification scheme.
+including, for example, Kukich (\cite{kukich}) and Kobus et
+al. (\cite{kobus}).
 
-Kukich (\cite{kukich}), for example, divided NTN techniques into six
-classes:
+So, Kukich (\cite{kukich}), for instance, divided all NTN techniques
+into six classes:
 \begin{enumerate}
 \item minimum edit distance techniques;
 \item similarity key techniques;
@@ -213,9 +210,8 @@ usual NLP-taxonomy which divides all approaches into:
   \item and hybrid ones.
 \end{enumerate}
 
-With these two classifications, we will now try to present and group
-together approaches to the NTN task which appeared in the literature
-in recent years.
+Based on these two classifications, recently proposed approaches to
+the NTN task could be grouped together as follows.
 
 The earlier works on NTN commonly relied on either purely graphematic
 or phonographematic levels of segmentation for deriving normalization
@@ -226,8 +222,10 @@ phonographematic approaches one could regard works done by Toutanova
 and Moore (\cite{toutanova}), Choudhury et al. (\cite{choudhury}),
 Cook and Stevenson (\cite{cook}) etc. With regard to the type of
 information inference, practically all of these methods were
-supervised with the exception of Cook and Stevenson (\cite{cook}) who
-claimed to use an unsupervised technique.
+supervised with the exceptions of Cook and Stevenson (\cite{cook}) who
+claimed to use an unsupervised technique, and Sproat et
+al. (\cite{sproat}) who described both a supervised and an
+unsupervised technique.
 
 Starting from the second half of the 2000s, the raising influence and
 improved quality of machine translation tools lead to the development
@@ -311,11 +309,11 @@ division into following groups seemed to us to be appropriate:
     (MRD)}. Among this group, we counted words of basic vocabulary
     which did not get into applications' MRD either because they
     supposedly were rare or because they did not exist at the time
-    when dictionaries were created. Another reason for the inclusion
-    in this type was the belonging of a word to an open lexical or
+    when dictionaries were created. Another reason for inclusion in
+    this type was the belonging of a word to an open lexical or
     part-of-speech class (like, for example, named entities or
-    interjections) which are often omitted from MRDs due to
-    the impossibility to fully cover these classes;\label{dict}
+    interjections) which are often omitted from MRDs due to the
+    impossibility to fully cover them;\label{dict}
   \item \textbf{Sloppiness of users' input}. In the scope of this
     second group, we considered incorrect spellings of words
     encountered in text;\label{spell}
@@ -332,7 +330,7 @@ tokens which appeared in text more than once and also looked at 1,000
 randomly selected hapax legomena. The results of these estimations are
 shown and explained below.
 
-We subdivided the class \ref{dict} into the following subclasses:
+We subdivided class \ref{dict} into the following subclasses:
 \begin{enumerate}
 \item regular German words, e.g. \textit{aufm},
   \textit{losziehen};\label{regular}
@@ -373,9 +371,9 @@ In Table \ref{table:mrd}, percentage figures for each of the above
 subgroups are shown. We have considered OOV-distributions for both
 \texttt{hunspell} and \texttt{TreeTagger}. For each of them, we
 estimated the percentage of a particular subclass with regard to the
-total number of occurrences of OOV-tokens (column ``\totaloov{}'') as
-well as with regard to their percentage rate in the list of only
-unique OOVs disregarding their frequencies (column ``\uniqoov{}'').
+total number of occurrences of all OOV-tokens (column ``\totaloov{}'')
+as well as with regard to their percentage rate in the list of only
+unique OOVs disregarding the frequencies (column ``\uniqoov{}'').
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
     ``Objective limitedness of MRD''\label{table:mrd}}
@@ -402,8 +400,8 @@ unique OOVs disregarding their frequencies (column ``\uniqoov{}'').
   \end{tabular}
 \end{table}
 
-Similarly to the class \ref{dict}, we subdivided the group
-``Sloppiness of users' input'' into the following subgroups:
+Similarly to class \ref{dict}, we subdivided the group ``Sloppiness of
+users' input'' into the following subgroups:
 \begin{enumerate}
   \item insertions, e.g. \textit{dennen} instead of \textit{denen};
   \item deletions, e.g. \textit{scho} instead of \textit{schon};
@@ -434,9 +432,9 @@ data. Statistical distribution of these subclasses is shown in Table
 
 As is clear from the table, deletions are by far the most common type
 of misspellings. The reasons for that are on the one hand either
-relatively frequent omissions of characters made by user or even more
-often automatic truncations of too long messages which were performed
-by Twitter service itself.\footnote{As is generally known, Twitter
+relatively frequent omissions of characters made by users or even more
+often automatic truncation of too long messages which is performed by
+Twitter service itself.\footnote{As is generally known, Twitter
   imposes a strong restriction on the length of posted messages which
   can be no longer than 140 characters. Upon exceeding this length,
   tweets get automatically truncated to the maximal allowed length.}
@@ -450,13 +448,13 @@ was subdivided into the subgroups:
   \item smileys, e.g. \textit{:-P};
   \item slang, e.g. \textit{OMG}.
 \end{enumerate}
-according to the lexical or syntactic class which these tokens
-belonged to. Apart from lexical expressions pertaining to the genre of
-Internet-based communication, we also marked as \textit{slang}
-spelling variants of standard language words which could be regarded
-as their corresponding colloquial equivalents. As such equivalents, we
-considred spellings like \textit{ned} instead of \textit{nicht} or
-\textit{grad} instead of \textit{gerade}. These cases were marked by
+according to the formal or lexical class which these tokens belonged
+to. Additionally, we also considered as \textit{slang} spelling
+variants of standard language words which could be regarded as their
+corresponding colloquial equivalents like, for example, \textit{ned}
+instead of \textit{nicht} or \textit{grad} instead of \textit{gerade}.
+
+These cases were marked by
 us both as misspellings and as slang. A detailed statistics on the
 above subgroups of class 3 is shown in Table \ref{table:style}:
 \begin{table}
