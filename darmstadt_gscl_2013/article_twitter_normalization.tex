@@ -210,7 +210,7 @@ usual NLP-taxonomy which divides all approaches into:
   \item and hybrid ones.
 \end{enumerate}
 
-Based on these two classifications, recently proposed approaches to
+According to these two classification criteria, recent approaches to
 the NTN task could be grouped together as follows.
 
 The earlier works on NTN commonly relied on either purely graphematic
@@ -220,15 +220,15 @@ belong methods suggested by Brill and Moore (\cite{brill}), Sproat et
 al. (\cite{sproat}), and Clark (\cite{alexander-clark}). As
 phonographematic approaches one could regard works done by Toutanova
 and Moore (\cite{toutanova}), Choudhury et al. (\cite{choudhury}),
-Cook and Stevenson (\cite{cook}) etc. With regard to the type of
-information inference, practically all of these methods were
-supervised with the exceptions of Cook and Stevenson (\cite{cook}) who
-claimed to use an unsupervised technique, and Sproat et
-al. (\cite{sproat}) who described both a supervised and an
-unsupervised technique.
+Cook and Stevenson (\cite{cook}), Han and Baldwin (\cite{han})
+etc. With regard to the type of information inference, practically all
+of these methods were supervised with the exceptions of Cook and
+Stevenson (\cite{cook}) who claimed to use an unsupervised technique,
+and Sproat et al. (\cite{sproat}) who described both a supervised and
+an unsupervised method.
 
 Starting from the second half of the 2000s, the raising influence and
-improved quality of machine translation tools lead to the development
+improved quality of machine translation tools led to the development
 of NTN technologies which used broader levels of segmentation. In
 \cite{aw}, Aw et al. suggested a supervised statistical system for
 normalization of SMS-messages which operated on automatically aligned
@@ -245,12 +245,11 @@ system the total performace of the whole system would improve as
 different sources of information would benefit from each other. As a
 consequence of this, a wealth of combined techniques emerged in the
 past few years. Among these we should especially mention works by
-Kobus et al. (\cite{kobus}), Kaufmann (\cite{kaufmann}), Han and
-Baldwin (\cite{han}), and Oliva et al. (\cite{oliva}). The majority of
-these systems used the whole range of segmentation levels from
-phonographematatic to phrasal one, and in many cases they also applied
-different knowledge inference mechanisms to different levels of the
-language.
+Kobus et al. (\cite{kobus}), Kaufmann (\cite{kaufmann}), and Oliva et
+al. (\cite{oliva}). The majority of these systems used the whole range
+of segmentation levels from phonographematatic to phrasal one, and in
+many cases they also applied different knowledge inference mechanisms
+to different levels of the language.
 
 %% Eventually, in \cite{han}, an article called ``Lexical Normalization
 %% of Short Text Messages: Makn Sens a \#{}twitter'' was published by Han
@@ -373,7 +372,7 @@ subgroups are shown. We have considered OOV-distributions for both
 estimated the percentage of a particular subclass with regard to the
 total number of occurrences of all OOV-tokens (column ``\totaloov{}'')
 as well as with regard to their percentage rate in the list of only
-unique OOVs disregarding the frequencies (column ``\uniqoov{}'').
+unique OOVs disregarding frequencies (column ``\uniqoov{}'').
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
     ``Objective limitedness of MRD''\label{table:mrd}}
@@ -431,32 +430,31 @@ data. Statistical distribution of these subclasses is shown in Table
 \end{table}
 
 As is clear from the table, deletions are by far the most common type
-of misspellings. The reasons for that are on the one hand either
-relatively frequent omissions of characters made by users or even more
-often automatic truncation of too long messages which is performed by
-Twitter service itself.\footnote{As is generally known, Twitter
-  imposes a strong restriction on the length of posted messages which
-  can be no longer than 140 characters. Upon exceeding this length,
-  tweets get automatically truncated to the maximal allowed length.}
+of misspellings. The reasons for that are either relatively frequent
+omissions of characters made by users or, even more often, automatic
+truncations of too long messages which are performed by Twitter
+service itself.\footnote{As is generally known, Twitter imposes a
+  strong restriction on the length of posted messages which can be no
+  longer than 140 characters. Upon exceeding this length, tweets get
+  automatically truncated to the maximal allowed length.}
 
 Finally, the third group -- ``Stylistic specifics of text genre'' --
 was subdivided into the subgroups:
 \begin{enumerate}
-  \item hashtags, e.g. \textit{\#Kleinanzeigen};
   \item @-tokens, e.g. \textit{@ZDFonline};
+  \item hashtags, e.g. \textit{\#Kleinanzeigen};
   \item links, e.g. \textit{http://t.co};
   \item smileys, e.g. \textit{:-P};
   \item slang, e.g. \textit{OMG}.
 \end{enumerate}
-according to the formal or lexical class which these tokens belonged
+according to the formal or lexical class which the tokens belonged
 to. Additionally, we also considered as \textit{slang} spelling
 variants of standard language words which could be regarded as their
-corresponding colloquial equivalents like, for example, \textit{ned}
-instead of \textit{nicht} or \textit{grad} instead of \textit{gerade}.
-
-These cases were marked by
-us both as misspellings and as slang. A detailed statistics on the
-above subgroups of class 3 is shown in Table \ref{table:style}:
+colloquial equivalents. Such words included cases like, for example,
+\textit{ned} instead of \textit{nicht} or \textit{grad} instead of
+\textit{gerade} and were marked both as \textit{misspelling}s and
+\textit{slang} in our classification. A detailed statistics on the
+subgroups of class 3 is shown in Table \ref{table:style}:
 \begin{table}
   \caption{Distribution of OOV words belonging to the class
     ``Stylistic specifics of text genre''\label{table:style}}
@@ -467,8 +465,8 @@ above subgroups of class 3 is shown in Table \ref{table:style}:
     \multicolumn{2}{c}{\texttt{TreeTagger}}\\
     & \totaloov{} & \uniqoov{} & \totaloov{} & \uniqoov{}\\
     \noalign{\smallskip} \hline
-    hashtags & 7.35 & 6.18 & 13.06 & 10.59\\
     @-tokens & 13.02 & 20.23 & 16.19 & 21.91\\
+    hashtags & 7.35 & 6.18 & 13.06 & 10.59\\
     links & 2.43 & 0.4 & 4.89 & 6.07\\
     smileys & 2 & 0.73 & 6.88 & 1.2\\
     slang & 16.22 & 5.27 & 6.94 & 4.77\\\hline
@@ -477,19 +475,52 @@ above subgroups of class 3 is shown in Table \ref{table:style}:
   \end{tabular}
 \end{table}
 
-A striking outlier of 16.22~\% for slang in column 1 of the table is
-due to the fact that the word ``RT'' which occurred 1,235 and was by
-far the most frequent OOV in our data was recognized as
-out-of-vocabulary by \texttt{hunspell} but not recognized as such by
-\texttt{TreeTagger}.
+A striking outlier of 16.22~\% for slang tokens in column 1 is
+explained by the fact that the word ``RT'' which occurred 1,235 times
+in our data and was by far the most frequent OOV in analyzed texts,
+was recognized as out-of-vocabulary by \texttt{hunspell} but was not
+deemed as such by \texttt{TreeTagger}. Luckily, such singleton cases
+were rather rare exceptions during the analyses and did not affect
+much the remaining classes of OOVs, so that distributions of unknown
+tokens for both tools were more or less similar or at least comparable
+to a certain extent.
 
-This knowledge about composition of unknown and ill-formed words
-should now help us select or devise techniques for recognizing and
-correcting such tokens in cases where it is needed. These procedures
-are described in the next Section of the article.
+But an even more important conclusion which can be drawn from the
+analyzed data is the fact that for both \texttt{TreeTagger} and
+\texttt{hunspell}, Twitter-specific phenomena like special tokens,
+colloquial expressions or sloppily typed words accounted for more than
+a half of all unknown words found in data. Since different classes of
+these Twitter phenomena were formed by different processes and also
+have different degrees of ambiguity, we will suggest different
+normalization procedures for each of them in the next Section.
 
 \section{Text Normalization Procedure}\label{normalization}
+
 \subsection{Replacement of Twitter-Specific Phenomena}
+Though hashtags are almost ubiquitous in today's tweets and one would
+probably think that they are as old as Twitter itself, an admirable
+truth would be that hashtags actually existed long before
+Twitter-service was introduced. It were Internet Relay Chats (IRC) --
+the forebears of all modern social networks -- which used the hash
+sign to mark channel names. And it was Chris Messina, a renowned
+advocate of open-source community, who borrowed this idea and brought
+it to Twitter. The ``hash godfather'', as Chris Messina describes
+himself, sent out a Twitter message suggesting that the pound sign
+coul be used for organizing groups on Twitter in August 2007. But a
+noticeable dissemination of this ``novelty'' among the Twitter
+community only happened a few years later, in 2010. ``I would say 2010
+was really the year of the hashtag.'' claims Ginger Wilcox, a founder
+of the Social Media Marketing Institute (cf. Parker, \cite{parker}).
+
+Luckily for us, both hashtags and @-names which are another
+omnipresent phenomenon in Twitter have very clear formal criteria by
+which these tokens could be identified and captured. The existence of
+such formal cues suggests that these phenomena could best be handled
+by means of rule-based methods. A most appropriate of such methods
+seemed to be an analog of finite-state transducers (FST).
+
+
+
 %
 \subsection{Restoration of Umlauts}
 %
@@ -669,6 +700,11 @@ the analysis of data.
   Papineni, K., Roukos, S., Ward, T., Zhu, W.-J.: %
   Bleu: a Method for Automatic Evaluation of Machine Translation. %
   ACL (2002) 311--318
+
+\bibitem [2011]{parker}
+  Parker, A.: %
+  Twitter's Secret Handshake. %
+  The New York Times, Page ST1, (June 10, 2011)
 
 \bibitem [1980]{petersen}
   Petersen, L. J.: %
