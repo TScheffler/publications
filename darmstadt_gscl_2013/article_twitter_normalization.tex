@@ -139,8 +139,8 @@ there already exist several classifications of NTN approaches
 including, for example, Kukich (\cite{kukich}) and Kobus et
 al. (\cite{kobus}).
 
-So, Kukich (\cite{kukich}), for instance, divided all NTN techniques
-into six classes:
+Kukich (\cite{kukich}), for instance, divided all NTN techniques into
+six classes:
 \begin{enumerate}
 \item minimum edit distance techniques;
 \item similarity key techniques;
@@ -157,11 +157,12 @@ Kobus (\cite{kobus}), on the contrary, referred to NTN methods as
 \item ``speech recognition'' metaphor.
 \end{enumerate}
 
-Though both divisions seem to be justified to some extent, it is
-difficult to determine using them whether an NTN approach that detects
-and restores incorrectly spelled words on the basis of phonetical
-\textit{n}-gram statistics should fall into the \textit{n}-gram based,
-probabilistic, spell checking or speech recognition class.
+Though both of these divisions seem to be justified to some extent, it
+is difficult to determine using them whether an NTN approach that
+detects and restores incorrectly spelled words on the basis of
+phonetical \textit{n}-gram statistics should fall into the
+\textit{n}-gram based, probabilistic, spell checking or speech
+recognition class.
 
 The reason for this confusion is the fact that the above
 classifications both rely on several independent criteria at the same
@@ -221,11 +222,11 @@ al. (\cite{sproat}), and Clark (\cite{alexander-clark}). As
 phonographematic approaches one could regard works done by Toutanova
 and Moore (\cite{toutanova}), Choudhury et al. (\cite{choudhury}),
 Cook and Stevenson (\cite{cook}), Han and Baldwin (\cite{han})
-etc. With regard to the type of information inference, practically all
-of these methods were supervised with the exceptions of Cook and
-Stevenson (\cite{cook}) who claimed to use an unsupervised technique,
-and Sproat et al. (\cite{sproat}) who described both a supervised and
-an unsupervised method.
+etc. With regard to the type of information inference, most of these
+methods were supervised with the exceptions of Cook and Stevenson
+(\cite{cook}) and Han and Baldwin (\cite{han}) who claimed to use an
+unsupervised technique. Sproat et al. (\cite{sproat}) described in
+their article both a supervised and unsupervised approach.
 
 Starting from the second half of the 2000s, the raising influence and
 improved quality of machine translation tools led to the development
@@ -267,12 +268,12 @@ to different levels of the language.
 
 It should however be noted that almost all of the above methods mainly
 concentrated on only English data. A few exceptions from that are
-approaches suggested by Beaufort et al. (\cite{beaufort}) for French
+approaches suggested by Beaufort et al. (\cite{beaufort}) for French,
 and Oliva et al. (\cite{oliva}) for Spanish. To find out which
 peculiarities of ill-formed words are characteristic for German, we
 will perform a quantitive and qualitative analysis of unknown words in
 German Twitter in the next Section in order to see what kind of NTN
-techniques would be more suitable for handling ill-formed words there.
+techniques would be most suitable for handling such words there.
 
 \section{Analysis of Unknown Tokens}\label{error:analysis}
 
@@ -284,7 +285,7 @@ media-aware tokenizer by Christopher Potts
 After skipping all words which did not contain any alphabetic
 characters or consisted only of a single letter, we obtained a list of
 129,146 tokens. As reference systems for dictionary lookup we used
-open source spell checking program \texttt{hunspell}\footnote{Ispell
+open-source spell checking program \texttt{hunspell}\footnote{Ispell
   Version 3.2.06 (Hunspell Version 1.3.2); dictionary de\_DE.} and
 publicly available part-of-speech tagger
 \texttt{TreeTagger}\footnote{Version 3.2 with German parameter file
@@ -300,9 +301,9 @@ unknown words raised as expected and run up to 46.96~\% for
 \texttt{hunspell} and 58.24~\% for \texttt{TreeTagger}.
 
 Here once again the question of classification arose. This time with
-regard to the reasons, why different tokens could have been omitted
+regard to the reasons why different tokens could have been omitted
 from corresponding applications' dictionaries. In this respect,
-division into following groups seemed to us to be appropriate:
+division into following groups seemed to us to be appropriate to us:
 \begin{enumerate}
   \item \textbf{Objective limitedness of machine-readable dictionary
     (MRD)}. Among this group, we counted words of basic vocabulary
@@ -356,7 +357,7 @@ We subdivided class \ref{dict} into the following subclasses:
   German lexica and did not comply with inflectional rules of German
   grammar.\label{fw}
 \end{enumerate}
-Though this division is admittedly arbitrarily to a certain degree and
+Though this division is admittedly arbitrary to a certain degree and
 also has the disadvantage of simultaneously involving different
 linguistic criteria, the underlying notion here was simple -- valid
 words could have been omitted from an MRD either due to the
@@ -431,7 +432,7 @@ data. Statistical distribution of these subclasses is shown in Table
 
 As is clear from the table, deletions are by far the most common type
 of misspellings. The reasons for that are either relatively frequent
-omissions of characters made by users or, even more often, automatic
+omissions of characters made by users or even more often automatic
 truncations of too long messages which are performed by Twitter
 service itself.\footnote{As is generally known, Twitter imposes a
   strong restriction on the length of posted messages which can be no
@@ -475,51 +476,83 @@ subgroups of class 3 is shown in Table \ref{table:style}:
   \end{tabular}
 \end{table}
 
-A striking outlier of 16.22~\% for slang tokens in column 1 is
-explained by the fact that the word ``RT'' which occurred 1,235 times
-in our data and was by far the most frequent OOV in analyzed texts,
-was recognized as out-of-vocabulary by \texttt{hunspell} but was not
-deemed as such by \texttt{TreeTagger}. Luckily, such singleton cases
-were rather rare exceptions during the analyses and did not affect
-much the remaining classes of OOVs, so that distributions of unknown
-tokens for both tools were more or less similar or at least comparable
-to a certain extent.
+A striking outlier of 16.22~\% for slang tokens in column 1 of the
+Table is explained by the fact that the word ``RT'' which occurred
+1,235 times in our texts and was by far the most frequent OOV in
+analyzed data, was recognized as out-of-vocabulary by
+\texttt{hunspell} but was not deemed as such by
+\texttt{TreeTagger}. Luckily, such singleton cases were rather rare
+exceptions during the analyses and did not affect much the remaining
+classes of OOVs, so that distributions of unknown tokens for both
+tools were more or less similar or at least comparable to a certain
+extent.
 
 But an even more important conclusion which can be drawn from the
 analyzed data is the fact that for both \texttt{TreeTagger} and
 \texttt{hunspell}, Twitter-specific phenomena like special tokens,
 colloquial expressions or sloppily typed words accounted for more than
-a half of all unknown words found in data. Since different classes of
-these Twitter phenomena were formed by different processes and also
-have different degrees of ambiguity, we will suggest different
-normalization procedures for each of them in the next Section.
+a half of all unknown words found during the analysis. Since different
+classes of these Twitter phenomena were formed by different processes
+and also have different degrees of ambiguity, we will suggest
+different normalization procedures for each of them in the next
+Section.
 
 \section{Text Normalization Procedure}\label{normalization}
 
 \subsection{Replacement of Twitter-Specific Phenomena}
-Though hashtags are almost ubiquitous in today's tweets and one would
-probably think that they are as old as Twitter itself, an admirable
-truth would be that hashtags actually existed long before
-Twitter-service was introduced. It were Internet Relay Chats (IRC) --
-the forebears of all modern social networks -- which used the hash
-sign to mark channel names. And it was Chris Messina, a renowned
-advocate of open-source community, who borrowed this idea and brought
-it to Twitter. The ``hash godfather'', as Chris Messina describes
-himself, sent out a Twitter message suggesting that the pound sign
-coul be used for organizing groups on Twitter in August 2007. But a
-noticeable dissemination of this ``novelty'' among the Twitter
-community only happened a few years later, in 2010. ``I would say 2010
-was really the year of the hashtag.'' claims Ginger Wilcox, a founder
-of the Social Media Marketing Institute (cf. Parker, \cite{parker}).
+In August 2007, Chris Messina, a renowned advocate of open-source
+community, sent out a Twitter message suggesting that the pound sign
+could be used for organizing groups on Twitter (cf. Parker,
+\cite{parker}). The ``hash godfather'', as Chris Messina described
+himself, allegedly borrowed this idea from Internet Relay Chats (IRC)
+-- the forebears of modern social networks -- which have been using
+the ``\#{}''-sign to mark channel names since the early 1990s.
 
-Luckily for us, both hashtags and @-names which are another
-omnipresent phenomenon in Twitter have very clear formal criteria by
-which these tokens could be identified and captured. The existence of
-such formal cues suggests that these phenomena could best be handled
-by means of rule-based methods. A most appropriate of such methods
-seemed to be an analog of finite-state transducers (FST).
+Luckily for us, this ``novelty'' by Messina as well as @-tokens which
+are in Twitter to mark names of user account both have strict formal
+features by which these tokens could be identified. Other types of
+words which are usually considered as OOVs and have unambiguous formal
+traits are hyperlinks, e-mail addresses, and smileys. The presence of
+such formal criteria suggests that these classes could best be handled
+by rule-methods and namely finite-state techniques like finite-state
+transducers (FST) (cf. Jurafsky and Martin, \cite{jurafsky},
+pp.57-60).
 
+For our purposes, we developed a prototypic Python system analogous to
+FSTs in which a set of regular expressions was associated with
+corresponding actions performed on matched subgroups. In this system,
+absolutely unambiguous tokens like web links and e-mail addresses were
+replaced with special words ``\%Mail'' and ``\%Link''
+correspondingly. Emoticons were replaced with tokens ``\%PosSmiley'',
+``\%NegSmiley'', depending on the type of emotion presumably conveyed
+by these expressions. In cases when an emoticon was ambiguous with
+regard to its polarity, it was replaced with the artificial word
+``\%Smiley''.
 
+Additionally to that, problematic UTF-8 characters like special quotes
+and ellipsis which caused incorrect work of tokenizer were converted
+to their corresponding ISO-8859-1 equivalents.
+
+For hashtags, we simply stripped off the pound character from the
+beginning of such words thus leaving only the alphabetic part of
+tokens. A more complicated case turned out to be the @-tokens. For
+them, we had to decide depending on the context whether these tokens
+played an important syntactic role in sentence or not. In cases they
+did, we additionally looked whether the alphabetic part following the
+``@'' character was present in dictionary. If it was, we only stripped
+the ``at'' character off, otherwise whole word was replaced with token
+``\%UserName''. In cases when @-tokens served as addresses or retweet
+marks, we deleted them from message since they were of little interest
+and importance for further syntactic and semantic analysis and could
+hardly be assigned a proper part-of-speech tag or syntactic role.
+
+All the artificially introduced words were added to custom user
+dictionaries of \texttt{TreeTagger} and \texttt{hunspell}. For
+tagging, we assigned NE tags to all artificial words except for smiley
+replacements which got the tag INJ. Additionally, positions and
+lengths of all replacements we remembered along with original words
+which were replaced and a restoration step to original forms was
+performed for certain classes of tokens after tagging.
 
 %
 \subsection{Restoration of Umlauts}
