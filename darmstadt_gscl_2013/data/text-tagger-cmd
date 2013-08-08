@@ -4,8 +4,35 @@
 set -e -o pipefail
 
 ##################################################################
-tree-tagger -token -lemma -cap-heuristics \
-    -lex "${SOCMEDIA_LSRC}/dict/special_tokens.lex" \
-    "${SOCMEDIA_BIN}/german-par-linux-3.2-utf8.bin" $@ | \
-awk -F '	' '$3 == "<unknown>" {print $1}' | \
-    LC_ALL=C.UTF-8 sort -d
+# tree-tagger -token -lemma -cap-heuristics \
+#     -lex "${SOCMEDIA_LSRC}/dict/special_tokens.lex" \
+#     "${SOCMEDIA_BIN}/german-par-linux-3.2-utf8.bin" $@ | \
+# awk -F '	' '$3 == "<unknown>" {print $1}' | \
+#     LC_ALL=C.UTF-8 sort -d
+
+EOS_TAG='</sentence>'
+
+sentence_splitter $@ | \
+    tokenizer | \
+    tree-tagger -token -lemma -cap-heuristics -eos-tag "${EOS_TAG}" \
+    "${SOCMEDIA_BIN}/german-par-linux-3.2-utf8.bin" | \
+    gawk -F "\t" -v sstart=1 -v eos_tag="${EOS_TAG}" '
+$0 == eos_tag {
+  printf("\n")
+  sstart=1
+  next
+}
+
+NF {
+  gsub(" ", "_", $1)
+  if (sstart)
+    sstart = 0
+  else
+    printf(" ")
+  printf("%s_%s", $1, $2)
+}
+
+END {
+  if (! sstart)
+      printf("\n")
+}'
