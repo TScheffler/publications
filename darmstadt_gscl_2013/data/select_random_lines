@@ -1,0 +1,48 @@
+#!/usr/bin/env python2.7
+# -*- coding: utf-8; -*-
+
+##################################################################
+# Libraries
+import sys
+import random
+from subprocess import Popen, PIPE
+
+from alt_argparse import argparser
+from alt_fio import AltFileInput, AltFileOutput
+
+##################################################################
+# Constants
+
+##################################################################
+# Arguments
+argparser.description="""Utility for randomly selecting lines from text."""
+argparser.add_rule_file_argument("-n", "--num-lines", \
+                                help = "number of lines to be selected", \
+                                type = int, default = 200)
+args = argparser.parse_args()
+
+# estimate how many random lines to select
+if args.files:
+    input_lines = int(Popen("wc -l " + ' '.join(args.files), stdout=PIPE, \
+                            shell=True).stdout.read().split()[-2])
+else:
+    raise Exception("This script only works with files of predefined length.")
+
+smpl_lines = min(args.num_lines, input_lines)
+rand_lines = range(1, input_lines + 1)
+random.shuffle(rand_lines)
+rand_lines = sorted(rand_lines[:smpl_lines])
+
+##################################################################
+# Main
+foutput  = AltFileOutput(encoding = args.encoding, \
+                             flush = args.flush)
+finput    = AltFileInput(*args.files)
+
+
+for line in finput:
+    if finput.nr == rand_lines[0]:
+        rand_lines.pop(0)
+        foutput.fprint(line)
+        if not rand_lines:
+            sys.exit()

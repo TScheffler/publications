@@ -509,14 +509,14 @@ himself, allegedly borrowed this idea from Internet Relay Chats (IRC)
 the ``\#{}''-sign to mark channel names since the early 1990s.
 
 Luckily for us, this ``novelty'' by Messina as well as @-tokens which
-are in Twitter to mark names of user account both have strict formal
-features by which these tokens could be identified. Other types of
-words which are usually considered as OOVs and have unambiguous formal
-traits are hyperlinks, e-mail addresses, and smileys. The presence of
-such formal criteria suggests that these classes could best be handled
-by rule-methods and namely finite-state techniques like finite-state
-transducers (FST) (cf. Jurafsky and Martin, \cite{jurafsky},
-pp.57-60).
+are used in Twitter to mark names of user account, both have strict
+formal features by which these tokens could be identified. Other types
+of words which are usually considered as OOVs and also have
+unambiguous formal traits are hyperlinks, e-mail addresses, and
+smileys. The presence of such formal criteria suggests that these
+classes could best be handled by rule-methods and namely finite-state
+techniques like finite-state transducers (FST) (cf. Jurafsky and
+Martin, \cite{jurafsky}, pp.57-60).
 
 For our purposes, we developed a prototypic Python system analogous to
 FSTs in which a set of regular expressions was associated with
@@ -542,24 +542,45 @@ did, we additionally looked whether the alphabetic part following the
 ``@'' character was present in dictionary. If it was, we only stripped
 the ``at'' character off, otherwise whole word was replaced with token
 ``\%UserName''. In cases when @-tokens served as addresses or retweet
-marks, we deleted them from message since they were of little interest
-and importance for further syntactic and semantic analysis and could
-hardly be assigned a proper part-of-speech tag or syntactic role.
+marks, we deleted them from message completely since they were of
+little interest and importance for further syntactic and semantic
+analysis and could hardly be assigned a proper part-of-speech tag or
+syntactic role.
 
 All the artificially introduced words were added to custom user
 dictionaries of \texttt{TreeTagger} and \texttt{hunspell}. For
-tagging, we assigned NE tags to all artificial words except for smiley
-replacements which got the tag INJ. Additionally, positions and
-lengths of all replacements we remembered along with original words
-which were replaced and a restoration step to original forms was
+tagging, we assigned NE tags to all artificial words except for
+emoticon replacements which got the tag INJ. Additionally, positions
+and lengths of all replacements we remembered along with original
+words which were replaced and a restoration step to original forms was
 performed for certain classes of tokens after tagging.
 
+Precision, recall and F1 score for replacement of Twitter-specific
+phenomena is shown in Table \ref{table:tw-phenomen-metrics}.
+
+\begin{table}
+  \caption{Precision, recall and F1 score for replacement of
+    Twitter-specific phenomena\label{table:tw-phenomen-metrics}}
+  \begin{tabular}{*{4}{>{\centering\arraybackslash}p{0.25\textwidth}}}
+    \hline\noalign{\smallskip}
+    OOV subclass & Precision & Recall & F1 score\\\hline
+    @-tokens & 0 & 0 & 0\\
+    hashtags & 0 & 0 & 0\\
+    links & 0 & 0 & 0\\
+    e-mail addresses & 0 & 0 & 0\\
+    smileys & 0 & 0 & 0\\
+    \noalign{\smallskip} \hline
+  \end{tabular}
+\end{table}
+
 %
-\subsection{Restoration of Umlauts}
+\subsection{Restoration of misspellings}
 %
-\subsection{Squeezing of Elongated Words}
+\subsubsection{Restoration of Umlauts}
 %
-\subsection{Translation of Slang Idioms}
+\subsubsection{Squeezing of Elongated Words}
+%
+\subsubsection{Translation of Slang Misspellings}
 %
 \section{Evaluation}\label{evaluation}
 
