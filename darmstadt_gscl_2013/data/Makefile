@@ -20,15 +20,16 @@ noise_cleaner_test: ${NORMALIZED_DIR}/1000_tweets_noise_normalization.res
 
 ${NORMALIZED_DIR}/1000_tweets_noise_normalization.res: %.res: %.in %.out
 	set -e -o pipefail; \
-	paste $^ | awk 'NF{sub(/\t/, "\n"); print $0 "\n"}' > $@.tmp; \
-	mv $@.tmp $@
+	paste $^ | ./noise_cleaner_res > $@.tmp && mv $@.tmp $@
 
 ${NORMALIZED_DIR}/1000_tweets_noise_normalization.in: 10000_random_tweets.txt
-	./select_random_lines -n 1000 $< > $@.tmp; \
+	set -e -o pipefail; \
+	./select_random_lines -n 1000 $< | awk 'NF {gsub(/\t/, " "); print}' > $@.tmp && \
 	mv $@.tmp $@
 
 ${NORMALIZED_DIR}/1000_tweets_noise_normalization.out: %.out : %.in
-	noise_cleaner $< > $@.tmp; \
+	set -e -o pipefail; \
+	character_normalizer $< | noise_cleaner -n > $@.tmp && \
 	mv $@.tmp $@
 
 clean_noise_cleaner_test:
