@@ -161,7 +161,7 @@ Noch zweimal Sex, dann ist Ostern.
 besonders gelungen ist der Hampelmann am Präsidiums-Mikro. Der ist vielleicht unterhaltsam! <smiley class="false_neg">:)</smiley> <hashtag class="true_pos">#bpt112</hashtag>
 besonders gelungen ist der Hampelmann am Präsidiums-Mikro. Der ist vielleicht unterhaltsam! :) bpt112
 
-<attoken class="true_pos">@AieMwe</attoken> das ist allenfalls möglich :) na kalorienmässig wars glaub gut war cake friends voll <smiley "true_pos">:)</smiley>
+<attoken class="true_pos">@AieMwe</attoken> das ist allenfalls möglich :) na kalorienmässig wars glaub gut war cake friends voll <smiley class="true_pos">:)</smiley>
 das ist allenfalls möglich %PosSmiley na kalorienmässig wars glaub gut war cake friends voll %PosSmiley
 
 Gestern trafen wir uns mit John, Nicole und Benjamin zu einem netten Gespräch im Bumerang. Themen natürlich der... <link class="true_pos">http://t.co/Or2aE7u2</link>
@@ -317,7 +317,7 @@ Sauber bis ins letzte Eck: Absolute Hygiene ist in Fleisch verarbeitenden Betrie
 <attoken class="true_pos">@ProfessorPopcorn</attoken> ich war ein wenig krank<smiley class="false_neg">^^(</smiley><attoken class="false_neg">@YouTube</attoken> <link class="true_pos">http://t.co/1VjShyRE)</link>
 ich war ein wenig krank^^(@YouTube
 
-<attoken class="true_pos">RT @RotesDing:</attoken> Ich wäre sowohl ohne Snowboard und Mountainbike am schnellsten unten <smiley "true_pos">:D</smiley> <hashtag class="true_pos">#trottel</hashtag> <hashtag class="true_pos">#wettendass</hashtag>
+<attoken class="true_pos">RT @RotesDing:</attoken> Ich wäre sowohl ohne Snowboard und Mountainbike am schnellsten unten <smiley class="true_pos">:D</smiley> <hashtag class="true_pos">#trottel</hashtag> <hashtag class="true_pos">#wettendass</hashtag>
 Ich wäre sowohl ohne Snowboard und Mountainbike am schnellsten unten %PosSmiley  trottel wettendass
 
 <attoken class="true_pos">@hyperaktivraupe</attoken> ist wohl nachvollziehbar, dass ich gerade leicht durch den wind bin ... <smiley class="true_pos">^^</smiley>
@@ -908,7 +908,7 @@ tja, so sind meine eltern.. Dafür bekomm ich alles, was ich will..
 mit schmerzenden Füßen einfach tot daliegen, the dome schauen und mich freuen, dass endlich mal ne sendung mit MUSIK läuft. <smiley class="true_pos">:))</smiley>
 mit schmerzenden Füssen einfach tot daliegen, the dome schauen und mich freuen, dass endlich mal ne sendung mit MUSIK läuft. %PosSmiley
 
-<attoken class="true_pos">RT @MilenaBonse:</attoken> Die <hashtag class="true_pos">#FSK</hashtag> gibt unseren Film <hashtag class="true_pos">#Romeos</hashtag> mit einer abenteuerlichen Begründung erst ab 16 frei <link class="false_pos">http://t.co/mDqSFed6<attoken</link> class="true_pos">@ZDF_DKF</attoken> # ...
+<attoken class="true_pos">RT @MilenaBonse:</attoken> Die <hashtag class="true_pos">#FSK</hashtag> gibt unseren Film <hashtag class="true_pos">#Romeos</hashtag> mit einer abenteuerlichen Begründung erst ab 16 frei <link class="false_pos">http://t.co/mDqSFed6</link> <attoken class="true_pos">@ZDF_DKF</attoken> # ...
 Die FSK gibt unseren Film Romeos mit einer abenteuerlichen Begründung erst ab 16 frei %Link # ...
 
 <attoken class="true_pos">@BSTV_PHIL</attoken> Und Blau ist langsam auch etwas abgenutzt finde ich.. Benutzen recht viele..
