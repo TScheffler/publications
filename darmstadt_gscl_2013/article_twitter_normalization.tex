@@ -120,7 +120,7 @@ that revived interest in this research area in the past two decades.
 %% concluding step, we will perform an evaluation of the results of this
 %% procedure and give some further suggestions for future research.
 
-In the next Section we will give a short overview of existing
+In the next Section, we will give a short overview of existing
 scientific approaches to the problem of tackling out-of-vocabulary
 words in non-standard texts. After that, in Section
 \ref{error:analysis} we will analyze which types of noisiness
@@ -164,14 +164,13 @@ phonetical \textit{n}-gram statistics should fall into the
 \textit{n}-gram based, probabilistic, spell checking or speech
 recognition class.
 
-The reason for this confusion is the fact that the above
-classifications both rely on several independent criteria at the same
-time, though each of these criteria characterizes an NTN system from a
-different point of view. As a consequence, unambiguous assignment of
-an NTN approach to one particular class often becomes impossible. In
+This confusion is explained by the fact that the above classifications
+both rely on several independent criteria at the same time, however
+each of these criteria characterizes an NTN system from a different
+point of view. As a consequence of this, unambiguous assignment of an
+NTN approach to one particular class often becomes impossible. In
 order to avoid this, we instead suggest using separate classifications
-for each type of involved criteria which might characterize an NTN
-technique.
+for each type of involved characterizing criterion.
 
 One of such criteria which in our opinion would be worth a separate
 classification is \emph{segmentation level} that is used
@@ -300,17 +299,16 @@ list by four times to 32,538 unique tokens. The relative rate of
 unknown words raised as expected and run up to 46.96~\% for
 \texttt{hunspell} and 58.24~\% for \texttt{TreeTagger}.
 
-Here once again the question of classification arose. This time with
-regard to the reasons why different tokens could have been omitted
-from corresponding applications' dictionaries. In this respect,
-division into following groups seemed to us to be appropriate to us:
+We classified found OOV tokens into the following three groups
+according to the reasons why these tokens could have been omitted from
+corresponding applications' dictionaries:
 \begin{enumerate}
-  \item \textbf{Objective limitedness of machine-readable dictionary
+  \item \textbf{Objective limitedness of machine-readable dictionaries
     (MRD)}. Among this group, we counted words of basic vocabulary
     which did not get into applications' MRD either because they
-    supposedly were rare or because they did not exist at the time
-    when dictionaries were created. Another reason for inclusion in
-    this type was the belonging of a word to an open lexical or
+    supposedly were rare or did not exist at the time when
+    dictionaries were created. Another reason for inclusion in this
+    type was the belonging of a word to an open lexical or
     part-of-speech class (like, for example, named entities or
     interjections) which are often omitted from MRDs due to the
     impossibility to fully cover them;\label{dict}
@@ -332,7 +330,7 @@ shown and explained below.
 
 We subdivided class \ref{dict} into the following subclasses:
 \begin{enumerate}
-\item regular German words, e.g. \textit{aufm},
+\item regular German words, e.g. \textit{meins},
   \textit{losziehen};\label{regular}
 \item compounds, e.g.  \textit{Altwein},
   \textit{Amtsapothekerin};\label{compound}
@@ -430,30 +428,30 @@ data. Statistical distribution of these subclasses is shown in Table
   \end{tabular}
 \end{table}
 
-As is clear from the table, deletions are by far the most common type
-of misspellings. The reasons for that are either relatively frequent
-omissions of characters made by users or even more often automatic
-truncations of too long messages which are performed by Twitter
-service itself.\footnote{As is generally known, Twitter imposes a
-  strong restriction on the length of posted messages which can be no
-  longer than 140 characters. Upon exceeding this length, tweets get
-  automatically truncated to the maximal allowed length.}
+%% As is clear from the table, deletions are by far the most common type
+%% of misspellings. The reasons for that are either relatively frequent
+%% omissions of characters made by users or even more often automatic
+%% truncations of too long messages which are performed by Twitter
+%% service itself.\footnote{As is generally known, Twitter imposes a
+%%   strong restriction on the length of posted messages which can be no
+%%   longer than 140 characters. Upon exceeding this length, tweets get
+%%   automatically truncated to the maximal allowed length.}
 
 Finally, the third group -- ``Stylistic specifics of text genre'' --
 was subdivided into the subgroups:
 \begin{enumerate}
-  \item @-tokens, e.g. \textit{@ZDFonline};
-  \item hashtags, e.g. \textit{\#Kleinanzeigen};
-  \item links, e.g. \textit{http://t.co};
-  \item smileys, e.g. \textit{:-P};
-  \item slang, e.g. \textit{OMG}.
+  \item @-tokens, e.g. \textit{@ZDFonline}, \textit{@sechsdreinuller};
+  \item hashtags, e.g. \textit{\#Kleinanzeigen}, \textit{\#wetter};
+  \item links, e.g. \textit{http://t.co}, \textit{sueddeutsche.de};
+  \item smileys, e.g. \textit{:-P}, \textit{xD};
+  \item slang, e.g. \textit{OMG}, \textit{WTF} etc.
 \end{enumerate}
 according to the formal or lexical class which the tokens belonged
 to. Additionally, we also considered as \textit{slang} spelling
 variants of standard language words which could be regarded as their
 colloquial equivalents. Such words included cases like, for example,
 \textit{ned} instead of \textit{nicht} or \textit{grad} instead of
-\textit{gerade} and were marked both as \textit{misspelling}s and
+\textit{gerade}, and were marked both as \textit{misspelling}s and
 \textit{slang} in our classification. A detailed statistics on the
 subgroups of class 3 is shown in Table \ref{table:style}:
 \begin{table}
@@ -479,7 +477,7 @@ subgroups of class 3 is shown in Table \ref{table:style}:
 A striking outlier of 16.22~\% for slang tokens in column 1 of the
 Table is explained by the fact that the word ``RT'' which occurred
 1,235 times in our texts and was by far the most frequent OOV in
-analyzed data, was recognized as out-of-vocabulary by
+analyzed data set, was recognized as out-of-vocabulary by
 \texttt{hunspell} but was not deemed as such by
 \texttt{TreeTagger}. Luckily, such singleton cases were rather rare
 exceptions during the analyses and did not affect much the remaining
@@ -487,7 +485,7 @@ classes of OOVs, so that distributions of unknown tokens for both
 tools were more or less similar or at least comparable to a certain
 extent.
 
-But an even more important conclusion which can be drawn from the
+However, an even more important conclusion which can be drawn from the
 analyzed data is the fact that for both \texttt{TreeTagger} and
 \texttt{hunspell}, Twitter-specific phenomena like special tokens,
 colloquial expressions or sloppily typed words accounted for more than
@@ -500,60 +498,47 @@ Section.
 \section{Text Normalization Procedure}\label{normalization}
 
 \subsection{Replacement of Twitter-Specific Phenomena}
-In August 2007, Chris Messina, a renowned advocate of open-source
-community, sent out a Twitter message suggesting that the pound sign
-could be used for organizing groups on Twitter (cf. Parker,
-\cite{parker}). The ``hash godfather'', as Chris Messina described
-himself, allegedly borrowed this idea from Internet Relay Chats (IRC)
--- the forebears of modern social networks -- which have been using
-the ``\#{}''-sign to mark channel names since the early 1990s.
+According to Parker (\cite{parker}), hasthags were supposedly
+introduced by Chris Messina, a renowned advocate of open-source
+community, in August 2007. The ``hash godfather'', as Messina
+describes himself, presumably borrowed the idea of marking relevant
+topics with the ``\#''- sign from Internet Relay Chats (IRC) -- the
+forebears of modern social networks -- which have been using the pound
+character for marking their channel names since the early 1990s.
 
-Luckily for us, this ``novelty'' by Messina as well as @-tokens which
-are used in Twitter to mark names of user account, both have strict
-formal features by which these tokens could be identified. Other types
-of words which are usually considered as OOVs and also have
-unambiguous formal traits are hyperlinks, e-mail addresses, and
-smileys. The presence of such formal criteria suggests that these
-classes could best be handled by rule-methods and namely finite-state
-techniques like finite-state transducers (FST) (cf. Jurafsky and
-Martin, \cite{jurafsky}, pp.57-60).
+Luckily for us, this ``novelty'' by Messina brought along a strict
+formal feature by which future hashtags could be identified. Other
+types of words which are usually considered as OOVs in Twitter but
+also have some unambiguous formal traits include at-tokens,
+hyperlinks, e-mail addresses, and smileys. The presence of such formal
+criteria suggests that these classes could best be handled by
+rule-based methods and namely finite-state techniques like
+finite-state transducers (FST) (cf. Jurafsky and Martin,
+\cite{jurafsky}, pp.57-60).
 
 For our purposes, we developed a prototypic Python system analogous to
-FSTs in which a set of regular expressions was associated with
-corresponding actions performed on matched subgroups. In this system,
-absolutely unambiguous tokens like web links and e-mail addresses were
-replaced with special words ``\%Mail'' and ``\%Link''
-correspondingly. Emoticons were replaced with tokens ``\%PosSmiley'',
-``\%NegSmiley'', depending on the type of emotion presumably conveyed
-by these expressions. In cases when an emoticon was ambiguous with
-regard to its polarity, it was replaced with the artificial word
-``\%Smiley''.
+an FST in which a set of regular expressions was associated with
+corresponding actions performed on matched subgroups in cases when
+these subgroups did not overlap. If some rules clashed together on
+certain contexts, a set of special criteria was used to determine
+which rule the preference should be given.
 
-Additionally to that, problematic UTF-8 characters like special quotes
-and ellipsis which caused incorrect work of tokenizer were converted
-to their corresponding ISO-8859-1 equivalents.
+In this system, unambiguous tokens like web links and e-mail addresses
+were replaced with an artificial word ``\%Mail''. Emoticons were
+substituted by tokens ``\%PosSmiley'' or ``\%NegSmiley'', depending on
+the type of emotion presumably conveyed by these expressions. In cases
+when an emoticon was ambiguous with regard to its polarity, it was
+replaced with the special word ``\%Smiley''. Furthermore, leading
+``\#{}'' characters were stripped off from the beginning of hashtags
+thus leaving only the alphabetic part of these tokens.
 
-For hashtags, we simply stripped off the pound character from the
-beginning of such words thus leaving only the alphabetic part of
-tokens. A more complicated case turned out to be the @-tokens. For
-them, we had to decide depending on the context whether these tokens
-played an important syntactic role in sentence or not. In cases they
-did, we additionally looked whether the alphabetic part following the
-``@'' character was present in dictionary. If it was, we only stripped
-the ``at'' character off, otherwise whole word was replaced with token
-``\%UserName''. In cases when @-tokens served as addresses or retweet
-marks, we deleted them from message completely since they were of
-little interest and importance for further syntactic and semantic
-analysis and could hardly be assigned a proper part-of-speech tag or
-syntactic role.
-
-All the artificially introduced words were added to custom user
-dictionaries of \texttt{TreeTagger} and \texttt{hunspell}. For
-tagging, we assigned NE tags to all artificial words except for
-emoticon replacements which got the tag INJ. Additionally, positions
-and lengths of all replacements we remembered along with original
-words which were replaced and a restoration step to original forms was
-performed for certain classes of tokens after tagging.
+A more complicated case turned out to be the at-tokens and
+hyperlinks. For them, we had to disambiguate whether these words
+played a certain syntactic role in a sentence or could be easily
+omitted without breaking the syntactic structure. In the former case,
+these words were replaced with artificial counterparts. In the latter
+case, such words were deleted from sentence in order not to confuse
+further intended parsing processing.
 
 Precision, recall and F1 score for replacement of Twitter-specific
 phenomena is shown in Table \ref{table:tw-phenomen-metrics}.
@@ -571,14 +556,17 @@ phenomena is shown in Table \ref{table:tw-phenomen-metrics}.
   \end{tabular}
 \end{table}
 
+All the artificial words were added to custom user dictionaries of
+\texttt{TreeTagger} and \texttt{hunspell}. For tagging, we assigned NE
+tags to all artificial tokens with the only exception of emoticon
+replacements which got the tag INJ. Furthermore, positions and lengths
+of all replacements we remembered along with original words which were
+replaced and a restoration step to original forms was performed for
+certain classes of tokens after tagging.
+
 %
 \subsection{Restoration of misspellings}
-%
-\subsubsection{Restoration of Umlauts}
-%
-\subsubsection{Squeezing of Elongated Words}
-%
-\subsubsection{Translation of Slang Misspellings}
+
 %
 \section{Evaluation}\label{evaluation}
 

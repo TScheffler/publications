@@ -24,7 +24,7 @@
 30	ok	inj
 30	sowas	dict
 29	Haha	inj
-29	naja	inj; spell:na ja:deletion
+29	naja	inj
 28	lol	slang; inj; smiley
 26	:-D	smiley
 26	heut	spell:heute:deletion; slang
@@ -43,7 +43,7 @@
 21	find	spell:finde:deletion; slang
 21	nem	 spell:einem:deletion; slang
 20	on	fw
-20	weiss	dict
+20	weiss	spell:weiß:substitution
 19	Jauch	ne:person
 19	@ZDFonline	at_token
 19	nacht	dict
@@ -98,7 +98,6 @@
 12	DTN	abbr
 12	FB	 ne:company; abbr
 12	Jungs	slang
-12	Spass	dict
 12	TL	abbr
 12	co	link
 12	fur	spell:für:substitution
@@ -149,7 +148,7 @@
 9	#Quoka	hash_tag
 9	Reus	ne:person
 9	Timeline	loan
-9	aku	abbr; slang
+9	aku	spell:Akku:deletion; slang
 9	daß	dict
 9	facebook	ne:company
 9	#fail	hash_tag
@@ -182,7 +181,7 @@
 8	Til	ne:person
 8	WE	abbr
 8	Weihnachts	token
-8	Weiss	dict
+8	Weiss	spell:Weiß:substitution
 8	and	fw
 8	@bangpowwww	at_token
 8	by	fw
@@ -237,7 +236,7 @@
 7	Zwickauer	ne:geo
 7	#alverde	hash_tag
 7	aww	inj
-7	bekomm	spell:bekomme:deletion
+7	bekomm	spell:bekomme:deletion; slang
 7	#berlin	hash_tag
 7	bett	dict
 7	boah	inj
@@ -263,7 +262,7 @@
 7	schaun	 spell:schauen:deletion; slang
 7	schonmal	spell:schon mal:deletion
 7	show	loan
-7	sry	spell:sorry:deletion
+7	sry	spell:sorry:deletion; slang
 7	tja	inj
 7	twittert	neologism
 7	up	fw
@@ -325,7 +324,7 @@
 6	fuck	fw; slang
 6	gesehn	spell:gesehen:deletion; slang
 6	go	fw
-6	grosse	dict
+6	grosse	spell:große:substitution
 6	hahah	inj
 6	hm	inj
 6	hätt	spell:hätte:deletion; slang
@@ -411,7 +410,7 @@
 5	Oo	smiley; inj
 5	Playing	fw
 5	@Polm90	at_token
-5	Scheiss	spell:Scheiße:deletion; slang
+5	Scheiss	spell:Scheiße:deletion/substitution; slang
 5	@Schmidtlepp	at_token
 5	Slim	fw
 5	Special	fw
@@ -492,9 +491,9 @@
 5	@sat1	at_token
 5	satz	dict
 5	schatz	dict
-5	schlaf	spell:schlafe:deletion; dict
+5	schlaf	spell:schlafe:deletion; slang
 5	@schlenzalot	at_token
-5	se	 spell:sie:deletion; slang
+5	se	spell:sie:deletion; slang
 5	seh	spell:sehe:deletion; slang
 5	#sem	hash_tag
 5	sitz	spell:sitze:deletion; slang
@@ -508,7 +507,7 @@
 5	un	spell:und:deletion
 5	waere	umlaut
 5	we	fw
-5	weisst	dict
+5	weisst	spell:weißt:substution
 5	@weltonline	at_token
 5	wochen	dict
 5	wärs	 spell:wäre es:deletion; slang
@@ -675,7 +674,7 @@
 4	#hamburg	hash_tag
 4	haus	dict
 4	he	inj
-4	heisse	dict
+4	heisse	spell:heiße:substitution
 4	@hi_d_11e	at_token
 4	ähm	inj
 4	@hmdeutschland	at_token
@@ -714,15 +713,15 @@
 4	riesenehre	compound
 4	rofl	inj; smiley
 4	@satriyowijoyo	at_token
-4	scheiss	spell:scheiß:substitution; slang
+4	scheiss	spell:Scheiße:substitution; slang
 4	seite	dict
 4	sex	dict
 4	shoppen	loan
 4	si	fw
 4	@siggismallz	at_token
 4	#spaeter	hash_tag
-4	spass	spell:Spaß:substitution; dict
-4	süsse	spell:süße:substitution/insertion; dict
+4	spass	spell:Spaß:substitution
+4	süsse	spell:süße:substitution
 4	stadt	dict
 4	@svennibenni_de	at_token
 4	tau	fw
@@ -750,10 +749,10 @@
 4	zb	abbr
 4	@zeitonline_pol	at_token
 4	zocken	dict
-4	zuviele	spell:zu viele:deletion; dict
+4	zuviele	spell:zu viele:deletion
 3	à	fw
 3	ABBA	ne:company
-3	Achja	spell:ach ja:substitution; inj
+3	Achja	inj
 3	@Aimar_HH	at_token
 3	@AkalineableYT	at_token
 3	Amy	ne:person
@@ -836,7 +835,7 @@
 3	Gr.	abbr
 3	Green	fw
 3	@GreenEyedNeko	at_token
-3	Grüsse	spell:Grüße:substitution; dict
+3	Grüsse	spell:Grüße:substitution
 3	HTC	abbr; ne:company
 3	Hahaha	inj
 3	@HaifischInAspik	at_token
@@ -963,7 +962,7 @@
 3	Sarah	ne:person
 3	Sat	ne:company
 3	#Sat1	hash_tag
-3	Scheisse	spell:Scheiße:substitution; dict
+3	Scheisse	spell:Scheiße:substitution
 3	@Scherzinfarkt	at_token
 3	Schmitz	ne:person
 3	@Schnupsi407	at_token
@@ -1072,7 +1071,7 @@
 3	ding	dict
 3	downloaden	neologism
 3	@drPfarrer	at_token
-3	draus	spell:daraus:deletion; dict
+3	draus	spell:daraus:deletion
 3	ei	dict
 3	@eingenickt	at_token
 3	eis	dict
@@ -1100,7 +1099,7 @@
 3	gak	fw
 3	ge	spell:gestern:deletion
 3	gebloggt	neologism
-3	gehn	spell:gehen:deletion
+3	gehn	spell:gehen:deletion; slang
 3	@gillyberlin	at_token
 3	gitarre	dict
 3	gl	abbr
@@ -1108,7 +1107,7 @@
 3	#gÃ¼nstigsten	hash_tag
 3	google	ne:company
 3	#gottschalk	hash_tag
-3	grossen	spell:großen:substitution/insertion; dict
+3	dict
 3	gruppe	dict
 3	hö	inj
 3	äh	inj
@@ -1119,7 +1118,7 @@
 3	@heckyeahsaade	at_token
 3	@heeeeenni	at_token
 3	@heiseonline	at_token
-3	heissen	spell:heißen:substitution/insertion; dict
+3	heissen	spell:heißen:substitution
 3	hi	inj
 3	hilfe	dict
 3	hinbekomme	dict
@@ -1153,7 +1152,7 @@
 3	kacken	slang; dict
 3	kaffee	dict
 3	kaka	fw
-3	kanns	spell:Kann es:deletion
+3	kanns	spell:Kann es:deletion; slang
 3	karte	dict
 3	katze	dict
 3	ki	fw
@@ -1173,7 +1172,7 @@
 3	mer	 spell:mir:substitution; slang
 3	mh	inj
 3	@miinaaa	at_token
-3	mitreissen	spell:mitreißen:substitution/insertion; dict
+3	mitreissen	spell:mitreißen:substitution
 3	mittwoch	dict
 3	#münchen	hash_tag
 3	männer	dict
@@ -1267,7 +1266,7 @@
 3	too	fw
 3	@traumdenker	at_token
 3	#trends	hash_tag
-3	träum	spell:träume:deletion; dict
+3	träum	spell:träume:deletion; slang
 3	ts	inj
 3	twittere	neologism
 3	#twoff	hash_tag
@@ -1284,7 +1283,7 @@
 3	vão	fw
 3	voten	loan
 3	@webrebell	at_token
-3	weis	spell:weiß:deletion; dict
+3	weis	spell:weiß:deletion
 3	weißte	spell:weißt du:deletion/insertion; slang
 3	@werkarniggel	at_token
 3	wetter	dict
@@ -1347,7 +1346,7 @@
 2	Angels	fw
 2	Animexx	ne:company
 2	Anschlußstelle	compound
-2	Anstoss	spell:Anstoß:substitution/deletion; dict
+2	Anstoss	spell:Anstoß:substitution
 2	@AntonioGrazian	at_token
 2	@Applewar	at_token
 2	Arcanoa	ne:company
@@ -1356,8 +1355,8 @@
 2	@Arrivedwithyou	at_token
 2	Aspire	ne:product
 2	@AthariDrawer	at_token
-2	Aussenbordmotor compound
-2	Ausserdem	spell:außerdem:substitution/insertion; dict
+2	Aussenbordmotor spell:Außenbordmotor:substitution
+2	Ausserdem	spell:Außerdem:substitution
 2	#Austria	hash_tag
 2	Autsch	inj
 2	Ava	slang
@@ -1474,7 +1473,7 @@
 2	DIe	dict
 2	DOSB	abbr
 2	@DaKrys	at_token
-2	Dabeisein	spell:dabei sein:substitution/deletion; dict
+2	Dabeisein	dict
 2	Dachdämmung	compound
 2	Dahoam	slang
 2	DailyDeal	fw
@@ -1512,7 +1511,7 @@
 2	Ebersbach	ne:geo
 2	@EchelonLaura	at_token
 2	@EgoTripMSR	at_token
-2	Ehr	spell:Ehre:deletion; dict
+2	Ehr	spell:Ehre:deletion
 2	#EinsExtra	hash_tag
 2	#EinsPlus	hash_tag
 2	Elektrogeraet	 umlaut; compound
@@ -1566,7 +1565,7 @@
 2	Fred	ne:person
 2	Fuchsberger	ne:person
 2	Full	fw
-2	Fussball	spell:Fußball:substitution/insertion; dict
+2	Fussball	spell:Fußball:substitution
 2	GERMAN	fw
 2	GORGEOUS	fw
 2	Gagas	ne:person
@@ -1600,8 +1599,8 @@
 2	@GomezStew	at_token
 2	Goodbye	 fw; inj
 2	Grand	fw
-2	Grosse	spell:große:substitution/insertion; dict
-2	Grossmütter	spell:Großmütter:substitution/insertion; dict
+2	Grosse	spell:Große:substitution
+2	Grossmütter	spell:Großmütter:substitution
 2	Group	fw
 2	Götz	ne:person
 2	#Guben	hash_tag
@@ -1633,7 +1632,8 @@
 2	Henava	ne:company
 2	Herdprämie	compound
 2	Herman	ne:person
-2	Heroine	spell:Heroin:insertion; dict
+1	Heroine	spell:Heroin:insertion
+1	Heroine	dict
 2	@HerrDemodex	at_token
 2	@HerrIdefix	at_token
 2	Herten	ne:geo
@@ -1655,14 +1655,14 @@
 2	@IboSC2	at_token
 2	Ibooks	ne:product
 2	Iconia	ne:product
-2	Ik	spell:ich:substitution/deletion; dict
+2	Ik	spell:ich:substitution/deletion; slang
 2	Indie	fw
 2	Infinity	ne:product
 2	@Inspiritx3	at_token
 2	Interio	ne:product
 2	Intro	slang
 2	Irwie	 spell:irgendiwe:deletion; slang
-2	Isch	spell:ich:insertion; dict
+2	Isch	spell:ich:insertion; slang
 2	Jaaa	 elongation; inj
 2	Jana	ne:person
 2	@JananasGold	at_token
@@ -1778,7 +1778,8 @@
 2	Marry	fw
 2	@MartinBeyond	at_token
 2	@Marvication	at_token
-2	Mass	fw
+1	Mass	fw
+1	Mass	fw
 2	Maxi	ne:person
 2	Maxxus	ne:product
 2	Mbit	 neologism; abbr
@@ -1861,7 +1862,7 @@
 2	Noir	fw
 2	@NoodLe3105	at_token
 2	Norman	ne:person
-2	Nu	spell:nun:deletion; dict
+2	Nu	spell:nun:deletion; slang
 2	Nuala	ne:person
 2	Nudelfee	compound
 2	OG	abbr
@@ -1912,7 +1913,7 @@
 2	Prödl	ne:person
 2	Princess	ne:product
 2	#ProSieben	hash_tag
-2	Probier	spell:probiere:deletion
+2	Probier	spell:probiere:deletion; slang
 2	Proclear	ne:product
 2	Prof	abbr; dict
 2	#Promifunk	hash_tag
@@ -2061,7 +2062,7 @@
 2	Stokke	ne:product
 2	Stop	dict; inj
 2	@Stousn	at_token
-2	Straks	 spell:stracks:deletion; slang
+2	Straks	 spell:stracks:deletion
 2	Subliminals	fw
 2	Suesser	umlaut
 2	@Suizidkatze87	at_token
@@ -2152,7 +2153,7 @@
 2	Weicon	ne:product
 2	Welcome	 inj; fw
 2	Wels	dict
-2	Wenns	spell:Wenn es:deletion
+2	Wenns	spell:Wenn es:deletion; slang
 2	@Weseresk	at_token
 2	#WettenDas	hash_tag
 2	@Whitypo	at_token
@@ -2245,7 +2246,7 @@
 2	atuh	fw
 2	#auslosung	hash_tag
 2	ausser	dict
-2	ausserdem	spell:außerdem:substitution; dict
+2	ausserdem	dict
 2	#auto	hash_tag
 2	#awlb	hash_tag
 2	aynen	fw
@@ -2362,7 +2363,7 @@
 2	@dorfgirl	at_token
 2	download	loan
 2	@dpmdogma	at_token
-2	draussen	spell:draußen:substitution; dict
+2	draussen	dict
 2	drum	spell:darum:deletion; slang
 2	düsseldorf	ne:geo
 2	düştükçe	fw
@@ -2434,7 +2435,7 @@
 2	geheimnis	dict
 2	gelegenheit	dict
 2	@gelsen	at_token
-2	geniesst	spell:genießt:substitution
+2	geniesst	dict
 2	gepruft	umlaut
 2	gerad	 spell:gerade:deletion; slang
 2	geretweetet	neologism
@@ -2449,7 +2450,8 @@
 2	gibi	fw
 2	gigaspeed	ne:product
 2	@girlontravel	at_token
-2	git	spell:gibt:deletion; slang; ne:product
+1	git	spell:gibt:deletion
+1	git	ne:product
 2	gk	fw
 2	gladbach	ne:geo
 2	gnaaa	inj
@@ -2497,7 +2499,7 @@
 2	hochgeladen.	token
 2	hochzeit	dict
 2	@hoergen	at_token
-2	hoff	spell:hoffe:deletion
+2	hoff	spell:hoffe:deletion; slang
 2	@hofrat	at_token
 2	@holadiho	at_token
 2	#holzfäller	hash_tag
@@ -2540,7 +2542,7 @@
 2	jared	ne:person
 2	jed	spell:jeder:deletion
 2	jedermanns	dict
-2	jedesmal	spell:jedes Mal:deletion; slang
+2	jedesmal	spell:jedes Mal:deletion
 2	#jena	hash_tag
 2	@jensbernau	at_token
 2	@jenshoffmann	at_token
@@ -2756,7 +2758,7 @@
 2	@pantoffelpunk	at_token
 2	parah	fw
 2	park	dict
-2	paßt	spell:passt:substitution/deletion
+2	paßt	spell:passt:substitution
 2	@pauli_pirat	at_token
 2	pöbeln	dict
 2	pech	dict
@@ -2973,7 +2975,7 @@
 2	#wdr	hash_tag
 2	#we	hash_tag
 2	weetje	fw
-2	wegn	spell:wegen:deletion
+2	wegn	spell:wegen:deletion; slang
 2	#weihnachten	hash_tag
 2	weihnachtsmarkt	compound
 2	weilchen	dict
@@ -3250,7 +3252,7 @@
 1	@Joooshi_	at_token
 1	Jule	ne:person
 1	@Julievane	at_token
-1	Jungbleiben	spell:jung bleiben:deletion
+1	Jungbleiben	compound
 1	KEM	fw
 1	Kame	spell:Kamera:deletion
 1	@Kat2402	at_token
@@ -3270,12 +3272,12 @@
 1	Kolibri	dict
 1	Kommunismusvorwürfe	compound
 1	Kons	spell:Konsequenzen:deletion
-1	Kopp	spell:Kopf:substitution
+1	Kopp	spell:Kopf:substitution; slang
 1	@KoreaReise	at_token
 1	Kraps	ne:person
 1	Kriegsse	slang; spell:kriegst du:deletion,insertion
 1	Kässpätzle	dict
-1	„KuH	spell:Kuh:insertion/substitution; dict
+1	„KuH	token
 1	Kung	fw
 1	LWS	abbr
 1	Labradordame	compound
@@ -3602,7 +3604,7 @@
 1	@cHHrissi	at_token
 1	canack	fw
 1	@celinevivian	at_token
-1	ceylan	ne:person; spell:Ceylan:substitution
+1	ceylan	ne:person
 1	#checkdaname	hash_tag
 1	chocoletter	fw
 1	@christianseel	at_token
@@ -3637,7 +3639,7 @@
 1	@dingler_g4	at_token
 1	disse	loan
 1	@dml_podcast	at_token
-1	döner	spell:Döner:substitution
+1	döner	dict
 1	@dnlwgnr	at_token
 1	#doei	hash_tag
 1	doidoo	fw
@@ -3647,30 +3649,30 @@
 1	@dridde	at_token
 1	#düsseldorf	hash_tag
 1	dta	fw
-1	durecke	spell:druecke:substitution; umlaut
+1	durecke	spell:drücke:substitution
 1	duuuuuuuuuuurch	elongation; dict
 1	#efa	hash_tag
 1	@egghat	at_token
 1	eigntlich	spell:eigentlich:deletion
-1	einsteins	ne:person; spell:Einstein:substitution
+1	einsteins	ne:person
 1	@eisenmed	at_token
 1	elien	ne:person
 1	ergebnisorientierte	dict
 1	erhiel	spell:erhielt:deletion
-1	ertränk	spell:ertränke:deletion
+1	ertränk	spell:ertränke:deletion; slang
 1	ettim	fw
 1	#euro1996	hash_tag
 1	ever.	fw
 1	evie	ne:person
 1	ey…	token; inj
-1	fahrschule.	spell:Fahrschule:substitution,insertion
+1	fahrschule.	token
 1	far	fw
 1	favt	loan
 1	#fdp	hash_tag
 1	@feenose	at_token
-1	feuergefecht	spell:Feuergefecht:substitution
+1	feuergefecht	compound
 1	flattrig	dict
-1	flug	spell:Flug:substitution; dict
+1	flug	dict
 1	@fotoSJ	at_token
 1	@franciskafriede	at_token
 1	färber	ne:person
@@ -3683,7 +3685,7 @@
 1	garnix	slang
 1	@gedankenstuecke	at_token
 1	geei	spell:geeignet:deletion
-1	gegenteil	spell:Gegenteil:substitution
+1	gegenteil	dict
 1	#gehtgarnich	hash_tag
 1	gehtsmit	spell:geht es mit:deletion
 1	gein	fw
@@ -3693,12 +3695,12 @@
 1	geschuetzte	umlaut
 1	gestylt	loan
 1	@_getlow	at_token
-1	getränkeautomaten	compound; spell:Getränkeautomaten:substitution
+1	getränkeautomaten	compound
 1	geupdated	loan
 1	#gladbachspiel	hash_tag
 1	@gmshits	at_token
 1	gnihihi	inj
-1	goettingen	spell:Göttingen:substitution,substitution
+1	goettingen	umlaut
 1	graaah	inj
 1	@grindmaster	at_token
 1	großrtig	spell:großartig:deletion
@@ -3709,18 +3711,18 @@
 1	guteee	elongation
 1	haahah	inj
 1	#hammer	hash_tag
-1	hartz	spell:Hartz:substitution; ne:person
+1	hartz	ne:person
 1	hatin	fw
 1	hbu	fw
 1	#hcsmeu	hash_tag
 1	@hedu	at_token
-1	heidelberg	spell:Heidelberg:substitution
+1	heidelberg	ne:geo
 1	heint	slang; spell:heut(e):substitution
 1	heist	spell:heißt:substitution
 1	@hellokittyeu	at_token
 1	@heuteshowf	at_token
 1	hillarious	fw
-1	hingehn	spell:hingehen:deletion
+1	hingehn	spell:hingehen:deletion; slang
 1	Öhm	inj
 1	hoezo	fw
 1	horas	fw
@@ -3737,53 +3739,53 @@
 1	@itestomat	at_token
 1	@itim	at_token
 1	itu	fw
-1	japan	spell:Japan:substitution
+1	japan	ne:geo
 1	jee	fw
 1	#joggen	hash_tag
-1	kakao	spell:Kakao:substitution
+1	kakao	dict
 1	@kakaotraeume	at_token
 1	kayanya	fw
 1	kgAugenfrabe	spell:Augenfarbe:insertion,substitution
-1	kicker	spell:Kicker:substitution
+1	kicker	dict
 1	kijkenn	fw
-1	killn	spell:killen:deletion
+1	killn	spell:killen:deletion; slang
 1	@kinderfreuden	at_token
 1	kingt	spell:klingt:deletion
 1	kisss	elongation
 1	kl.	abbr
 1	@klarawrrr	at_token
-1	klassenfeier	spell:Klassenfeier:substitution
-1	kleider	spell:Kleider:substitution
+1	klassenfeier	compound
+1	kleider	dict
 1	@kleinesscheusal	at_token
 1	@kleinobi	at_token
-1	kälte	spell:Kälte:substitution; dict
+1	kälte	dict
 1	küm	fw
-1	knnen	spell:können:deletion; dict
-1	koftschmersen	fw
+1	knnen	spell:können:deletion
+1	koftschmersen	spell:Kopfschmerzen:substitution
 1	@kogekisha	at_token
 1	konkordant	loan; dict
-1	kopenhagen	spell:Kopenhagen:substitution; ne:geo
+1	kopenhagen	ne:geo
 1	@kosh_ac	at_token
 1	kpikiran	fw
 1	kraul	dict
-1	kuschelbettchen	spell:Kuschelbettchen:substitution; compound
+1	kuschelbettchen	compound
 1	kwon	ne:company
-1	labberst	spell:laberst:insertion
-1	lad	spell:lade:deletion
+1	labberst	dict
+1	lad	spell:lade:deletion; slang
 1	lahmarschig	dict
-1	landkarte	spell:Landkarte:substitution
+1	landkarte	compound
 1	langweilichrrrrrrrrr	spell:langweilig:substitution,insertion
 1	@laprintem	at_token
 1	learning	fw
-1	leggins	spell:Leggins:substitution
+1	leggins	ne:product
 1	leida	slang
-1	lesestoff	spell:Lesestoff:substitution
+1	lesestoff	compound
 1	@lexi_68	at_token
 1	li	fw
-1	lichtenberg.	spell:Lichtenberg:substitution,insertion
+1	lichtenberg.	token
 1	lieeeebe	elongation
 1	@_liisalii_	at_token
-1	link	spell:Link:substitution
+1	link	dict
 1	@littlewisehen	at_token
 1	@ölla	at_token
 1	losziehen	dict
@@ -3793,7 +3795,7 @@
 1	maaann	elongation
 1	@macXperts	at_token
 1	males	fw
-1	mantel	spell:Mantel:substitution
+1	mantel	dict
 1	@manuelnappo	at_token
 1	manyakmısınız	fw
 1	@marcleyendecker	at_token
@@ -3811,39 +3813,39 @@
 1	@mikeoomen	at_token
 1	mirco	ne:person
 1	@missfatinaten	at_token
-1	mission2beach	fw; spell:mission to beach:deletion,substitution,deletion
+1	mission2beach	ne:product
 1	mobbe	loan; dict
-1	mobilität	spell:Mobilität:substitution
+1	mobilität	dict
 1	mocht	slang; spell:gemacht:deletion,substitution
 1	@mode_mama	at_token
-1	moenchengladbach	umlaut; ne:geo; spell:Mönchengladbach:substitution
+1	moenchengladbach	umlaut; ne:geo
 1	moods	fw
-1	mürbeteig	spell:Mürbeteig:substitution
+1	mürbeteig	compound
 1	muahahaha	inj
 1	@muetzenkind	at_token
 1	muhahahahaha	inj
 1	@murielkelleher	at_token
 1	#music	hash_tag
-1	mutterbänder	spell:Mutterbänder:substitution; compound
+1	mutterbänder	compound
 1	@mycomfor	at_token
 1	#mydealz	hash_tag
-1	nö.	slang; spell:nein:deletion/insertion
+1	nö.	token
 1	@nachtlos	at_token
-1	nazi	spell:Nazi:substitution
+1	nazi	slang
 1	ngmngin	fw
-1	nickerchen	spell:Nickerchen:substitution
+1	nickerchen	dict
 1	@niclasdanzer	at_token
 1	@nikkychan	at_token
 1	@ninakutschera	at_token
 1	#no_ad	hash_tag
 1	@nocjoz	at_token
 1	noerdlich	umlaut; dict
-1	›notte‹	fw
+1	›notte‹	token
 1	#nuernberg	hash_tag
 1	nuhr	spell:nur:insertion
-1	oberweite	spell:Oberweite:substitution
+1	oberweite	compound
 1	odeer	elongation; dict
-1	ohnmacht	spell:Ohnmacht:substitution
+1	ohnmacht	dict
 1	@oliverg	at_token
 1	@onedirection	at_token
 1	opruimen	fw
@@ -3852,10 +3854,10 @@
 1	overpaced	loan
 1	@ovipar	at_token
 1	painten	loan
-1	paket	spell:Paket:substitution
-1	papst	spell:Papst:substitution; dict
-1	partei	spell:Partei:substitution; dict
-1	pasta	spell:Pasta:substitution
+1	paket	dict
+1	papst	dict
+1	partei	dict
+1	pasta	dict
 1	payah	fw
 1	@pianistberlin	at_token
 1	#pic	hash_tag
@@ -3863,11 +3865,11 @@
 1	@pinkmango77	at_token
 1	piratebayäääähm	ne:company; inj; elongation; spell:piratebay ähm:deletion,insertion
 1	@piratte	at_token
-1	plastikbechern	spell:Plastikbechern:substitution; compound
+1	plastikbechern	compound
 1	plat	fw
 1	please	fw
-1	polizei	spell:Polizei:substitution
-1	post	spell:Post:substitution
+1	polizei	dict
+1	post	dict
 1	ppl	abbr; fw
 1	pppppffffhhhh	inj; elongation
 1	prä	fw
@@ -3876,7 +3878,7 @@
 1	@psennhauser	at_token
 1	#pulleralarm	hash_tag
 1	pw	abbr
-1	raffs	spell:raffe es:deletion,insertion,deletion
+1	raffs	spell:raffe es:deletion,insertion,deletion; slang
 1	rahe	fw
 1	rausgehauen	dict
 1	rausgeschmissen	dict
@@ -3884,25 +3886,25 @@
 1	ref	abbr
 1	reingezappt	loan
 1	#reisem	hash_tag
-1	rekursionsoption	spell:Rekursionsoption:substitution
+1	rekursionsoption	compound
 1	@rhearamin	at_token
 1	@rheinzeitung	at_token
 1	rtl2	ne:company;
 1	rutte	fw
-1	sabbat	spell:Sabbat:substitution
+1	sabbat	dict
 1	@sanczny	at_token
 1	@sanne073	at_token
 1	satu	fw
-1	sauf	spell:saufe:deletion
-1	schatz	spell:Schatz:substitution,insertion; dict
-1	scheisse	spell:scheiße:substitution
-1	scheitelpunkte	spell:Scheitelpunkte:substitution
+1	sauf	spell:saufe:deletion; slang
+1	schatz	token
+1	scheisse	dict
+1	scheitelpunkte	compound
 1	schicksten	dict
 1	schme	fw
 1	schöööner	elongation
 1	schoenes	umlaut
 1	@schurlo	at_token
-1	screamo	spell:Screamo:substitution
+1	screamo	neologism
 1	#süd	hash_tag
 1	selb	spell:selbst:deletion
 1	seriö	spell:seriöse:deletion
@@ -3912,7 +3914,7 @@
 1	@sido_vdmeulen	at_token
 1	siegtenBadische	spell:siegten badische:deletion,substitution
 1	#sims	hash_tag
-1	singl	spell:single:deletion; loan
+1	singl	spell:Singleleben:deletion
 1	@skobai	at_token
 1	slaat	fw
 1	slafen	spell:schlafen:deletion
@@ -3924,12 +3926,12 @@
 1	@sprain	at_token
 1	sprech	spell:spreche:deletion
 1	sprt	abbr; fw
-1	spuck´	dict;	spell:spucke:deletion
+1	spuck´	token
 1	srk	ne:person
 1	@stARTconference	at_token
 1	@stadioncheck	at_token
 1	stalkst	loan
-1	stecher	spell:Stecher:substitution
+1	stecher	dict
 1	@stefan4all	at_token
 1	@sternenfalke	at_token
 1	@storykom	at_token
@@ -3943,21 +3945,21 @@
 1	swiss	fw
 1	@swr1bw	at_token
 1	#swtor	hash_tag
-1	szene	spell:Szene:substitution
+1	szene	dict
 1	taktiles	loan
 1	@tapioliller	at_token
 1	@tatichen	at_token
 1	teeny18j.	loan; spell:Teeny 18 J.:deletion
 1	tendier	spell:tendiere:deletion
-1	tequila	spell:Tequila:substitution
+1	tequila	dict
 1	@text100	at_token
 1	@therock	at_token
-1	these	spell:These:substitution
+1	these	fw
 1	#thumbsup	hash_tag
 1	@timetosayitloud	at_token
-1	tipps.	spell:Tipps:substitution
+1	tipps.	token
 1	tjä	inj
-1	trends	spell:Trends:substitution
+1	trends	dict
 1	troca	fw
 1	tudo	fw
 1	tumhein	fw
@@ -3970,38 +3972,38 @@
 1	twittarmee	neologism
 1	uff.	inj
 1	uler	fw
-1	umgebung	spell:Umgebung:substitution
+1	umgebung	dict
 1	umräumen	dict
 1	unverschluesselt	umlaut
 1	up.	fw
-1	uran	spell:Uran:substitution; dict
-1	verbindung	spell:Verbindung:substitution
-1	verfolgungtour	spell:Verfolgungstour:substitution,deletion
-1	vergass.	spell:vergaß:substitution
-1	versprec…	spell:versprechen:deletion
+1	uran	dict
+1	verbindung	dict
+1	verfolgungtour	spell:Verfolgungstour:deletion
+1	vergass.	token
+1	versprec…	token
 1	@viirus42	at_token
 1	@volksdroge	at_token
 1	voodka	elongation
-1	vorlesung	spell:Vorlesung:substitution; dict
+1	vorlesung	dict
 1	@wadi_1989	at_token
-1	wassermelone	spell:Wassermelone:substitution
+1	wassermelone	dict
 1	@watchmefade92	at_token
 1	waterfront	fw
-1	wave…hier	fw; dict; spell:wave... hier:deletion
+1	wave…hier	token
 1	wcwette	spell:WC Wette:deletion
 1	website	loan
 1	weck	dict
 1	#weekend	hash_tag
 1	weghauen	dict
-1	weihnachtsbowlen	compound; spell:Weihnachtsbowlen:substitution
-1	weihnachtsreiten	compound; spell:Weihnachstreiten:substitution
-1	weihnachtszeit	spell:Weihnachtszeit:substitution
+1	weihnachtsbowlen	compound
+1	weihnachtsreiten	compound
+1	weihnachtszeit	compound
 1	@weizenspreu	at_token
 1	whiteits	fw
 1	wij	fw
 1	willkommn	spell:willkommen:deletion
 1	@wolflotter	at_token
-1	wolken	spell:Wolken:substitution
+1	wolken	dict
 1	@wormi	at_token
 1	@wuschelkeks	at_token
 1	@wynsh_DE	at_token
@@ -4022,10 +4024,10 @@
 1	zap	loan
 1	@zdfneo	at_token
 1	ze	fw
-1	zeiche	slang; spell:zeige:substitution,insertion
-1	zenit		spell:Zeit:substitution,insertion
+1	zeiche	spell:zeige:substitution,insertion
+1	zenit	spell:Zeit:substitution,insertion
 1	#zeppelin	hash_tag
-1	zertifikat	spell:Zertifikat:substitution
+1	zertifikat	dict
 1	zurücklehen	spell:zurücklegen:substitution
 1	zuuu	elongation
 1	SEH	spell:SEHE:deletion
