@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+@stats = { }
+
+##################################################################
+# Methods
+
+##################################################################
+# Arguments
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+#{myname} generates gnuplot coordinates.
+
+USAGE:
+#{myname} FILE1 FILE2
+  EOF
+end.parse!()
+
+##################################################################
+# Main
+f     = nil
+fname = nil
+doc   = nil
+
+ARGV.each do |fname|
+  f = File.open(fname)
+  doc = Nokogiri::XML(f)
+  @elements.each_pair do |elname, elstat|
+    doc.xpath("//#{elname}").each do |el|
+      raise "Class not specified for element at line: #{el.line()}" unless el['class']
+      elstat[el['class']] += 1
+    end
+  end
+  f.close()
+end
+
+
+=begin
+OOV subclass & Precision & Recall & F1 score\\\hline
+=end
+prec  = 0.0
+rcall = 0.0
+fmeasure = 0.0
+@elements.each_pair do |el, stat|
+  if stat['true_pos'] != 0
+    prec  = stat['true_pos'] / (stat['true_pos'] + stat['false_pos']).to_f()
+    rcall = stat['true_pos'] / (stat['true_pos'] + stat['false_neg']).to_f()
+    fmeasure = 2 * prec * rcall / (prec + rcall)
+  else
+    prec  = 0.0
+    rcall = 0.0
+    fmeasure = 0.0
+  end
+  printf("%s & %.2f & %.2f & %.2f\\\\\n", el, prec * 100, rcall * 100, \
+         fmeasure * 100)
+end
+
+=begin
+{"attoken"=>{"false_pos"=>6, "false_neg"=>6, "true_pos"=>524,
+"true_neg"=>0}, "link"=>{"false_pos"=>2, "false_neg"=>0,
+"true_pos"=>354, "true_neg"=>0}, "smiley"=>{"false_pos"=>10,
+"false_neg"=>47, "true_pos"=>151, "true_neg"=>0}}
+=end
