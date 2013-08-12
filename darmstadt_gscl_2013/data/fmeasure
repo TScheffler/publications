@@ -56,7 +56,26 @@ ARGV.each do |fname|
   f.close()
 end
 
-p @elements
+
+=begin
+OOV subclass & Precision & Recall & F1 score\\\hline
+=end
+prec  = 0.0
+rcall = 0.0
+fmeasure = 0.0
+@elements.each_pair do |el, stat|
+  if stat['true_pos'] != 0
+    prec  = stat['true_pos'] / (stat['true_pos'] + stat['false_pos']).to_f()
+    rcall = stat['true_pos'] / (stat['true_pos'] + stat['false_neg']).to_f()
+    fmeasure = 2 * prec * rcall / (prec + rcall)
+  else
+    prec  = 0.0
+    rcall = 0.0
+    fmeasure = 0.0
+  end
+  printf("%s & %.2f & %.2f & %.2f\\\\\n", el, prec * 100, rcall * 100, \
+         fmeasure * 100)
+end
 
 =begin
 {"attoken"=>{"false_pos"=>6, "false_neg"=>6, "true_pos"=>524,
