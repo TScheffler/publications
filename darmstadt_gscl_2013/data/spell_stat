@@ -1,0 +1,107 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+SLANG_RE = Regexp.compile('(?:slang|elongation)\b', Regexp::IGNORECASE)
+NONSLANG_RE = Regexp.compile('(?:spell|umlaut)\b', Regexp::IGNORECASE)
+FLD_SEP  = Regexp.compile('\s*\t\s*')
+
+SLANG_KEY    = 'slang'
+NONSLANG_KEY = 'nonslang'
+
+@stats = {
+  SLANG_KEY => {}, \
+  NONSLANG_KEY => {} \
+}
+
+@slang_cnt = 0
+@nonslang_cnt = 0
+@total = 0
+
+@nonslang_file = nil
+
+##################################################################
+# Methods
+
+##################################################################
+# Arguments
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+#{myname} generates gnuplot coordinates for distribution of
+misspellings classified as slang and not slang.
+
+USAGE:
+#{myname} [OPTIONS] [FILE1]
+
+OPTIONS:
+
+  EOF
+
+  opt_parser.on('-f=MANDATORY', '--nonslang-file',
+'file to which statistics on non-slang should be printed', :REQUIRED) do |fname|
+    @nonslang_file = File.new(fname, 'w')
+  end
+end.parse!()
+
+##################################################################
+# Main
+flds    = []
+cnt_key = 0
+trg_arr = []
+
+while gets
+  $_.chomp!()
+  flds = $_.split(FLD_SEP).compact()
+  if flds.length < 3
+    next
+  end
+  cnt_key = flds[0].to_i()
+
+  if flds[2] =~ SLANG_RE
+    trg_arr = @stats[SLANG_KEY]
+    @slang_cnt += cnt_key
+  elsif flds[2] =~ NONSLANG_RE
+    trg_arr = @stats[NONSLANG_KEY]
+    @nonslang_cnt += cnt_key
+  end
+  trg_arr[cnt_key] ||= 0
+  trg_arr[cnt_key] += 1
+end
+
+##################################################################
+# Output stat
+i = 0
+ofile = nil
+
+@stats.each_pair do |key, statdict|
+  if key == NONSLANG_KEY
+    ofile = @nonslang_file
+  else
+    ofile = $stdout
+  end
+
+  ofile.printf("# %s\n", key)
+  ofile.printf("# # of words \t times coccurred\n")
+
+  statdict.to_a.sort do |el1, el2|
+    el1[0] <=> el2[0] or el1[1] <=> el2[1]
+  end.each do |occ, case_cnt|
+    ofile.printf("%d\t%d\n", occ, case_cnt)
+  end
+end
+@nonslang_file.close()
+
+@total = 100 / (@slang_cnt + @nonslang_cnt).to_f()
+
+$stderr.printf('Total: %d
+Colloquial Spellings: %.2f
+Misspellings: %.2f
+', @total, @slang_cnt * @total, @nonslang_cnt * @total)

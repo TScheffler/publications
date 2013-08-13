@@ -57,7 +57,8 @@ OptionParser.new(nil, 20) do |opt_parser|
   myname = File.basename(opt_parser.program_name)
   opt_parser.banner = <<-EOF
 #{myname} checks if lines having similar keys (i.e. 2-nd fields) in 2
-input files have similar assigned classes.
+input files have similar assigned classes. Two input files should be
+correspondingly sorted on their 2-nd field
 
 USAGE:
 #{myname} FILE1 FILE2
@@ -81,6 +82,7 @@ ARGV.shift()
 while gets
   $_.chomp!()
   @tokens2 = $_.split(FIELD_SEP)
+  next if @tokens2.length != 3
   @key2 = @tokens2[1]
 
   while @key1 and @key1 < @key2

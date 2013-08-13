@@ -1,0 +1,13 @@
+#!/usr/bin/env gnuplot
+
+set xlabel 'misspelling frequencies'
+set ylabel '# of unique misspellings'
+
+set term png
+set output ofile
+
+plot slangdata title 'Colloquial Spellings' with linespoints, \
+nonslangdata title 'True Misspellings' with linespoints
+set yr [GPVAL_DATA_Y_MIN:GPVAL_DATA_Y_MAX]
+set xr [GPVAL_DATA_X_MIN:GPVAL_DATA_X_MAX]
+replot

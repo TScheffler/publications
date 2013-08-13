@@ -96,7 +96,7 @@
 12	FB	ne:company; abbr
 12	GB	abbr
 12	#Wettendass	hash_tag
-12	fur	spell:für:substitution
+12	fur	spell:für:substitution; umlaut
 12	hahaha	inj
 12	hehe	inj
 12	jaa	elongation; inj
@@ -218,7 +218,8 @@
 7	#berlin	hash_tag
 7	boah	inj
 7	#domian	hash_tag
-7	dr	spell:dran:deletion
+4	dr	spell:der:deletion
+3	dr	spell:dran:deletion
 7	Äh	inj
 7	@hex2	at_token
 7	hihi	inj
@@ -232,10 +233,10 @@
 7	ray	token
 7	schaun	spell:schauen:deletion; slang
 7	schonmal	spell:schon mal:deletion
-7	sry	spell:sorry:deletion
+7	sry	spell:sorry:deletion; slang
 7	tja	inj
 7	twittert	neologism
-7	vllt	spell:vielleicht:deletion
+7	vllt	spell:vielleicht:deletion; slang
 7	vo	spell:vor:deletion
 7	xx	smiley
 6	Biel	ne:geo
@@ -273,7 +274,7 @@
 6	Wow	inj
 6	XDDD	smiley
 6	Yeah	inj
-6	aufm	dict
+6	aufm	spell:auf dem:deletion; slang
 6	augen	dict
 6	#bundesliga	hash_tag
 6	com	link
@@ -479,7 +480,7 @@
 4	Cup	loan
 4	DDD	smiley
 4	DSDS	abbr
-4	Danisch	spell:Dänisch:substitution
+4	Danisch	spell:Dänisch:substitution; umlaut
 4	#Darmstadt	hash_tag
 4	@DerWachsame	at_token
 4	@DerWesten	at_token
@@ -888,7 +889,7 @@
 3	Sms	neologism
 3	Sooo	elongation
 3	Soundtrack	loan
-3	Sry	spell:Sorry:deletion
+3	Sry	spell:Sorry:deletion; slang
 3	Starck	ne:product
 3	@Stief1996	at_token
 3	#Strompreisvergleich	hash_tag
@@ -1947,7 +1948,7 @@
 2	Sticks	loan
 2	Stokke	ne:product
 2	@Stousn	at_token
-2	Straks	spell:stracks:deletion; slang
+2	Straks	spell:stracks:deletion
 2	Stromtarifrechner	compound
 2	#Sturm	hash_tag
 2	Subliminals	fw
@@ -2046,7 +2047,7 @@
 2	#Weiterbildung	hash_tag
 2	Welcome	inj; fw
 2	Wels	dict
-2	Wenns	spell:Wenn es:deletion
+2	Wenns	spell:Wenn es:deletion; slang
 2	#Werteverfall	hash_tag
 2	@Weseresk	at_token
 2	#WettenDas	hash_tag
@@ -2791,7 +2792,7 @@
 2	#we	hash_tag
 2	weetje	fw
 2	weg.	token
-2	wegn	spell:wegen:deletion
+2	wegn	spell:wegen:deletion; slang
 2	#weihnachten	hash_tag
 2	@wellpresso	at_token
 2	welt	dict
@@ -3320,7 +3321,7 @@
 1	bèn	ne:person
 1	bonne	fw
 1	brawl	ne:product
-1	Übrigen™	token; spell:zunächst:insertion
+1	Übrigen™	token; spell:Übrigens:substitution
 1	brudi	slang
 1	bz.	abbr
 1	@cHHrissi	at_token
@@ -3378,7 +3379,7 @@
 1	erzäh	spell:erzählen:deletion
 1	está	fw
 1	evg	smiley
-1	fahrn	spell:fahren:deletion
+1	fahrn	spell:fahren:deletion; slang
 1	#fc	hash_tag
 1	@fcsginfo	at_token
 1	@feiaconny	at_token
@@ -3398,8 +3399,8 @@
 1	@geheimratd	at_token
 1	gelöscht.	token
 1	gemampft	dict
-1	geschlafn	spell:geschlafen:deletion
-1	gesehn.	token; spell:gesehen.:deletion
+1	geschlafn	spell:geschlafen:deletion; slang
+1	gesehn.	token
 1	geskyped	neologism
 1	geskypt	neologism
 1	gestrickt.	token
@@ -3693,7 +3694,7 @@
 1	@mz_zeitz	at_token
 1	nachdeinem	spell:nach deinem:deletion
 1	@nadi_ann_grimes	at_token
-1	namlich	spell:nämlich:substitution
+1	namlich	spell:nämlich:substitution; umlaut
 1	nba.	abbr; token
 1	nbsp	abbr
 1	@negotiable_me	at_token
@@ -3859,7 +3860,7 @@
 1	Rosso	ne:product
 1	SALE	loan
 1	SALE	ne:product
-1	SEH	spell:SEHE:deletion
+1	SEH	spell:SEHE:deletion; slang
 1	SEH	spell:THE:substitution,substitution
 1	Sunshine	ne:product
 1	Sunshine	loan

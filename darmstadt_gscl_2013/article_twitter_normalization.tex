@@ -6,14 +6,16 @@
 \usepackage{multirow} % for multirow
 \usepackage{tabularx} % for centering in table
 \usepackage{url}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\totaloov}{\% of total OOVs}
 \newcommand{\uniqoov}{\% of unique OOVs}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \pagestyle{headings}  % switches on printing of running heads
-\title{MT @HanBaldwin: Fightin OOVs in German \#twitter}
-\titlerunning{Makn Sens a Germa \#twitter}  % abbreviated title (for running head)
+\title{Rule-Based Normalization of German Twitter Messages}
+\titlerunning{Rule-Based Normalization of German Twets}  % abbreviated title (for running head)
 %                                     also used for the TOC unless
 %                                     \toctitle is used
 %
@@ -330,7 +332,7 @@ shown and explained below.
 
 We subdivided class \ref{dict} into the following subclasses:
 \begin{enumerate}
-\item regular German words, e.g. \textit{meins},
+\item regular German words, e.g. \textit{Piraterie},
   \textit{losziehen};\label{regular}
 \item compounds, e.g.  \textit{Altwein},
   \textit{Amtsapothekerin};\label{compound}
@@ -506,24 +508,26 @@ topics with the ``\#''- sign from Internet Relay Chats (IRC) -- the
 forebears of modern social networks -- which have been using the pound
 character for marking their channel names since the early 1990s.
 
-Luckily for us, this ``novelty'' by Messina brought along a strict
+Luckily for us, this Messina's ``novelty'' brought along a strict
 formal feature by which future hashtags could be identified. Other
-types of words which are usually considered as OOVs in Twitter but
-also have some unambiguous formal traits include at-tokens,
-hyperlinks, e-mail addresses, and smileys. The presence of such formal
-criteria suggests that these classes could best be handled by
-rule-based methods and namely finite-state techniques like
-finite-state transducers (FST) (cf. Jurafsky and Martin,
-\cite{jurafsky}, pp.57-60).
+types of words which also are usually considered as OOVs in Twitter
+but have unambiguous formal traits are at-tokens, hyperlinks, e-mail
+addresses, and smileys. The presence of such formal criteria suggests
+that these classes could best be handled by rule-based methods and
+namely finite-state techniques like finite-state transducers (FST)
+(cf. Jurafsky and Martin, \cite{jurafsky}, pp.57-60).
 
 For our purposes, we developed a prototypic Python system analogous to
 an FST in which a set of regular expressions was associated with
-corresponding actions performed on matched subgroups in cases when
-these subgroups did not overlap. If some rules clashed together on
-certain contexts, a set of special criteria was used to determine
-which rule the preference should be given.
+corresponding actions performed on matched subgroups. If some rules'
+subgroups clashed together on certain contexts, a set of special
+criteria was used to determine which rule had to be preferred. These
+criteria involved length of text spans matched by subgroups, length of
+left and right context mathced by corresponding regular expressions,
+and, finally, the order in which these expressions appeared in rule
+file.
 
-In this system, unambiguous tokens like web links and e-mail addresses
+In our system, unambiguous tokens like, for example, e-mail addresses
 were replaced with an artificial word ``\%Mail''. Emoticons were
 substituted by tokens ``\%PosSmiley'' or ``\%NegSmiley'', depending on
 the type of emotion presumably conveyed by these expressions. In cases
@@ -534,14 +538,13 @@ thus leaving only the alphabetic part of these tokens.
 
 A more complicated case turned out to be the at-tokens and
 hyperlinks. For them, we had to disambiguate whether these words
-played a certain syntactic role in a sentence or could be easily
-omitted without breaking the syntactic structure. In the former case,
-these words were replaced with artificial counterparts. In the latter
-case, such words were deleted from sentence in order not to confuse
-further intended parsing processing.
+played an important syntactic role in sentence or not. In the former
+case, these words were replaced with artificial counterparts. In the
+latter case, such words were deleted from sentence in order not to
+confuse further intended parsing processing.
 
-Precision, recall and F1 score for replacement of Twitter-specific
-phenomena is shown in Table \ref{table:tw-phenomen-metrics}.
+Precision, recall and F1 metrics for replacement of Twitter-specific
+phenomena are shown in Table \ref{table:tw-phenomen-metrics}.
 
 \begin{table}
   \caption{Precision, recall and F1 score for replacement of
@@ -560,18 +563,65 @@ All the artificial words were added to custom user dictionaries of
 \texttt{TreeTagger} and \texttt{hunspell}. For tagging, we assigned NE
 tags to all artificial tokens with the only exception of emoticon
 replacements which got the tag INJ. Furthermore, positions and lengths
-of all replacements we remembered along with original words which were
-replaced and a restoration step to original forms was performed for
-certain classes of tokens after tagging.
+of all replacements we remembered along with the original words which
+were replaced, and a restoration step to original forms was performed
+for user names after tagging.
 
 %
 \subsection{Restoration of misspellings}
 
+A closer look at unknown words which were classified as misspellings
+revealed that a prevailing majority of them was considered as
+colloquial spelling variants. Such spellings accounted for 70.5~\% of
+detected spelling mistakes in \texttt{hunspell} data and 66.17~\% of
+misspellings recognized by \texttt{TreeTagger}. Frequency distribution
+of colloquial and non-colloquial misspellings for data analyzed with
+either tools is shown in Figures \ref{fig:misspl-hunspell} and
+\ref{fig:misspl-ttagger}.
+...
+%% \begin{minipage}[t]{0.45\textwidth}
+%%   \begin{figure}[!ht]\label{fig:misspl-hunspell}
+%%   \end{figure}
+%% \end{minipage}
+
+%% \begin{minipage}[t]{0.45\textwidth}
+%%   \begin{figure}[!ht]\label{fig:misspl-ttagger}
+%%   \end{figure}
+%% \end{minipage}
+
+As can be seen from the Figures, both kinds of spelling variations
+have nearly Zipfian distribution. However colloquial spelling
+variants, if used, tend to be used frequently whereas non-colloquial
+misspellings are rather represented by sporadic singleton cases. This
+could be explained by fact that colloquial spellings are usually
+formed by systematic rewriting processes. These processes are supposed
+to make written form of words more similar to their casual soundings
+in everyday speech. According to our data, the most productive of such
+processes were:
+\begin{itemize}
+  \item Omissions of `e' in unstressed (``schwa'') positions,
+    e.g. \textit{w\"urd}, \textit{zuguckn} etc. In cases when `e' was
+    part of the impersonal pronoun ``es'' and followed a verb,
+    remaining `s' was usually appended to the preceding verb form;
+
+  \item Complete omissions or replacement of final consonants with
+    their voiceless equivalents, e.g. \textit{nich} instead of
+    \textit{nicht} or \textit{Tach} instead of \textit{Tag};
+
+  \item Omissions of `ei' from indefinite articles, e.g. \textit{ne}
+    instead of \textit{eine} or \textit{nem} in lieu of
+    \textit{einem};
+
+  \item Multiple repetions of characters as a means of expressing
+    elongation of sounds, e.g. \textit{Hilfeeee},
+    \textit{s\"u\"u\"u\ss};
+\end{itemize}
+
 %
 \section{Evaluation}\label{evaluation}
+To evaluate our system, we used metrics
 
-
-\section{Conclusion}\label{concl}
+\section{Conclusion}\label{conclusion}
 
 %% This article provided an overview of exisiting approaches to noisy
 %% text normalization task. Additionally, all mentioned methods were
