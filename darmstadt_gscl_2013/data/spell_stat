@@ -71,6 +71,8 @@ while gets
   elsif flds[2] =~ NONSLANG_RE
     trg_arr = @stats[NONSLANG_KEY]
     @nonslang_cnt += cnt_key
+  else
+    next
   end
   trg_arr[cnt_key] ||= 0
   trg_arr[cnt_key] += 1

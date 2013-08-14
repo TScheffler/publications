@@ -6,8 +6,11 @@ set ylabel '# of unique misspellings'
 set term png
 set output ofile
 
+set xrange [1:30]
+set xtics (1,2,5,10,20,30)
+
 plot slangdata title 'Colloquial Spellings' with linespoints, \
 nonslangdata title 'True Misspellings' with linespoints
-set yr [GPVAL_DATA_Y_MIN:GPVAL_DATA_Y_MAX]
-set xr [GPVAL_DATA_X_MIN:GPVAL_DATA_X_MAX]
+set yr [GPVAL_DATA_Y_MIN:GPVAL_DATA_Y_MAX + 50]
+# set xr [GPVAL_DATA_X_MIN:GPVAL_DATA_X_MAX]
 replot

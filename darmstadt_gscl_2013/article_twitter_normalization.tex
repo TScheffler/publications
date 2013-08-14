@@ -5,6 +5,7 @@
 \usepackage{paralist} % for inparaenum
 \usepackage{multirow} % for multirow
 \usepackage{tabularx} % for centering in table
+\usepackage{graphicx} % for \includegraphics
 \usepackage{url}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -500,22 +501,22 @@ Section.
 \section{Text Normalization Procedure}\label{normalization}
 
 \subsection{Replacement of Twitter-Specific Phenomena}
-According to Parker (\cite{parker}), hasthags were supposedly
-introduced by Chris Messina, a renowned advocate of open-source
-community, in August 2007. The ``hash godfather'', as Messina
-describes himself, presumably borrowed the idea of marking relevant
-topics with the ``\#''- sign from Internet Relay Chats (IRC) -- the
-forebears of modern social networks -- which have been using the pound
-character for marking their channel names since the early 1990s.
+According to Parker (\cite{parker}), hasthags were presumably introduced by
+Chris Messina, a renowned advocate of open-source community, in August
+2007. The ``hash godfather'', as Messina describes himself, allegedly borrowed
+the idea of marking relevant topics with the ``\#''- sign from Internet Relay
+Chats (IRC) -- the forebears of modern social networks -- which have been
+using the pound character for marking their channel names since the early
+1990s.
 
-Luckily for us, this Messina's ``novelty'' brought along a strict
-formal feature by which future hashtags could be identified. Other
-types of words which also are usually considered as OOVs in Twitter
-but have unambiguous formal traits are at-tokens, hyperlinks, e-mail
-addresses, and smileys. The presence of such formal criteria suggests
-that these classes could best be handled by rule-based methods and
-namely finite-state techniques like finite-state transducers (FST)
-(cf. Jurafsky and Martin, \cite{jurafsky}, pp.57-60).
+Luckily for us, this Messina's ``novelty'' brought along a strict formal
+feature by which future hashtags could be identified. Other types of words
+which also are usually considered as OOVs in Twitter but have unambiguous
+formal traits are at-tokens, hyperlinks, e-mail addresses, and smileys. The
+presence of such formal criteria suggests that these classes could best be
+handled by rule-based methods and namely finite-state techniques like
+finite-state transducers (FST) (cf. Jurafsky and Martin, \cite{jurafsky},
+pp.57-60).
 
 For our purposes, we developed a prototypic Python system analogous to
 an FST in which a set of regular expressions was associated with
@@ -527,24 +528,23 @@ left and right context mathced by corresponding regular expressions,
 and, finally, the order in which these expressions appeared in rule
 file.
 
-In our system, unambiguous tokens like, for example, e-mail addresses
-were replaced with an artificial word ``\%Mail''. Emoticons were
-substituted by tokens ``\%PosSmiley'' or ``\%NegSmiley'', depending on
-the type of emotion presumably conveyed by these expressions. In cases
-when an emoticon was ambiguous with regard to its polarity, it was
-replaced with the special word ``\%Smiley''. Furthermore, leading
-``\#{}'' characters were stripped off from the beginning of hashtags
-thus leaving only the alphabetic part of these tokens.
+In our system, unambiguous tokens like, for example, e-mail addresses were
+replaced with an artificial word ``\%Mail''. Emoticons were substituted by
+tokens ``\%PosSmiley'' or ``\%NegSmiley'' depending on the type of emotion
+presumably conveyed by these expressions. In cases when an emoticon was
+ambiguous with regard to its polarity, it was replaced with the special word
+``\%Smiley''. Furthermore, leading ``\#{}'' characters were stripped off from
+the beginning of hashtags thus leaving only the alphabetic part of these
+tokens.
 
-A more complicated case turned out to be the at-tokens and
-hyperlinks. For them, we had to disambiguate whether these words
-played an important syntactic role in sentence or not. In the former
-case, these words were replaced with artificial counterparts. In the
-latter case, such words were deleted from sentence in order not to
-confuse further intended parsing processing.
+A more complicated case turned out to be the at-tokens and hyperlinks. For
+them, we had to disambiguate whether these words played an important syntactic
+role in sentence or not. In the former case, these words were replaced with
+artificial counterparts. In the latter case, such words were deleted from
+sentence in order not to confuse further intended parsing processing.
 
-Precision, recall and F1 metrics for replacement of Twitter-specific
-phenomena are shown in Table \ref{table:tw-phenomen-metrics}.
+Precision, recall and F1 metrics for replacement of Twitter-specific phenomena
+are shown in Table \ref{table:tw-phenomen-metrics}.
 
 \begin{table}
   \caption{Precision, recall and F1 score for replacement of
@@ -560,117 +560,158 @@ phenomena are shown in Table \ref{table:tw-phenomen-metrics}.
 \end{table}
 
 All the artificial words were added to custom user dictionaries of
-\texttt{TreeTagger} and \texttt{hunspell}. For tagging, we assigned NE
-tags to all artificial tokens with the only exception of emoticon
-replacements which got the tag INJ. Furthermore, positions and lengths
-of all replacements we remembered along with the original words which
-were replaced, and a restoration step to original forms was performed
-for user names after tagging.
+\texttt{TreeTagger} and \texttt{hunspell}. For tagging, we assigned NE tags to
+all artificial tokens with the only exception of emoticon replacements which
+got the tag INJ. Furthermore, positions and lengths of all replacements we
+remembered along with the original words which were replaced, and a
+restoration step to original forms was performed for user names after tagging.
 
 %
 \subsection{Restoration of misspellings}
 
-A closer look at unknown words which were classified as misspellings
-revealed that a prevailing majority of them was considered as
-colloquial spelling variants. Such spellings accounted for 70.5~\% of
-detected spelling mistakes in \texttt{hunspell} data and 66.17~\% of
-misspellings recognized by \texttt{TreeTagger}. Frequency distribution
-of colloquial and non-colloquial misspellings for data analyzed with
-either tools is shown in Figures \ref{fig:misspl-hunspell} and
-\ref{fig:misspl-ttagger}.
-...
-%% \begin{minipage}[t]{0.45\textwidth}
-%%   \begin{figure}[!ht]\label{fig:misspl-hunspell}
-%%   \end{figure}
-%% \end{minipage}
+A closer look at unknown words which were classified as misspellings revealed
+that a prevailing majority of them was considered as colloquial spelling
+variants. Such variants accounted for 70.5~\% of detected spelling mistakes in
+\texttt{hunspell} data and for 66.17~\% of misspellings recognized by
+\texttt{TreeTagger}. Frequency distributions of colloquial and non-colloquial
+misspellings in data analyzed with either tools are shown in Figures
+\ref{fig:misspl-hunspell} and \ref{fig:misspl-ttagger}.
+\begin{figure}[ht]
+  \centering
+  \begin{minipage}[b]{0.45\linewidth}
+    \caption{Frequency distributions of non-standard spellings in data
+      analyzed with \texttt{hunspell}}
+    \includegraphics[width=\textwidth]{data/img/hunspell_spell.png}
+    \label{fig:misspl-hunspell}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.45\linewidth}
+    \caption{Frequency distributions of non-standard spellings in data
+      analyzed with \texttt{TreeTagger}}
+    \includegraphics[width=\textwidth]{data/img/treetagger_spell.png}
+    \label{fig:misspl-ttagger}
+  \end{minipage}
+\end{figure}
 
-%% \begin{minipage}[t]{0.45\textwidth}
-%%   \begin{figure}[!ht]\label{fig:misspl-ttagger}
-%%   \end{figure}
-%% \end{minipage}
-
-As can be seen from the Figures, both kinds of spelling variations
-have nearly Zipfian distribution. However colloquial spelling
-variants, if used, tend to be used frequently whereas non-colloquial
-misspellings are rather represented by sporadic singleton cases. This
-could be explained by fact that colloquial spellings are usually
-formed by systematic rewriting processes. These processes are supposed
-to make written form of words more similar to their casual soundings
-in everyday speech. According to our data, the most productive of such
-processes were:
+As can be seen from the figures, both kinds of spelling variations have nearly
+Zipfian distribution. However colloquial spelling variants, if used, tend to
+be used frequently whereas non-colloquial misspellings are rather represented
+by sporadic singletons. This could be explained by the fact that colloquial
+spellings are usually formed by systematic rewriting processes. These
+processes are supposed to make written form of words more similar to their
+casual soundings in everyday speech. According to our data, the most
+productive of such processes were:
 \begin{itemize}
   \item Omissions of `e' in unstressed (``schwa'') positions,
-    e.g. \textit{w\"urd}, \textit{zuguckn} etc. In cases when `e' was
-    part of the impersonal pronoun ``es'' and followed a verb,
-    remaining `s' was usually appended to the preceding verb form;
+    e.g. \textit{w\"urd}, \textit{zuguckn} etc. In cases when `e' was part of
+    the impersonal pronoun ``es'' following a verb, remaining `s' of this
+    pronoun was usually appended to the preceding verb form;
 
-  \item Complete omissions or replacement of final consonants with
-    their voiceless equivalents, e.g. \textit{nich} instead of
-    \textit{nicht} or \textit{Tach} instead of \textit{Tag};
+  \item Complete omissions or replacements of final consonants with their
+    voiceless equivalents, e.g. \textit{nich} instead of \textit{nicht} or
+    \textit{Tach} instead of \textit{Tag};
 
-  \item Omissions of `ei' from indefinite articles, e.g. \textit{ne}
-    instead of \textit{eine} or \textit{nem} in lieu of
-    \textit{einem};
+  \item Omissions of `ei' from indefinite articles, e.g. \textit{ne} instead
+    of \textit{eine} or \textit{nem} in lieu of \textit{einem};
 
-  \item Multiple repetions of characters as a means of expressing
-    elongation of sounds, e.g. \textit{Hilfeeee},
-    \textit{s\"u\"u\"u\ss};
+  \item Multiple repetions of characters as a means of expressing elongation
+    of sounds, e.g. \textit{Hilfeeee}, \textit{s\"u\"u\"u\ss};
 \end{itemize}
+
+Since all of the above processes followed some specific formation patterns. We
+developed a set of reverese transformation rules which first captured tokens
+with suspicious character sequences, checked them in the dictionary, and if
+these words were not found there, a transformation associated with each
+matched incorrect character sequence was applied.
+
+TODO: more detailed and coherent description of rule module
+
+Unfortunately, spelling variants which were classified as true misspellings
+did not show any regularities except for cases of incorrect spelling of sharp
+``s'' and umlauts. While writting of ``ss'' instead of sharp ``s'' could also
+be considered as correct variant with regard to the Swiss norm. For umlauts, a
+straightforward replacement of character sequences like ``ae'', ``oe'' or
+``ue'' because these character sequences also appeared in regular German words
+like ``israelisch'' or ``quer''. Therefore a set of exceptional cases had to
+be found before applying substitutions. As a possible source of such
+exceptions we considered words classified by us as in-vocabulary or valid
+out-of-vocabulary terms. Another source of possible exceptions was a corpus of
+newspaper texts which by definition were supposed to contain only proof-read
+content. To derive exceptional character sequences, we subsequently expanded
+the substrings to the left and to the right or simultaneously to both
+directions until these subsequence only captured words present in our
+``normal'' data without capturing any misspeling from the list. After having
+collected exceptions, we only applied replacement operation to text spans
+lying in between exceptional substrings. On another test set of 500 cases,
+this method turned out to have made only one mistake. It replaced the word
+``zuende'' with ``z\"unde'' in the sentence ``RT @Netznarr: Als Amtstr\"ager
+wei\ss man, dass es zuende geht, wenn man in Umfragen unbeliebter als
+Westerwelle ist. \#Wulff''
+
+TODO: should be described as algorithm, should the same approach be tried for
+other misspelling char sequences?
+
 
 %
 \section{Evaluation}\label{evaluation}
-To evaluate our system, we used metrics
+To evaluate our system, we first performed an intrinsic evaluation by
+measuring the rate by which the amount of unknown tokens was reduced for
+\texttt{TreeTagger} and \texttt{hunspell}.
+
+TODO: figures for OOV rates after normalization.
+
+To comply with metrics commonly used for evaluating text normalization
+procedures for other languages, we also measured word error rate (WER) and
+sentence error rate (SER) for restoration of non-standard and incorrect
+spellings.
+
+TODO: WER and SER figures after normalization.
+
+Finally, as a first step towards an extrinsic evaluation, we measured
+\texttt{TreeTagger}
+
+TODO: Figures for tagging quality before and after normalization.
+
 
 \section{Conclusion}\label{conclusion}
 
-%% This article provided an overview of exisiting approaches to noisy
-%% text normalization task. Additionally, all mentioned methods were
-%% classified on the basis of two independent criteria. In section
-%% \ref{error:analysis}, we performed qulitative and quantitive analyses
-%% of out-of-vocabulary words in German tweets and suggested a set of
-%% ad-hoc techniques for mitigating their potential negative influence on
-%% natural language processing. This procedure allowed us to reduce the
-%% total OOV rate by ... \% for \texttt{hunspell} and by ... \% for
-%% \texttt{TreeTagger}.
+With this article, we hope to have provided a better insight into the nature
+and composition of ill-formed words in German Twitter messages. As was shown
+in Section \ref{error:analysis}, special markup elements and casual sppellings
+account for more than a half unknown words discovered in Tweets. Furthermore,
+almost three quarters of non-standard spellings could be regarded as
+colloquial spelling variants rather than occasional slip of the finger. Such
+colloquial spellings also showed the tendency to be formed by well formalized
+processes and to be used over and over again in texts.
 
-%% Nevertheless, we should honestly admit that our system still has
-%% potential for development and research, since it mainly addresses only
-%% one of three main groups of OOV tokens. Future directions should
-%% certainly include a more thorough tackling of unintentional spelling
-%% mistakes and especially their most prominent types -- deletions and
-%% substitutions.
+We also suggested a rule-based text normalization approach which could serve
+as a baseline comparison measure for future normalization methods which may be
+suggested for German tweets. As was shown in previous sections, our approach
+could effectively address some ofthe most frequent phenomena which contribute
+to a higher rate of out-of-vocabulary words in Twitter texts such as
+Twitter-specific elements and non-standard spellings.
 
-%% Furthemore, a better evalution technique as well as comparison with
-%% other systems are needed for our normalization procedure. On the one
-%% hand, an \textit{extrinsic} evaluation should be performed (cf. Sparck
-%% Jones and Galliers, \cite{sparck}) which means that we not only have
-%% to show how the rate of OOV words goes down but much more how this
-%% lower OOV rate affects the work of the whole NLP system. On the other
-%% hand, we need to assess the quality of our procedure's work on the
-%% basis of metrics used by other researchers.
+We are going to make our classification and test data available online at
+\url{http://dasom.ling.uni-potsdam.de/} under the terms consistent with
+Twitter regulations. Our classified data could, in our opinion, significantly
+save tedious manual work for other researchers.
 
-%% One possible estimation criterion which was used by Aw et
-%% al. (\cite{aw}), Kaufmann (\cite{kaufmann}), Beaufort et
-%% al. (\cite{beaufort}), and Oliva et al. (\cite{oliva}) is the BLEU
-%% score (Papineni et al., \cite{papineni}). Another possibility would be
-%% to use the Word (WER) and Sentence Error Rates (SER) as suggested by
-%% Kobus et al. (\cite{kobus}). However, an obvious difficulty that we
-%% already encountered here is that both metrics highly rely on a
-%% subjective notion of the look of a ``normalized'' message. While the
-%% BLEU score could be an approriate criterion for normalization of
-%% messages like ``i luv ma mather and wd do evrythin 4 her'' which in
-%% fact looks like as if it were not English. But such highly distorted
-%% tweets are rather atypical for German. In this regard, WER and SER
-%% could be considered as more appropriate measurement criteria. But
-%% these metrics once again are rather dealing with spelling mistakes and
-%% would highly depend on whether one, for example, would consider the
-%% hash sign in a hashtag as an error.
+Admittedly, our method still could be further refined and improved. As
+possible steps for such refinement, we see a possible addition of a
+machine-learning classifier which could help distinguish spelling mistakes
+from valid unknown words. On the other side, a better disambiguation of
+suggested replacement variants for misspellings could be achieved by letting
+part-of-speech tagger process a word grid with input tokens and their
+suggested replacements. At the end of tagging, not only the most probable tag
+sequence but the most likely word/tag mesh could be chosen in a single run. At
+any rate, these steps are beyond the scope of this work. But we hope to have
+laid the groundwork for them.
 
 \subsection*{\ackname}
 
-This work was financially supported by ... as part of collaborative
-project ``...''. The authors are also thankful to ... for help with
-the analysis of data.
+This work was financially supported by ... as part of collaborative project
+``...''. The authors are also thankful to ... for help with the analysis of
+data.
 
 %
 % ---- Bibliography ----

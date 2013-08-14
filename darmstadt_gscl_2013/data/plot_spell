@@ -1,9 +1,0 @@
-###################################################################
-# Gnu Plot script for drawing distributions of spelling mistakes. #
-###################################################################
-set xlabel 'word frequencies'
-set ylabel '# of words'
-
-plot 'unnormalized/hunspell.spell.slang.plot.dat' title 'Slang Spellings' with linespoints, \
-'unnormalized/hunspell.spell.nonslang.plot.dat' title 'True Misspellings' with linespoints
-pause -1
