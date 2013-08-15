@@ -200,7 +200,9 @@
 1	Waaaaas	elongation
 1	Yaaaaa	elongation
 1	zuuu	elongation
-\n\n
+
+
+
 24	fuer	umlaut
 13	zuhause	spell:zu Hause:deletion/substitution
 12	fur	spell:für:substitution

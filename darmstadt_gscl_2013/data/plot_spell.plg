@@ -7,7 +7,7 @@ set term png
 set output ofile
 
 set xrange [1:30]
-set xtics (1,2,5,10,20,30)
+set xtics (1,2,4,8,16,30)
 
 plot slangdata title 'Colloquial Spellings' with linespoints, \
 nonslangdata title 'True Misspellings' with linespoints
