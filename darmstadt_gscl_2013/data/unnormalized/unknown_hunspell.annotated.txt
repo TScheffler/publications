@@ -3455,7 +3455,7 @@
 1	Stay	fw
 1	Steiner	ne:person
 1	Steinmeier	ne:person
-1	Stinkts	slang; spell:stinkt's:deletion
+1	Stinkts	slang; spell:Stinkt es:deletion
 1	Sto	abbr
 1	Stoneprince	fw
 1	Storymodus	loan
@@ -3717,7 +3717,7 @@
 1	#hcsmeu	hash_tag
 1	@hedu	at_token
 1	heidelberg	ne:geo
-1	heint	slang; spell:heut(e):substitution
+1	heint	slang; spell:heute:substitution
 1	heist	spell:heißt:substitution
 1	@hellokittyeu	at_token
 1	@heuteshowf	at_token

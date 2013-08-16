@@ -15,16 +15,14 @@
 10	habs	spell:habe es:deletion; slang
 10	wars	spell:war es:deletion; slang
 9	ned	spell:nicht:substitution/deletion; slang
-9	scho	spell:schon:deletion; slang
 8	sooo	elongation
-7	isch	slang; spell:ich:insertion
-7	iwie	spell:irgendwie:deletion; slang
 7	Jaa	elongation; inj
+7	isch	slang; spell:ich:insertion
 7	schaun	spell:schauen:deletion; slang
 7	sry	spell:sorry:deletion; slang
 7	vllt	spell:vielleicht:deletion; slang
-6	aufm	spell:auf dem:deletion; slang
 6	Find	slang; spell:Finde:deletion
+6	aufm	spell:auf dem:deletion; slang
 6	gesehn	spell:gesehen:deletion; slang
 6	hätt	spell:hätte:deletion; slang
 6	ik	slang; spell:ich:substitution
@@ -32,64 +30,67 @@
 6	soooo	elongation
 6	wenns	slang; spell:wenn es:deletion
 6	wirds	spell:wird es:deletion; slang
+5	Ick	spell:Ich:substitution; slang
+5	Werd	slang; spell:Werde:deletion
 5	hats	spell:hat es:deletion; slang
 5	ichs	spell:ich es:deletion; slang
-5	Ick	spell:Ich:substitution; slang
 5	jz	spell:jetzt:deletion; slang
 5	les	spell:lese:deletion; slang
 5	nehm	spell:nehme:deletion; slang
-5	seh	slang; spell:sehe:deletion
 5	se	spell:sie:deletion; slang
+5	seh	slang; spell:sehe:deletion
 5	wärs	spell:wäre es:deletion; slang
-5	Werd	slang; spell:Werde:deletion
+4	Tach	spell:Tag:substitution; slang
 4	dat	spell:das:substitution; slang
 4	jaaa	elongation; inj
-4	Tach	spell:Tag:substitution; slang
 4	weils	spell:weil es:deletion; slang
+3	Ga	slang; spell:geh:deletion/substitution
+3	Ma	slang; spell:Mama:deletion
+3	Nachti	spell:Nacht:insertion; slang
+3	Sooo	elongation
+3	Sry	spell:Sorry:deletion; slang
 3	chillin	fw;  spell:cilling:deletion; slang
 3	gaaaanz	elongation
-3	Ga	slang; spell:geh:deletion/substitution
-3	gehn	spell:gehen:deletion; slang
 3	habn	spell:haben:deletion; slang
 3	ham	spell:haben:substitution/deletion; slang
 3	isses	spell:ist es:deletion/substitution; slang
 3	kanns	slang; spell:kann es:deletion
-3	Ma	slang; spell:Mama:deletion
 3	mer	spell:mir:substitution; slang
-3	Nachti	spell:Nacht:insertion; slang
 3	oooh	elongation; inj
 3	pls	fw;  spell:please:deletion; slang
-3	Sooo	elongation
-3	Sry	spell:Sorry:deletion; slang
 3	stehts	spell:steht es:deletion; slang
 3	zyn	spell:sind:substitution/deletion; slang
 2	Abo	spell:Abonnement:deletion; slang
+2	Dikka	spell:Dicker:substitution; slang
+2	Gibts	slang; spell:gibt es:deletion
+2	Hilfeeee	elongation
+2	Irwie	spell:irgendiwe:deletion; slang
+2	Isch	slang; spell:Ich:insertion
+2	Jaaa	elongation; inj
+2	Kannste	spell:kannst du:deletion/substitution; slang
+2	Nen	spell:einen:deletion; slang
+2	Net	spell:nicht:substitution/deletion; slang
+2	Supi	spell:super:substitution; slang
+2	Wenns	spell:Wenn es:deletion; slang
 2	ahhhh	elongation; inj
 2	bday	fw;  spell:birthday:deletion; slang
 2	biin	elongation
 2	bins	spell:bin es:deletion; slang
 2	biste	spell:bist du:; slang
 2	bro	spell:brother:deletion; slang
-2	daaa	elongation
 2	daa	elongation
+2	daaa	elongation
 2	darfste	spell:darfst du:deletion; slang
 2	depri	spell:deprimiert:deletion; slang
-2	Dikka	spell:Dicker:substitution; slang
 2	duu	elongation
 2	ess	spell:esse:deletion; slang
 2	fands	spell:fand es:deletion; slang
 2	gerad	spell:gerade:deletion; slang
-2	Gibts	slang; spell:gibt es:deletion
-2	hätts	spell:hätte es:deletion; slang
 2	haun	spell:hauen:deletion; slang
-2	Hilfeeee	elongation
-2	Irwie	spell:irgendiwe:deletion; slang
-2	Isch	slang; spell:Ich:insertion
+2	hätts	spell:hätte es:deletion; slang
 2	isser	spell:ist er:substitution/deletion; slang
 2	iwelche	spell:irgendwelche:deletion; slang
-2	Jaaa	elongation; inj
 2	kannste	spell:kannst du:deletion/substitution; slang
-2	Kannste	spell:kannst du:deletion/substitution; slang
 2	kucken	spell:gucken:substitution; slang
 2	machts	spell:macht es:deletion; slang
 2	mitn	spell:mit einem:deletion; slang
@@ -98,222 +99,39 @@
 2	neee	elongation; slang
 2	neeein	elongation
 2	neet	slang; spell:nicht:substitution/deletion
-2	Nen	spell:einen:deletion; slang
-2	Net	spell:nicht:substitution/deletion; slang
 2	seeeehr	elongation
 2	siehste	spell:siehst du:deletion/substitution; slang
 2	slecht	spell:schlecht:deletion; slang
 2	stehn	spell:stehen:deletion; slang
-2	Supi	spell:super:substitution; slang
 2	umarm	spell:umarme:deletion; slang
 2	vergess	spell:vergesse:deletion; slang
 2	vids	spell:videos:deletion; slang
 2	wegn	spell:wegen:deletion; slang
-2	Wenns	spell:Wenn es:deletion; slang
 2	zuguckn	spell:zuguckn:deletion; slang
-1	ae	slang; spell:eine:substitution
-1	auuuuuch	elongation
-1	Axo	inj; slang; spell:ach so:deletion/substitution
-1	drann	elongation
-1	een	spell:einen:deletion; slang
 1	EINFA	slang; spell:EINFACH:deletion
 1	Eisnachemangere	slang; spell:Eins nach dem anderen:substitution/deletion/insertion
-1	fahrn	spell:fahren:deletion; slang
 1	FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU	inj; elongation
-1	geschlafn	spell:geschlafen:deletion; slang
 1	Haamburg	elongation
-1	jaaaaa	inj; elongation
 1	Juhuuu	inj; elongation
-1	Kanns	spell:Kann das:deletion; slang
+1	Waaaaah	elongation; inj
+1	Waaaaas	elongation
+1	ae	slang; spell:eine:substitution
+1	auuuuuch	elongation
+1	drann	elongation
+1	fahrn	spell:fahren:deletion; slang
+1	geschlafn	spell:geschlafen:deletion; slang
+1	jaaaaa	inj; elongation
 1	kuck	slang; spell:guck:substitution
 1	looool	inj; elongation
 1	m8	slang; spell:macht:substitution
 1	maanchmal	elongation
 1	meinste	slang; spell:meinst du:deletion/substitution
-1	mom	slang; spell:moment:deletion
 1	scheiseee	elongation; spell:scheisse:deletion/insertion
-1	SEH	spell:SEHE:deletion; slang
 1	shauhauhauahsuhau	elongation
-1	stecks	slang; spell:steck es:deletion
 1	süüss	elongation
-1	Waaaaah	elongation; inj
-1	Waaaaas	elongation
+1	stecks	slang; spell:steck es:deletion
 1	werds	slang; spell:werde es:deletion
-
-
-
-24	fuer	umlaut
-12	fur	spell:für:substitution; umlaut
-9	garnicht	spell:gar nicht:deletion
-7	immernoch	spell:immer noch:deletion
-7	jetz	spell:jetzt:deletion
-7	schonmal	spell:schon mal:deletion
-7	vo	spell:vor:deletion
-6	met	spell:mit:substitution
-5	achso	spell:ach so:deletion
-5	Achso	spell:Ach so:deletion
-5	komt	spell:kommt:deletion
-5	moechte	umlaut
-5	nog	spell:noch:substitution
-5	un	spell:und:deletion
-5	waere	umlaut
-4	Danisch	spell:Dänisch:substitution; umlaut
-4	dr	spell:der:deletion
-4	duerfen	umlaut
-4	ic	spell:ich:deletion
-4	no	spell:noch:deletion
-4	Schwдnze	spell:Schwänze:substitution
-4	vorallem	spell:vor allem:deletion
-3	aso	spell:also:deletion
-3	dr	spell:dran:deletion
-3	erlich	spell:ehrlich:deletion
-3	fine	spell:finde:deletion
-3	ge	spell:gestern:deletion
-3	hät	spell:hätte:deletion
-3	jez	spell:jetzt:deletion
-3	Ka	spell:Kategorien:deletion
-3	Kindervon	spell:Kinder von:deletion
-3	n8	spell:Nacht:substitution
-3	nciht	spell:nicht:substitution
-3	nurnoch	spell:nur noch:deletion
-3	Proble	spell:Probleme:deletion
-3	PunktenIch	spell:Punkten Ich:deletion
-3	sic	spell:sicher:deletion
-3	vi	spell:viel:deletion
-3	Vorallem	spell:Vor allem:deletion
-2	alls	spell:alles:deletion
-2	änder	spell:ändern:deletion
-2	ang	spell:angekündigt:deletion
-2	befreuntet	spell:befreundet:deletion
-2	beschä	spell:beschämen:deletion
-2	Be	spell:Berlin:deletion
-2	cih	spell:ich:substitution
-2	dennen	spell:denen:insertion
-2	Deu	spell:Deutsch:deletion
-2	dm	spell:dem:deletion
-2	Elektrogeraet	umlaut; compound
-2	etw	spell:etwas:deletion
-2	Forsc	spell:Forschung:deletion
-2	fü	spell:für:deletion
-2	Gastebuch	umlaut
-2	gepruft	umlaut
-2	geschri	spell:geschrieben:deletion
-2	Glucksquell	umlaut
-2	Glueck	umlaut
-2	gud	spell:good:substitution; fw
-2	inner	spell:innere:deletion
-2	jed	spell:jeder:deletion
-2	jtz	spell:jetzt:deletion
-2	ke	spell:keinen:deletion
-2	Koble	spell:Koblenz:deletion
-2	kom	spell:komme:deletion
-2	laeuft	umlaut
-2	Län	spell:Länge:deletion
-2	Mas	spell:Masse:deletion
-2	mcih	spell:mich:substitution
-2	Munchen	ne:geo; umlaut
-2	naechsten	umlaut
-2	nichtmehr	spell:nicht mehr:deletion
-2	nit	spell:nicht:deletion
-2	Pr	spell:Preis:deletion
-2	Put	ne:person; spell:Putin:deletion
-2	Schatzchen	umlaut
-2	schenkenhttp	spell:schenken http:deletion
-2	schoen	umlaut
-2	schonwieder	spell:schon wieder:deletion
-2	sc	spell:schwerer:deletion
-2	sidn	spell:sind:substitution
-2	sol	spell:solche:deletion
-2	spast	spell:spasst:deletion
-2	Straks	spell:stracks:deletion
-2	Suesser	umlaut
-2	Th	spell:Thema:deletion
-2	Tr	spell:Trade:deletion
-2	TUV	umlaut
-2	uber	umlaut
-2	Uber	umlaut
-2	ve	spell:verstehe:deletion
-2	wiede	spell:wieder:deletion
-2	wi	spell:wir:deletion
-2	Wissenschafter	spell:Wissenschaftler:deletion
-2	wissenschaftl	spell:wissenschaftliche:deletion
-2	Zubehoer	umlaut
-1	abmache	spell:abmachen:deletion
-1	af	spell:auf:deletion
-1	Ansch	spell:Anschaffung:deletion
-1	bedin	spell:bedingungsloses:deletion
-1	befesti	spell:befestigen:deletion
-1	besoofen	spell:besoffen:substitution
-1	be	spell:betrinken:deletion
-1	BildernBei	spell:Bildern Bei:deletion
-1	bisexuel	spell:bisexuell:deletion
-1	dah	spell:da:insertion
-1	Dänemurks	spell:Dänemarks:substitution
-1	deshalp	spell:deshalb:substitution
-1	desswegen	spell:deswegen:insertion
-1	dun	spell:dann:substitution,deletion
-1	Eigentlichheit	spell:Eigentlichkeit:substitution
-1	erringenMit	spell:erringen Mit:substitution
-1	ertsmal	spell:erstmal:substitution
-1	erzäh	spell:erzählen:deletion
-1	Finanzministe	spell:Finanzminister:deletion
-1	fi	spell:finde:deletion
-1	fol	spell:folgende:deletion
-1	git	spell:gibt:deletion
-1	herumgsprungen	spell:herumgesprungen:deletion
-1	hoch4	spell:hoch 4:deletion
-1	Huette	umlaut
-1	Ichdichauch	spell:Ich dich auch:deletion
-1	Jakpot	spell:Jackpot:deletion
-1	JesusEure	spell:JesusEure:deletion
-1	kamer	spell:kammer:deletion
-1	Kame	spell:Kamera:deletion
-1	Kanns	spell:Kannst:deletion
-1	Kinderstuh	spell:Kinderstuhl:deletion
-1	klassi	spell:klassischer:deletion
-1	Kurtze	spell:Kurze:insertion
-1	le	spell:legen:deletion
-1	le	spell:leiden:deletion
-1	letze	spell:letzte:deletion
-1	liegts	spell:liegt es:deletion
-1	Looksreen	spell:Lockscreen:deletion/deletion
-1	ManagerSOS	spell:Manager SOS:deletion
-1	muesst	umlaut
-1	nachdeinem	spell:nach deinem:deletion
-1	Nachrichte	spell:Nachrichten:deletion
-1	Nac	spell:Nachrichten:deletion
-1	namlich	spell:nämlich:substitution
-1	Netzansc	spell:Netzanschluss:deletion
-1	nichtsmehr	spell:nichts mehr:deletion
-1	Nierlande	spell:Nierlande:deletion
-1	ni	spell:nicht:deletion
-1	ni	spell:nie:deletion
-1	ni	spell:niemand:deletion
-1	No	spell:Na:substitution
-1	Pa	spell:Partei:deletion
-1	pauscha	spell:pauschal:deletion
-1	PunktenEs	spell:Punkten Es:deletion
-1	RF31Erleben	spell:RF31 Erleben:deletion
-1	schn	spell:schnellstens:deletion
-1	schuleund	spell:schule und:deletion
-1	seen	spell:sehen:deletion
-1	SEH	spell:THE:substitution,substitution
-1	sielen	spell:spielen:deletion
-1	sies	spell:sie es:deletion
-1	sost	spell:sonst:deletion
-1	spingst	spell:spinnst:substitution
-1	Tätigkeits	spell:Tätigkeit:insertion
-1	Übrigen™	token; spell:Übrigens:substitution
-1	UFrom	fw; spell:From:insertion
-1	verbeiten	spell:verbreiten:deletion
-1	verpest	spell:verpesten:deletion
-1	vomFreund	spell:vom Freund:deletion
-1	Vorwüfe	spell:Vorwürfe:deletion
-1	We	spell:Weltliteratur:deletion
-1	We	spell:Werder:deletion
-1	weten	spell:wetten:deletion
-1	Whg	spell:Wohnung:deletion
-1	Wintertr	spell:Wintertrainers:deletion
-1	wrhaben	spell:wir haben:deletion
-1	Wtal	ne:geo; spell:Wuppertal:deletion
-1	zunächtst	spell:zunächst:insertion
+1	Axo	inj; slang; spell:ach so:deletion/substitution
+1	SEH	spell:SEHE:deletion; slang
+1	een	spell:einen:deletion; slang
+1	mom	slang; spell:moment:deletion
