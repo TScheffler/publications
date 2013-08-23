@@ -14,6 +14,7 @@ Encoding.default_external = 'utf-8'
 answer = 0
 mobj   = nil
 repls  = []
+replacement  = ''
 
 iline    = ''
 origline = ''
@@ -58,6 +59,8 @@ while f.gets()
   elsif fields.length == 2
     @replacements[fields[0]] ||= []
     @replacements[fields[0]].push(fields[1])
+  elsif fields.length == 1
+    @replacements[fields[0]] ||= []
   else
     raise "Incorrect line format: '#{$_}' (#{fields.length} field(s) instead of 2)"
   end
@@ -82,40 +85,52 @@ while origline = gets
     match    = $&
     if @replacements.has_key?(match)
       repls = @replacements[match]
-      if repls.length > 1
+      if repls.length != 1
         $stderr.puts(lcontext + '<<' + match + '>>' + rcontext)
         $stderr.puts('Which replacement should be chosen?:')
         repls.each_index do |i|
           $stderr.printf('%d) %s; ', i, repls[i])
         end
+        i = repls.length
+        $stderr.printf('%d) *your input; ', i)
+        i += 1
+        $stderr.printf('%d) *skip (default); ', i)
         $stderr.printf("\n")
         while true
           answer = $stdin.readline().chomp()
           if answer =~ /^\s*\d+\s*$/ and answer = answer.to_i() and \
             answer >= 0 and answer < repls.length
+            replacement = repls[answer]
+            break
+          elsif answer == '' or answer == i
+            replacement = match
+            break
+          elsif answer == i - 1
+            $stderr.puts('Please type your replacement:')
+            replacement = $stdin.readline().chomp()
             break
           else
             $stderr.puts <<-EOF
-Incorrect number of replacement. Please type a number between 0 and #{repls.length - 1}.
+Incorrect number of replacement. Please type a number between 0 and #{i}.
             EOF
           end
         end
       else
-        answer = 0
+        replacement = repls[0]
       end
     else
       raise "No substitution for '#{match}' found."
     end
-    resline += lcontext + repls[answer]
+    resline += lcontext + replacement
     marked_origline += lcontext + '<<<' + match + '>>>'
-    marked_resline  += lcontext + '<<<' + repls[answer] + '>>>'
+    marked_resline  += lcontext + '<<<' + replacement + '>>>'
     iline = rcontext
   end
   resline += iline
   marked_origline += iline
   marked_resline  += iline
 
-  if iline == origline
+  if resline == origline
     $stderr.puts <<-EOF
 No substitutions made in line:
 '#{origline}'
