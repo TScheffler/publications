@@ -1,0 +1,142 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+@options = {}
+@replacements = Hash.new()
+answer = 0
+mobj   = nil
+repls  = []
+
+iline    = ''
+origline = ''
+resline  = ''
+marked_origline = ''
+marked_resline  = ''
+
+lcontext = ''
+rcontext = ''
+match    = ''
+
+##################################################################
+# Methods
+
+##################################################################
+# Arguments
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+Apply replacements specified in FILE1 to strings in FILE2.
+
+USAGE:
+#{myname} FILE1 [FILE2, ...]
+  EOF
+  opt_parser.on('-r', '--replace-file=MANDATORY', \
+                'file with replacements in tab separated 2-field format') do |fname|
+    @options[:fname] = fname
+  end
+end.parse!()
+
+# read replacements
+raise 'File with replacement not specified. Type --help to see usage.' if @options[:fname].nil?
+
+f = File.new(@options[:fname], 'r')
+repl_sep_re = Regexp.new(/\s*\t\s*/)
+fields = []
+while f.gets()
+  $_.chomp!()
+  fields = $_.split(repl_sep_re).compact()
+  if fields.length == 0
+    next
+  elsif fields.length == 2
+    @replacements[fields[0]] ||= []
+    @replacements[fields[0]].push(fields[1])
+  else
+    raise "Incorrect line format: '#{$_}' (#{fields.length} field(s) instead of 2)"
+  end
+end
+f.close()
+
+# can't use Regexp Union here, because it does not provide word
+# boundaries specification
+misspellings_re = Regexp.compile('(?<=[[:punct:]\s]|\A)(?:' + \
+                              @replacements.keys.map!{|k| Regexp.escape(k)}.join('|') + \
+                                 ')(?=[[:punct:]\s]|\z)')
+
+##################################################################
+# Main
+while origline = gets
+  origline.chomp!()
+  iline = origline
+  resline = marked_origline = marked_resline = ''
+  while iline =~ misspellings_re
+    lcontext = $`
+    rcontext = $'
+    match    = $&
+    if @replacements.has_key?(match)
+      repls = @replacements[match]
+      if repls.length > 1
+        $stderr.puts(lcontext + '<<' + match + '>>' + rcontext)
+        $stderr.puts('Which replacement should be chosen?:')
+        repls.each_index do |i|
+          $stderr.printf('%d) %s; ', i, repls[i])
+        end
+        $stderr.printf("\n")
+        while true
+          answer = $stdin.readline().chomp()
+          if answer =~ /^\s*\d+\s*$/ and answer = answer.to_i() and \
+            answer >= 0 and answer < repls.length
+            break
+          else
+            $stderr.puts <<-EOF
+Incorrect number of replacement. Please type a number between 0 and #{repls.length - 1}.
+            EOF
+          end
+        end
+      else
+        answer = 0
+      end
+    else
+      raise "No substitution for '#{match}' found."
+    end
+    resline += lcontext + repls[answer]
+    marked_origline += lcontext + '<<<' + match + '>>>'
+    marked_resline  += lcontext + '<<<' + repls[answer] + '>>>'
+    iline = rcontext
+  end
+  resline += iline
+  marked_origline += iline
+  marked_resline  += iline
+
+  if iline == origline
+    $stderr.puts <<-EOF
+No substitutions made in line:
+'#{origline}'
+Skip it? (y/n - default yes):
+     EOF
+    while true
+      $stdin.readline().chomp!()
+      if $_ == '' or $_ =~ /^\s*y/io
+        break
+      elsif $_ =~ /^\s*n/io
+        exit 1
+      else
+        $stderr.puts 'Please type y or n'
+      end
+    end
+    next
+  end
+
+  puts 'OrigLine:	' + origline
+  puts 'CorrectLine:	' + resline
+  puts 'OrigMarked:	' + marked_origline
+  puts 'CorrectMarked:	' + marked_resline
+  puts
+end

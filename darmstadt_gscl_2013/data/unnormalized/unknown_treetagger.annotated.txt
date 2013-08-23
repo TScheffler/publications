@@ -2838,7 +2838,7 @@
 2	@zeitimbild	at_token
 2	@zimtsternin	at_token
 2	zock	slang
-2	zuguckn	spell:zuguckn:deletion; slang
+2	zuguckn	spell:zugucken:deletion; slang
 2	@zwyback	at_token
 1	Ê	fw
 1	ДНЁМ	fw
@@ -3867,6 +3867,7 @@
 1	We	spell:Werder:deletion
 1	We	spell:Weltliteratur:deletion
 1	We	fw
+1	Wundesschöner	spell:Wunderschöner:substitution
 1	af	spell:auf:deletion
 1	bb	slang; abbr
 1	be	fw
@@ -3912,3 +3913,4 @@
 1	sz	token
 1	tk	fw
 1	tk	link
+1	FRUSINAIch	FRUSINA Ich

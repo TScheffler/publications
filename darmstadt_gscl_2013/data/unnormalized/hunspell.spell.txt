@@ -90,7 +90,6 @@
 34	nix	slang; spell:nichts:substitution/deletion
 4	Tach	spell:Tag:substitution; slang
 3	Nix	spell:nichts:substitution/deletion; slang
-3	chillin	fw; spell:cilling:deletion; slang
 
 # omission of `ei' from indefinite articles
 117	ne	slang; spell:eine:deletion
@@ -188,6 +187,7 @@
 3	ni	spell:nicht:deletion; slang
 3	pls	fw;  spell:please:deletion; slang
 3	zyn	spell:sind:substitution,deletion; slang
+3	chillin	fw; spell:cilling:deletion; slang
 2	Axo	spell:ach so:substitution/deletion; slang
 2	Dikka	spell:Dicker:substitution; slang
 2	Ik	spell:ich:substitution/deletion; slang

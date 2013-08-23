@@ -1355,7 +1355,7 @@
 2	@Arrivedwithyou	at_token
 2	Aspire	ne:product
 2	@AthariDrawer	at_token
-2	Aussenbordmotor spell:Außenbordmotor:substitution
+2	Aussenbordmotor	spell:Außenbordmotor:substitution
 2	Ausserdem	spell:Außerdem:substitution
 2	#Austria	hash_tag
 2	Autsch	inj
@@ -3522,6 +3522,7 @@
 1	Woods	ne:person
 1	Work	fw
 1	Writing	fw
+1	Wundesschöner	spell:Wunderschöner:substitution
 1	XAVB5501	abbr
 1	XDD	smiley
 1	#Xing	hash_tag
@@ -4044,3 +4045,4 @@
 1	electronic	ne:product
 1	fi	fw
 1	fi	spell:finde:deletion
+1	FRUSINAIch	FRUSINA Ich
