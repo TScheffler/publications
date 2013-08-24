@@ -9,6 +9,9 @@ require 'optparse'
 Encoding.default_internal = 'utf-8'
 Encoding.default_external = 'utf-8'
 
+START_MARKER = '%%%END_OF_CHECK%%'
+started = false
+
 @options = {}
 @replacements = Hash.new()
 answer = 0
@@ -70,13 +73,20 @@ f.close()
 # can't use Regexp Union here, because it does not provide word
 # boundaries specification
 misspellings_re = Regexp.compile('(?<=[[:punct:]\s]|\A)(?:' + \
-                              @replacements.keys.map!{|k| Regexp.escape(k)}.join('|') + \
+                                 @replacements.keys.map!{|k| Regexp.escape(k)}.join('|') + \
                                  ')(?=[[:punct:]\s]|\z)')
 
 ##################################################################
 # Main
 while origline = gets
   origline.chomp!()
+
+  if not started
+    next if $_ != START_MARKER
+    started = true
+    next
+  end
+
   iline = origline
   resline = marked_origline = marked_resline = ''
   while iline =~ misspellings_re
