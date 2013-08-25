@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+ORIG_MARK_RE    = Regexp.compile("^OrigMarked:\t")
+CORRECT_MARK_RE = Regexp.compile("CorrectMarked:\t")
+SPLIT_RE  = Regexp.compile('(<<<(?:[^>]|>[^>])+>>>)')
+
+orig    = []
+correct = []
+
+##################################################################
+# Methods
+def double_check(arr1, arr2)
+  if arr1.length != arr2.length
+    p arr1
+    p arr2
+    raise "Unmatching number of corrected tokens (#{arr1.length} vs. #{arr2.length}) near line:\n'#{$_}'"
+  end
+
+  err_flag = nil
+  arr1.each_index do |i|
+    if (! (err_flag = (arr1[i] =~ SPLIT_RE))) != (! (arr2[i] =~ SPLIT_RE))
+      raise "Unmatched errors #{arr1[i]} vs. #{arr2[i]}"
+    elsif err_flag
+      if arr1[i].downcase() == arr2[i].downcase()
+        arr1[i] = arr1[i][3..-4]
+        arr2[i] = arr2[i][3..-4]
+      end
+    end
+  end
+end
+
+##################################################################
+# Arguments
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+Clean up corpus of corrections, i.e. remove <<< >>> marks from entities which
+# fully correspond.
+
+USAGE:
+#{myname} FILE1 [FILE2, ...]
+  EOF
+end.parse!()
+
+##################################################################
+# Main
+
+=begin
+OrigMarked:	Ahh die <<<Convention>>> vom 8. - 10. Juni wird <<<soo>>> total genial %PosSmiley
+CorrectMarked:	Ahh die <<<Convention>>> vom 8. - 10. Juni wird <<<so>>> total genial %PosSmiley
+==>
+OrigMarked:	Ahh die Convention vom 8. - 10. Juni wird <<<soo>>> total genial %PosSmiley
+CorrectMarked:	Ahh die Convention vom 8. - 10. Juni wird <<<so>>> total genial %PosSmiley
+=end
+
+while gets
+  $_.chomp!()
+  if $_ == ''
+    puts
+    next
+  end
+
+  case $_
+  when ORIG_MARK_RE
+    raise "No correct line found for origline:\n'#{$_}'" unless orig.empty?
+    orig = $_.split(SPLIT_RE)
+
+  when CORRECT_MARK_RE
+    raise "No original line found for correct line:\n'#{$_}'" if orig.empty?
+    correct = $_.split(SPLIT_RE)
+    double_check(orig, correct)
+    puts orig.join(''), correct.join('')
+    orig.clear()
+    correct.clear()
+
+  else
+    raise "Unrecognized line format:\n'#{$_}'"
+  end
+end
