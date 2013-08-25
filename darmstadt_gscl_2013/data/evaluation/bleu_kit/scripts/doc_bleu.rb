@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby1.9
+
 require 'optparse'
 require "#{File.dirname(__FILE__)}/bleulib"
 

@@ -1186,8 +1186,8 @@ CorrectMarked:	Noch auf der Suche nach dem passenden Weihnachtsgeschenk für die
 OrigMarked:	weiss jemand ob die jungs heute oder morgen nach <<<muenchen>>> fliegen ?!? %Link %Link %Link
 CorrectMarked:	weiss jemand ob die Jungs heute oder morgen nach <<<München>>> fliegen ?!? %Link %Link %Link
 
-OrigMarked:	Fedor war <<<fur>>> <<<enige>>> wochen <<<zuruck>>> im holland bei hoost. Auf unsere Facebook seite <<<stegen>>> <<<wijle>>> bilde.
-CorrectMarked:	Fedor war <<<für>>> <<<einige>>> wochen <<<zurück>>> im holland bei hoost. Auf unsere Facebook seite <<<stehen>>> <<<wilde>>> bilde.
+OrigMarked:	Fedor war <<<fur>>> <<<enige>>> wochen <<<zuruck>>> im holland bei hoost. Auf unsere Facebook seite <<<stegen>>> <<<wijle>>> <<<bilde>>>.
+CorrectMarked:	Fedor war <<<für>>> <<<einige>>> wochen <<<zurück>>> im holland bei hoost. Auf unsere Facebook seite <<<stehen>>> <<<wilde>>> <<<bilder>>>.
 
 OrigMarked:	Netter Er  40 Jahre: Dortmund | sucht eine nette Sie die Lust hat mich im Hotel zu besuchen.Ich <<<moechte>>> gerne er...
 CorrectMarked:	Netter Er  40 Jahre: Dortmund | sucht eine nette Sie die Lust hat mich im Hotel zu besuchen.Ich <<<möchte>>> gerne er...
