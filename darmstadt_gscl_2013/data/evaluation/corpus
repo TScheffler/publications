@@ -13,8 +13,8 @@ CorrectMarked:	Seit gestern <<<gibt es>>> auf dem Stupidozid Youtube Kanal den <
 OrigMarked:	<<<oooh>>>, hab ich nicht <<<gesehn>>>. wie geht's dir? ♥
 CorrectMarked:	<<<oh>>>, hab ich nicht <<<gesehen>>>. wie geht's dir? ♥
 
-OrigMarked:	Morgens um 7 aufstehen um irgendwelche dubiosen Physik arbeiten zu schreiben... Wenigstens wartet ein <<<Wundesschöner>>> Student mit mir an der H
-CorrectMarked:	Morgens um 7 aufstehen um irgendwelche dubiosen Physik arbeiten zu schreiben... Wenigstens wartet ein <<<Wunderschöner>>> Student mit mir an der H
+OrigMarked:	Morgens um 7 aufstehen um irgendwelche dubiosen <<<Physik arbeiten>>> zu schreiben... Wenigstens wartet ein <<<Wundesschöner>>> Student mit mir an der H
+CorrectMarked:	Morgens um 7 aufstehen um irgendwelche dubiosen <<<Physikarbeiten>>> zu schreiben... Wenigstens wartet ein <<<Wunderschöner>>> Student mit mir an der H
 
 OrigMarked:	Folgt mal alle der %User . Ihr fehlen <<<nurnoch>>> 12 zu den 500
 CorrectMarked:	Folgt mal alle der %User . Ihr fehlen <<<nur noch>>> 12 zu den 500
@@ -37,8 +37,8 @@ CorrectMarked:	Wer weiss, ob man auf %Link <<<oder>>> so (<<<wurst>>> ob man was
 OrigMarked:	Heute Finale !!!Wer ist Live dabei??Hoffentlich <<<gibts>>> was zu feiern!!!
 CorrectMarked:	Heute Finale !!!Wer ist Live dabei??Hoffentlich <<<gibt es>>> was zu feiern!!!
 
-OrigMarked:	%PosSmiley Du bist echt toll %PosSmiley Ich <<<werd>>> dran denken! Und ihr lenkt mich eh <<<grad>>> sehr ab.
-CorrectMarked:	%PosSmiley Du bist echt toll %PosSmiley Ich <<<werde>>> dran denken! Und ihr lenkt mich eh <<<gerade>>> sehr ab.
+OrigMarked:	%PosSmiley Du bist echt toll %PosSmiley Ich <<<werd>>> <<<dran>>> denken! Und ihr lenkt mich <<<eh>>> <<<grad>>> sehr ab.
+CorrectMarked:	%PosSmiley Du bist echt toll %PosSmiley Ich <<<werde>>> <<<daran>>> denken! Und ihr lenkt mich <<<eher>>> <<<gerade>>> sehr ab.
 
 OrigMarked:	<<<Elektrogeraet>>> com: Ein <<<Elektrogeraet>>> ist ein meist in Privathaushalten verwendetes <<<Gerat>>>  Auf der Seite werden d...
 CorrectMarked:	<<<Elektrogerät>>> com: Ein <<<Elektrogerät>>> ist ein meist in Privathaushalten verwendetes <<<Gerät>>>  Auf der Seite werden d...
@@ -91,14 +91,11 @@ CorrectMarked:	<<<Ach so>>>? Naja, in 22 Tagen ist ja schon Weihnachten...
 OrigMarked:	British Langhaar BKH Zucht in Gold & Silber %PosSmiley in Hamburg: Wir sind eine liebevolle und <<<seriö>>>... %Link Anzeigen
 CorrectMarked:	British Langhaar BKH Zucht in Gold & Silber %PosSmiley in Hamburg: Wir sind eine liebevolle und <<<seriöse>>>... %Link Anzeigen
 
-OrigMarked:	 . . p kacili leh kong ukuran p pai, <<<nich>>> Ray p kmeja sma ukuran dgn %User px noch, ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ª
-CorrectMarked:	 . . p kacili leh kong ukuran p pai, <<<nicht>>> Ray p kmeja sma ukuran dgn %User px noch, ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ªќ ª
-
 OrigMarked:	Machen wir uns <<<nix>>> vor, am heutige <<<Tach>>> können wir alle live dabei <<<zuguckn>>> wie unser aller Kindheit endgültig zu End ...
 CorrectMarked:	Machen wir uns <<<nichts>>> vor, am heutige <<<Tag>>> können wir alle live dabei <<<zugucken>>> wie unser aller Kindheit endgültig zu End ...
 
-OrigMarked:	%PosSmiley %PosSmiley na, leida <<<ned>>>, sie melden sich irgendwann bis neujahr, also <<<könnts>>> noch dauern %NegSmiley ich geh <<<jz>>> dann schlafen %PosSmiley gute nacht
-CorrectMarked:	%PosSmiley %PosSmiley na, leida <<<nicht>>>, sie melden sich irgendwann bis Neujahr, also <<<könnte es>>> noch dauern %NegSmiley ich geh <<<jetzt>>> dann schlafen %PosSmiley gute nacht
+OrigMarked:	%PosSmiley %PosSmiley na, leida <<<ned>>>, sie melden sich irgendwann bis neujahr, also <<<könnts>>> noch dauern %NegSmiley ich <<<geh>>> <<<jz>>> dann schlafen %PosSmiley gute nacht
+CorrectMarked:	%PosSmiley %PosSmiley na, leida <<<nicht>>>, sie melden sich irgendwann bis Neujahr, also <<<könnte es>>> noch dauern %NegSmiley ich <<<gehe>>> <<<jetzt>>> dann schlafen %PosSmiley gute nacht
 
 OrigMarked:	Haha %PosSmiley Also wenn du noch Hilfe brauchst, schau ich auch gerne mal <<<drüber>>> %PosSmiley
 CorrectMarked:	Haha %PosSmiley Also wenn du noch Hilfe brauchst, schau ich auch gerne mal <<<darüber>>> %PosSmiley
@@ -144,9 +141,6 @@ CorrectMarked:	ich hab <<<nichts>>> bekommen , kann das sein das das <<<eine>>> 
 
 OrigMarked:	Aber so ein bisschen wirkt das wie ein gemeinsamer Kongress von Julis, Grüner Jugend und Grünen in der <<<Gründungsphas>>> ...
 CorrectMarked:	Aber so ein bisschen wirkt das wie ein gemeinsamer Kongress von Julis, Grüner Jugend und Grünen in der <<<Gründungsphase>>> ...
-
-OrigMarked:	By die filmavond <<<ik>>> viel bijna in slaap - WHAHA
-CorrectMarked:	By die filmavond <<<ich>>> viel bijna in slaap - WHAHA
 
 OrigMarked:	ja wieso wohl :'DD nur <<<wegn>>> dir bin auch so <<<gwordn>>>
 CorrectMarked:	ja wieso wohl :'DD nur <<<wegen>>> dir bin auch so <<<geworden>>>
@@ -385,8 +379,8 @@ CorrectMarked:	ich war zuerst hier! %PosSmiley aber Du nicht zu OpenNRW, oder? A
 OrigMarked:	Nachher muss ich übrigens noch 30 Seiten über präsidentielle und parlamentarische Systeme lesen. <<<Würds>>> mich <<<ned>>> <<<intressieren>>>, <<<wärs>>> hart.
 CorrectMarked:	Nachher muss ich übrigens noch 30 Seiten über präsidentielle und parlamentarische Systeme lesen. <<<Würde es>>> mich <<<nicht>>> <<<interessieren>>>, <<<wäre es>>> hart.
 
-OrigMarked:	also ich geh nächstes Jahr <<<aufjedenfall>>> wieder hin %PosSmiley und diesmal <<<vergess>>> ich NICHT meinen Schülerausweis %PosSmiley
-CorrectMarked:	also ich geh nächstes Jahr <<<auf jeden Fall>>> wieder hin %PosSmiley und diesmal <<<vergesse>>> ich NICHT meinen Schülerausweis %PosSmiley
+OrigMarked:	also ich <<<gehe>>> nächstes Jahr <<<aufjedenfall>>> wieder hin %PosSmiley und diesmal <<<vergess>>> ich NICHT meinen Schülerausweis %PosSmiley
+CorrectMarked:	also ich <<<geh>>> nächstes Jahr <<<auf jeden Fall>>> wieder hin %PosSmiley und diesmal <<<vergesse>>> ich NICHT meinen Schülerausweis %PosSmiley
 
 OrigMarked:	Endlich <<<ma>>> ein interessanter Protest um ein Heim für seine Haustiere zu bekommen
 CorrectMarked:	Endlich <<<mal>>> ein interessanter Protest um ein Heim für seine Haustiere zu bekommen
@@ -733,9 +727,6 @@ CorrectMarked:	der/die/das hat aber schöne augen! %PosSmiley wie nacht? gute Pa
 OrigMarked:	Papierloses Büro - Software für Dokumentenverwaltung: Ich bin momentan auf der Suche nach einer Software die <<<fol>>>...
 CorrectMarked:	Papierloses Büro - Software für Dokumentenverwaltung: Ich bin momentan auf der Suche nach einer Software die <<<folgende>>>...
 
-OrigMarked:	Shaal pehnaaey gaa ab koun december mein tumhein // Baarishoun mein kabhi bheegoo <<<ge>>> tou yaad aaon gaa urdupoetry shayari
-CorrectMarked:	Shaal pehnaaey gaa ab koun december mein tumhein // Baarishoun mein kabhi bheegoo <<<gestern>>> tou yaad aaon gaa urdupoetry shayari
-
 OrigMarked:	danke dir, <<<wünsch>>> dir auch einen schönen Samstag %PosSmiley
 CorrectMarked:	danke dir, <<<wünsche>>> dir auch einen schönen Samstag %PosSmiley
 
@@ -928,8 +919,8 @@ CorrectMarked:	Ich <<<lese>>> ein Buch und lache, bis es aus der Hand fällt und
 OrigMarked:	Auf dem weg nach friedrichshafen <<<fuer>>> wetten dass. Es ist eine riesenehre bei tommys letzter sendung dabei sein zu <<<duerfen>>>.
 CorrectMarked:	Auf dem weg nach friedrichshafen <<<für>>> wetten dass. Es ist eine riesenehre bei tommys letzter sendung dabei sein zu <<<dürfen>>>.
 
-OrigMarked:	<<<Halloooooo>>>, was denkt ihr..das zieh ich doch nicht wirklich an, hab ich mir für <<<ne>>> trashy Weihnachtsparty erworben %PosSmiley
-CorrectMarked:	<<<Hallo>>>, was denkt ihr..das zieh ich doch nicht wirklich an, hab ich mir für <<<eine>>> trashy Weihnachtsparty erworben %PosSmiley
+OrigMarked:	<<<Halloooooo>>>, was denkt ihr..das <<<ziehe>>> ich doch nicht wirklich an, hab ich mir für <<<ne>>> trashy Weihnachtsparty erworben %PosSmiley
+CorrectMarked:	<<<Hallo>>>, was denkt ihr..das <<<zieh>>> ich doch nicht wirklich an, hab ich mir für <<<eine>>> trashy Weihnachtsparty erworben %PosSmiley
 
 OrigMarked:	An so <<<nem>>> schönen Tag lässt Burda himself im Erdgeschoss neue Barcelona-Chairs durch die Gegend schieben.
 CorrectMarked:	An so <<<einem>>> schönen Tag lässt Burda himself im Erdgeschoss neue Barcelona-Chairs durch die Gegend schieben.
@@ -1042,8 +1033,8 @@ CorrectMarked:	Wenn Pietro Lombardi singt, dann will ich dem immer eine in die F
 OrigMarked:	<<<pahh>>> die <<<würd>>> uns den hals abbeissen %PosSmiley
 CorrectMarked:	<<<pah>>> die <<<würde>>> uns den Hals abbeissen %PosSmiley
 
-OrigMarked:	ich hab gar nicht so aufgepasst war zu lw^^ aber echt ich versteh auch <<<ned>>> was da so toll dran is
-CorrectMarked:	ich hab gar nicht so aufgepasst war zu lw^^ aber echt ich versteh auch <<<nicht>>> was da so toll dran is
+OrigMarked:	ich hab gar nicht so aufgepasst war zu lw^^ aber echt ich <<<versteh>>> auch <<<ned>>> was da so toll <<<dran>>> is
+CorrectMarked:	ich hab gar nicht so aufgepasst war zu lw^^ aber echt ich <<<verstehe>>> auch <<<nicht>>> was da so toll <<<daran>>> is
 
 OrigMarked:	<<<Find>>> aber viel übersichtlicher als das alte! %PosSmiley
 CorrectMarked:	<<<Finde>>> aber viel übersichtlicher als das alte! %PosSmiley
@@ -1195,8 +1186,8 @@ CorrectMarked:	Netter Er  40 Jahre: Dortmund | sucht eine nette Sie die Lust hat
 OrigMarked:	ach claire, es waren nur 10 tage, aber es waren die schönsten meines lebens! und <<<jz>>> bist du seit 5 stunden weg und ich vermisse dich so sehr
 CorrectMarked:	ach claire, es waren nur 10 tage, aber es waren die schönsten meines lebens! und <<<jetzt>>> bist du seit 5 stunden weg und ich vermisse dich so sehr
 
-OrigMarked:	Ich geh die Treppe <<<rauf>>> und geh die Treppe und geh die Treppe <<<rauf>>> und geh die Treppe runter und dann geh ich die Seitentreppe <<<rauf>>>...
-CorrectMarked:	Ich geh die Treppe <<<herauf>>> und geh die Treppe und geh die Treppe <<<herauf>>> und geh die Treppe runter und dann geh ich die Seitentreppe <<<herauf>>>...
+OrigMarked:	Ich <<<geh>>> die Treppe <<<rauf>>> und geh die Treppe und geh die Treppe <<<rauf>>> und geh die Treppe runter und dann geh ich die Seitentreppe <<<rauf>>>...
+CorrectMarked:	Ich geh die Treppe <<<herauf>>> und geh die Treppe und geh die Treppe <<<herauf>>> und geh die Treppe runter und dann <<<gehe>>> ich die Seitentreppe <<<herauf>>>...
 
 OrigMarked:	Männerklo - Atze:"Ey <<<Dikka>>> is für dich <<<kool>>> wenn <<<ick>>> <<<een>>> fahren lasse?"<<<Ick>>>:" Easy <<<Dikka>>>, lass ab."Er: "<<<pppppffffhhhh>>> ...
 CorrectMarked:	Männerklo - Atze:"Ey <<<Dicker>>> is für dich <<<cool>>> wenn <<<ich>>> <<<einen>>> fahren lasse?"<<<Ich>>>:" Easy <<<Dicker>>>, lass ab."Er: "<<<pfh>>> ...
@@ -1483,8 +1474,8 @@ CorrectMarked:	ich auch <<<nicht>>> -- :'(
 OrigMarked:	Jeans Raffhose DORTJE Gr. 98: Tolle Raffhose nach einem Schnitt von Farbenmix aus weichem Jeansstoff mit sehr <<<vi>>>...
 CorrectMarked:	Jeans Raffhose DORTJE Gr. 98: Tolle Raffhose nach einem Schnitt von Farbenmix aus weichem Jeansstoff mit sehr <<<viel>>>...
 
-OrigMarked:	<<<Ohrwürmle>>>...verzeitung... ich glaub, ich geh ins bett. ich kann <<<nich>>> mehr <<<schreibn>>> <<<heut>>> o.o
-CorrectMarked:	<<<Ohrwurm>>>...verzeitung... ich glaub, ich geh ins Bett. ich kann <<<nicht>>> mehr <<<schreiben>>> <<<heute>>> o.o
+OrigMarked:	<<<Ohrwürmle>>>...verzeitung... ich glaub, ich <<<geh>>> ins bett. ich kann <<<nich>>> mehr <<<schreibn>>> <<<heut>>> o.o
+CorrectMarked:	<<<Ohrwurm>>>...verzeitung... ich glaub, ich <<<gehe>>> ins Bett. ich kann <<<nicht>>> mehr <<<schreiben>>> <<<heute>>> o.o
 
 OrigMarked:	<<<sry>>> aber das muss jetzt sein - weil ich's org finde...
 CorrectMarked:	<<<sorry>>> aber das muss jetzt sein - weil ich's org finde...
@@ -2584,8 +2575,8 @@ CorrectMarked:	Neben der Spur: Ironic <<<Christmas>>> %Link Ich meine das Gedich
 OrigMarked:	"Und was machst du <<<heut>>> noch so?" "Och, erstmal arbeiten, dann einkaufen, bisschen Brandstiftung. Wie immer eben."
 CorrectMarked:	"Und was machst du <<<heute>>> noch so?" "Och, erstmal arbeiten, dann einkaufen, bisschen Brandstiftung. Wie immer eben."
 
-OrigMarked:	ich hab dich <<<net>>> geschlagen wollte ich zu mindestens <<<net>>> und ich geh jetzt meine schuhe hole bis später <<<hdgggggggggdl>>> %PosSmiley %PosSmiley
-CorrectMarked:	ich hab dich <<<nicht>>> geschlagen wollte ich zu mindestens <<<nicht>>> und ich geh jetzt meine schuhe hole bis später <<<hdgdl>>> %PosSmiley %PosSmiley
+OrigMarked:	ich hab dich <<<net>>> geschlagen wollte ich zu mindestens <<<net>>> und ich <<<geh>>> jetzt meine schuhe hole bis später <<<hdgggggggggdl>>> %PosSmiley %PosSmiley
+CorrectMarked:	ich hab dich <<<nicht>>> geschlagen wollte ich zu mindestens <<<nicht>>> und ich <<<gehe>>> jetzt meine schuhe hole bis später <<<hdgdl>>> %PosSmiley %PosSmiley
 
 OrigMarked:	Hier, nimm all mein Geld, das ich <<<grad>>> bei mir habe und kauf dir so viel zu <<<fres>>>(@YouTube
 CorrectMarked:	Hier, nimm all mein Geld, das ich <<<gerade>>> bei mir habe und kauf dir so viel zu <<<fressen>>>(@YouTube
@@ -2641,8 +2632,8 @@ CorrectMarked:	Hab den <<<Flashkalender>>> jetzt auch geupdated, war <<<heute>>>
 OrigMarked:	wer weiss.. <<<vllt>>> wirst du ja jetzt bodybuilder
 CorrectMarked:	wer weiss.. <<<vielleicht>>> wirst du ja jetzt bodybuilder
 
-OrigMarked:	wenn du willst auch gleich <<<hingehn>>> ich geh mit %PosSmiley der kennt da ja <<<genung>>>, aw & dann ging's hier aber ab mit meiner <<<mom>>> lmao
-CorrectMarked:	wenn du willst auch gleich <<<hingehen>>> ich geh mit %PosSmiley der kennt da ja <<<genug>>>, aw & dann ging's hier aber ab mit meiner <<<moment>>> lmao
+OrigMarked:	wenn du willst auch gleich <<<hingehn>>> ich <<<geh>>> mit %PosSmiley der kennt da ja <<<genung>>>, aw & dann ging's hier aber ab mit meiner <<<mom>>> lmao
+CorrectMarked:	wenn du willst auch gleich <<<hingehen>>> ich <<<gehe>>> mit %PosSmiley der kennt da ja <<<genug>>>, aw & dann ging's hier aber ab mit meiner <<<moment>>> lmao
 
 OrigMarked:	Geld verdienen mit %Link anschauen <<<Gutscheincod>>>: 8TMRCZ4Z <<<find>>> ich interessant
 CorrectMarked:	Geld verdienen mit %Link anschauen <<<Gutscheincode>>>: 8TMRCZ4Z <<<finde>>> ich interessant
@@ -2779,8 +2770,8 @@ CorrectMarked:	++ Neuer Multimedia Prospekt bei Media Markt und Amazon zieht (we
 OrigMarked:	KLA GG: <<<SC>>> Opel Rüsselsheim geht in die Berufung / HFV-Sportgericht wird nun entscheiden
 CorrectMarked:	KLA GG: <<<schwerer>>> Opel Rüsselsheim geht in die Berufung / HFV-Sportgericht wird nun entscheiden
 
-OrigMarked:	hab ich nicht dran gedacht und niemand twittert <<<drüber>>>?
-CorrectMarked:	hab ich nicht dran gedacht und niemand twittert <<<darüber>>>?
+OrigMarked:	hab ich nicht <<<dran>>> gedacht und niemand twittert <<<drüber>>>?
+CorrectMarked:	hab ich nicht <<<daran>>> gedacht und niemand twittert <<<darüber>>>?
 
 OrigMarked:	schon klar, <<<bekomm>>> ich aber nicht interpoliert... 4 Stunden?
 CorrectMarked:	schon klar, <<<bekomme>>> ich aber nicht interpoliert... 4 Stunden?
@@ -2971,9 +2962,6 @@ CorrectMarked:	ich <<<auf>>>;laghfjkalbgnmzmguak aghapogja Madre Monster aufaigs
 OrigMarked:	Fussballquiz %Link Browser Denk- und Quizspiel Fussballquiz.-mit Maus auf Banner-Kostenlose Anmeldung inkl. <<<vi>>> Browsergame
 CorrectMarked:	Fussballquiz %Link Browser Denk- und Quizspiel Fussballquiz.-mit Maus auf Banner-Kostenlose Anmeldung inkl. <<<viel>>> Browsergame
 
-OrigMarked:	<<<Straks>>> naar munster. Auf Wiedersehen
-CorrectMarked:	<<<stracks>>> naar munster. Auf Wiedersehen
-
 OrigMarked:	ich <<<kom>>> noa boete
 CorrectMarked:	ich <<<komme>>> noa boete
 
@@ -3117,8 +3105,8 @@ CorrectMarked:	<<<einen>>> Euro mehr würde ich wohl verkraften. %PosSmiley
 OrigMarked:	Twitter und ich. <<<Heut>>> ist nicht unser Tag. Nochmal den Link von beam eBooks   %Link Sander
 CorrectMarked:	Twitter und ich. <<<heute>>> ist nicht unser Tag. Nochmal den Link von beam eBooks   %Link Sander
 
-OrigMarked:	%User <<<hatt>>> ich mir auch nicht so schwer vorgestellt! geh wohl zu Arte - Darwin - %PosSmiley den kurt <<<kenn>>> ich "leichter" %PosSmiley
-CorrectMarked:	%User <<<hatte>>> ich mir auch nicht so schwer vorgestellt! geh wohl zu Arte - Darwin - %PosSmiley den kurt <<<kenne>>> ich "leichter" %PosSmiley
+OrigMarked:	%User <<<hatt>>> ich mir auch nicht so schwer vorgestellt! <<<geh>>> wohl zu Arte - Darwin - %PosSmiley den kurt <<<kenn>>> ich "leichter" %PosSmiley
+CorrectMarked:	%User <<<hatte>>> ich mir auch nicht so schwer vorgestellt! <<<gehe>>> wohl zu Arte - Darwin - %PosSmiley den kurt <<<kenne>>> ich "leichter" %PosSmiley
 
 OrigMarked:	Meine <<<Ma>>> fragt, ob du nicht was abgeben und <<<rüberschicken>>> magst %PosSmiley
 CorrectMarked:	Meine <<<Mama>>> fragt, ob du nicht was abgeben und <<<herüberschicken>>> magst %PosSmiley
@@ -3690,9 +3678,6 @@ CorrectMarked:	<<<siehst du>>>, ich <<<hätte>>> jetzt gedacht, das <<<wäre>>> 
 OrigMarked:	Aber:Legitimation der "Herrschaft" durch Beteiligung der "Wähler" und Zustimmung einer "Mehrheit".Aber Austritt,<<<weils>>> nicht nach
 CorrectMarked:	Aber:Legitimation der "Herrschaft" durch Beteiligung der "Wähler" und Zustimmung einer "Mehrheit".Aber Austritt,<<<weil es>>> nicht nach
 
-OrigMarked:	Oo <<<pls>>>  %User cmt 4 der.ur head lyk Baah Nuakoh
-CorrectMarked:	Oo <<<please>>>  %User cmt 4 der.ur head lyk Baah Nuakoh
-
 OrigMarked:	<<<ic>>> bin sehr gut und du? wie geht es dir?
 CorrectMarked:	<<<ich>>> bin sehr gut und du? wie geht es dir?
 
@@ -3813,8 +3798,8 @@ CorrectMarked:	<<<Juhu>>>! Endlich! %PosSmiley  Viel Spass mit iOutBank Version 
 OrigMarked:	%PosSmiley  ich dachte auch ich sterbe..<<<vorallem>>> ich hatte nie so krass..der arzt sagte das kann passieren wenn man <<<schupfen>>> hat
 CorrectMarked:	%PosSmiley  ich dachte auch ich sterbe..<<<vor allem>>> ich hatte nie so krass..der arzt sagte das kann passieren wenn man <<<Schnupfen>>> hat
 
-OrigMarked:	die bekommen dann <<<nen>>> halben Herzinfarkt wenn ich nicht dran geh %PosSmiley
-CorrectMarked:	die bekommen dann <<<einen>>> halben Herzinfarkt wenn ich nicht dran geh %PosSmiley
+OrigMarked:	die bekommen dann <<<nen>>> halben Herzinfarkt wenn ich nicht dran <<<geh>>> %PosSmiley
+CorrectMarked:	die bekommen dann <<<einen>>> halben Herzinfarkt wenn ich nicht dran <<<gehe>>> %PosSmiley
 
 OrigMarked:	deshalb hab ich nur 4 stunden %PosSmiley und <<<freu>>> mich auf die Prüfung!
 CorrectMarked:	deshalb hab ich nur 4 stunden %PosSmiley und <<<freue>>> mich auf die Prüfung!
@@ -3858,8 +3843,8 @@ CorrectMarked:	Deutscheweltweit de: Informationen <<<für>>> Deutsche  <<<Öster
 OrigMarked:	Günther Jauch wahrscheinlich. <<<Werd>>>' erstmal wieder nüchtern glaube ich %PosSmiley
 CorrectMarked:	Günther Jauch wahrscheinlich. <<<Werde>>>' erstmal wieder nüchtern glaube ich %PosSmiley
 
-OrigMarked:	einfach dran gezogen %NegSmiley mach ich mit <<<ner>>> freundin wenn keiner da ist %PosSmiley ich weiss ich bin böse %PosSmiley
-CorrectMarked:	einfach dran gezogen %NegSmiley mach ich mit <<<einer>>> freundin wenn keiner da ist %PosSmiley ich weiss ich bin böse %PosSmiley
+OrigMarked:	einfach <<<dran>>> gezogen %NegSmiley mach ich mit <<<ner>>> freundin wenn keiner da ist %PosSmiley ich weiss ich bin böse %PosSmiley
+CorrectMarked:	einfach <<<daran>>> gezogen %NegSmiley mach ich mit <<<einer>>> freundin wenn keiner da ist %PosSmiley ich weiss ich bin böse %PosSmiley
 
 OrigMarked:	So, <<<ne>>> Stunde später bin ich glücklich und vollgefressen %PosSmiley
 CorrectMarked:	So, <<<eine>>> Stunde später bin ich glücklich und vollgefressen %PosSmiley
@@ -4005,8 +3990,8 @@ CorrectMarked:	Sorry, dass ich <<<nicht>>> mehr so ganz nüchtern bin %PosSmiley
 OrigMarked:	Hab ich <<<heut>>> auch <<<scho>>> öfters gehört! %PosSmiley  Ein Prosit! Lebenslang grün-weiss!
 CorrectMarked:	Hab ich <<<heute>>> auch <<<schon>>> öfters gehört! %PosSmiley  Ein Prosit! Lebenslang grün-weiss!
 
-OrigMarked:	Ohh ja das tut es %PosSmiley Ich glaub ich zieh das morgen an..auf <<<nem>>> 60. Geburtstag %PosSmiley %PosSmiley
-CorrectMarked:	Ohh ja das tut es %PosSmiley Ich glaub ich zieh das morgen an..auf <<<einem>>> 60. Geburtstag %PosSmiley %PosSmiley
+OrigMarked:	Ohh ja das tut es %PosSmiley Ich glaub ich <<<zieh>>> das morgen an..auf <<<nem>>> 60. Geburtstag %PosSmiley %PosSmiley
+CorrectMarked:	Ohh ja das tut es %PosSmiley Ich glaub ich <<<ziehe>>> das morgen an..auf <<<einem>>> 60. Geburtstag %PosSmiley %PosSmiley
 
 OrigMarked:	<<<r0fl>>>, du hast %PosSmiley gesagt %NegSmiley Naja, ich drück nochmal ein Auge zu!
 CorrectMarked:	<<<rofl>>>, du hast %PosSmiley gesagt %NegSmiley Naja, ich drück nochmal ein Auge zu!
@@ -4147,19 +4132,19 @@ OrigMarked:	ich will, das 2011 SCHNELL vorbeigeht. im grossen und ganzen <<<wars
 CorrectMarked:	ich will, das 2011 SCHNELL vorbeigeht. im grossen und ganzen <<<war es>>> ein einfach beschissenes jahr. sowas brauch ich nicht nochmal.
 
 OrigMarked:	Gönnen Sie sich eine Pause - Lautsprecher an - <<<zurücklehen>>> - entspannen
-CorrectMarked:	Gönnen Sie sich eine Pause - Lautsprecher an - <<<zurücklegen>>> - entspannen
+CorrectMarked:	Gönnen Sie sich eine Pause - Lautsprecher an - <<<zurücklehnen>>> - entspannen
 
 OrigMarked:	<<<weils>>> sich lohnt %PosSmiley die twittern auch immer den raab des tages frau fuchs %PosSmiley
 CorrectMarked:	<<<weil es>>> sich lohnt %PosSmiley die twittern auch immer den raab des tages frau fuchs %PosSmiley
 
 OrigMarked:	Nur damit <<<ihrs>>> wisst, ich war früher das Teletubbie-Sonnen-Baby. Wollte das nur mal loswerden.
-CorrectMarked:	Nur damit <<<ihres>>> wisst, ich war früher das Teletubbie-Sonnen-Baby. Wollte das nur mal loswerden.
+CorrectMarked:	Nur damit <<<ihr es>>> wisst, ich war früher das Teletubbie-Sonnen-Baby. Wollte das nur mal loswerden.
 
 OrigMarked:	<<<biste>>> morgen auch offenbings ???
 CorrectMarked:	<<<bist du>>> morgen auch offenbings ???
 
-OrigMarked:	keinen Cosmo %PosSmiley oder ich <<<wünsch>>> mich und ihn aufn Mars und dich und Ruki auf die Erde %PosSmiley so sind wir beide glücklich ♥
-CorrectMarked:	keinen Cosmo %PosSmiley oder ich <<<wünsche>>> mich und ihn aufn Mars und dich und Ruki auf die Erde %PosSmiley so sind wir beide glücklich ♥
+OrigMarked:	keinen Cosmo %PosSmiley oder ich <<<wünsch>>> mich und ihn <<<aufn>>> Mars und dich und Ruki auf die Erde %PosSmiley so sind wir beide glücklich ♥
+CorrectMarked:	keinen Cosmo %PosSmiley oder ich <<<wünsche>>> mich und ihn <<<auf den>>> Mars und dich und Ruki auf die Erde %PosSmiley so sind wir beide glücklich ♥
 
 OrigMarked:	23. Denkt mal <<<drüber>>> nach. wettendass
 CorrectMarked:	23. Denkt mal <<<darüber>>> nach. wettendass
@@ -4179,8 +4164,8 @@ CorrectMarked:	<<<nope>>> %PosSmiley <<<heute>>> nicht und ich <<<kenne>>> das j
 OrigMarked:	zwei sehr schöne gemälde.: Neunkirchen/Saar | Auf leine gemalt zwei Elefanten Gemälde. Jahrgang 1977  bei <<<intres>>>...
 CorrectMarked:	zwei sehr schöne gemälde.: Neunkirchen/Saar | Auf leine gemalt zwei Elefanten Gemälde. Jahrgang 1977  bei <<<Interesse>>>...
 
-OrigMarked:	Wir haben auf dem D-Dorfer Weihnachtsmarkt einen Maronen-Stand gesehen! %PosSmiley Und ich rief aus: Maronen! Hast <<<ne>>> Nachricht!
-CorrectMarked:	Wir haben auf dem D-Dorfer Weihnachtsmarkt einen Maronen-Stand gesehen! %PosSmiley Und ich rief aus: Maronen! Hast <<<eine>>> Nachricht!
+OrigMarked:	Wir haben auf dem <<<D-Dorfer>>> Weihnachtsmarkt einen Maronen-Stand gesehen! %PosSmiley Und ich rief aus: Maronen! Hast <<<ne>>> Nachricht!
+CorrectMarked:	Wir haben auf dem <<<Düsseldorfer>>> Weihnachtsmarkt einen Maronen-Stand gesehen! %PosSmiley Und ich rief aus: Maronen! Hast <<<eine>>> Nachricht!
 
 OrigMarked:	Sie sucht Ihn <<<Boarische>>> Sie, mitte 50, schlank, sportlich, in München: aus münchen hat das <<<singl>>>... %Link Kontaktanzeigen
 CorrectMarked:	Sie sucht Ihn <<<Bayrische>>> Sie, mitte 50, schlank, sportlich, in München: aus münchen hat das <<<Singleleben>>>... %Link Kontaktanzeigen
@@ -4188,8 +4173,8 @@ CorrectMarked:	Sie sucht Ihn <<<Bayrische>>> Sie, mitte 50, schlank, sportlich, 
 OrigMarked:	Herzlichen Glückwunsch Hondo !: Hallo <<<ChefIch>>> <<<wünsch>>> Dir einen ganz tollen <<<GeburtstagViel>>> Glück und vor allem ...
 CorrectMarked:	Herzlichen Glückwunsch Hondo !: Hallo <<<Chef Ich>>> <<<wünsche>>> Dir einen ganz tollen <<<Geburtstag viel>>> Glück und vor allem ...
 
-OrigMarked:	Die EM-Auslosung war <<<Dänemurks>>>,aber das ist mir portuegal. em2012
-CorrectMarked:	Die EM-Auslosung war <<<Dänemarks>>>,aber das ist mir portuegal. em2012
+OrigMarked:	Die EM-Auslosung war Dänemurks,aber das ist mir portuegal. em2012
+CorrectMarked:	Die EM-Auslosung war Dänemurks,aber das ist mir portuegal. em2012
 
 OrigMarked:	In Offenbings angekommen hotel ist <<<ne>>> absolute Bruchbude, gleich <<<aufm>>> weg FFM gothic-disse bpt112
 CorrectMarked:	In Offenbings angekommen hotel ist <<<eine>>> absolute Bruchbude, gleich <<<auf dem>>> weg FFM gothic-disse bpt112
@@ -4452,14 +4437,14 @@ CorrectMarked:	Kennt ihr diese Situationen, in denen ihr denkt, es könnte nicht
 OrigMarked:	Du hast Jorge gesagt. Jorge hat aber keine Arme! auf geht es ...Jorge die neuzugezogenen kommen auch noch <<<rum>>>...
 CorrectMarked:	Du hast Jorge gesagt. Jorge hat aber keine Arme! auf geht es ...Jorge die neuzugezogenen kommen auch noch <<<herum>>>...
 
-OrigMarked:	Zo lang ich <<<nog>>> in laeve bèn, bin ich eine Fortuna fan! Aan 'M Vanaovend!  veefor
-CorrectMarked:	Zo lang ich <<<noch>>> in laeve bèn, bin ich eine Fortuna fan! Aan 'M Vanaovend!  veefor
+OrigMarked:	<<<Zo>>> lang ich <<<nog>>> in laeve <<<bèn>>>, bin ich eine Fortuna fan! Aan 'M Vanaovend!  veefor
+CorrectMarked:	<<<So>>> lang ich <<<noch>>> in laeve <<<bin>>>, bin ich eine Fortuna fan! Aan 'M Vanaovend!  veefor
 
 OrigMarked:	Okay. Dann <<<freu>>> ich mich auf Montag.%PosSmiley
 CorrectMarked:	Okay. Dann <<<freue>>> ich mich auf Montag.%PosSmiley
 
 OrigMarked:	<<<af>>> welchen channel <<<isch>>> danza kuduro?
-CorrectMarked:	<<<auf>>> welchen channel <<<ich>>> danza kuduro?
+CorrectMarked:	<<<auf>>> welchen channel <<<ist>>> danza kuduro?
 
 OrigMarked:	Einigen von euch würde ich gern mal zeigen, was ich auf Arbeit mache & würde <<<dannach>>> fragen, ob ihr Schule <<<immernoch>>> so doof findet.
 CorrectMarked:	Einigen von euch würde ich gern mal zeigen, was ich auf Arbeit mache & würde <<<danach>>> fragen, ob ihr Schule <<<immer noch>>> so doof findet.
@@ -4482,8 +4467,8 @@ CorrectMarked:	<<<ich>>> auch...
 OrigMarked:	kann ich <<<heut>>> doch <<<net>>> %PosSmiley
 CorrectMarked:	kann ich <<<heute>>> doch <<<nicht>>> %PosSmiley
 
-OrigMarked:	Kurze Witze: Lustige <<Spr uuml che>> und Witze finden sich hier auf unserer Seite   <<uuml bersichtlich>> in mehrere <<Ka>>...
-CorrectMarked:	Kurze Witze: Lustige <<Sprüche>> und Witze finden sich hier auf unserer Seite   <<übersichtlich>> in mehrere <<Kategorien>>...
+OrigMarked:	Kurze Witze: Lustige <<<Spr uuml che>>> und Witze finden sich hier auf unserer Seite   <<<uuml bersichtlich>>> in mehrere <<<Ka>>>...
+CorrectMarked:	Kurze Witze: Lustige <<<Sprüche>>> und Witze finden sich hier auf unserer Seite   <<<übersichtlich>>> in mehrere <<<Kategorien>>>...
 
 OrigMarked:	<<<Anspruchvolle>>> geschenke: Luxuriöse Pflege für ein sichtbar strahlendes, frisches Aussehen, spürbar weiches Hautgefühl. ...
 CorrectMarked:	<<<Anspruchsvolle>>> Geschenke: Luxuriöse Pflege für ein sichtbar strahlendes, frisches Aussehen, spürbar weiches Hautgefühl. ...
