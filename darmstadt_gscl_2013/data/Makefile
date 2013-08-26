@@ -143,7 +143,15 @@ ${EVAL_TRNSL_CORPUS}: ${EVAL_CORPUS}
 
 ##################################################################
 # Precision, Recall, F-Measure
-test_prf:
+${PRF_REF_CORPUS} := ${EVAL_TMP_DIR}/prf_ref_corpus.txt
+
+test_prf: ${PRF_REF_CORPUS} ${EVAL_TRNSL_CORPUS}
+	correction_fmeasure -c ${EVAL_TRNSL_CORPUS} $<
+
+${PRF_REF_CORPUS}: ${EVAL_SRC_CORPUS} ${EVAL_REF_CORPUS}
+	set -e -o pipefail; \
+	align_err_correct $^ > $@.tmp && \
+	mv $@.tmp $@
 
 ##################################################################
 # clean_test

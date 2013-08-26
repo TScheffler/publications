@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8; -*-
+
+##################################################################
+require 'optparse'
+require 'pp'
+
+##################################################################
+# Variables and Constants
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
+
+ERR_CORRECT_SEP = Regexp.compile(':' * 4)
+
+##################################################################
+# Methods
+
+##################################################################
+# Arguments
+opts = {}
+OptionParser.new(nil, 20) do |opt_parser|
+  myname = File.basename(opt_parser.program_name)
+  opt_parser.banner = <<-EOF
+#{myname} calculates precision, recall and F-score for line by line
+aligned corrected file and refrence corpus.
+
+USAGE:
+#{myname} -c corrected_file corpus_file
+  EOF
+
+  opt_parser.on('-c', '--correction-file=MANDATORY', :REQUIRED) do |filename|
+      opts[:correct_file] = filename
+  end
+end.parse!()
+
+raise 'No corrected file specified. Type --help to see usage' if opts[:correct_file].nil?
+
+##################################################################
+# Main
+in_words = []
+res_words = []
+
+while gets()
+  $_.chomp!()
+  in_words = $_.split().map do |iw|
+    iw
+  end
+end
