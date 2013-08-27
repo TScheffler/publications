@@ -11,9 +11,30 @@ Encoding.default_internal = 'utf-8'
 Encoding.default_external = 'utf-8'
 
 ERR_CORRECT_SEP = Regexp.compile(':' * 4)
+ERR_MARK_RE = Regexp.compile('<<<((?:[^>:]|>[^>]|:[^:])+):::((?:[^>:]|>[^>]|:[^:]))>>>')
 
 ##################################################################
 # Methods
+errline  = ''
+errwords = []
+tokline  = ''
+
+def get_res_words(err_file, tok_file)
+  raise 'Insufficient number of lines in err corpus' unless errline = err_file.gets()
+  raise 'Insufficient number of lines in tok corpus' unless tokline = tok_file.gets()
+
+  errline.chomp!(); tokline.chomp!()
+
+  errwords = []
+  errline.scan(ERR_MARK_RE) do |ematch|
+    errwords += $`.split().map(){|w| [w, nil]}
+    errwords += [ematch[1], ematch[2]]
+  end
+
+  raise "No errors found in line '#{errline}'" if errwords.empty?
+  errwords += $'.split().map(){|w| [w, nil]}
+  return errwords
+end
 
 ##################################################################
 # Arguments
@@ -25,24 +46,52 @@ OptionParser.new(nil, 20) do |opt_parser|
 aligned corrected file and refrence corpus.
 
 USAGE:
-#{myname} -c corrected_file corpus_file
+#{myname} --error-corpus error_corpus_file --tokenized-src-corpus tokenized_corpus_file normalized_test
   EOF
 
-  opt_parser.on('-c', '--correction-file=MANDATORY', :REQUIRED) do |filename|
-      opts[:correct_file] = filename
+  opt_parser.on('-e', '--error-corpus=MANDATORY') do |fname|
+    opts[:err_corpus] = fname
+  end
+
+  opt_parser.on('-t', '--tokenized-corpus=MANDATORY') do |fname|
+    opts[:tok_corpus] = fname
   end
 end.parse!()
 
-raise 'No corrected file specified. Type --help to see usage' if opts[:correct_file].nil?
+if opts[:err_corpus].nil? or opts[:tok_corpus].nil?
+  raise 'No corrected file specified. Type --help to see usage'
+end
+
+err_corpus = File.open(opts[:err_corpus])
+tok_corpus = File.open(opts[:tok_corpus])
 
 ##################################################################
 # Main
-in_words = []
+in_words  = []
 res_words = []
+precision = 0.0
+recall    = 0.0
 
+##################################################################
 while gets()
   $_.chomp!()
-  in_words = $_.split().map do |iw|
-    iw
-  end
+  in_words = $_.split()
+  res_words = get_res_words(err_corpus, tok_corpus)
 end
+
+if err_corpus.gets() or tok_corpus.gets()
+  raise 'Superfluous number of lines in corpora'
+end
+err_corpus.close()
+tok_corpus.close()
+
+##################################################################
+printf("%-15s: %.2f\n", "Precision:", precision)
+printf("%-15s: %.2f\n", "Recall:", recall)
+printf("%-15s: ", "F-score:")
+if precision + recall != 0.0
+  printf("%.2f", 2 * precision * recall / (precision + recall).to_f())
+else
+  printf("0.00")
+end
+printf("\n")

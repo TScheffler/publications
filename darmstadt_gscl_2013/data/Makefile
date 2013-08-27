@@ -75,7 +75,7 @@ EVAL_TRNSL_SGML   := ${EVAL_TMP_DIR}/trns_corpus.sgml
 
 RESTORE_LINE = awk '/^[[:blank:]]*<\/message/{printf("\n"); next} /<\/sentence>/{printf(" "); next} NF{printf("%s ", tolower($$0))}'
 
-STRIP_MARKS = awk -F '\t' '/^${REGEXP}:/ {print gensub(/<<<(([^>]|>[^>])+)>>>/, "\\1", "g", $$2) \
+STRIP_MARKS = awk -F '\t' 'NF {print gensub(/<<<(([^>:]|>[^>]|:[^:])+):::(([^>:]|>[^>]|:[^:])+)>>>/, "\\${FIELD_NUM}", "g", $$0) \
 	"\n</message>"}'
 
 NORMALIZATION_PROCEDURE = misspelling_restorer | umlaut_restorer | \
@@ -83,7 +83,7 @@ NORMALIZATION_PROCEDURE = misspelling_restorer | umlaut_restorer | \
 
 define MAKE_CORPUS
 	set -e -o pipefail; \
-	 ${STRIP_MARKS} $< | sentence_splitter -x | tokenizer -x | \
+	${STRIP_MARKS} $< | sentence_splitter -x | tokenizer -x | \
 	${RESTORE_LINE} > $@.tmp && mv $@.tmp $@
 endef
 
@@ -113,13 +113,14 @@ ${EVAL_SRC_SGML}: CORPUS_NAME := srcset
 ${EVAL_SRC_SGML}: ${EVAL_SRC_CORPUS}
 	 ${MAKE_SGML}
 
-${EVAL_TRNSL_CORPUS} ${EVAL_SRC_CORPUS}: REGEXP := OrigMarked
+${EVAL_TRNSL_CORPUS} ${EVAL_SRC_CORPUS}: FIELD_NUM := 1
 ${EVAL_SRC_CORPUS}: ${EVAL_CORPUS}
 	 ${MAKE_CORPUS}
 
 ${EVAL_SRC_SELFTEST_SGML}: ${EVAL_SRC_SGML}
 	set -e -o pipefail ; \
-	awk -v IGNORECASE=1 'NF {sub(/srcset/, "tstset", $$0); sub(/sysid="[^"]"/, sysid="selftest"); print}' $< > $@.tmp && \
+	awk -v IGNORECASE=1 'NF {sub(/srcset/, "tstset", $$0);\
+	 sub(/sysid="[^"]"/, sysid="selftest"); print}' $< > $@.tmp && \
 	mv $@.tmp $@
 
 # reference file for translation
@@ -127,7 +128,7 @@ ${EVAL_REF_SGML}: CORPUS_NAME := refset
 ${EVAL_REF_SGML}: ${EVAL_REF_CORPUS}
 	 ${MAKE_SGML}
 
-${EVAL_REF_CORPUS}: REGEXP := CorrectMarked
+${EVAL_REF_CORPUS}: FIELD_NUM := 3
 ${EVAL_REF_CORPUS}: ${EVAL_CORPUS}
 	 ${MAKE_CORPUS}
 
@@ -143,15 +144,11 @@ ${EVAL_TRNSL_CORPUS}: ${EVAL_CORPUS}
 
 ##################################################################
 # Precision, Recall, F-Measure
-${PRF_REF_CORPUS} := ${EVAL_TMP_DIR}/prf_ref_corpus.txt
+PRF_REF_CORPUS := ${EVAL_TMP_DIR}/prf_ref_corpus.txt
 
-test_prf: ${PRF_REF_CORPUS} ${EVAL_TRNSL_CORPUS}
-	correction_fmeasure -c ${EVAL_TRNSL_CORPUS} $<
-
-${PRF_REF_CORPUS}: ${EVAL_SRC_CORPUS} ${EVAL_REF_CORPUS}
-	set -e -o pipefail; \
-	align_err_correct $^ > $@.tmp && \
-	mv $@.tmp $@
+test_prf: ${EVAL_TRNSL_CORPUS} ${EVAL_CORPUS} ${EVAL_SRC_CORPUS}
+	correction_fmeasure --error-corpus ${EVAL_CORPUS} \
+	--tokenized-corpus ${EVAL_SRC_CORPUS} $<
 
 ##################################################################
 # clean_test
