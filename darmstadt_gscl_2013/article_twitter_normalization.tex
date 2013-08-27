@@ -7,10 +7,13 @@
 \usepackage{tabularx} % for centering in table
 \usepackage{graphicx} % for \includegraphics
 \usepackage{url}
+\usepackage{amsmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\totaloov}{\% of total OOVs}
 \newcommand{\uniqoov}{\% of unique OOVs}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -47,21 +50,34 @@
   %% significantly decrease the chances of successful automatic analysis
   %% of this kind of data.
 
-  This article gives an overview of existing approaches to the problem
-  of out-of-vocabulary (OOV) tokens and noisiness phenomena in natural
-  language texts. These approaches are classified with regard to the
-  size of text spans and knowledge inference mechanisms which they
-  rely on in their work. Additionally to that, we conduct quantitative
-  and qualitative analyses of unknown words in German Twitter
-  messages, in order to see how relevant the OOV and text
-  normalization problems are for this particular kind of micro-texts
-  and what the characteristics of these OOVs are. In a concluding
-  step, we present a set of ad-hoc techniques which are supposed to
-  tackle some of the most prominent disturbing effects found during
-  the analyses and show how this set of techniques helps us lower the
-  average rate of out-of-vocabulary tokens in Twitter messages and how
-  this lower OOV-rate in turn helps improve the quality of automatic
-  part-of-speech tagging.
+  %% This article gives an overview of existing approaches to the problem
+  %% of out-of-vocabulary (OOV) tokens and noisiness phenomena in natural
+  %% language texts. These approaches are classified with regard to the
+  %% size of text spans and knowledge inference mechanisms which they
+  %% rely on in their work. Additionally to that, we conduct quantitative
+  %% and qualitative analyses of unknown words in German Twitter
+  %% messages, in order to see how relevant the OOV and text
+  %% normalization problems are for this particular kind of micro-texts
+  %% and what the characteristics of these OOVs are. In a concluding
+  %% step, we present a set of ad-hoc techniques which are supposed to
+  %% tackle some of the most prominent disturbing effects found during
+  %% the analyses and show how this set of techniques helps us lower the
+  %% average rate of out-of-vocabulary tokens in Twitter messages and how
+  %% this lower OOV-rate in turn helps improve the quality of automatic
+  %% part-of-speech tagging.
+
+
+ In this article, we conduct quantitative and qualitative analyses of
+ unknown words in German Twitter messages, and propose a normalization
+ method which prepares German Twitter text for standard text
+ processing tools. In the first part, the prevalence of different
+ types of out-of-vocabulary (OOV) tokens and non-standard language in
+ German Twitter data is determined. In a second step, we present a set
+ of ad-hoc techniques which can tackle some of the most prominent
+ effects found during the analyses. We show how this set of techniques
+ helps us lower the average rate of out-of-vocabulary tokens in
+ Twitter messages and how this lower OOV-rate in turn helps improve
+ the quality of automatic part-of-speech tagging.
 
   \keywords{twitter, social media, text normalization, spelling
     correction}
@@ -123,136 +139,213 @@ that revived interest in this research area in the past two decades.
 %% concluding step, we will perform an evaluation of the results of this
 %% procedure and give some further suggestions for future research.
 
-In the next Section, we will give a short overview of existing
-scientific approaches to the problem of tackling out-of-vocabulary
-words in non-standard texts. After that, in Section
-\ref{error:analysis} we will analyze which types of noisiness
-phenomena are especially characteristic for German Twitter. Section
-\ref{normalization} will subsequently describe an automatic procedure
-for mitigating some of the most prominent of those effects. In a
-concluding step, we will perform an evaluation of the results of this
-procedure and give further suggestions for future research.
+In the next Section, we give a short overview of existing scientific
+approaches to the problem of tackling out-of-vocabulary words in
+non-standard texts. After that, in Section \ref{error:analysis} we
+will analyze which types of noisiness phenomena are especially
+characteristic for German Twitter. Section \ref{normalization} will
+subsequently describe an automatic procedure for mitigating some of
+the most prominent of those effects. In a concluding step, we will
+perform an evaluation of the results of this procedure and give
+further suggestions for future research.
 
 \section{Related Work}
 
-Before proceeding with the description of recent methods for noisy
-text normalization (NTN), we first would like to define the criteria
-by which these methods could be classified. It should be noted that
-there already exist several classifications of NTN approaches
-including, for example, Kukich (\cite{kukich}) and Kobus et
-al. (\cite{kobus}).
+%% Before proceeding with the description of recent methods for noisy
+%% text normalization (NTN), we first would like to define the criteria
+%% by which these methods could be classified. It should be noted that
+%% there already exist several classifications of NTN approaches
+%% including, for example, Kukich (\cite{kukich}) and Kobus et
+%% al. (\cite{kobus}).
 
-Kukich (\cite{kukich}), for instance, divided all NTN techniques into
-six classes:
-\begin{enumerate}
-\item minimum edit distance techniques;
-\item similarity key techniques;
-\item rule-based techniques;
-\item \textit{n}-gram based techniques;
-\item probabilistic techniques;
-\item neural nets.
-\end{enumerate}
-Kobus (\cite{kobus}), on the contrary, referred to NTN methods as
-\textit{metaphors} and split them into the following three groups:
-\begin{enumerate}
-\item ``spell checking'' metaphor;
-\item ``translation'' metaphor;
-\item ``speech recognition'' metaphor.
-\end{enumerate}
+%% Kukich (\cite{kukich}), for instance, divided all NTN techniques into
+%% six classes:
+%% \begin{enumerate}
+%% \item minimum edit distance techniques;
+%% \item similarity key techniques;
+%% \item rule-based techniques;
+%% \item \textit{n}-gram based techniques;
+%% \item probabilistic techniques;
+%% \item neural nets.
+%% \end{enumerate}
+%% Kobus (\cite{kobus}), on the contrary, referred to NTN methods as
+%% \textit{metaphors} and split them into the following three groups:
+%% \begin{enumerate}
+%% \item ``spell checking'' metaphor;
+%% \item ``translation'' metaphor;
+%% \item ``speech recognition'' metaphor.
+%% \end{enumerate}
 
-Though both of these divisions seem to be justified to some extent, it
-is difficult to determine using them whether an NTN approach that
-detects and restores incorrectly spelled words on the basis of
-phonetical \textit{n}-gram statistics should fall into the
-\textit{n}-gram based, probabilistic, spell checking or speech
-recognition class.
+%% Though both of these divisions seem to be justified to some extent, it
+%% is difficult to determine using them whether an NTN approach that
+%% detects and restores incorrectly spelled words on the basis of
+%% phonetical \textit{n}-gram statistics should fall into the
+%% \textit{n}-gram based, probabilistic, spell checking or speech
+%% recognition class.
 
-This confusion is explained by the fact that the above classifications
-both rely on several independent criteria at the same time, however
-each of these criteria characterizes an NTN system from a different
-point of view. As a consequence of this, unambiguous assignment of an
-NTN approach to one particular class often becomes impossible. In
-order to avoid this, we instead suggest using separate classifications
-for each type of involved criteria.
+%% This confusion is explained by the fact that the above classifications
+%% both rely on several independent criteria at the same time, however
+%% each of these criteria characterizes an NTN system from a different
+%% point of view. As a consequence of this, unambiguous assignment of an
+%% NTN approach to one particular class often becomes impossible. In
+%% order to avoid this, we instead suggest using separate classifications
+%% for each type of involved criteria.
 
-One of such criteria which in our opinion would be worth a separate
-classification is \emph{segmentation level} that is used
-\begin{inparaenum}[\itshape a\upshape)]
-\item to infer in-vocabulary (IV) equivalents for OOV
-  tokens\label{candidate:inferring} and
-\item to choose the most probable variant\label{candidate:selection}
-  among multiple possible suggestions\footnote{For the cases, when
-    segments of different lengths are used for tasks
-    \ref{candidate:inferring} and \ref{candidate:selection}, we note
-    it explicitly in our classification on which segmentation length
-    each of these subtasks relies.}.
-\end{inparaenum} For this criterion, we propose division into the following
-classes:
-\begin{enumerate}
-  \item graphematic\footnote{Depending on whether phonetical
-    information is involved or not at this level, this class could be
-    further divided into a phonographematic and purely graphematic
-    subclasses.};
-  \item lexical;
-  \item phrasal.
-\end{enumerate}
-Each broader level of this hierarchy is supposed to either incorporate
-or ignore information provided by its narrower subsegments. In this
-way, we only need to mention one (the broadest) hierarchical class for
-the cases when multiple segmentation levels are involved by some
-techniques.
+%% We use two independent criteria to classify normalization methods.
+%% One of such criteria which in our opinion would be worth a separate
+%% classification
+%% is the \emph{segmentation level} that is used
+%% \begin{inparaenum}[\itshape a\upshape)]
+%% \item to infer in-vocabulary (IV) equivalents for OOV
+%%   tokens\label{candidate:inferring} and
+%% \item to choose the most probable variant\label{candidate:selection}
+%%   among multiple possible suggestions\footnote{If
+%%     segments of different lengths are used for tasks
+%%     \ref{candidate:inferring} and \ref{candidate:selection}, this can
+%%     be noted explicitly.}.
+%% \end{inparaenum} For this criterion, we propose division into the following
+%% classes:
+%% \begin{enumerate}
+%%   \item graphematic\footnote{Depending on whether phonetic
+%%     information is involved at this level, this class can be
+%%     further divided into a phonographematic and purely graphematic
+%%     subclasses.};
+%%   \item lexical;
+%%   \item phrasal.
+%% \end{enumerate}
+%% Each broader level of this hierarchy is supposed to either incorporate
+%% or ignore information provided by its narrower subsegments. In this
+%% way, we only need to mention one (the broadest) hierarchical class for
+%% the cases when multiple segmentation levels are involved by some
+%% techniques.
 
-The second criterion regards the \emph{type of information induction}
-that is used to devise the correction rules. This leads us to the
-usual NLP-taxonomy which divides all approaches into:
-\begin{enumerate}
-  \item rule-based;
-  \item statistical\footnote{Depending on the type of training data
-    required, this class is in turn usually divided into unsupervised,
-    semi-supervised, and supervised groups.};
-  \item and hybrid ones.
-\end{enumerate}
+%% The second criterion regards the \emph{type of information induction}
+%% that is used to devise the correction rules. This leads us to the
+%% usual NLP-taxonomy which divides all approaches into:
+%% \begin{enumerate}
+%%   \item rule-based;
+%%   \item statistical\footnote{Depending on the type of training data
+%%     required, this class is in turn usually divided into unsupervised,
+%%     semi-supervised, and supervised groups.};
+%%   \item and hybrid ones.
+%% \end{enumerate}
 
-According to these two classification criteria, recent approaches to
-the NTN task could be grouped together as follows.
+%% According to these two classification criteria, recent approaches to
+%% the NTN task could be grouped together as follows.
 
-The earlier works on NTN commonly relied on either purely graphematic
-or phonographematic levels of segmentation for deriving normalization
-variants of incorrectly spelled words. To purely graphematic systems
-belong methods suggested by Brill and Moore (\cite{brill}), Sproat et
-al. (\cite{sproat}), and Clark (\cite{alexander-clark}). As
-phonographematic approaches one could regard works done by Toutanova
-and Moore (\cite{toutanova}), Choudhury et al. (\cite{choudhury}),
-Cook and Stevenson (\cite{cook}), Han and Baldwin (\cite{han})
-etc. With regard to the type of information inference, most of these
-methods were supervised with the exceptions of Cook and Stevenson
-(\cite{cook}) and Han and Baldwin (\cite{han}) who claimed to use an
-unsupervised technique. Sproat et al. (\cite{sproat}) described in
-their article both a supervised and unsupervised approach.
+The earlier works on normalization of noisy messages were greatly
+influenced by text restoration techniques commonly applied in the
+domains of speech and optical character recognition. One of the most
+well-established techniques in those fields at the beginning of the
+1990-s was the method of ``noisy channel model'' (NCM) first
+introduced by Shannon in \cite{shannon}. In this method, an input text
+$T$ was regarded as a distorted version of some initial clean language
+signal $S$. And in order to find the original sequence, one had to
+solve the equation $\mathop{arg\,max} P(S|T)$ by computing an
+equivalent expression $\mathop{arg\,max} P(T|S)P(S)$. In this last
+form, the term -- $P(T|S)$ -- was usually referred to as \textit{error
+  model}, i.e. one which showed how likely it was that the given
+non-standard form $T$ could have resulted from the assumed standard
+counterpart $S$. The latter part of the equation -- $P(S)$ -- was
+called the \textit{language model} and accounted for the probability
+of form $S$ to appear in standard text in general. %% It is however
+%% not specified by NCM, what should regarded as language model, what
+%% has to be considered as an error model and eventually how a set of
+%% standard language equivalents $S$ should be derived for given
+%% non-standard form $T$.
 
-Starting from the second half of the 2000s, the raising influence and
-improved quality of machine translation tools led to the development
-of NTN technologies which used broader levels of segmentation. In
-\cite{aw}, Aw et al. suggested a supervised statistical system for
-normalization of SMS-messages which operated on automatically aligned
-phrases A few years later, Clark and Araki (\cite{clark-araki})
-described a purely rule-based method which used mappings of
-non-standard words and phrases to their corresponding standard
-language forms.
+Among works belonging to the NCM framework, we could mention the
+approach suggested by Mayes, Damerau et al. (\cite{mayes}) who used a
+uniform error model and calculated $P(S)$ on the basis of word bigrams
+statistics. As a set $S$ of possible replacement suggestions, the
+authors regarded the original input word $T$ as well as all words in
+dictionary which could be derived from the original word by applying
+at most one edit operation either insertion, or deletion, or
+substituion of a single character. In \cite{church}, Church and Gale
+suggested a more elaborated error model in which every edit operation
+was weihgted according to statistics gathered from a training corpus
+and conditioned on the letter context in which this edit operation
+apeeared. Brill and Moore (\cite{Brill}) further enhanced this model
+by considering edit operations not only on single letters but rather
+on word subsegments of different lengths. Toutanova and Moore
+(\cite{toutanova}) improved the performance of the latter work by
+23~\% by incorporating phonetical information. Eventually, Alexander
+Clark (\cite{clark}) was one among the first who addressed the text
+noisiness problem in the genre of Internet-based communication
+(IBC). In his presented system, multiple indpendent modules were used
+to perform tokenization, normalization and correction of Usenet forum
+posts. The system relied on a 3-gram language model and a trainable
+stateless stochastic transduces as error model, however no particular
+details about its implementation were provided in the article. In
+\cite{choudhury}, Choudhury et al. proposed
+
+
+Bangalore et al. - MT
+
+suggested an NCM
+approach in which they derived the set $S$ by applying one of the four
+operations: insertion, deletion or substitution of a single character
+or transposition of two adjacent characters to string $T$ and then
+leaving only variants which were present in vocabulary. Original word
+$T$ was also included in the generated set. As language model, the
+authors used word bigrams. As error model, a uniform distribution was
+used which assigned equal probabilities to all generated variants and
+a constant probability $\alpha$ to the original word.
+
+
+%% According to this, the main task of NCM consisted in finding such $S$
+%% which could maximize the probability of $S$ given $T$. By using the
+%% Bayesian rule of probability, $P(S|T)$ was defined as
+%% $\frac{P(T|S)P(S)}{P(T)}$ and in order to find $arg$ and further as
+%% $P(T|S)P(S)$ since the denominator $P()$
+
+%%  commonly relied on either purely graphematic or phonographematic
+%%  levels of segmentation for deriving normalization variants of
+%%  incorrectly spelled words. Methods suggested by Brill and Moore
+%%  (\cite{brill}), Sproat et al. (\cite{sproat}), and Clark
+%%  (\cite{alexander-clark}) are purely graphematic, whereas works by
+%%  Toutanova and Moore (\cite{toutanova}), Choudhury et
+%%  al. (\cite{choudhury}), Cook and Stevenson (\cite{cook}), Han and
+%%  Baldwin (\cite{han}), etc., can be classified as
+%%  phonographematic. With regard to the type of information inference,
+%%  most of these methods were supervised with the exceptions of Cook and
+%%  Stevenson (\cite{cook}) and Han and Baldwin (\cite{han}) who claim to
+%%  use an unsupervised technique. Sproat et al. (\cite{sproat})
+%%  described in their article both a supervised and an unsupervised
+%%  approach.
+
+%% Starting from the second half of the 2000s, the raising influence and
+%% improved quality of machine translation tools led to the development
+%% of NTN technologies which used broader levels of segmentation. In
+%% \cite{aw}, Aw et al. suggested a supervised statistical system for
+%% normalization of mobile text messages which operates on automatically
+%% aligned phrases. A few years later, Clark and Araki
+%% (\cite{clark-araki}) described a purely rule-based method which uses
+%% mappings of non-standard words and phrases to their corresponding
+%% standard language forms.
 
 As noted by Kobus et al. (\cite{kobus}), NTN methods relying on either
-graphematic or phrasal segments usually revealed complementary
-strengths and weaknesses. This notion led NLP scientists to the idea
-that by incorporating multiple levels of the language into one NTN
-system the total performace of the whole system would improve as
-different sources of information would benefit from each other. As a
-consequence of this, a wealth of combined techniques emerged in the
-past few years. Among these we should especially mention works by
-Kobus et al. (\cite{kobus}), Kaufmann (\cite{kaufmann}), and Oliva et
+graphematic or phrasal segments usually reveal complementary strengths
+and weaknesses. This notion led NLP scientists to the idea that by
+incorporating multiple levels of the language into one NTN system the
+total performace of the whole system would improve as different
+sources of information would benefit from each other. As a consequence
+of this, a wealth of combined techniques emerged in the past few
+years. Among these we should especially mention works by Kobus et
+al. (\cite{kobus}), Kaufmann (\cite{kaufmann}), and Oliva et
 al. (\cite{oliva}). The majority of these systems used the whole range
-of segmentation levels from phonographematatic to phrasal one, and in
-many cases they also applied different knowledge inference mechanisms
-to different levels of the language.
+of segmentation levels from phonographematatic to phrasal, and in many
+cases they also applied different knowledge inference mechanisms to
+different levels of the language.
+% % *TS*
+% It's not quite clear what these approaches actually DO -  for
+% example the combined methods above or some of the early
+% approaches. I liked how "Clark and Araki" was described in half a
+% sentence, maybe add something like that for one or two of the papers
+% in the first paragraph ("earlier works") and also for the last
+% paragraph ("combined methods"). I can shorten the "combined methods"
+% paragraph more if needed.
+%
 
 %% Eventually, in \cite{han}, an article called ``Lexical Normalization
 %% of Short Text Messages: Makn Sens a \#{}twitter'' was published by Han
@@ -269,14 +362,13 @@ to different levels of the language.
 %% them to outperform most of the NTN methods existing at that time.
 
 It should however be noted that almost all of the above methods mainly
-concentrated on only English data. A few exceptions from that are
+concentrated on only English data. A few exceptions are the
 approaches suggested by Beaufort et al. (\cite{beaufort}) for French,
-and Oliva et al. (\cite{oliva}) for Spanish. To find out which
-peculiarities of ill-formed words are characteristic for German, we
-will perform a quantitive and qualitative analysis of unknown words in
+and Oliva et al. (\cite{oliva}) for Spanish. Since the peculiarities
+of short messages are often language-specific, we
+perform a quantitive and qualitative analysis of unknown words in
 German Twitter in the next Section in order to see what kind of NTN
 techniques would be most suitable for handling such words there.
-
 \section{Analysis of Unknown Tokens}\label{error:analysis}
 
 In order to estimate the percentage of unknown words in Twitter
@@ -320,8 +412,8 @@ corresponding applications' dictionaries:
     point of view of standard language but were perfectly valid terms
     in the domain of web discourse or more specifically in Twitter
     communication;\label{style}
-  \item \textbf{Sloppiness of users' input}. In the scope of this
-    group, we considered incorrect spellings of words encountered in
+  \item \textbf{Misspellings}. In the scope of this group, we
+    considered incorrect spellings of words encountered in
     text.\label{spell}
 \end{enumerate}
 
@@ -768,6 +860,19 @@ the analysis of data.
   Issue on Analytics of Noisy Text. {\bfseries 10} %
   (2007) 157--174 %
 
+\bibitem[1991]{church}
+  Church, K., Gale, W.: %
+  Probability scoring for spelling correction. %
+  Statistics and Computing. {\bfseries 1} %
+  (1991) 93--103 %
+
+\bibitem[2003]{clark}
+  Clark, A.,: %
+  Pre-Processing very noisy text. %
+  In Proceedings of Workshop on Shallow Processing of Large Corpora. %
+  Corpus Linguistics. %
+  Lancaster (2003)
+
 \bibitem[2011]{clark-araki}
   Clark, E., Araki, K.: %
   Text Normalization in Social Media: Progress, Problems and %
@@ -816,6 +921,12 @@ the analysis of data.
   Techniques for Automatically Correcting Words in Text. %
   ACM Computing Surveys {\bfseries 24/4} (1992) 378--439
 
+\bibitem[1991]{mayes}
+  Mayes, E., F. Damerau, et al.: %
+  Context Based Spelling Correction. %
+  Information Processing and Management. 27(5) %
+  (1991) 517--522
+
 \bibitem[2012]{guardian:sms}
   McVeigh, T.: %
   Text messaging turns 20. %
@@ -826,11 +937,6 @@ the analysis of data.
   TwiSent: A Multistage System for Analyzing Sentiment in Twitter. %
   In Proceedings of The 21st ACM Conference on Information and %
   Knowledge Management CIKM 2012, Hawai, (Oct 29 - Nov 2, 2012)
-
-
-  McVeigh, T.: %
-  Text messaging turns 20. %
-  The Observer (December 1, 2012)
 
 \bibitem [2013]{oliva}
   Oliva, J., Serrano, J. I., and Del Castillo, M. D., %
@@ -871,6 +977,12 @@ the analysis of data.
   Probabilistic Part-of-Speech Tagging Using Decision Trees. %
   In Proceedings of International Conference on New Methods in %
   Language Processing. (1994)
+
+\bibitem[1948]{shannon}
+  Shannon, C. E.: %
+  A mathematical theory of communication. %
+  Bell system techical journal, 27:379--423 %
+  (1948) 623--656
 
 \bibitem[1996]{sparck}
   Sparck Jones, K., Galliers, J. R.: %

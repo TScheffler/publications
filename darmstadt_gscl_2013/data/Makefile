@@ -102,10 +102,12 @@ test: test_prf test_bleu test_bleu_self
 # BLEU
 BLEU_SCRIPT := ${EVAL_DIR}/scripts/mteval-v13.pl --international-tokenization -b
 
-test_bleu: ${EVAL_SRC_SGML} ${EVAL_TRNSL_SGML} ${EVAL_REF_SGML}
+test_bleu: ${EVAL_SRC_SGML} ${EVAL_TRNSL_SGML} ${EVAL_REF_SGML} test_bleu_self
+	@echo 'Normalization BLEU'
 	${BLEU_SCRIPT} -s ${EVAL_SRC_SGML} -t ${EVAL_TRNSL_SGML} -r ${EVAL_REF_SGML}
 
 test_bleu_self: ${EVAL_SRC_SGML} ${EVAL_SRC_SELFTEST_SGML} ${EVAL_REF_SGML}
+	@echo 'Self-Test BLEU'
 	${BLEU_SCRIPT} -s ${EVAL_SRC_SGML} -t ${EVAL_SRC_SELFTEST_SGML} -r ${EVAL_REF_SGML}
 
 # source file for translation
