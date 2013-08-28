@@ -254,31 +254,38 @@ of form $S$ to appear in standard text in general. %% It is however
 %% standard language equivalents $S$ should be derived for given
 %% non-standard form $T$.
 
-Among works belonging to the NCM framework, we could mention the
-approach suggested by Mayes, Damerau et al. (\cite{mayes}) who used a
-uniform error model and calculated $P(S)$ on the basis of word bigrams
-statistics. As a set $S$ of possible replacement suggestions, the
-authors regarded the original input word $T$ as well as all words in
-dictionary which could be derived from the original word by applying
-at most one edit operation either insertion, or deletion, or
-substituion of a single character. In \cite{church}, Church and Gale
-suggested a more elaborated error model in which every edit operation
-was weihgted according to statistics gathered from a training corpus
-and conditioned on the letter context in which this edit operation
-apeeared. Brill and Moore (\cite{Brill}) further enhanced this model
-by considering edit operations not only on single letters but rather
-on word subsegments of different lengths. Toutanova and Moore
-(\cite{toutanova}) improved the performance of the latter work by
-23~\% by incorporating phonetical information. Eventually, Alexander
-Clark (\cite{clark}) was one among the first who addressed the text
-noisiness problem in the genre of Internet-based communication
-(IBC). In his presented system, multiple indpendent modules were used
-to perform tokenization, normalization and correction of Usenet forum
-posts. The system relied on a 3-gram language model and a trainable
-stateless stochastic transduces as error model, however no particular
-details about its implementation were provided in the article. In
-\cite{choudhury}, Choudhury et al. proposed
-
+Among works belonging to the NCM framework, we could mention the approach
+suggested by Mayes, Damerau et al. (\cite{mayes}) who used a uniform error
+model and calculated $P(S)$ on the basis of word bigrams statistics. As a set
+$S$ of possible replacement suggestions, the authors regarded the original
+input word $T$ as well as all words in dictionary which could be derived from
+$T$ by applying at most one edit operation which could be either insertion, or
+deletion, or substituion of a single character or a transposition of two
+adjacent characters. In \cite{church}, Church and Gale suggested a more
+elaborated error model in which they weighted every edit operation according
+to statistics generated from a training corpus and additionally conditioned
+each of these operations on the letter context in which they appeared. Brill
+and Moore (\cite{Brill}) enhanced this model by considering edit operations
+not only for single letters but for whole word subsegments up to a length of 5
+characters. Toutanova and Moore (\cite{toutanova}) improved the performance of
+the latter work by 23~\% by incorporating phonetical information in
+it. Eventually, Alexander Clark (\cite{clark}) was one among the first who
+addressed the text noisiness problem in the genre of Internet-based
+communication (IBC). In his presented system, multiple independent modules
+were used to simultaneously perform tokenization, normalization and correction
+of Usenet forum posts and . This system relied on a 3-gram language model and
+a trainable stateless stochastic transduces as error model, however no
+particular details about its implementation were given in the article. In
+\cite{choudhury}, Choudhury et al. proposed a modified version of NCM approach
+which was specifically targeted at normalization of texting language in
+English SMS messages. This model built on the basis of the work by Toutanova
+and Moore (\cite{toutanova}) and utilized bigram statistics as language model
+for its work. An important change in contrast to the work done by Toutanova
+(\cite{toutanova}), however, consisted in the fact, that Choudhury et
+al. (\cite{choudhury}) used a joint phone-character HMM lattice for computing
+probabilities of restoration suggestions, whereas Toutanova and Moore
+(\cite{toutanova}) separately calculated probabilities for phonemic and
+graphemic derivations, linearly interpolating them at the end.
 
 Bangalore et al. - MT
 
